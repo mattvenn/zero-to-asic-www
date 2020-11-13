@@ -8,7 +8,7 @@ featured_image: "/sta.png"
 Static Timing Analysis helps us to understand how fast we can expect our chip to run.
 
 [OpenLane](/terminology/openlane) uses a tool called [OpenSTA](https://github.com/The-OpenROAD-Project/OpenSTA)
-It's job is to analyse the 'critical paths' in the design and then work out how long it will take those paths to propagate a signal.
+Its job is to analyse the 'critical paths' in the design and then work out how long it will take those paths to propagate a signal.
 
 After OpenLane finishes, we get a report from OpenSTA: reports/synthesis/opensta.min_max.rpt
 
