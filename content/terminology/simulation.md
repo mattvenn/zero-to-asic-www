@@ -26,3 +26,5 @@ This makes it much easier to provide complex stimulus to the device under test (
 Jump to [3:27](https://www.youtube.com/watch?v=dtK-4JZ4Cwc&t=207s) in this video to see a demonstration of cocotb being used to pass wavefiles through a filter implemented for an [FPGA](/terminology/fpga).
 
 {{< youtube dtK-4JZ4Cwc >}}
+
+Simulation on it's own can take us a fair way, but to be sure you should also [verify](/terminology/verification) your design.

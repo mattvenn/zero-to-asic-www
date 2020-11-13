@@ -1,0 +1,18 @@
+googleAnalytics = "G-X1QPZ4TM5C"
+baseURL = "https://www.zerotoasic.com/"
+languageCode = "en-us"
+title = "Zero to ASIC"
+theme = "ananke"
+[menu]
+
+[[menu.main]]
+identifier = "Terminology"
+name = "Terminology"
+url = "/terminology"
+weight = 10
+
+[[menu.main]]
+identifier = "Articles"
+name = "Articles"
+url = "/post"
+weight = 10

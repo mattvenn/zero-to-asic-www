@@ -14,6 +14,8 @@ Each of these ICs are then cut out of the wafer and are called dies.
 
 The die is then somehow packaged. Often they are mounted to a leadframe and then moulded into a plastic packaging to make them larger and easier to handle.
 
+## Leadframe 
+
 ![leadframe](/leadframe.jpg)
 
 Image from [Sergei Frolov](https://commons.wikimedia.org/wiki/File:DIP_zagotovka.jpg)
