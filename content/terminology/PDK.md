@@ -1,0 +1,45 @@
+---
+title: "PDK"
+date: 2020-11-12T17:38:48+01:00
+featured_image: '/stackup.png'
+---
+
+The Process Design Kit is a library of all the specifications that describe a particular factories' particular chip fabrication process.
+
+In our case we have access to the Skywater factories 130 nanometer process, usually called sky130. 
+This picture shows how the layers of the chip stack up to form the complete ASIC.
+
+![stackup](/stackup.png)
+
+This picture shows all the layers defined in the PDK that can be used in a design tool like [Magic](/terminology/magic).
+
+![layers](/sky130-layers.png)
+
+For the raw data, check the [mask definitions](https://skywater-pdk.readthedocs.io/en/latest/rules/masks.html)
+
+You can get all the information here https://skywater-pdk.readthedocs.io/en/latest/
+The following is adapted from one of Tim Ansell's [slides](https://docs.google.com/presentation/d/e/2PACX-1vRtwZPc8ykkkgtUkHkoJZrP9jKOo3FYdKqbg-So0ic6_kx7ha1vHnxrWmuxWkTc9GfC8xl0TfEpMLwK/pub?start=false&loop=false&delayms=3000#slide=id.g8a122ff1a1_6_2113) in his [Fossi presentation](https://www.youtube.com/watch?v=EczW2IWdnOM&list=PLUg3wIOWD8yoZCg9XpFSgEgljx6MSdm9L)
+
+# Design Rules
+
+* [DRC](/terminology/drc)
+* [LVS](/terminology/drc)
+
+# Behavioural models
+
+This allows us to model analogue and digital components, for example different sizes of [MOSFET](/terminology/mosfet).
+
+# Support IP
+
+* Input Output libraries
+
+# Analogue design
+
+* [Spice](/terminology/spice) models
+
+# Digital design
+
+* [Standard cells](/terminology/standardcell)
+* Timing models - allow us to know how fast we can run our designs
+
+
