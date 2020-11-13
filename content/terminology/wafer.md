@@ -8,7 +8,7 @@ Silicon is purified to around 99.9999999%! Then it is sliced into very thin roun
 
 ![silicon wafers](/wafer.jpg)
 
-The type used in the [Skywater 130nm process](/terminology/process) is [doped](/terminology/doping) to become p-type.
+The type used in the [Skywater 130nm process](/terminology/node) is [doped](/terminology/doping) to become p-type.
 
 I found these great videos about the birth of the Japanese semiconductor industry. Jump to about 12 minutes in to see 
 how they pull the silicon ingot out of the molten material.

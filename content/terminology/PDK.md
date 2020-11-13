@@ -6,12 +6,21 @@ featured_image: '/stackup.png'
 
 The Process Design Kit is a library of all the specifications that describe a particular factories' particular chip fabrication process.
 
-In our case we have access to the Skywater factories 130 nanometer process, usually called sky130. 
+In our case we have access to the Skywater factories 130 nanometer [process](/terminology/node), usually called sky130. 
+
+Tim Edwards:
+
+> Note that this process is advertised as a "hybrid 180nm / 130nm".  
+A number of aspects are either very close to a 180nm process or somewhere between 180 and 130.  
+The typical minimum length low-voltage transistor is 150nm. 
+
+For more information about process sizes see this about the [node](/terminology/node).
+
 This picture shows how the layers of the chip stack up to form the complete ASIC.
 
 ![stackup](/stackup.png)
 
-This picture shows all the layers defined in the PDK that can be used in a design tool like [Magic](/terminology/magic).
+This table shows all the layers defined in the PDK that can be used in a design tool like [Magic](/terminology/magic).
 
 ![layers](/sky130-layers.png)
 
@@ -23,7 +32,7 @@ The following is adapted from one of Tim Ansell's [slides](https://docs.google.c
 # Design Rules
 
 * [DRC](/terminology/drc)
-* [LVS](/terminology/drc)
+* [LVS](/terminology/lvs)
 
 # Behavioural models
 

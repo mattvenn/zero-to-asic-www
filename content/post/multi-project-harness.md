@@ -4,14 +4,12 @@ date: 2020-11-12T14:54:58+01:00
 featured_image: '/ciic_harness.png'
 ---
 
-I've been working on the [multi project harness](https://github.com/mattvenn/multi-project-harness).
-Normally in a [multi project wafer](https://en.wikipedia.org/wiki/Multi-project_wafer_service) you would have the entire space for your own design.
+I've been working on the Zero to ASIC [multi project harness](https://github.com/mattvenn/multi-project-harness).
 
-The Google/Skywater Shuttle is a bit different. First of all, there is the [Caravel harness](https://github.com/efabless/caravel2), which even has its own [datasheet](https://raw.githubusercontent.com/efabless/caravel/release/doc/caravel_datasheet.pdf)
+The Google/Skywater [Shuttle](/terminology/shuttle) has about 10 square mm of space for your project. This sounds tiny but is actually HUGE for many beginner projects.
+Read [this post to find out what you could fit in](/post/how-much-can-we-fit) the user space.
 
-![Caravel harness](/ciic_harness.png)
-
-For this course, I want to put all your designs together into that area, so we need to do some extra bits:
+For the Zero to ASIC course, I want to aggregate all your designs together into that area, so we need to do some extra bits:
 
 * hold all the designs except 1 in reset
 * connect all the inputs and outputs

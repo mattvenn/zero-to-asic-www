@@ -4,7 +4,7 @@ date: 2020-11-12T17:42:46+01:00
 featured_image: '/hackaday-gds.png'
 ---
 
-GDSII/GDS2 is a binary file format that represents the layers needed to produce an ASIC.
+GDSII/GDS2 is a binary file format that represents the layers needed to produce an [ASIC](/terminology/asic).
 
 In the [OpenLane](/terminology/openlane) flow, [Magic](/terminology/magic) is used to 'stream' the final GDS2 files.
 

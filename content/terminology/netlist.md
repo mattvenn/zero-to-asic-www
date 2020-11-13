@@ -3,7 +3,6 @@ title: "Netlist"
 date: 2020-11-13T10:13:03+01:00
 featured_image: "/show_rtl.png"
 ---
-
 A netlist is a machine readable file that contains all the connections between all the components in your design.
 
 They are one of the outputs of a [Synthesis](/terminology/synthesis) tool like Yosys.

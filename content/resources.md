@@ -32,5 +32,5 @@ featured_image: '/die.jpg'
 
 # FPGA
 
-* FPGA boards: [iCEBreaker](https://www.crowdsupply.com/1bitsquared/icebreaker-fpga), [TinyFPGA](https://tinyfpga.com/)
+* FPGA boards: [iCEBreaker](https://www.crowdsupply.com/1bitsquared/icebreaker-fpga), [TinyFPGA](https://tinyfpga.com/), [Black Ice](https://www.tindie.com/products/Folknology/blackice-mx/)
 * [WTFPGA course](https://github.com/esden/WTFpga)

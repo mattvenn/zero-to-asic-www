@@ -1,13 +1,14 @@
 ---
-title: "spice"
+title: "SPICE"
 date: 2020-11-12T17:39:43+01:00
 featured_image: '/inverter-current.png'
+description: "Simulation Program with Integrated Circuit Emphasis"
 ---
 
 SPICE general-purpose, open-source analog electronic circuit simulator. It stands for Simulation Program with Integrated Circuit Emphasis.
 ngspice is a successor, and is easily installable on Linux. It's the simulator I've used to explore the Skywater 130 [PDK](/terminology/pdk).
 
-Here's an example spice simulation file that I used to simulate the inverter I drew. To find out more about that check [this post](/post/inverter).
+Here's an example spice simulation file that I used to [simulate the inverter I drew](/post/inverter).
 
     Inverter Simulation
     * this file edited to remove everything not in tt lib
