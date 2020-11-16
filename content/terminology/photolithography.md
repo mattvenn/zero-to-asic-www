@@ -10,7 +10,7 @@ Sam Zeloof did a great talk about his home [IC](/terminology) [foundry](/termino
 
 This slide shows an overview of the process:
 
-![photolithograpy](/photolithography.png)
+![photolithography](/photolithography.png)
 
 A series of [masks](/terminology/maskset) is used to build up a 3 dimensional structure on the [wafer](/terminology/wafer).
 
@@ -24,6 +24,6 @@ Each step is fundamentally the same:
     * growing a layer of silicon dioxide
     * growing a layer of polysilicon
     * metalising the area
-    * [implanting](/terminology/doping) impurities that change the electochemical properties
+    * [implanting](/terminology/doping) impurities that change the electrochemical properties
 
 Photolithography is the key that allows us to take the patterns we create in a tool like [Magic](/terminology/magic) or [OpenLane](/terminology/openlane) and miniaturise them down to the nanometer scale. It also lets us easily tile the same design over the [wafer](/terminology/wafer) to make the individual [dies](/terminology/die)

@@ -11,9 +11,9 @@ featured_image: '/die.jpg'
 * [0 to ASIC #remoticon talk on twitch](https://www.twitch.tv/videos/796434894) and [slides](http://bit.ly/0-ASIC-slides)
 * [FOSSi foundation dialup talks](https://www.youtube.com/playlist?list=PLUg3wIOWD8yoZCg9XpFSgEgljx6MSdm9L)
 
-# Skywater/Google discussion & announcements
+# SkyWater/Google discussion & announcements
 
-* [Google/Skywater Slack](https://slack.skywater.tools/)
+* [Google/SkyWater Slack](https://slack.skywater.tools/)
 * [PDK docs](https://skywater-pdk.readthedocs.io/en/latest/)
 * [Announce mailing list](https://groups.google.com/forum/#!forum/skywater-pdk-announce)
 

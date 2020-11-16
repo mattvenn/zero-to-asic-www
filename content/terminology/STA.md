@@ -5,16 +5,26 @@ description: "Static Timing Analysis"
 featured_image: "/sta.png"
 ---
 
-Static Timing Analysis helps us to understand how fast we can expect our chip to run.
+Static Timing Analysis checks that at the desired speed, there are no setup and hold violations.
 
-[OpenLane](/terminology/openlane) uses a tool called [OpenSTA](https://github.com/The-OpenROAD-Project/OpenSTA)
-Its job is to analyse the 'critical paths' in the design and then work out how long it will take those paths to propagate a signal.
+When the input clock rises, a flip-flop will capture and store the incoming data. If data changes in the setup time, then there is a chance the wrong data will be captured. This is a setup violation. The same thing applies to data changing after the clock, which is called a hold violation.
 
-After OpenLane finishes, we get a report from OpenSTA: reports/synthesis/opensta.min_max.rpt
+![setup and hold](/setup_and_hold.png) [Image source](https://www.designnews.com/electronics-test/how-track-down-setup-and-hold-violations-mixed-signal-oscilloscope)
 
-The required timing is set in the OpenLane config file. By default it's 10ns, which means we are targetting a clock frequency of 100MHz.
+# OpenSTA
 
-The report shows that timing is met, so the design should run fine at 100MHz.
+[OpenLane](/terminology/openlane) uses a tool called [OpenSTA](https://github.com/The-OpenROAD-Project/OpenSTA).
+Its job is to find the fastest and slowest data paths in the design.
+
+The required timing is set in the OpenLane config file. By default its 10ns, which means we are targetting a clock frequency of 100MHz.
+
+# Min report - validating hold timing
+
+To validate hold timing, OpenSTA does a 'min' timing analysis. Using the most optimisic timing values, how fast can new data arrive at the flip-flop after it receives a clock?
+
+This report below is extracted from reports/synthesis/opensta.min_max.rpt:
+
+The report shows the shortest data path and sums the data arrival time (0.32ns). The data arrival time has to be more than the hold time (-0.02ns - yes hold times can be negative!). As 0.32ns > -0.02ns we pass the hold requirements.
 
     Startpoint: _357_ (rising edge-triggered flip-flop clocked by clk)
     Endpoint: _357_ (rising edge-triggered flip-flop clocked by clk)
@@ -44,6 +54,13 @@ The report shows that timing is met, so the design should run fine at 100MHz.
     ---------------------------------------------------------
                0.33   slack (MET)
 
+# Max report - validating setup timing
+
+To validate setup timing, OpenSTA does a 'max' timing analysis. This uses the most pessimistic timing to check how long it takes the data to arrive at the flip-flop. It is measured against the next clock edge and verifies that the data will arrive in time.
+
+For the max report, the longest path is found (6.48ns). Then the time the data is required to be stable is calculated by subtracting the setup time from the clock period (9.82ns).
+
+We need the data to arrive before the setup time: 6.48ns < 9.82ns. So in this case we pass the setup requirements.
 
     Startpoint: _367_ (rising edge-triggered flip-flop clocked by clk)
     Endpoint: _384_ (rising edge-triggered flip-flop clocked by clk)

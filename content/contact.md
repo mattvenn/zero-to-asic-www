@@ -13,7 +13,7 @@ I am working on a course. The specs are not final but this is the rough idea.
 
 # 0 to ASIC workshop
 
-Design and fabricate your own [ASIC](/terminology/asic)! Thanks to the new Open Source [Process Development Kit](/terminology/pdk) from Google and Skywater along with the latest Open Source ASIC tools from [efabless](https://efabless.com/).
+Design and fabricate your own [ASIC](/terminology/asic)! Thanks to the new Open Source [Process Development Kit](/terminology/pdk) from Google and Skywater along with the latest Open Source ASIC tools from [Efabless](https://efabless.com/).
 
 GCC revolutionised compiling, Linux revolutionised computing. Arduino revolutionised microcontrollers. RISCV is revolutionising ISAs. The next step is Open Source Silicon. 
 

@@ -1,6 +1,6 @@
 ---
 title: "How Much Can We Fit on an ASIC?"
-date: 2020-11-12T20:00:11+01:00
+date: 2020-11-13T20:00:11+01:00
 featured_image: "/design-size.png"
 ---
 

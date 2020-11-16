@@ -11,7 +11,7 @@ For a lot of great information on how it works and what it does, please watch [M
 
 Here's the overview:
 
-![openlane flow](/openlane-flow.png)
+![Openlane flow](/openlane-flow.png)
 
 We put our [HDL](/terminology/hdl) in at one end, and out the other comes the [GDS2](/terminology/gds2) files that are the standard file format for the [foundry](/terminology/foundry). 
 
