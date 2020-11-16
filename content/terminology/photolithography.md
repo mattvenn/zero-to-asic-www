@@ -27,3 +27,7 @@ Each step is fundamentally the same:
     * [implanting](/terminology/doping) impurities that change the electrochemical properties
 
 Photolithography is the key that allows us to take the patterns we create in a tool like [Magic](/terminology/magic) or [OpenLane](/terminology/openlane) and miniaturise them down to the nanometer scale. It also lets us easily tile the same design over the [wafer](/terminology/wafer) to make the individual [dies](/terminology/die)
+
+This cross section shows how the layers are used to build up the 3 dimensional structures that make up the IC.
+
+![cross section](/ic-cross-section.jpeg) [Image source](https://twitter.com/reivilo_t/status/1324402794783215616/photo/1)

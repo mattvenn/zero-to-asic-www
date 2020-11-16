@@ -26,3 +26,7 @@ The idea here is to make it easier to bring up and debug your designs at the cos
 Read [this post to find out what you could fit in](/post/how-much-can-we-fit) the user space.
 
 The Google shuttle will return chips in type of packaging called [Wafer Level Chip Scale Packaging](/terminology/wlcsp).
+
+## Requirements
+
+[Efabless have put up a page](https://efabless.com/open_shuttle_program) that has more details on the requirements for entry to the shuttle.
