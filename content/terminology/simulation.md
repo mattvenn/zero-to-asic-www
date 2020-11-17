@@ -7,7 +7,7 @@ featured_image: "/simulation.png"
 
 Simulation lets us see the design working. It's useful for debugging while designing and it can also be used to verify that the design is working correctly.
 
-There are quite a few Open Source simulators available: iverilog, verilator and recently CXXRTL (a [good review](https://tomverbeure.github.io/2020/08/08/CXXRTL-the-New-Yosys-Simulation-Backend.html) of CXXRTL by Tom Verbeure).
+There are quite a few Open Source simulators available: [Icarus Verilog](http://iverilog.icarus.com/), [Verilator](https://www.veripool.org/wiki/verilator) and recently [CXXRTL](https://tomverbeure.github.io/2020/08/08/CXXRTL-the-New-Yosys-Simulation-Backend.html).
 
 We provide our [HDL](/terminology/hdl) design and a testbench and we get back a data dump of the results of the simulation.
 The data is usually in the form of a VCD (value change dump). This is a way of minimising file sizes, only when and what values changed are dumped. It's not unusual to get multi-gigabyte dump files.
@@ -27,4 +27,4 @@ Jump to [3:27](https://www.youtube.com/watch?v=dtK-4JZ4Cwc&t=207s) in this video
 
 {{< youtube dtK-4JZ4Cwc >}}
 
-Simulation on it's own can take us a fair way, but to be sure you should also [verify](/terminology/verification) your design.
+Simulation on its own can take us a fair way, but to be sure you should also [verify](/terminology/verification) your design.

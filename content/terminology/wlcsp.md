@@ -2,6 +2,7 @@
 title: "WLCSP"
 date: 2020-11-13T13:03:31+01:00
 description: "Wafer Level Chip Scale Packaging"
+featured_image: "/wlcsp-package.png"
 ---
 
 This package is very small and cheap to produce. It also has benefits due to the lack of bond wires. 
