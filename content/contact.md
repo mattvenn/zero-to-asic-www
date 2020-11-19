@@ -7,9 +7,10 @@ type: page
 menu: main
 ---
 
+
 I am working on a course. The specs are not final but this is the rough idea.
 
-[Express your interest in the Zero to ASIC course here](https://docs.google.com/forms/d/e/1FAIpQLSdfZD3StNJIgfGuXdE1SRRVEOVnR8194mtrheV_Dl25me0pvg/viewform)!
+{{< mail-chimp >}}
 
 # 0 to ASIC workshop
 
@@ -47,4 +48,4 @@ This workshop will allow the opportunity for people to experience creating their
 
 * about $500 
 
-[Express your interest in the Zero to ASIC course here](https://docs.google.com/forms/d/e/1FAIpQLSdfZD3StNJIgfGuXdE1SRRVEOVnR8194mtrheV_Dl25me0pvg/viewform)!
+{{< mail-chimp >}}

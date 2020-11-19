@@ -1,6 +1,7 @@
 ---
 title: "PDK"
 date: 2020-11-12T17:38:48+01:00
+description: "Process Design Kit"
 featured_image: '/stackup.png'
 ---
 
