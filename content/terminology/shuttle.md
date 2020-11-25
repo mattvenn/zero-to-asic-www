@@ -17,7 +17,7 @@ These [slides taken from his talk](https://docs.google.com/presentation/d/e/2PAC
 
 ## Caravel
 
-Normally in an MPW you would have the whole [die](/terminology/die) to yourself. In the Google/Skywater Shuttle all the designs will be within the user project area of the [Caravel harness](https://github.com/efabless/caravel2). 
+Normally in an MPW you would have the whole [die](/terminology/die) to yourself. In the Google/Skywater Shuttle all the designs will be within the user project area of the [Caravel harness](https://github.com/efabless/caravel). 
 Caravel has its own RISCV processor and a neat [datasheet](https://raw.githubusercontent.com/efabless/caravel/release/doc/caravel_datasheet.pdf). 
 The idea here is to make it easier to bring up and debug your designs at the cost of some area.
 
