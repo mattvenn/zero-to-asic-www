@@ -23,3 +23,7 @@ I currently have 3 designs ready to add to the [multi project harness](/post/mul
 | [ws2812 LED driver](https://github.com/mattvenn/ws2812-core)               | 72900 | 140  |
 
 There is a lot of room for simple designs!
+
+# Final ASIC application
+
+You can see the [final application here](/post/asic_submitted), we fit in 8 designs with room for more.
