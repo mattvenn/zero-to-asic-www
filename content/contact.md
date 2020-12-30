@@ -49,18 +49,18 @@ MOSFETs are the building blocks of the chips we will be learning how to make. Wh
 * How are they constructed on a silicon wafer.
 * How to run a simulation with ngspice.
 
-## Project 1.1: Draw a mosfet in magic
-
-* Learn the basics of the Magic VLSI tool.
-* Extract the circuit from a drawing.
-* Simulate with ngspice.
-
-## Project 1.2: Choose a standard cell and simulate it
+## Project 1.1: Choose a standard cell and simulate it
 
 * Get an overview of what the standard cells are.
 * Choose your fighter!
 * Simulate the cell and show it does what it should.
 * Measure how fast it can propagate signals from input to output.
+
+## Project 1.2: Draw a mosfet in magic
+
+* Learn the basics of the Magic VLSI tool.
+* Extract the circuit from a drawing.
+* Simulate with ngspice.
 
 # Part 2: Building Digital Designs
 
