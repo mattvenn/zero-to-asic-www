@@ -4,5 +4,5 @@ featured_image: '/magic.png'
 menu: "terminology"
 ---
 
-Want to learn how to make your own custom chip?
-[Express your interest in the Zero to ASIC course here](contact)!
+Want to learn how to make your own custom chips?
+[Signup to the Zero to ASIC course here](contact)!
