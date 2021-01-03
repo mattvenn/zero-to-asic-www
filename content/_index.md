@@ -5,4 +5,4 @@ menu: "terminology"
 ---
 
 Want to learn how to make your own custom chips?
-[Signup to the Zero to ASIC course here](contact)!
+[Sign up to the Zero to ASIC course here](contact)!
