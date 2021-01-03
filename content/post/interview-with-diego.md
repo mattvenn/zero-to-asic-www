@@ -1,5 +1,5 @@
 ---
-title: "Interview With Diego"
+title: "Interview With Diego Hernando"
 date: 2021-01-03T18:06:26+01:00
 featured_image: "/analog_simulation.png"
 tags: ["interviews", "videos"]

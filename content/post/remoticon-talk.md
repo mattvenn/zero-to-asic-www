@@ -12,4 +12,4 @@ I recently presented a demo/presentation for [Hackaday's #remoticon](https://hac
 * [slides from the talk](http://bit.ly/0-ASIC-slides)
 * [presentation tools](https://github.com/mattvenn/remoticon-presentation-tools)
 
-[![Zero to ASIC talk](/zerotoasic-talk.png)](https://www.twitch.tv/videos/796434894)
+{{< youtube lq2BpWwcyQM >}}
