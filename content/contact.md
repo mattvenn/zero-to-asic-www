@@ -1,8 +1,6 @@
 ---
 title: Sign up
 featured_image: "magic.png"
-omit_header_text: true
-description: Sign up to the course
 type: page
 menu: main
 ---

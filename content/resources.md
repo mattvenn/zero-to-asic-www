@@ -1,6 +1,5 @@
 ---
 title: Resources
-description: Resources
 type: page
 menu: main
 featured_image: '/die.jpg'
