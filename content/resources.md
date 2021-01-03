@@ -2,7 +2,7 @@
 title: Resources
 type: page
 menu: main
-featured_image: '/die.jpg'
+featured_image: "tapeout.png"
 ---
 
 # Talks

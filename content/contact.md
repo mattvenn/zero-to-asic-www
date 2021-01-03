@@ -1,6 +1,6 @@
 ---
 title: Sign up
-featured_image: "magic.png"
+featured_image: '/die.jpg'
 type: page
 menu: main
 ---
