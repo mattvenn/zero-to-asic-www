@@ -3,6 +3,10 @@ baseURL = "https://www.zerotoasic.com/"
 languageCode = "en-us"
 title = "Zero to ASIC"
 theme = "ananke"
+
+[params]
+  site_logo = "/zero-to-asic-logo-white-transp.png"
+
 [menu]
 
 [[menu.main]]
