@@ -23,6 +23,7 @@ featured_image: "tapeout.png"
 
 # Courses
 
+* [My course](/contact)
 * [Kunal’s udemy courses](https://www.udemy.com/course/vlsi-academy-custom-layout/)
 
 # Books
