@@ -1,5 +1,5 @@
 ---
-title: "Zero to ASIC"
+title: "Zero to ASIC Course"
 featured_image: '/magic.png'
 menu: "terminology"
 ---

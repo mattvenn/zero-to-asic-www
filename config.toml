@@ -1,7 +1,7 @@
 googleAnalytics = "G-X1QPZ4TM5C"
-baseURL = "https://www.zerotoasic.com/"
+baseURL = "https://www.zerotoasiccourse.com/"
 languageCode = "en-us"
-title = "Zero to ASIC"
+title = "Zero to ASIC Course"
 theme = "ananke"
 
 [params]
