@@ -11,7 +11,7 @@ Sign up to the newsletter to keep up to date with all things Zero to ASIC and to
 
 # 0 to ASIC course
 
-{{< youtube 50kPORZlFzU >}}
+{{< youtube IHUfitXjJmE >}}
 
 Design and fabricate your own [ASIC](/terminology/asic)! Thanks to the new Open Source [Process Development Kit](/terminology/pdk) from Google and Skywater along with the latest Open Source ASIC tools from [Efabless](https://efabless.com/).
 
@@ -86,7 +86,7 @@ The labs are split up into the following projects, although if you already have 
 
 ## Project 2.2: Frequency counter
 
-* Build a 4 digit seven segment driver.
+* Build a 2 digit seven segment driver.
 * Debounce a digital input.
 * Combine them both with a clock and a register to make a frequency counter.
 
