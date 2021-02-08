@@ -23,7 +23,7 @@ This workshop will allow the opportunity for people to experience creating their
 
 ## Format
 
-* 7 hands-on projects, each with video and text guides.
+* 10 hands-on projects, supported with over 6 hours of and text guides.
 * 6 weeks support via discord server and weekly office hours.
 * Asynchronous - do in your own time.
 * A PCB will be optionally available to buy with ASIC pre-soldered for you - see [FAQ](#faq).
@@ -34,6 +34,7 @@ This workshop will allow the opportunity for people to experience creating their
 
 * Basic Linux command line experience helpful.
 * Some Linux exposure helpful.
+* Some programming experience probably helpful.
 
 ## Cost
 
@@ -86,9 +87,10 @@ The labs are split up into the following projects, although if you already have 
 
 ## Project 2.2: Frequency counter
 
+* Make an edge detector for an incoming digital signal.
 * Build a 2 digit seven segment driver.
-* Debounce a digital input.
-* Combine them both with a clock and a register to make a frequency counter.
+* Count edges in a fixed number of clock cycles and format to decimal.
+* Use a state machine to sequence the conversion from binary to decimal.
 
 # Part 3: Verification
 
@@ -100,8 +102,14 @@ We will take a quick look at Formal Verification and see how to use it to prove 
 
 ## Project 3.1: prove your design is safe
 
-* Add a feature to one of your projects so that when reset is active the outputs are low.
-* Use formal verification to prove it.
+* Write a cover statement to show the timer starting and ending.
+* Write some assertions to prove the timer works as designed.
+
+## Project 3.2: 
+
+* Put the RGB mixer design inside the project wrapper.
+* Write some assertions that prove the design is safe in a multi project environment.
+* Run the formal tools to make the proof.
 
 # Part 4: OpenLane
 
@@ -113,12 +121,18 @@ OpenLANE is an automated set of tools to turn a digital design into the files ne
 * Layout vs Schematic (LVS)
 * Basic configuration setting.
 
-## Project 4.1: harden your design
+## Project 4.1: harden an example design
 
-* Setup OpenLane on your computer.
-* Configure the config file.
-* Run the flow.
-* Inspect the results and check the design fits within your allotted area.
+* Choose an example design from the OpenLANE.
+* Read the config and check the documentation.
+* Run the tools and inspect t
+
+## Project 4.2: harden your design
+
+* Use OpenLane to create the GDS files for your own design
+* Learn how to resolve some basic errors
+* Learn how to use the design exploration tools to help find the best results
+* Make adjustments to your config for either personal or group submission.
 
 ## Part 5: Google/Skywater/Efabless shuttle
 
@@ -136,11 +150,18 @@ You will learn:
 * How to simulate it, including your own design.
 * How to fulfil the application process and make your own application should you wish.
 
-## Project 5.1: Prepare a Shuttle submission for your own design
+## Project 5.1: Simulate your design inside Caravel
 
-* Integrate your previously hardened project into the Caravel design.
-* Make sure it passes pre-check requirements.
-* Make the application using efabless’s site.
+* Run Caravel’s example project’s test.
+* Add your design to Caravel: design files, SoC firmware, testbench.
+* Simulate your design within Caravel.
+
+## Project 5.2: Aboard Caravel!
+
+* Get your design’s GDS files in place.
+* Build the final GDS for Caravel.
+* Run the checker script.
+* Group vs Personal submission.
 
 # FAQ
 
@@ -177,7 +198,5 @@ For simple and small designs like the ones I include in the course, you can use 
 Q. Refunds?
 
 Attendees can receive refunds up to 7 days before the event start date.
-
-In the case that there are not enough participants, the course may be cancelled and a full refund given.
 
 {{< mail-chimp >}}
