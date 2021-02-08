@@ -100,18 +100,18 @@ We will take a quick look at Formal Verification and see how to use it to prove 
 * Assumptions and assertions.
 * How to use the Open Source Formal Verification tools.
 
-## Project 3.1: prove your design is safe
+## Project 3.1: Prove your design is safe
 
 * Write a cover statement to show the timer starting and ending.
 * Write some assertions to prove the timer works as designed.
 
-## Project 3.2: 
+## Project 3.2: Prove the project wrapper is safe
 
 * Put the RGB mixer design inside the project wrapper.
 * Write some assertions that prove the design is safe in a multi project environment.
 * Run the formal tools to make the proof.
 
-# Part 4: OpenLane
+# Part 4: OpenLANE
 
 OpenLANE is an automated set of tools to turn a digital design into the files needed for creating an ASIC. It is automated but it needs to be configured correctly to get usable results. We will cover:
 
