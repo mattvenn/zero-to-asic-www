@@ -23,7 +23,7 @@ This workshop will allow the opportunity for people to experience creating their
 
 ## Format
 
-* 10 hands-on projects, supported with over 6 hours of and text guides.
+* 10 hands-on projects, supported with text guides and over 6 hours of videos.
 * 6 weeks support via discord server and weekly office hours.
 * Asynchronous - do in your own time.
 * A PCB will be optionally available to buy with ASIC pre-soldered for you - see [FAQ](#faq).
