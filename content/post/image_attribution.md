@@ -1,8 +1,8 @@
 ---
 title: "Image Attribution"
-date: 2021-02-28T14:57:29+01:00
+date: 2021-01-01T14:57:29+01:00
 tags: []
-featured_image: ""
+featured_image: "/montage.jpg"
 description: ""
 ---
 
