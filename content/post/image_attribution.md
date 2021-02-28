@@ -6,6 +6,8 @@ featured_image: ""
 description: ""
 ---
 
+Image attributions for images used on this website.
+
 ![Antenna rule](/antenna-rule.png)
 Image from [Mohamed Shalan](https://www.youtube.com/watch?v=Vhyv0eq_mLU)
 
