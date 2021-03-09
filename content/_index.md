@@ -1,6 +1,6 @@
 ---
 title: "Zero to ASIC Course"
-featured_image: '/magic.png'
+featured_image: '/Fairchild-UA714HC.jpg'
 menu: "terminology"
 ---
 
