@@ -17,28 +17,26 @@ Design and fabricate your own [ASIC](/terminology/asic)! Thanks to the new Open 
 
 GCC revolutionised compiling, Linux revolutionised computing. Arduino revolutionised microcontrollers. RISCV is revolutionising ISAs. The next step is Open Source Silicon. 
 
-This workshop will allow the opportunity for people to experience creating their own microchips, using free and Open Source tools. We will concentrate on digital design.
+This workshop will give you the experience creating your own microchip, using free and Open Source tools. 
+
+We will concentrate on digital design.
 
 # Overview
 
 ## Format
 
 * 10 hands-on projects, supported with text guides and over 6 hours of videos.
-* 6 weeks support via discord server and weekly office hours.
+* 6 weeks support via discord server and office hours.
 * Asynchronous - do in your own time.
 * A PCB will be optionally available to buy with ASIC pre-soldered for you - see [FAQ](#faq).
 * High resolution set of digital images of the decapped ASIC - see [FAQ](#faq).
+* Access to the course materials for the lifetime of the course.
 * Course completion certificate.
 
 ## Prerequisites
 
 * Basic Linux command line experience helpful.
-* Some Linux exposure helpful.
-* Some programming experience probably helpful.
-
-## Cost
-
-$500.
+* Some programming experience helpful.
 
 # Part 1: MOSFETs and the Skywater130 standard cells
 
@@ -51,8 +49,7 @@ MOSFETs are the building blocks of the chips we will be learning how to make. Wh
 ## Project 1.1: Choose a standard cell and simulate it
 
 * Get an overview of what the standard cells are.
-* Choose your fighter!
-* Simulate the cell and show it does what it should.
+* Choose your favourite cell, simulate it and show it does what it should.
 * Measure how fast it can propagate signals from input to output.
 
 ## Project 1.2: Draw a mosfet in magic
@@ -173,23 +170,29 @@ If the application doesn’t make it onto the shuttle, then that also means we d
 
 Q. How much will the PCB be?
 
-If we are successful and get on the shuttle, then I will organise mounting and posting a PCB with a sample ASIC to people who want one. This will cost $50 + $15 postage and packing.
+If we are successful and get on the shuttle, then I will organise mounting and posting a PCB with a sample ASIC to people who want one. This will cost around $50 + $15 postage and packing.
 
 Q. How big can I make my custom project?
 
-You will have at least 300 x 300 um which is quite a lot of space for a small digital design. If you need bigger then you can separately apply to the Google/Skywater shuttle.
+You will have at least 300 x 300 um which is quite a lot of space for a small digital design. If you need bigger then you can make an individual application to Efabless.
 
 Q. Can I team up with other course participants and get more space?
 
-Yes, that’s fine.
+Maybe, it's easier for me if all the projects are the same size with the same pinout.
 
 Q. How long does the whole course take to complete?
 
-It depends on your existing level of experience and how deep you want to go on your own project. I would say between 20 and 100 hours.
+It depends on your existing level of experience and how deep you want to go on your own project. Most people complete each section in 4 hours, so about 20 hours for coursework. 
+Then you will need some amount of time to prepare your own project.
 
 Q. Is there a time limit to complete the course?
 
 You can take as long as you want with the course materials, but I will only be able to support you on discord or office hours for the 6 week length of the course.
+
+Q. When do I need to submit my final design?
+
+It depends on the next shuttle. As we don't know this in advance I will check with you at the end of the course. If you want to submit to the group project I will give you a deadline of 1 month
+before the shuttle closing date to make sure I have enough time to aggregate all the designs into a single submissions.
 
 Q. Do I need an FPGA to develop my design?
 

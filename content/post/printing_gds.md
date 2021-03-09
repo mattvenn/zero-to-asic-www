@@ -17,11 +17,14 @@ Here's a photo of the print (I know, how meta) of 1:
 
 ![caravel photo](/caravel_photo.jpg)
 
-And here's number 2:
+Number 2:
 
 ![macro photo](/macro_photo.jpg)
 
-I think I've got number 3 now as well, but I need to visit the printer again. 
+And number 3:
+
+![macro photo](/standard_cell_photo.jpg)
+
 You can check my layout property files that define colours and layers here: https://github.com/mattvenn/klayout_properties
 
 And I made a video showing how to use KLayout and how to export the PNG files:
