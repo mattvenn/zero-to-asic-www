@@ -28,7 +28,7 @@ My work situation had just changed and I was thinking that instead of looking fo
 
 October came and although it was sad not to be at a live conference I still had a blast delivering the [Zero to ASIC](/post/remoticon-talk) demos and presentation. About 100 people signed up for a course over the next few weeks and so I decided to go for it.
 
-November was the date for submitting our designs to the shuttle so I was super busy with getting that working. Not only my own designs, but 5 from some interested collaborators, and then working out a way to combine them all into one chip.
+November was the date for submitting our designs to the shuttle so I was super busy with getting that working. I had to get 3 of my own designs ready, along with another 5 from some interested collaborators, at the same time working out a way to combine them all into one chip.
 
 Not a great time to get COVID19, but luckily not severely. I was out of action for about 5 days, and the rest of my quarantine period was spent fixing issues on the shuttle application, [interviewing people](/tags/interviews) and creating a video introduction to the course. 
 
