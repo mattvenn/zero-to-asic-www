@@ -5,10 +5,13 @@ menu: main
 featured_image: "tapeout.png"
 ---
 
-# Talks
+# Talks and interviews
 
 * [0 to ASIC #remoticon talk on youtube](https://youtu.be/ILZ6fDHZ_eo) and [slides](http://bit.ly/0-ASIC-slides)
 * [FOSSi foundation dialup talks](https://www.youtube.com/playlist?list=PLUg3wIOWD8yoZCg9XpFSgEgljx6MSdm9L)
+* [Zero to ASIC course interviews on youtube](https://youtube.com/playlist?list=PLyynFETmdQDS3hguItPHrRVYPpRo6mkVh)
+* [Zero to ASIC course interviews podcast](https://www.podcasts.com/zero-to-asic-course)
+
 
 # SkyWater/Google discussion & announcements
 
@@ -25,6 +28,7 @@ featured_image: "tapeout.png"
 
 * [My course](/contact)
 * [Kunal’s udemy courses](https://www.udemy.com/course/vlsi-academy-custom-layout/)
+* [OpenLANE workshop by Grant Brown](https://gitlab.com/gab13c/openlane-workshop)
 
 # Books
 
