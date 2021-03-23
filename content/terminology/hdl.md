@@ -7,7 +7,7 @@ featured_image: "/hdl.png"
 A Hardware Description Language is used to... describe hardware!
 So instead of drawing out an [inverter](/post/inverter) using a tool like [Magic](/terminology/magic) we can write a line like this:
 
-    input = !output;
+    output = !input;
 
 Which describes what an inverter does. The ! means invert.
 

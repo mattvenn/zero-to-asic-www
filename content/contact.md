@@ -9,7 +9,7 @@ Sign up to the newsletter to keep up to date with all things Zero to ASIC and to
 
 {{< mail-chimp >}}
 
-# 0 to ASIC course
+# Zero to ASIC course
 
 {{< youtube IHUfitXjJmE >}}
 
@@ -20,6 +20,11 @@ GCC revolutionised compiling, Linux revolutionised computing. Arduino revolution
 This workshop will give you the experience creating your own microchip, using free and Open Source tools. 
 
 We will concentrate on digital design.
+
+# Cost
+
+* $500 standard ticket includes 1 hour of office hours
+* $800 pro ticket includes 4 hours of office hours
 
 # Overview
 

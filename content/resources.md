@@ -5,9 +5,13 @@ menu: main
 featured_image: "tapeout.png"
 ---
 
-# Talks
+# My Talks
 
 * [0 to ASIC #remoticon talk on youtube](https://youtu.be/ILZ6fDHZ_eo) and [slides](http://bit.ly/0-ASIC-slides)
+* [Zero to ASIC emBO++ talk slides](https://docs.google.com/presentation/d/1Brn4BtYtRsc6_ee_7XgPvYyOTiCuho2Z3MEdSJuPr0Y/edit?usp=sharing)
+
+# FOSSi Dialup
+
 * [FOSSi foundation dialup talks](https://www.youtube.com/playlist?list=PLUg3wIOWD8yoZCg9XpFSgEgljx6MSdm9L)
 
 # SkyWater/Google discussion & announcements
