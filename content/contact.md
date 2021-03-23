@@ -21,11 +21,6 @@ This workshop will give you the experience creating your own microchip, using fr
 
 We will concentrate on digital design.
 
-# Cost
-
-* $500 standard ticket includes 1 hour of office hours
-* $800 pro ticket includes 4 hours of office hours
-
 # Overview
 
 ## Format
@@ -42,6 +37,11 @@ We will concentrate on digital design.
 
 * Basic Linux command line experience helpful.
 * Some programming experience helpful.
+
+## Cost
+
+* $500 standard ticket includes 1 hour of office hours
+* $800 pro ticket includes 4 hours of office hours
 
 # Part 1: MOSFETs and the Skywater130 standard cells
 
