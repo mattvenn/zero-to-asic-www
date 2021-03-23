@@ -1,6 +1,6 @@
 ---
-title: "Interview"
-featured_image: '/die-slicing.jpg'
+title: "Interviews"
+featured_image: '/thomas-parry.jpg'
 ---
 
 Interviews with people in the Open Source silicon world.
