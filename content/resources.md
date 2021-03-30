@@ -22,13 +22,16 @@ featured_image: "tapeout.png"
 
 # Tools
 
-* [Openlane](https://github.com/efabless/openlane)
+* [Openlane](https://github.com/efabless/openlane) & [Documentation](https://openlane-docs.readthedocs.io/en/rtd-develop/)
 * [Magic](http://opencircuitdesign.com/magic/)
+* [KLayout](https://www.klayout.de/)
+* [Open Source FPGA toolchain](https://github.com/YosysHQ/fpga-toolchain)
 
 # Courses
 
 * [My course](/contact)
 * [Kunal’s udemy courses](https://www.udemy.com/course/vlsi-academy-custom-layout/)
+* [Grant Brown's OpenLANE course](https://gitlab.com/gab13c/openlane-workshop)
 
 # Books
 
