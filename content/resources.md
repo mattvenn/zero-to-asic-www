@@ -9,6 +9,7 @@ featured_image: "tapeout.png"
 
 * [0 to ASIC #remoticon talk on youtube](https://youtu.be/ILZ6fDHZ_eo) and [slides](http://bit.ly/0-ASIC-slides)
 * [Zero to ASIC emBO++ talk slides](https://docs.google.com/presentation/d/1Brn4BtYtRsc6_ee_7XgPvYyOTiCuho2Z3MEdSJuPr0Y/edit?usp=sharing)
+* [Zero to ASIC DC11332 slides](https://docs.google.com/presentation/d/1FBDEz1bazVJ_pxfsQL5tvQJnu_2ILjnXKlUb_23ehOM/edit?usp=sharing)
 
 # FOSSi Dialup
 
