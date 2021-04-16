@@ -23,7 +23,8 @@ featured_image: "tapeout.png"
 
 # Tools
 
-* [Openlane](https://github.com/efabless/openlane) & [Documentation](https://openlane-docs.readthedocs.io/en/rtd-develop/)
+* [OpenLANE](https://github.com/efabless/openlane) & [Documentation](https://openlane-docs.readthedocs.io/en/rtd-develop/)
+* [OpenLANE summary tool](https://github.com/mattvenn/openlane_summary) helps to explore the OpenLANE output files.
 * [Magic](http://opencircuitdesign.com/magic/)
 * [KLayout](https://www.klayout.de/)
 * [Open Source FPGA toolchain](https://github.com/YosysHQ/fpga-toolchain)
