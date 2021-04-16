@@ -13,7 +13,7 @@ Sign up to the newsletter to keep up to date with all things Zero to ASIC and to
 
 {{< youtube IHUfitXjJmE >}}
 
-Design and fabricate your own [ASIC](/terminology/asic)! Thanks to the new Open Source [Process Development Kit](/terminology/pdk) from Google and Skywater along with the latest Open Source ASIC tools from [Efabless](https://efabless.com/).
+Design and fabricate your own [ASIC](/terminology/asic)! Thanks to the new Open Source [Process Development Kit](/terminology/pdk) from Google and Skywater along with the OpenLANE ASIC tools from [Efabless](https://efabless.com/).
 
 GCC revolutionised compiling, Linux revolutionised computing. Arduino revolutionised microcontrollers. RISCV is revolutionising ISAs. The next step is Open Source Silicon. 
 
