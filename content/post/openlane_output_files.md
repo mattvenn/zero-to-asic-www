@@ -16,12 +16,15 @@ Thanks Amr and Ahmed for helping me with this!
 
 Note that newer versions of OpenLANE have started numbering the filenames so I will update the spreadsheet in the future to reflect this.
 
+# OpenLANE summary tool
+
 I've also made a summary tool: https://github.com/mattvenn/openlane_summary
 
 This allows you to easily:
 
 * browse and pick a specific results directory
-* get summary of violations
+* get a summary of violations
+* get a summary of antenna issues
 * show usage of standard cells
 * easily view the various stages of the OpenLANE ASIC flow: floorplanning, power distribution, placement and the final GDS.
 

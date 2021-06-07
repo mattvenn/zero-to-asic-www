@@ -57,6 +57,8 @@ If the value exceeds the ratio then it's a violation. This is shown by an asteri
 
 So in the report above we can see we have an antenna violation on met1 as the PAR value of 400.02 exceeds the ratio of 400.
 
+## Ignoring antenna violations
+
 On the skywater slack, Tim Edwards recently spoke about this:
 
 > The general principle here is that antenna violations will give you a yield hit---that's something to worry about on a production run because it will affect profit margins.  But for a test chip on an MPW run, you could in principle have a yield loss as high as 10% and never notice it.  So then it comes down mostly to personal choice.  If the antenna violation is in a circuit that you think people will re-use as-is on other projects, then it would be in your best interest to knock the antenna violations down to zero.  But it is most likely that the antenna violations occur in (1) a synthesized block which would most likely be resynthesized if re-used in another project, or (2) a top level layout which would necessarily be re-done for another project.  That's the thinking behind my guidance.
@@ -76,3 +78,8 @@ You can also try a different insertion strategy. This configuration variable is 
     DIODE_INSERTION_STRATEGY (default is 3)
 
 You can find the definition here in the [OpenLANE docs](https://openlane-docs.readthedocs.io/en/rtd-develop/configuration/README.html).
+
+## OpenLANE summary tool
+
+The [OpenLANE summary tools](/post/openlane_output_files) can list antenna violations with the --antenna flag
+
