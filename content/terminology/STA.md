@@ -22,7 +22,7 @@ The required timing is set in the OpenLane config file. By default its 10ns, whi
 
 To validate hold timing, OpenSTA does a 'min' timing analysis. Using the most optimisic timing values, how fast can new data arrive at the flip-flop after it receives a clock?
 
-This report below is extracted from reports/synthesis/opensta.min_max.rpt:
+The report below is extracted from reports/synthesis/2-opensta.min_max.rpt which is created right after the synthesis step.
 
 The report shows the shortest data path and sums the data arrival time (0.32ns). The data arrival time has to be more than the hold time (-0.02ns - yes hold times can be negative!). As 0.32ns > -0.02ns we pass the hold requirements.
 
@@ -99,4 +99,9 @@ We need the data to arrive before the setup time: 6.48ns < 9.82ns. So in this ca
     ---------------------------------------------------------
                3.34   slack (MET)
 
+# Different reports
 
+There are two calls to OpenSTA during a typical OpenLANE run:
+
+* In the synthesis exploration loop. Here the results can be used to iterate over different synthesis options to help meet timing requirements.
+* After extraction. This is the most accurate timing report as it is done on the finished layout. This file is called 27-opensta_spef.min_max.rpt (numbering can change depending on OpenLANE setup).
