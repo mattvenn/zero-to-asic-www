@@ -21,3 +21,5 @@ The most fundamental steps are:
 * [Floor planning](/terminology/floorplan)
 * [Place and Route](/terminology/place_and_route)
 * sign off: [Layout vs Schematic](/terminology/lvs), [Design Rule Check](/terminology/drc), [Static Timing Analysis](/terminology/sta)
+
+To see more about OpenLANE's output files - [check this article](posts/openlane_output_files)

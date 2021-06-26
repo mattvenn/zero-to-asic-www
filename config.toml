@@ -20,3 +20,9 @@ identifier = "Articles"
 name = "Articles"
 url = "/post"
 weight = 10
+
+[[menu.main]]
+identifier = "Interviews"
+name = "Interviews"
+url = "/interviews"
+weight = 10

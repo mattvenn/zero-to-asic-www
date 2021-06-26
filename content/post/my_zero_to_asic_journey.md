@@ -8,7 +8,7 @@ Almost exactly a year ago in March 2020 I started getting interested in Open Sou
 
 I began by investigating [QFlow](http://opencircuitdesign.com/qflow/). The [standard cells](/terminology/standardcell) used by QFlow were from Oklahoma State University (OSU).
 
-By May I was getting a few results out of QFlow and I was curious to discover how digital logic actually works on silicon. I experimented with [Magic](/terminology/magic) and managed to draw and simulate inverter after taking one of [Kunal Ghosh's VLSI courses](https://www.vlsisystemdesign.com/basic_courses/). 
+By May I was getting a few results out of QFlow and I was curious to discover how digital logic actually works on silicon. I experimented with [Magic](/terminology/magic) and managed to draw and simulate an inverter after taking one of [Kunal Ghosh's VLSI courses](https://www.vlsisystemdesign.com/basic_courses/). 
 
 [![inverter tweet](/inverter_tweet.png)](https://twitter.com/matthewvenn/status/1274728518216306690)
 

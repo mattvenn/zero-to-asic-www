@@ -5,9 +5,14 @@ menu: main
 featured_image: "tapeout.png"
 ---
 
-# Talks and interviews
+# My Talks
 
-* [0 to ASIC #remoticon talk on youtube](https://youtu.be/ILZ6fDHZ_eo) and [slides](http://bit.ly/0-ASIC-slides)
+* [Zero to ASIC Hackaday #remoticon talk on youtube](https://youtu.be/ILZ6fDHZ_eo) and [slides](http://bit.ly/0-ASIC-slides)
+* [Zero to ASIC emBO++ talk slides](https://docs.google.com/presentation/d/1Brn4BtYtRsc6_ee_7XgPvYyOTiCuho2Z3MEdSJuPr0Y/edit?usp=sharing)
+* [Zero to ASIC DC11332 slides](https://docs.google.com/presentation/d/1FBDEz1bazVJ_pxfsQL5tvQJnu_2ILjnXKlUb_23ehOM/edit?usp=sharing)
+
+# FOSSi Dialup
+
 * [FOSSi foundation dialup talks](https://www.youtube.com/playlist?list=PLUg3wIOWD8yoZCg9XpFSgEgljx6MSdm9L)
 * [Zero to ASIC course interviews on youtube](https://youtube.com/playlist?list=PLyynFETmdQDS3hguItPHrRVYPpRo6mkVh)
 * [Zero to ASIC course interviews podcast](https://www.podcasts.com/zero-to-asic-course)
@@ -21,14 +26,17 @@ featured_image: "tapeout.png"
 
 # Tools
 
-* [Openlane](https://github.com/efabless/openlane)
+* [OpenLANE](https://github.com/efabless/openlane) & [Documentation](https://openlane-docs.readthedocs.io/en/rtd-develop/)
+* [OpenLANE summary tool](https://github.com/mattvenn/openlane_summary) helps to explore the OpenLANE output files.
 * [Magic](http://opencircuitdesign.com/magic/)
+* [KLayout](https://www.klayout.de/)
+* [Open Source FPGA toolchain](https://github.com/YosysHQ/fpga-toolchain)
 
 # Courses
 
 * [My course](/contact)
 * [Kunal’s udemy courses](https://www.udemy.com/course/vlsi-academy-custom-layout/)
-* [OpenLANE workshop by Grant Brown](https://gitlab.com/gab13c/openlane-workshop)
+* [Grant Brown's OpenLANE course](https://gitlab.com/gab13c/openlane-workshop)
 
 # Books
 

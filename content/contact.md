@@ -9,23 +9,25 @@ Sign up to the newsletter to keep up to date with all things Zero to ASIC and to
 
 {{< mail-chimp >}}
 
-# 0 to ASIC course
+# Zero to ASIC course
 
 {{< youtube IHUfitXjJmE >}}
 
-Design and fabricate your own [ASIC](/terminology/asic)! Thanks to the new Open Source [Process Development Kit](/terminology/pdk) from Google and Skywater along with the latest Open Source ASIC tools from [Efabless](https://efabless.com/).
+Design and fabricate your own [ASIC](/terminology/asic)! Thanks to the new Open Source [Process Development Kit](/terminology/pdk) from Google and Skywater along with the OpenLANE ASIC tools from [Efabless](https://efabless.com/).
 
 GCC revolutionised compiling, Linux revolutionised computing. Arduino revolutionised microcontrollers. RISCV is revolutionising ISAs. The next step is Open Source Silicon. 
 
-This workshop will give you the experience creating your own microchip, using free and Open Source tools. 
-
-We will concentrate on digital design.
+This course will give you the experience creating your own microchip, using free and Open Source tools. 
 
 # Overview
 
+* We will concentrate on digital design.
+* A virtual machine is available or you can install the tools manually. 
+* The course has now been updated to match the MPW2 submission process.
+
 ## Format
 
-* 10 hands-on projects, supported with text guides and over 6 hours of videos.
+* 11 hands-on projects, supported with text guides and over 6 hours of videos.
 * 6 weeks support via discord server and office hours.
 * Asynchronous - do in your own time.
 * A PCB will be optionally available to buy with ASIC pre-soldered for you - see [FAQ](#faq).
@@ -37,6 +39,11 @@ We will concentrate on digital design.
 
 * Basic Linux command line experience helpful.
 * Some programming experience helpful.
+
+## Cost
+
+* $550 standard ticket includes 1 hour of office hours
+* $850 pro ticket includes 4 hours of office hours
 
 # Part 1: MOSFETs and the Skywater130 standard cells
 
@@ -153,12 +160,17 @@ You will learn:
 * Add your design to Caravel: design files, SoC firmware, testbench.
 * Simulate your design within Caravel.
 
-## Project 5.2: Aboard Caravel!
+## Project 5.2: Making a personal submission to Efabless
 
 * Get your design’s GDS files in place.
 * Build the final GDS for Caravel.
 * Run the checker script.
-* Group vs Personal submission.
+
+## Project 5.3: Making a group submission
+
+* Wrap your small design ready for aggregating into the group submission.
+* How to prepare your repository.
+* Submit your design.
 
 # FAQ
 
