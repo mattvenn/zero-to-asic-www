@@ -35,3 +35,9 @@ It wasn't all smooth sailing, we had a few last minute changes including adding 
 I put together a video to describe the process:
 
 {{< youtube DdKgbq5KGqw >}}
+
+# Awesome blender renders!
+
+Course participant Maximo put together some lovely images here by converting the GDS to STL and then rendering inside blender.
+
+{{< tweet 1408126991459553284 >}}

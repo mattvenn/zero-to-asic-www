@@ -1,7 +1,7 @@
 ---
 title: "Zero to ASIC Course"
-featured_image: '/Fairchild-UA714HC.jpg'
-menu: "terminology"
+featured_image: 'mpw2_li_m1_m2_m3_actives_small.jpg'
+image_pos: 0px -1300px
 ---
 
 Want to learn how to make your own custom chips?
