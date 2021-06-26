@@ -1,6 +1,7 @@
 ---
 title: Sign up
-featured_image: '/die.jpg'
+featured_image: 'mpw2_li_m1_m2_m3_actives_small.jpg'
+image_pos: 0px -1600px
 type: page
 menu: main
 ---
@@ -9,7 +10,7 @@ Sign up to the newsletter to keep up to date with all things Zero to ASIC and to
 
 {{< mail-chimp >}}
 
-# Zero to ASIC course
+# Want to learn to make your own chips?
 
 {{< youtube IHUfitXjJmE >}}
 
@@ -19,7 +20,11 @@ GCC revolutionised compiling, Linux revolutionised computing. Arduino revolution
 
 This course will give you the experience creating your own microchip, using free and Open Source tools. 
 
-# Overview
+# What do people say about the course?
+
+{{< youtube yLdxzL7syzU >}}
+
+# Course  Overview
 
 * We will concentrate on digital design.
 * A virtual machine is available or you can install the tools manually. 
