@@ -13,6 +13,7 @@ The biggest changes are:
     * smaller repo size includes a 'Caravel Lite' submodule
     * new IRQ ports
     * logic analyser registers renamed
+* An alternative analogue specific 'Caravan' harness
 * The submission process has been streamlined to make it faster and easier to submit
 
 You can browse the current applications here: https://efabless.com/open_shuttle_program/2.
@@ -26,6 +27,6 @@ You can see the walkthrough video from Efabless here:
 
 {{< youtube jBrBqhVNgDo >}}
 
-And they have also announced a paid version of the service!
+And they have also announced a paid version of the service! $10k for 250 chips makes for $40 samples!
 
 ![Paid shuttle](/efabless_paid_shuttle.jpg) 
