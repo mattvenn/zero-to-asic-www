@@ -40,7 +40,7 @@ featured_image: "tapeout.png"
 
 # Books
 
-* Books: search ‘introduction to VLSI systems’
+* Books: search ‘introduction to VLSI systems’ by Carver Mead & Lynn Conway. Old but good.
 
 # FPGA
 
