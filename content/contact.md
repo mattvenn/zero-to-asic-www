@@ -1,18 +1,14 @@
 ---
-title: Sign up
+title: Buy a ticket
 featured_image: 'mpw2_li_m1_m2_m3_actives_small.jpg'
-image_pos: 0px -1600px
+image_pos: 0px -1700px
 type: page
 menu: main
 ---
 
-Sign up to the newsletter to keep up to date with all things Zero to ASIC and to get alerted when new tickets are released.
-
-{{< mail-chimp >}}
+{{< youtube IHUfitXjJmE >}}
 
 # Want to learn to make your own chips?
-
-{{< youtube IHUfitXjJmE >}}
 
 Learn to design and fabricate your own [ASIC](/terminology/asic)! Thanks to the new Open Source [Process Development Kit](/terminology/pdk) from Google and Skywater along with the OpenLANE ASIC tools from [Efabless](https://efabless.com/).
 
@@ -20,11 +16,17 @@ GCC revolutionised compiling, Linux revolutionised computing. Arduino revolution
 
 This course will give you the experience creating your own microchip, using free and Open Source tools. 
 
+
+14 people who took the course in the last 6 months have [already submitted designs for MPW2](/post/mpw2-submitted/).
+
+* [$550 standard ticket with 1 hour of office hours](https://buy.stripe.com/7sIdTHedSaKe9NubIJ)
+* [$850 pro ticket with 4 hours of office hours](https://buy.stripe.com/6oE3f3b1GaKe4ta146)
+
 # What do people say about the course?
 
 {{< youtube fjpFWogQl8Y >}}
 
-# Course  Overview
+# Course Overview
 
 * We will concentrate on digital design.
 * A virtual machine is available or you can install the tools manually. 
@@ -33,7 +35,8 @@ This course will give you the experience creating your own microchip, using free
 ## Format
 
 * 11 hands-on projects, supported with text guides and over 6 hours of videos.
-* 6 weeks support via discord server and office hours.
+* Support via discord community server and 1 to 1 office hours.
+* Weekly course hangout call.
 * Asynchronous - do in your own time.
 * A PCB will be optionally available to buy with ASIC pre-soldered for you - see [FAQ](#faq).
 * High resolution set of digital images of the decapped ASIC - see [FAQ](#faq).
@@ -44,11 +47,6 @@ This course will give you the experience creating your own microchip, using free
 
 * Basic Linux command line experience helpful.
 * Some programming experience helpful.
-
-## Cost
-
-* $550 standard ticket includes 1 hour of office hours
-* $850 pro ticket includes 4 hours of office hours
 
 # Part 1: MOSFETs and the Skywater130 standard cells
 
@@ -204,7 +202,7 @@ Then you will need some amount of time to prepare your own project.
 
 Q. Is there a time limit to complete the course?
 
-You can take as long as you want with the course materials, but I will only be able to support you on discord or office hours for the 6 week length of the course.
+You can take as long as you want with the course materials, but your office hours will expire after 6 months.
 
 Q. When do I need to submit my final design?
 
@@ -217,6 +215,4 @@ For simple and small designs like the ones I include in the course, you can use 
 
 Q. Refunds?
 
-Attendees can receive refunds up to 7 days before the event start date.
-
-{{< mail-chimp >}}
+If for any reason you are unhappy with the course you can ask for a refund.

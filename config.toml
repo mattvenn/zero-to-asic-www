@@ -26,3 +26,15 @@ identifier = "Interviews"
 name = "Interviews"
 url = "/interviews"
 weight = 10
+
+[[menu.main]]
+identifier = "Buy a ticket"
+name = "Buy a ticket"
+url = "/contact"
+weight = 1
+
+[[menu.main]]
+identifier = "Newsletter"
+name = "Newsletter"
+url = "/newsletter"
+weight = 2
