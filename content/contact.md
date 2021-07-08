@@ -6,7 +6,7 @@ type: page
 menu: main
 ---
 
-{{< youtube IHUfitXjJmE >}}
+{{< youtube Jf3ltgG5uck >}}
 
 # Want to learn to make your own chips?
 
