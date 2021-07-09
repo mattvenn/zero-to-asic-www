@@ -5,4 +5,4 @@ image_pos: 0px -1150px
 ---
 
 Want to learn how to make your own custom chips?
-[Sign up to the Zero to ASIC course here](contact)!
+[Buy a ticket for the Zero to ASIC course here](contact)!

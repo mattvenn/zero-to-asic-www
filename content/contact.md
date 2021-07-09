@@ -36,8 +36,10 @@ Check your email for onboarding information after your purchase.
 ## Format
 
 * 11 hands-on projects, supported with text guides and over 6 hours of videos.
-* Support via discord community server and 1 to 1 office hours.
-* Weekly course hangout call.
+* Support via:
+    * 1 to 1 office hours (after 3 months, any remaining hours will expire).
+    * discord community server.
+    * weekly course hangout call.
 * Asynchronous - do in your own time.
 * A PCB will be optionally available to buy with ASIC pre-soldered for you - see [FAQ](#faq).
 * High resolution set of digital images of the decapped ASIC - see [FAQ](#faq).
@@ -203,7 +205,7 @@ Then you will need some amount of time to prepare your own project.
 
 Q. Is there a time limit to complete the course?
 
-You can take as long as you want with the course materials, but your office hours will expire after 6 months.
+You can take as long as you want with the course materials, but your office hours will expire after 3 months.
 
 Q. When do I need to submit my final design?
 
