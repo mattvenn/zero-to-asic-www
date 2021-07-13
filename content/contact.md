@@ -26,6 +26,20 @@ This course will give you the experience creating your own microchip, using free
 * Pro ticket with 4 hours of 1-to-1 office hours {{< button "https://buy.stripe.com/8wMg1PedS6tYgbSdQT" "Buy a pro ticket for $850" >}}
 * Standard ticket with 1 hour of 1-to-1 office hours {{< button "https://buy.stripe.com/7sIdTHedSaKe9NubIJ" "Buy a standard ticket for $550" >}}
 
+# Table
+
+| Silicon level                                                                                          | Beryllium level                                                                                        | Arsenic level                                                             |
+|--------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------|
+| All course materials for life of the course                                                            | All course materials for life of the course                                                            | All course materials for life of the course                               |
+| Support via recorded solution videos                                                                   | Support via recorded solution videos                                                                   | Support via recorded solution videos                                      |
+| Support via discord community server                                                                   | Support via discord community server                                                                   | Support via discord community server                                      |
+| Access to course weekly call                                                                           | Access to course weekly call                                                                           | Access to course weekly call                                              |
+| Access to the course group submission - get your open source chip made for real! Max area 300 x 300 um | Access to the course group submission - get your open source chip made for real! Max area 300 x 300 um | Make an application to ChipIgnite - guaranteed chips! Max area 800x800 um |
+| If the application is successful, get 1 chip back.                                                     | If the application is successful, get 3 chips back.                                                    | 50 chips back. Design doesn’t need to be open source.                     |
+|                                                                                                        | 2 hours of 1 on 1 calls with Matt ($250/hr when individually purchased)                                | 4 hours of 1 on 1 calls with Matt                                         |
+|                                                                                                        |                                                                                                        | How to add more value?                                                    |
+| Buy button $650                                                                                        | Buy button $950                                                                                        | Buy Button $4950                                                          |
+
 Check your email for onboarding information after your purchase.
 
 # What do people say about the course?
