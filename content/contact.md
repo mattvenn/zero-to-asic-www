@@ -18,8 +18,13 @@ This course will give you the experience creating your own microchip, using free
 
 14 people who took the course in the last 6 months have [already submitted designs for MPW2](/post/mpw2-submitted/).
 
+<!--
 * Pro ticket with 4 hours of 1-to-1 office hours {{< button "https://buy.stripe.com/test_14k04365BaHSgDe7st" "Buy a pro ticket for $850" >}}
 * Standard ticket with 1 hour of 1-to-1 office hours {{< button "https://buy.stripe.com/test_fZedUTbpVg2caeQ002" "Buy a standard ticket for $550" >}}
+-->
+
+* Pro ticket with 4 hours of 1-to-1 office hours {{< button "https://buy.stripe.com/8wMg1PedS6tYgbSdQT" "Buy a pro ticket for $850" >}}
+* Standard ticket with 1 hour of 1-to-1 office hours {{< button "https://buy.stripe.com/7sIdTHedSaKe9NubIJ" "Buy a standard ticket for $550" >}}
 
 Check your email for onboarding information after your purchase.
 
