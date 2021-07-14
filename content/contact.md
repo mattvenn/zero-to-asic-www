@@ -38,7 +38,7 @@ This course will give you the experience creating your own microchip, using free
 | If the application is successful, get 1 chip back.                                                     | If the application is successful, get 3 chips back.                                                    | 50 chips back. Design doesn’t need to be open source.                     |
 |                                                                                                        | 2 hours of 1 on 1 calls with Matt ($250/hr when individually purchased)                                | 4 hours of 1 on 1 calls with Matt                                         |
 |                                                                                                        |                                                                                                        | How to add more value?                                                    |
-| Buy button $650                                                                                        | Buy button $950                                                                                        | Buy Button $4950                                                          |
+| {{< button "https://buy.stripe.com/" "Buy a pro ticket for $650" >}}                                                                                        | {{< button "https://buy.stripe.com/" "Buy a pro ticket for $950" >}}                                                                                        | {{< button "https://buy.stripe.com/" "Buy a pro ticket for $4950" >}}                                                          |
 
 Check your email for onboarding information after your purchase.
 

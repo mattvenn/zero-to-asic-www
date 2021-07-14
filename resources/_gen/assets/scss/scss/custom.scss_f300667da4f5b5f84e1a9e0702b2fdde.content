@@ -1,0 +1,36 @@
+.button a {
+  font-weight: bold;
+  background-color: #0A0;
+  cursor: pointer;
+  padding: 3px 18px;
+  border: none;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  letter-spacing: .03em;
+  border-color: transparent; }
+
+td {
+  padding: 0 10px 10px;
+  line-height: 1.2em; }
+
+table th {
+  padding: 10px 0;
+  background-color: #ccc; }
+
+table tr:nth-child( odd ) td {
+  background-color: #fafafa; }
+
+table tr:nth-child( even ) td {
+  background-color: #ccc; }
+
+table tr:nth-last-child(1) td {
+  background-color: #fff;
+  padding-top: 10px; }
+
+table td {
+  padding: 5px 10px 5px;
+  line-height: 1.2em; }
+  table td div a {
+    display: flex;
+    text-decoration: none; }
