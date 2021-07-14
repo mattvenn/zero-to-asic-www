@@ -31,7 +31,7 @@ weight = 30
 identifier = "Buy a ticket"
 name = "Buy a ticket"
 url = "/contact"
-weight = 5
+weight = 45
 [menu.main.params]
       class = "button"
 
@@ -39,4 +39,10 @@ weight = 5
 identifier = "Newsletter"
 name = "Newsletter"
 url = "/newsletter"
+weight = 20
+
+[[menu.main]]
+identifier = "Resources"
+name = "Resources"
+url = "/resources"
 weight = 20
