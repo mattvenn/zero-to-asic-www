@@ -13,28 +13,30 @@ theme = "ananke"
 identifier = "Terminology"
 name = "Terminology"
 url = "/terminology"
-weight = 10
+weight = 40
 
 [[menu.main]]
 identifier = "Articles"
 name = "Articles"
 url = "/post"
-weight = 10
+weight = 20
 
 [[menu.main]]
 identifier = "Interviews"
 name = "Interviews"
 url = "/interviews"
-weight = 10
+weight = 30
 
 [[menu.main]]
 identifier = "Buy a ticket"
 name = "Buy a ticket"
 url = "/contact"
-weight = 1
+weight = 5
+[menu.main.params]
+      class = "button"
 
 [[menu.main]]
 identifier = "Newsletter"
 name = "Newsletter"
 url = "/newsletter"
-weight = 2
+weight = 20
