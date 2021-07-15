@@ -6,6 +6,7 @@ theme = "ananke"
 [params]
   site_logo = "/zero-to-asic-logo-white-transp.png"
   favicon = "/zero-to-asic-logo-transp.png"
+  stripe_test = "false"
 
 [menu]
 

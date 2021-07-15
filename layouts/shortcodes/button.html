@@ -4,9 +4,13 @@
 
 </style>
 <div id="sellbutton">
+{{ if eq .Site.Params.stripe_test "true" }}
+    <a href="{{.Get 1}}">
+{{ else }}
     <a href="{{.Get 0}}">
+{{ end }}
     <button class='button'>
-         {{.Get 1}}
+         {{.Get 2}}
     </button>
     </a>
 </div>
