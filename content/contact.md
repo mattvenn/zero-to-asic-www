@@ -18,20 +18,23 @@ This course will give you the experience creating your own microchip, using free
 
 14 people who took the course in the last 6 months have [already submitted designs for MPW2](/post/mpw2-submitted/).
 
-# Ticket options
+# Ticket options {#tickets}
 |                                                                                                   | Silicon           | Boron         | Arsenic |
 |-------------------------------------------------------------------------------------------------  |----------------   |-------------- |----------------   |
 | Access to 6 hours recorded video content & 11 projects                                            | ✅                | ✅                | ✅                |
+| Access to updates of the course material                                                          | ✅                | ✅                | ✅                |
 | Recorded solution videos                                                                          | ✅                | ✅                | ✅                |
 | Access to discord community server                                                                | ✅                | ✅                | ✅                |
 | Access to weekly call                                                                             | ✅                | ✅                | ✅                |
 | Access to the group submission - get your open source chip made for real! Max area 300 x 300 um **[ⓘ](#how-big)**  | ✅                | ✅                | ✅                |
+| Access to the material for the lifetime of the course **[ⓘ](#course-life)**                       | ✅                | ✅                | ✅                |
+| Your ASIC mounted on a PCB breakout board                                                         | $50 + P&P         | ✅                | ✅                |
+| How many chips will you receive                                                                   | 1                 | 3                 | 50                |
 | 1 to 1 office hours support                                                                       | ❌                | 2 hours                 | 4 hours                |
 | Application to ChipIgnite - design doesn't need to be open source. Max area 800 x 800 um          | ❌                | ❌                | ✅                |
 | Guaranteed ASIC manufacture **[ⓘ](#asic-def)**                                                    | ❌                | ❌                | ✅                |
-| How many chips will you receive                                                                   | 1                 | 3                 | 50                |
-| Your ASIC mounted on PCB breakout board                                                           | $50 + P&P         | ✅                | ✅                |
 | Custom PCB design consultancy                                                                     | ❌                | ❌                | ✅                |
+| Team access **[ⓘ](#team-access)**                                                                 | ❌                | ❌                | ✅                |
 | Price | {{< button "https://buy.stripe.com/cN22aZd9O05Af7O8wC" "https://buy.stripe.com/test_fZedUTbpVg2caeQ002" "$650" >}}  | {{< button "https://buy.stripe.com/3cs6rf8Tyf0ucZGfZ3" "https://buy.stripe.com/test_14k04365BaHSgDe7st" "$950" >}}                                  | {{< button "https://buy.stripe.com/6oE7vj7Puf0uf7O28c" "https://buy.stripe.com/test_6oEeYX65B5nyfza8ww" "$4950" >}}                       |
 
 * Check your email for onboarding information after your purchase.
@@ -82,11 +85,15 @@ new projects and optimism for some working silicon!
 * Some programming experience helpful.
 * No hardware or [HDL](/terminology/hdl) experience required!
 
+[Back to top](#tickets)
+
+--- 
+
 # FAQ
 
-### Refunds?
+### Can I get a refund?
 
-If for any reason you are unhappy with the course you can ask for a refund.
+I'm so confident you will love the course, if for any reason you are unhappy you can ask for a refund.
 
 ### Will I definitely get an ASIC with my design on it? {#asic-def}
 
@@ -118,6 +125,18 @@ before the shuttle closing date to make sure I have enough time to aggregate all
 
 For simple and small designs like the ones I include in the course, you can use simulation to check everything is working fine. If you want to make a more complex project, then it’s probably a good idea to test your design on an FPGA.
 
+### What is the life of the course? {#course-life}
+
+For as long as I'm running this course.
+
+### What is team access? {#team-access}
+
+Take the course with 2 colleagues. You will work through the course material as a group and submit a single design between you.
+
 ### Anything else?
 
 [Send your questions here!](/contact-form) 
+
+---
+
+[Back to top](#tickets)
