@@ -59,10 +59,10 @@ new projects and optimism for some working silicon!
 
 # Course Overview
 
+* [Full course details here](/course_content).
 * We will concentrate on digital design.
 * A virtual machine is available or you can install the tools manually. 
 * The course is continually updated for the latest tooling and PDK.
-* [Full course details here](/course_content).
 * Find out more about [Matt's science communication work here](http://sci-com.mattvenn.net).
 
 ## Format
@@ -93,7 +93,17 @@ new projects and optimism for some working silicon!
 
 ### Can I get a refund?
 
-I'm so confident you will love the course, if for any reason you are unhappy you can ask for a refund.
+I'm so confident you will love the course, if for any reason you are unhappy you can ask for a refund within 30 days of purchase.
+
+[Back to top](#tickets)
+
+### How big can I make my custom project? {#how-big}
+
+Your project needs to be 300 x 300 um. See the [MPW2 submission](/post/mpw2-submitted/) for ideas about what is possible in this space.
+If you need bigger then you can make an individual application to Efabless.
+
+[Back to top](#tickets)
+
 
 ### Will I definitely get an ASIC with my design on it? {#asic-def}
 
@@ -102,41 +112,48 @@ To keep the cost of the course reasonable we have to rely on the Google/Skywater
 
 If the application doesn’t make it onto the shuttle, then that also means we don’t get the decapped photos.
 
-### How big can I make my custom project? {#how-big}
-
-Your project needs to be 300 x 300 um. See the [MPW2 submission](/post/mpw2-submitted/) for ideas about what is possible in this space.
-If you need bigger then you can make an individual application to Efabless.
+[Back to top](#tickets)
 
 ### How long does the whole course take to complete?
 
 It depends on your existing level of experience and how deep you want to go on your own project. Most people complete each section in 4 hours, so about 20 hours for coursework. 
 Then you will need some amount of time to prepare your own project.
 
+[Back to top](#tickets)
+
 ### Is there a time limit to complete the course?
 
 You can take as long as you want with the course materials.
+
+[Back to top](#tickets)
 
 ### When do I need to submit my final design?
 
 It depends on the next shuttle. As we don't know this in advance I will announce this through discord and email. If you want to submit to the group project I will give you a deadline of 2 weeks
 before the shuttle closing date to make sure I have enough time to aggregate all the designs into a single submissions.
 
-### Do I need an FPGA to develop my design?
+[Back to top](#tickets)
+
+### Do I need an FPGA to develop my design? {#fpga}
 
 For simple and small designs like the ones I include in the course, you can use simulation to check everything is working fine. If you want to make a more complex project, then it’s probably a good idea to test your design on an FPGA.
+
+[Back to top](#tickets)
 
 ### What is the life of the course? {#course-life}
 
 For as long as I'm running this course.
 
+[Back to top](#tickets)
+
 ### What is team access? {#team-access}
 
 Take the course with 2 colleagues. You will work through the course material as a group and submit a single design between you.
 
+[Back to top](#tickets)
+
 ### Anything else?
 
 [Send your questions here!](/contact-form) 
-
----
 
 [Back to top](#tickets)
