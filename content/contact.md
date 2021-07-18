@@ -2,7 +2,7 @@
 title: Buy a ticket
 description: Learn how to make your own custom chips!
 featured_image: 'maximo_render_3.jpeg'
-image_pos: 0px -100px
+image_pos: 0% +10%
 type: page
 ---
 
@@ -14,7 +14,7 @@ Learn to design and fabricate your own [ASIC](/terminology/asic)! Thanks to the 
 
 GCC revolutionised compiling, Linux revolutionised computing. Arduino revolutionised microcontrollers. RISCV is revolutionising ISAs. The next step is Open Source Silicon. 
 
-This course will give you the experience creating your own microchip, using free and Open Source tools. 
+This course will give you the experience of creating your own microchip, using free and open source tools. 
 
 14 people who took the course in the last 6 months have [already submitted designs for MPW2](/post/mpw2-submitted/).
 

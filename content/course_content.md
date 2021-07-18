@@ -89,7 +89,7 @@ We will take a quick look at [Formal Verification](/terminology/verification) an
 
 * Choose an example design from the OpenLANE.
 * Read the config and check the documentation.
-* Run the tools and inspect t
+* Run the tools and inspect the results.
 
 ## Project 4.2: harden your design
 
