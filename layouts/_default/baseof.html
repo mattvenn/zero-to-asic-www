@@ -21,7 +21,7 @@
     {{ end }}
 
     {{ $styles := resources.Get "scss/custom.scss" | toCSS }}
-    <link rel="stylesheet" href="{{ $styles.Permalink }}" media="screen">
+    <link rel="stylesheet" href="{{ $styles.Permalink }}">
 
     {{ range .Site.Params.custom_css }}
       <link rel="stylesheet" href="{{ relURL (.) }}">
