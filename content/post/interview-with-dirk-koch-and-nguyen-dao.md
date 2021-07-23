@@ -1,5 +1,5 @@
 ---
-title: "Interview With Dirk Koch and Nyugen Dao"
+title: "Interview With Dirk Koch and Nguyen Dao"
 date: 2021-07-23T14:17:19+02:00
 featured_image: fuserisc.png
 ---
@@ -11,7 +11,7 @@ In MPW2 I noticed there were a couple of applications that seemed fairly advance
 
 ![fuserisc](/fuserisc.png)
 
-Dirk & Nyugen kindly allowed me to interview them about:
+Dirk & Nguyen kindly allowed me to interview them about:
 
 * their FABulous eFPGA framework,
 * support for Yosys & NextPNR,
