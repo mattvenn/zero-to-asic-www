@@ -9,7 +9,7 @@ I have previously spoken with [Arya Reais-Parsi](/post/interview-with-arya) abou
 
 In MPW2 I noticed there were a couple of applications that seemed fairly advanced - especially FuseRISC: 2 RISCV processors with embedded FPGA fabric between them.
 
-![fuserisc](/fuserisc.png)
+![fuserisc](/eFPGA_riscv_caravel.png)
 
 Dirk & Nguyen kindly allowed me to interview them about:
 

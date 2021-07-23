@@ -36,6 +36,7 @@ table td {
     text-decoration: none; }
   table td #sellbutton button {
     height: auto !important;
+    min-width: 85px;
     line-height: 1.5em !important; }
 
 #sellbutton .button:hover {
