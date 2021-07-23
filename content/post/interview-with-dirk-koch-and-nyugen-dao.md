@@ -23,3 +23,11 @@ Dirk & Nyugen kindly allowed me to interview them about:
 Enjoy!
 
 {{< youtube 5rpi-c0WuQU >}}
+
+# Resources
+
+* FABulous FPGA framework: https://github.com/FPGA-Research-Manchester/FABulous
+* MPW2 applications: 
+    * Fabric test: https://www.efabless.com/projects/202
+    * FuseRISC: https://efabless.com/projects/134
+
