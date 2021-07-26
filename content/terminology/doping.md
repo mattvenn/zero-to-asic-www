@@ -12,8 +12,8 @@ Silicon is in group 4 of the periodic table. Like Carbon it makes nice solid bon
 
 The elements we typically use are Boron for p-type (positive holes) doping and Phosphoros or Arsenic for n-type (extra electrons) doping.
 
-The Arsenic is the poison in this fun [tweet from @computerfact](https://twitter.com/computerfact/status/722931893256065024):
+The Arsenic is the poison in this fun tweet:
 
-![poisoned sand](/poisoned-sand.png)
+{{< twitter 722931893256065024 >}}
 
 For more information check this [article from technocrazed](https://www.technocrazed.com/2-5-electrons-and-u201cholesu2019u2019)
