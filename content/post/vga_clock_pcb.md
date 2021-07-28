@@ -1,7 +1,7 @@
 ---
 title: "World's first certified open source hardware down to the chip level?"
 date: 2021-07-28T16:26:18+02:00
-featured_image: caravel_bga_escape.png
+featured_image: vga_pcb.png
 ---
 
 I'm very pleased to get [OSHWA certification](https://certification.oshwa.org/es000023.html) for my [ASIC clock](https://www.zerotoasiccourse.com/post/vga_clock/). 
