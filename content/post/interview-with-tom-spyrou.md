@@ -2,6 +2,7 @@
 title: "Interview With Tom Spyrou"
 date: 2021-08-02T14:16:05+02:00
 featured_image: openlane-flow.png
+tags: ["interviews", "videos"]
 ---
 
 Tom Spyrou is a long time EDA developer who has worked at large and small companies.
