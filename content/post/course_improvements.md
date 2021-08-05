@@ -21,7 +21,7 @@ Another improvement is to move away from starting the courses in groups. People 
 * you can start whenever you want,
 * discord channels to support each part of the course rather than each group.
 
-{{< button "/contact#tickets" "/contact#tickets" "Buy a ticket today!" >}}
+{{< button "/contact" "/contact" "Buy a ticket today!" >}}
 
 Thanks [@luisdeilor](https://twitter.com/luisdeilor) and  [@harriskenny](https://twitter.com/harriskenny) for the help in getting this ready. 
 
