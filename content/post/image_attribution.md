@@ -80,6 +80,13 @@ Image from [Mohamed Kassem's FOSSi presentation](https://www.youtube.com/watch?v
 ![Raven](/raven.png)
 Image from [Mohamed Kassem's FOSSi presentation](https://www.youtube.com/watch?v=HvWveK2fZt0)
 
+![Renders](/maximo_render_1.jpeg)
+Images from course participant Maximo Balestrini. 
+
+{{< tweet 1408126991459553284 >}}
+
+{{< tweet 1412801867302805504 >}}
+
 ![RTL](/rtl.png)
 Image from [VLSI Systems by Mead & Conway](https://www.researchgate.net/publication/234388249_Introduction_to_VLSI_systems)
 
