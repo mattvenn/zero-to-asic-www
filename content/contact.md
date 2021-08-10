@@ -41,6 +41,7 @@ This course will give you the experience of creating your own microchip, using f
 * Receipt provided upon purchase for deducting as a business expense.
 * [Contact us](/contact-form) if your business has any special requirements.
 * Secure payment handling by Stripe.
+* Not ready? [Join the mailing list to receive updates and promotional discount codes](/newsletter).
 
 # What do people say about the course?
 
