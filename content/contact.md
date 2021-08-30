@@ -35,7 +35,7 @@ This course will give you the experience of creating your own microchip, using f
 | Guaranteed ASIC manufacture **[ⓘ](#asic-def)**                                                    | ❌                | ❌                | ✅                |
 | Custom PCB design consultancy                                                                     | ❌                | ❌                | ✅                |
 | Team access **[ⓘ](#team-access)**                                                                 | ❌                | ❌                | ✅                |
-| Price | {{< button "/vacation_notice" "/vacation_notice" "Buy for $650" >}}  | {{< button "/vacation_notice" "/vacation_notice" "Buy for $950" >}}                                  | {{< button "/vacation_notice" "/vacation_notice" "Buy for $4950" >}}                       |
+| Price | {{< button "https://buy.stripe.com/cN22aZd9O05Af7O8wC" "https://buy.stripe.com/test_fZedUTbpVg2caeQ002" "Buy for $650" >}}  | {{< button "https://buy.stripe.com/3cs6rf8Tyf0ucZGfZ3" "https://buy.stripe.com/test_14k04365BaHSgDe7st" "Buy for $950" >}}                                  | {{< button "https://buy.stripe.com/6oE7vj7Puf0uf7O28c" "https://buy.stripe.com/test_6oEeYX65B5nyfza8ww" "Buy for $4950" >}}                       |
 
 * Check your email for onboarding information after your purchase.
 * Receipt provided upon purchase for deducting as a business expense.
