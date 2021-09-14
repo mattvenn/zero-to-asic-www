@@ -6,7 +6,7 @@ featured_image: "tapeout.png"
 
 # Talks, Interviews & Podcast
 
-* [Zero to ASIC Hackaday #remoticon talk on](https://youtu.be/ILZ6fDHZ_eo) and [slides](http://bit.ly/0-ASIC-slides)
+* [Zero to ASIC Hackaday #remoticon talk on youtube](https://youtu.be/ILZ6fDHZ_eo) and [slides](http://bit.ly/0-ASIC-slides)
 * [Zero to ASIC emBO++ talk](https://www.youtube.com/watch?v=3E_YxyGEjlA) and [slides](https://docs.google.com/presentation/d/1Brn4BtYtRsc6_ee_7XgPvYyOTiCuho2Z3MEdSJuPr0Y/edit?usp=sharing)
 * [Discussion with Robert Feranec](https://www.youtube.com/watch?v=YounUJvIW04)
 * [Zero to ASIC course interviews](https://youtube.com/playlist?list=PLyynFETmdQDS3hguItPHrRVYPpRo6mkVh)
@@ -38,7 +38,8 @@ featured_image: "tapeout.png"
 
 # Books
 
-* Books: search ‘introduction to VLSI systems’ by Carver Mead & Lynn Conway. Old but good.
+* Weste & Harris: CMOS VLSI Design. Expensive but excellent.
+* search ‘introduction to VLSI systems’ by Carver Mead & Lynn Conway. Old but good.
 
 # FPGA
 
