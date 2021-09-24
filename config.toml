@@ -7,6 +7,9 @@ theme = "ananke"
   site_logo = "/zero-to-asic-logo-white-transp.png"
   favicon = "/zero-to-asic-logo-transp.png"
   stripe_test = "false"
+  description = "Learn how to make your own chips!"
+  title = "Zero to ASIC Course"
+  images = ["zero-to-asic-logo-white-bg.png"]
 
 [menu]
 
