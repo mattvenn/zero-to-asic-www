@@ -1,7 +1,8 @@
 ---
 title: "Printing my first ASIC's GDS files"
 date: 2021-02-24T16:46:34+01:00
-featured_image: "/macro_photo.jpg"
+images: ["macro_photo.jpg"]
+featured_image: "macro_photo.jpg"
 ---
 
 I've been wanting to try plotting or printing the GDS files from my first ASIC for a while, and finally I've had some time to have a play.

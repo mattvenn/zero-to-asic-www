@@ -1,7 +1,8 @@
 ---
 title: "Foundry"
 date: 2020-11-13T11:08:44+01:00
-featured_image: '/skywater-foundry.jpg'
+images: ["skywater-foundry.jpg"]
+featured_image: "skywater-foundry.jpg"
 ---
 
 Foundry is the fancy semiconductor word for factory. You have to admit, silicon foundry does sound cool.

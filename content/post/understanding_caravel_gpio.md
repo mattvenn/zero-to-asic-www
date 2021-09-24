@@ -1,7 +1,8 @@
 ---
 title: "Understanding Caravel GPIO"
 date: 2021-02-15T13:36:29+01:00
-featured_image: "/caravel_gpio.png"
+images: ["caravel_gpio.png"]
+featured_image: "caravel_gpio.png"
 ---
 
 When I was first testing my designs inside [Caravel](/terminology/shuttle#caravel), I was quite confused about all the GPIO options.

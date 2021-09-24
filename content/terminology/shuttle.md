@@ -2,6 +2,7 @@
 title: "Google / Skywater Shuttle"
 description: "free ASIC service"
 date: 2020-11-12T17:44:07+01:00
+images: ["wafer.jpg"]
 featured_image: "wafer.jpg"
 ---
 

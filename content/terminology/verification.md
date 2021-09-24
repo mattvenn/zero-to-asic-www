@@ -1,7 +1,8 @@
 ---
 title: "Verification"
 date: 2020-11-12T17:44:17+01:00
-featured_image: "/simulation.png"
+images: ["simulation.png"]
+featured_image: "simulation.png"
 ---
 
 [Simulation](/terminology/simulation) offers us a way of checking the design is doing what we expect, but that is almost exactly why simulation on its own isn't enough.

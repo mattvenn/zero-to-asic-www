@@ -2,7 +2,8 @@
 title: "NMOS"
 date: 2020-11-13T13:12:26+01:00
 description: "N-type Metal Oxide Semiconductor"
-featured_image: "/nmos.png"
+images: ["nmos.png"]
+featured_image: "nmos.png"
 ---
 
 NMOS refers to building the [standard cells](/terminology/standardcell) we need for building our [IC](/terminology/ic) out of only N-type [MOSFETs](/terminology/mosfet)

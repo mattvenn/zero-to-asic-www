@@ -1,7 +1,8 @@
 ---
 title: "GDS2"
 date: 2020-11-12T17:42:46+01:00
-featured_image: '/hackaday-gds.png'
+images: ["hackaday-gds.png"]
+featured_image: "hackaday-gds.png"
 ---
 
 GDSII/GDS2 is a binary file format that represents the layers needed to produce an [ASIC](/terminology/asic).

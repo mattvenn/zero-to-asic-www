@@ -1,7 +1,8 @@
 ---
 title: "Floorplan"
 date: 2020-11-13T18:20:59+01:00
-featured_image: "/floorplan.png"
+images: ["floorplan.png"]
+featured_image: "floorplan.png"
 ---
 
 The floorplanning stage is where [OpenLane](/terminology/openlane) decides how big an area we need to fit everything in.

@@ -1,7 +1,8 @@
 ---
 title: "MPW"
 date: 2020-11-13T10:58:24+01:00
-featured_image: '/mpw.jpg'
+images: ["mpw.jpg"]
+featured_image: "mpw.jpg"
 ---
 
 A Multi Project Wafer is used to reduce the cost of making an [ASIC](/terminology/asic).

@@ -1,7 +1,8 @@
 ---
 title: "Contact"
 date: 2021-07-15T13:53:43+02:00
-featured_image: 'maximo_render_1.jpeg'
+images: ["maximo_render_1.jpeg"]
+featured_image: "maximo_render_1.jpeg"
 ---
 
 Got a question? Want to say hello? I look forward to hearing from you!

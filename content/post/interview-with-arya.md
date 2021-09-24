@@ -1,7 +1,8 @@
 ---
 title: "Interview with Arya Reais-Parsi - FPGA fabric"
 date: 2020-12-05T16:08:53+01:00
-featured_image: "/fpga-fabric.png"
+images: ["fpga-fabric.png"]
+featured_image: "fpga-fabric.png"
 tags: ["interviews", "videos"]
 ---
 

@@ -1,7 +1,8 @@
 ---
 title: "Die"
 date: 2020-11-13T10:31:34+01:00
-featured_image: '/wafermap.svg'
+images: ["wafermap.svg"]
+featured_image: "wafermap.svg"
 ---
 
 The silicon [wafer](/terminology/wafer) is usually patterned with the [mask set](/terminology/maskset) to make hundreds or thousands of the same [IC](/terminology/ic).

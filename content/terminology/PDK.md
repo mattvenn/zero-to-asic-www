@@ -2,7 +2,8 @@
 title: "PDK"
 date: 2020-11-12T17:38:48+01:00
 description: "Process Design Kit"
-featured_image: '/stackup.png'
+images: ["stackup.png"]
+featured_image: "stackup.png"
 ---
 
 The Process Design Kit is a library of all the specifications that describe a particular factories' particular chip fabrication process.

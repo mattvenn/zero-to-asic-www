@@ -1,7 +1,8 @@
 ---
 title: "Magic"
 date: 2020-11-12T17:39:43+01:00
-featured_image: '/magic.png'
+images: ["magic.png"]
+featured_image: "magic.png"
 ---
 
 From its [homepage](http://opencircuitdesign.com/magic/):

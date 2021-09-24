@@ -2,7 +2,8 @@
 title: "LVS"
 date: 2020-11-12T17:43:29+01:00
 description: "Layout vs Schematic"
-featured_image: "/lvs.png"
+images: ["lvs.png"]
+featured_image: "lvs.png"
 ---
 
 Layout vs Schematic is an important [verification](/terminology/verification) step.

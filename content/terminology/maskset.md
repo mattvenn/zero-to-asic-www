@@ -1,7 +1,8 @@
 ---
 title: "Maskset"
 date: 2020-11-12T17:42:33+01:00
-featured_image: '/photomask.jpg'
+images: ["photomask.jpg"]
+featured_image: "photomask.jpg"
 ---
 
 From [Wikipedia](https://en.wikipedia.org/wiki/Photomask):

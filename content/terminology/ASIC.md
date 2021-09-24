@@ -1,7 +1,8 @@
 ---
 title: "ASIC"
 date: 2020-11-12T17:38:37+01:00
-featured_image: '/asic-zoom.png'
+images: ["asic-zoom.png"]
+featured_image: "asic-zoom.png"
 ---
 
 Application Specific Integrated Circuit

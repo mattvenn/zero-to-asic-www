@@ -1,7 +1,8 @@
 ---
 title: "Interview With Dan Rodrigues - first shuttle, racing the beam & retro gaming"
 date: 2021-05-05T16:09:22+01:00
-featured_image: 'dan-rodrigues.png'
+images: ["dan-rodrigues.png"]
+featured_image: "dan-rodrigues.png"
 tags: ["interviews"]
 ---
 

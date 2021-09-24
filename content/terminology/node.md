@@ -1,7 +1,8 @@
 ---
 title: "Node / Process"
 date: 2020-11-13T16:48:16+01:00
-featured_image: "/half-pitch.png"
+images: ["half-pitch.png"]
+featured_image: "half-pitch.png"
 description: "The node is nonsense"
 ---
 

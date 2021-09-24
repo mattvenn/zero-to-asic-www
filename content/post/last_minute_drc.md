@@ -2,7 +2,8 @@
 title: "Last minute DRC fixes"
 date: 2021-02-07T18:47:01+01:00
 tags: ["videos", "updates"]
-featured_image: "/m5shorts.png"
+images: ["m5shorts.png"]
+featured_image: "m5shorts.png"
 ---
 
 The story of the first Open Source ASIC shuttle continues! 

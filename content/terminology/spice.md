@@ -1,7 +1,8 @@
 ---
 title: "SPICE"
 date: 2020-11-12T17:39:43+01:00
-featured_image: '/inverter-current.png'
+images: ["inverter-current.png"]
+featured_image: "inverter-current.png"
 description: "Simulation Program with Integrated Circuit Emphasis"
 ---
 

@@ -1,7 +1,8 @@
 ---
 title: "Interview With Matt Guthaus"
 date: 2021-08-11T17:23:24+02:00
-featured_image: 'openram_mpw2.png'
+images: ["openram_mpw2.png"]
+featured_image: "openram_mpw2.png"
 tags: ["interviews"]
 ---
 

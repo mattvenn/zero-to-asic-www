@@ -1,7 +1,8 @@
 ---
 title: "MOSFET"
 date: 2020-11-12T17:39:16+01:00
-featured_image: Construction-of-MOSFET.png
+images: ["Construction-of-MOSFET.png"]
+featured_image: "Construction-of-MOSFET.png"
 ---
 
 A MOSFET is a type of transistor we can use as a digital switch.

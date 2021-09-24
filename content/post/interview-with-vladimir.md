@@ -1,7 +1,8 @@
 ---
 title: "Interview With Vladimir Milovanović - spectrometer with Chisel"
 date: 2020-12-05T16:08:53+01:00
-featured_image: "/spectrometer.png"
+images: ["spectrometer.png"]
+featured_image: "spectrometer.png"
 tags: ["interviews", "videos"]
 ---
 

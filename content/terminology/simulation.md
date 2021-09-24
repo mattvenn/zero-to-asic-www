@@ -2,7 +2,8 @@
 title: "Simulation"
 description: "simulating your digital design"
 date: 2020-11-13T11:58:01+01:00
-featured_image: "/simulation.png"
+images: ["simulation.png"]
+featured_image: "simulation.png"
 ---
 
 Simulation lets us see the design working. It's useful for debugging while designing and it can also be used to verify that the design is working correctly.

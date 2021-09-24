@@ -1,7 +1,8 @@
 ---
 title: "Interview With Thomas Parry - Amateur satellite radio, Open Source vs Industry tools and beautiful analogue layout"
 date: 2021-03-23T16:09:22+01:00
-featured_image: 'thomas-parry.jpg'
+images: ["thomas-parry.jpg"]
+featured_image: "thomas-parry.jpg"
 tags: ["interviews"]
 ---
 

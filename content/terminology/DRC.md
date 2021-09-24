@@ -1,7 +1,8 @@
 ---
 title: "DRC"
 date: 2020-11-12T17:42:51+01:00
-featured_image: '/antenna-rule.png'
+images: ["antenna-rule.png"]
+featured_image: "antenna-rule.png"
 ---
 
 The Design Rule Check is part of the [PDK](/terminology/pdk). Both the [Magic](/terminology/magic) and [OpenLane](/terminology/openlane) tools make use of it.

@@ -1,7 +1,8 @@
 ---
 title: "ASIC submitted"
 date: 2020-12-23T18:07:33+01:00
-featured_image: "/caravel-numbered.png"
+images: ["caravel-numbered.png"]
+featured_image: "caravel-numbered.png"
 description: "ASIC submitted!"
 ---
 

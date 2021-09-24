@@ -2,7 +2,8 @@
 title: "GDS Artwork"
 date: 2020-11-20T17:58:11+01:00
 description: "artwork on the top metal layer"
-featured_image: "/chip-artwork.jpeg"
+images: ["chip-artwork.jpeg"]
+featured_image: "chip-artwork.jpeg"
 ---
 
 I've always thought the artwork people put in the top layer of their chips was cool.

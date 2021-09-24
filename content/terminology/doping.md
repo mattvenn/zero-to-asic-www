@@ -1,7 +1,8 @@
 ---
 title: "Doping"
 date: 2020-11-13T10:39:15+01:00
-featured_image: '/doping.png'
+images: ["doping.png"]
+featured_image: "doping.png"
 ---
 
 Doping is when we add impurities to the extremely pure [silicon](/terminology/wafer). This changes the electrochemical properties of the silicon.

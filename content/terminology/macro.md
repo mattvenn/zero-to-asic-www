@@ -1,7 +1,8 @@
 ---
 title: "Macro"
 date: 2020-11-12T17:06:52+01:00
-featured_image: "/openram.jpg"
+images: ["openram.jpg"]
+featured_image: "openram.jpg"
 ---
 
 From http://88physicaldesign.blogspot.com/2015/10/what-is-macro.html:

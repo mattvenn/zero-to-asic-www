@@ -1,7 +1,8 @@
 ---
 title: "Interview with Lakshmi S - PLL design"
 date: 2021-01-05T16:08:53+01:00
-featured_image: "/lakshmi_pll.jpg"
+images: ["lakshmi_pll.jpg"]
+featured_image: "lakshmi_pll.jpg"
 tags: ["interviews", "videos"]
 ---
 

@@ -1,7 +1,8 @@
 ---
 title: "Interview with Tim Edwards - what happens between ASIC submission and sending to Skywater?"
 date: 2021-01-10T16:08:53+01:00
-featured_image: "/fpga-fabric.png"
+images: ["fpga-fabric.png"]
+featured_image: "fpga-fabric.png"
 tags: ["interviews", "videos"]
 ---
 

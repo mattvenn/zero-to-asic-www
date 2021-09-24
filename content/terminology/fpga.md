@@ -2,7 +2,8 @@
 title: "FPGA"
 date: 2020-11-13T15:42:06+01:00
 description: "Field Programmable Gate Array"
-featured_image: "/fpga-lut.png"
+images: ["fpga-lut.png"]
+featured_image: "fpga-lut.png"
 ---
 
 An FPGA is quite like an [ASIC](/terminology/asic), but has some major differences.

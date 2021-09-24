@@ -1,6 +1,7 @@
 ---
 title: Newsletter
-featured_image: 'maximo_render_2.jpeg'
+images: ["maximo_render_2.jpeg"]
+featured_image: "maximo_render_2.jpeg"
 type: page
 ---
 

@@ -1,7 +1,8 @@
 ---
 title: "VLSI"
 date: 2020-11-12T17:44:33+01:00
-featured_image: '/die.jpg'
+images: ["die.jpg"]
+featured_image: "die.jpg"
 ---
 
 Very Large Scale Integration - this term started getting used in the 70s when millions of [MOSFETs](/terminology/mosfet) were

@@ -1,7 +1,8 @@
 ---
 title: "Interview With Sylvain 'tnt' Munaut: USB peripherals"
 date: 2020-12-05T16:08:53+01:00
-featured_image: "/pyfive.jpg"
+images: ["pyfive.jpg"]
+featured_image: "pyfive.jpg"
 tags: ["interviews", "videos"]
 ---
 

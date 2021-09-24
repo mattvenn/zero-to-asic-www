@@ -1,7 +1,8 @@
 ---
 title: "IC"
 date: 2020-11-12T17:49:00+01:00
-featured_image: '/Fairchild-UA714HC.jpg'
+images: ["Fairchild-UA714HC.jpg"]
+featured_image: "Fairchild-UA714HC.jpg"
 ---
 
 An Integrated Circuit is a collection of circuit elements all together on one piece of silicon.

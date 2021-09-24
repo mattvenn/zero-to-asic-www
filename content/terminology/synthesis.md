@@ -1,7 +1,8 @@
 ---
 title: "Synthesis"
 date: 2020-11-12T17:43:01+01:00
-featured_image: "/show_rtl.png"
+images: ["show_rtl.png"]
+featured_image: "show_rtl.png"
 ---
 
 Synthesis is kind of analogous to the compiler used for sequential programming languages like C.

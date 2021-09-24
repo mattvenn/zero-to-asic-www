@@ -1,7 +1,8 @@
 ---
 title: "RTL"
 date: 2020-11-12T17:43:56+01:00
-featured_image: "/rtl.png"
+images: ["rtl.png"]
+featured_image: "rtl.png"
 description: Register Transfer Level
 ---
 People often use the terms RTL and [HDL](/terminology/hdl) interchangably.

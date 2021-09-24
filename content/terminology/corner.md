@@ -1,7 +1,8 @@
 ---
 title: "Corner"
 date: 2021-03-22T16:59:20+01:00
-featured_image: corners.png
+images: ["corners.png"]
+featured_image: "corners.png"
 ---
 
 [MOSFET](/terminology/mosfet) characteristics can vary across multiple wafers.

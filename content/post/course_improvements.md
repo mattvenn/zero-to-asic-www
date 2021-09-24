@@ -1,7 +1,8 @@
 ---
 title: "Course Improvements"
 date: 2021-07-22T16:45:12+02:00
-featured_image: 'maximo_render_1.jpeg'
+images: ["maximo_render_1.jpeg"]
+featured_image: "maximo_render_1.jpeg"
 ---
 
 After 6 months, 90 participants and [14 designs submitted to MPW2](/post/mpw2-submitted), I'm making the Zero to ASIC course even better!

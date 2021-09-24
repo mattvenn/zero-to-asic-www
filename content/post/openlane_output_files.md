@@ -1,7 +1,8 @@
 ---
 title: "OpenLANE Output Files"
 date: 2021-04-16T13:06:58+02:00
-featured_image: "/openlane-flow.png"
+images: ["openlane-flow.png"]
+featured_image: "openlane-flow.png"
 ---
 
 [OpenLANE](/terminology/openlane) makes a lot of output files! This can be quite confusing when you're getting started.

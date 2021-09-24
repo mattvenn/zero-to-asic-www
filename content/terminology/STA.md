@@ -2,7 +2,8 @@
 title: "STA"
 date: 2020-11-12T17:43:21+01:00
 description: "Static Timing Analysis"
-featured_image: "/sta.png"
+images: ["sta.png"]
+featured_image: "sta.png"
 ---
 
 Static Timing Analysis checks that at the desired speed, there are no setup and hold violations.

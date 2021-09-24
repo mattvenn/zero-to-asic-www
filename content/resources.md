@@ -1,6 +1,7 @@
 ---
 title: Resources
 type: page
+images: ["tapeout.png"]
 featured_image: "tapeout.png"
 ---
 

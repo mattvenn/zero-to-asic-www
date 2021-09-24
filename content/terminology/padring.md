@@ -1,7 +1,8 @@
 ---
 title: "Padring"
 date: 2020-11-13T16:09:29+01:00
-featured_image: "/raven.png"
+images: ["raven.png"]
+featured_image: "raven.png"
 ---
 
 We need to make sure we can package the [IC](/terminology/ic) after the [wafer](/terminology/wafer) has been diced into individual [dies](/terminology/die).

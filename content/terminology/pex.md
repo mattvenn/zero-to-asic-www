@@ -1,7 +1,8 @@
 ---
 title: "PEX"
 date: 2021-01-07T11:41:15+01:00
-featured_image: '/inverter-sim.png'
+images: ["inverter-sim.png"]
+featured_image: "inverter-sim.png"
 ---
 
 PEX stands for Parastic Extraction.

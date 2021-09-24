@@ -1,7 +1,8 @@
 ---
 title: "Interview With Dirk Koch and Nguyen Dao"
 date: 2021-07-23T14:17:19+02:00
-featured_image: fuserisc.png
+images: ["fuserisc.png"]
+featured_image: "fuserisc.png"
 tags: ["interviews", "videos"]
 ---
 

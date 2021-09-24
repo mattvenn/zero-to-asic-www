@@ -1,7 +1,8 @@
 ---
 date: 2020-11-11
 description: "Hackaday #remoticon talk"
-featured_image: '/remoticon.png'
+images: ["remoticon.png"]
+featured_image: "remoticon.png"
 tags: ["videos"]
 title: "Hackaday #remoticon talk"
 ---

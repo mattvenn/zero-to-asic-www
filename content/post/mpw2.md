@@ -1,6 +1,7 @@
 ---
 title: "MPW2"
 date: 2021-05-19T13:15:24+02:00
+images: ["open_mpw_header.jpg"]
 featured_image: "open_mpw_header.jpg"
 ---
 

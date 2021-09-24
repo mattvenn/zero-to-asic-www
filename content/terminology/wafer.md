@@ -1,7 +1,8 @@
 ---
 title: "Wafer"
 date: 2020-11-13T10:31:47+01:00
-featured_image: '/wafer.jpg'
+images: ["wafer.jpg"]
+featured_image: "wafer.jpg"
 ---
 
 Silicon is purified to around 99.9999999%! Then it is sliced into very thin round sheets called wafers.

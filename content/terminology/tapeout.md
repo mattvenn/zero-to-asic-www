@@ -1,7 +1,8 @@
 ---
 title: "Tapeout"
 date: 2020-11-12T17:42:16+01:00
-featured_image: '/tapeout.png'
+images: ["tapeout.png"]
+featured_image: "tapeout.png"
 ---
 
 Once a chip design is complete, it is taped out for manufacturing. 

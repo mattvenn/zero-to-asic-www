@@ -1,7 +1,8 @@
 ---
 title: "HDL"
 date: 2020-11-13T11:58:32+01:00
-featured_image: "/hdl.png"
+images: ["hdl.png"]
+featured_image: "hdl.png"
 ---
 
 A Hardware Description Language is used to... describe hardware!

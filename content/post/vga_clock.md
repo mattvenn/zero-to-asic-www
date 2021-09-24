@@ -1,7 +1,8 @@
 ---
 title: "VGA clock"
 date: 2020-11-12T19:13:04+01:00
-featured_image: '/vga_clock.jpg'
+images: ["vga_clock.jpg"]
+featured_image: "vga_clock.jpg"
 ---
 
 This is one of the first projects I [hardened](/terminology/harden) using [OpenLane](/terminology/openlane).

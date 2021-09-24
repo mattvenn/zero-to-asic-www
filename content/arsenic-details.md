@@ -1,7 +1,8 @@
 ---
 title: "Arsenic Ticket Details"
 date: 2021-09-21T15:11:16+02:00
-featured_image: 'maximo_render_3.jpeg'
+images: ["maximo_render_3.jpeg"]
+featured_image: "maximo_render_3.jpeg"
 image_pos: 0% +10%
 type: page
 ---

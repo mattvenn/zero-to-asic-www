@@ -1,7 +1,8 @@
 ---
 title: "Antenna Report"
 date: 2021-03-30T12:31:35+02:00
-featured_image: '/antenna-rule.png'
+images: ["antenna-rule.png"]
+featured_image: "antenna-rule.png"
 ---
 
 Antenna rules are part of the [DRC](/terminology/drc).

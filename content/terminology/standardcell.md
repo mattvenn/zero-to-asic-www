@@ -1,6 +1,7 @@
 ---
 title: "Standard cell"
 date: 2020-11-12T17:38:45+01:00
+images: ["std-cell-inverter.png"]
 featured_image: "std-cell-inverter.png"
 ---
 

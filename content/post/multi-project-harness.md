@@ -1,7 +1,8 @@
 ---
 title: "Multi Project Harness"
 date: 2020-11-12T14:54:58+01:00
-featured_image: '/multi-project-harness.png'
+images: ["multi-project-harness.png"]
+featured_image: "multi-project-harness.png"
 ---
 
 The Google/Skywater [Shuttle](/terminology/shuttle) has about 10 square mm of space for your project. This sounds tiny but is actually HUGE for many beginner projects.

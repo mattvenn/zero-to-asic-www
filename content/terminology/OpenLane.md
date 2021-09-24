@@ -1,7 +1,8 @@
 ---
 title: "OpenLANE"
 date: 2020-11-12T17:39:49+01:00
-featured_image: "/openlane-flow.png"
+images: ["openlane-flow.png"]
+featured_image: "openlane-flow.png"
 ---
 
 OpenLANE is an Open Source ASIC tool. You can download it from [here](https://github.com/efabless/openlane). The 

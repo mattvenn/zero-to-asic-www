@@ -1,7 +1,8 @@
 ---
 title: "Zero to ASIC Course"
 description: Learn how to make your own custom chips!
-featured_image: 'mpw2_li_m1_m2_m3_actives_small.jpg'
+images: ["mpw2_li_m1_m2_m3_actives_small.jpg"]
+featured_image: "mpw2_li_m1_m2_m3_actives_small.jpg"
 image_pos: 0% 10%
 ---
 

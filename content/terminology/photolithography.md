@@ -1,7 +1,8 @@
 ---
 title: "Photolithography"
 date: 2020-11-13T10:57:47+01:00
-featured_image: '/die.jpg'
+images: ["die.jpg"]
+featured_image: "die.jpg"
 ---
 
 Sam Zeloof did a great talk about his home [IC](/terminology) [foundry](/terminology/foundry) at the Hackaday Supercon 2019.

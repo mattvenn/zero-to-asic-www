@@ -1,7 +1,8 @@
 ---
 title: "Livestream with Thomas Parry: analogue design with the open source ASIC tools"
 date: 2021-06-30T13:43:25+02:00
-featured_image: 'thomas-parry.jpg'
+images: ["thomas-parry.jpg"]
+featured_image: "thomas-parry.jpg"
 tags: ["interviews"]
 image_pos: 0% 50%
 ---

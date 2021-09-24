@@ -1,7 +1,8 @@
 ---
 date: 2020-11-01
 description: "Learn how to make your own inverter in Magic"
-featured_image: '/inverter-speedrun.png'
+images: ["inverter-speedrun.png"]
+featured_image: "inverter-speedrun.png"
 tags: ["magic", "videos"]
 title: "Inverter"
 ---
