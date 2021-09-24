@@ -1,6 +1,7 @@
 ---
 title: "Standard cell"
 date: 2020-11-12T17:38:45+01:00
+featured_image: "std-cell-inverter.png"
 ---
 
 One of the many things a [PDK](/terminology/pdk) contains is the standard cell library.

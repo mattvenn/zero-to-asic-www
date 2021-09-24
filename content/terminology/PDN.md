@@ -1,7 +1,7 @@
 ---
 title: "PDN"
 date: 2021-02-07T18:59:34+01:00
-featured_image: ""
+featured_image: "openlane_pdn.png"
 description: "Power Delivery Network"
 ---
 

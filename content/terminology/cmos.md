@@ -2,6 +2,7 @@
 title: "CMOS"
 date: 2020-11-13T13:35:41+01:00
 description: "Complementary Metal Oxide Semiconductor"
+featured_image: "inverter-schematic-labelled.png"
 ---
 
 https://en.wikipedia.org/wiki/CMOS:
