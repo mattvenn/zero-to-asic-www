@@ -16,10 +16,11 @@ term = term.replace(".md", "")
 link = "https://www.zerotoasiccourse.com/terminology/%s" % term
 print(link)
 
-# fetch google analytics report
-analytics = run_report(property_id)
-
 # rank it
+"""
+# fetch google analytics report
+#analytics = run_report(property_id)
+
 terms = 0
 for row in analytics.rows:
     if 'terminology' in row.dimension_values[0].value: 
@@ -27,6 +28,9 @@ for row in analytics.rows:
         if term in row.dimension_values[0].value:
             print(row.dimension_values[0].value, row.metric_values[0].value, terms)
             term_rank = terms
+"""
+terms = 40
+term_rank = 5
 term_rank = num2words(term_rank, to="ordinal_num")
 twitter_text = "#ASIC terminology of the week!\n%s has been the %s most popular out of %d terms in the last month.\n%s" % (term.capitalize(), term_rank, terms, link)
 print(twitter_text)
