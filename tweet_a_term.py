@@ -14,26 +14,32 @@ analytics = run_report(property_id)
 os.chdir("content/terminology")
 terms = glob.glob("*md")
 week = datetime.date(2010, 6, 16).isocalendar()[1]
+print("num terms found %d" % len(terms))
+print("this is week %d" % week)
 term = (terms[week % len(terms)])
 term = term.replace(".md", "")
+if term.isupper():
+    term_name = term
+else:
+    term_name = term.capitalize()
+
 link = "https://www.zerotoasiccourse.com/terminology/%s" % term
 print(link)
 
 # rank it
-terms = 0
+term_num = 0
 for row in analytics.rows:
     if 'terminology' in row.dimension_values[0].value: 
-        print(row)
-        terms += 1
+        term_num += 1
         if term.lower() in row.dimension_values[0].value.lower():
             print("-" * 80)
-            print("found term! at pos %d" % terms)
-            term_rank = terms
+            print("found term! at pos %d" % term_num)
+            term_rank = term_num
 
 term_rank = num2words(term_rank, to="ordinal_num")
-twitter_text = "#ASIC terminology of the week!\n%s has been the %s most popular out of %d terms in the last month.\n%s" % (term.capitalize(), term_rank, terms, link)
+twitter_text = "%s is the #ASIC terminology of the week!\n%s\nIn the last month, %s has been the %s most popular out of %d terms on https://ZeroToASICcourse.com/terminology" % (term_name, link, term_name, term_rank, len(terms))
 print(twitter_text)
-
+exit()
 # Authenticate to Twitter
 auth = tweepy.OAuthHandler(api_key, api_key_secret)
 auth.set_access_token(access_token, access_token_secret)
