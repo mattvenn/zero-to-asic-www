@@ -1,26 +1,37 @@
 name: tweet-a-term
-on: workflow_dispatch
+# either manually started, or on a schedule
+on:
+  workflow_dispatch
+  schedule:
+    - cron: '0 21 * * 1' # At 21:00 on Monday 
 jobs:
   tweet-a-term:
+    # ubuntu
     runs-on: ubuntu-latest
     steps:
+    # need the repo checked out
     - name: checkout repo
       uses: actions/checkout@v2
 
+    # need python
     - name: setup python
       uses: actions/setup-python@v2
       with:
         python-version: '3.7.7' # install the python version needed
 
+    # python deps from reqirements file, use a marketplace action
     - name: Install Python dependencies
       uses: py-actions/py-dependency-install@v2
       with:
         path: "requirements.txt"
+
+    # decrypt secrets
     - name: Decrypt large secret
       run: ./decrypt.sh
       env:
           LARGE_SECRET_PASSPHRASE: ${{ secrets.LARGE_SECRET_PASSPHRASE }}
 
+    # run the script
     - name: run tweet a term
       run: python ./tweet_a_term.py
 
