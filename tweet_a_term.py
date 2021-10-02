@@ -13,6 +13,10 @@ analytics = run_report(property_id)
 # fetch the term of the week
 os.chdir("content/terminology")
 terms = glob.glob("*md")
+
+# glob is non-deterministic!
+terms.sort()
+
 week = datetime.date(2010, 6, 16).isocalendar()[1]
 print("num terms found %d" % len(terms))
 print("this is week %d" % week)
@@ -24,14 +28,19 @@ else:
     term_name = term.capitalize()
 
 link = "https://www.zerotoasiccourse.com/terminology/%s" % term
-print(link)
+print("looking for %s" % term)
 
 # rank it
 term_num = 0
 for row in analytics.rows:
     if 'terminology' in row.dimension_values[0].value: 
         term_num += 1
-        if term.lower() in row.dimension_values[0].value.lower():
+        stat_url = row.dimension_values[0].value
+        stat_url = stat_url.replace(".md", "")
+        stat_url = stat_url.replace("/terminology/", "")
+        stat_url = stat_url.replace("/", "")
+        print(stat_url)
+        if term == stat_url:
             print("-" * 80)
             print("found term! at pos %d" % term_num)
             term_rank = term_num
