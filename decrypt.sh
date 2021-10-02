@@ -10,5 +10,3 @@ gpg --quiet --batch --yes --decrypt --passphrase="$LARGE_SECRET_PASSPHRASE" \
 gpg --quiet --batch --yes --decrypt --passphrase="$LARGE_SECRET_PASSPHRASE" \
 --output tweet-a-term-stats-d8b4ef62a65c.json tweet-a-term-stats-d8b4ef62a65c.json.gpg
 
-cat secrets.py
-cat tweet-a-term-stats-d8b4ef62a65c.json

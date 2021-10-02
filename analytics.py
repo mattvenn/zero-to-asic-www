@@ -5,7 +5,6 @@ from google.analytics.data_v1beta.types import Metric
 from google.analytics.data_v1beta.types import RunReportRequest
 import os
 
-
 # https://developers.google.com/analytics/devguides/reporting/data/v1/quickstart-client-libraries
 
 def run_report(property_id):
