@@ -1,0 +1,9 @@
+name: tweet-a-term
+on: workflow_dispatch
+jobs:
+  tweet-a-term:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: tweet_a_term.py
+
