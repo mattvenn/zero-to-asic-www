@@ -9,6 +9,7 @@ import datetime
 
 # fetch google analytics report, have to do this first because the secrets are in a local file
 analytics = run_report(property_id)
+print(analytics)
 
 # fetch the term of the week
 os.chdir("content/terminology")
@@ -22,6 +23,7 @@ print(link)
 # rank it
 terms = 0
 for row in analytics.rows:
+    print(row)
     if 'terminology' in row.dimension_values[0].value: 
         terms += 1
         if term in row.dimension_values[0].value:
