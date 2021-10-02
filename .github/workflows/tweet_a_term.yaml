@@ -4,6 +4,19 @@ jobs:
   tweet-a-term:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - run: tweet_a_term.py
+    - name: checkout repo
+      uses: actions/checkout@v2
+
+    - name: setup python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.7.7' # install the python version needed
+
+    - name: Install Python dependencies
+      uses: py-actions/py-dependency-install@v2
+      with:
+        path: "requirements.txt"
+
+    - name: run tweet a term
+      run: python ./tweet_a_term.py
 

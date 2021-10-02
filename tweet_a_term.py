@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-
 from secrets import *
 import tweepy
 import glob
@@ -8,9 +7,6 @@ from analytics import run_report
 import os
 import datetime
 
-# fetch google analytics report
-analytics = run_report(property_id)
-
 # fetch the term of the week
 os.chdir("content/terminology")
 terms = glob.glob("*md")
@@ -18,6 +14,10 @@ week = datetime.date(2010, 6, 16).isocalendar()[1]
 term = (terms[week % len(terms)])
 term = term.replace(".md", "")
 link = "https://www.zerotoasiccourse.com/terminology/%s" % term
+print(link)
+
+# fetch google analytics report
+analytics = run_report(property_id)
 
 # rank it
 terms = 0
