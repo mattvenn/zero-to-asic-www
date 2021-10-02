@@ -23,11 +23,12 @@ print(link)
 # rank it
 terms = 0
 for row in analytics.rows:
-    print(row)
     if 'terminology' in row.dimension_values[0].value: 
+        print(row)
         terms += 1
         if term in row.dimension_values[0].value:
-            print(row.dimension_values[0].value, row.metric_values[0].value, terms)
+            print("-" * 80)
+            print("found term! at pos %d" % terms)
             term_rank = terms
 
 term_rank = num2words(term_rank, to="ordinal_num")
