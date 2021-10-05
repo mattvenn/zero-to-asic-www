@@ -46,7 +46,7 @@ for row in analytics.rows:
             term_rank = term_num
 
 term_rank = num2words(term_rank, to="ordinal_num")
-twitter_text = "%s is the #ASIC terminology of the week!\n%s\nIn the last month, %s has been the %s most popular out of %d terms on https://ZeroToASICcourse.com/terminology" % (term_name, link, term_name, term_rank, len(terms))
+twitter_text = "%s is the #ASIC terminology of the week!\n%s\n\nIn the last month, %s has been the %s most popular out of %d terms." % (term_name, link, term_name, term_rank, len(terms))
 print(twitter_text)
 
 # Authenticate to Twitter
@@ -59,4 +59,9 @@ try:
 except:
     print("Authentication Error")
 
-api.update_status(status = twitter_text)
+try:
+    if api.update_status(status = twitter_text):
+        print("Posted")
+except tweepy.error.TweepError as e:
+    print(e)
+
