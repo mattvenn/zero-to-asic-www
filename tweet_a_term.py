@@ -17,7 +17,7 @@ terms = glob.glob("*md")
 # glob is non-deterministic!
 terms.sort()
 
-week = datetime.date(2010, 6, 16).isocalendar()[1]
+week = datetime.datetime.today().isocalendar()[1]
 print("num terms found %d" % len(terms))
 print("this is week %d" % week)
 term = (terms[week % len(terms)])
