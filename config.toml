@@ -25,17 +25,17 @@ name = "Articles"
 url = "/post"
 weight = 20
 
-[[menu.main]]
-identifier = "Interviews"
-name = "Interviews"
-url = "/interviews"
-weight = 30
+#[[menu.main]]
+#identifier = "Interviews"
+#name = "Interviews"
+#url = "/interviews"
+#weight = 30
 
 [[menu.main]]
 identifier = "Buy a ticket"
 name = "Buy a ticket"
 url = "/contact"
-weight = 45
+weight = 60
 [menu.main.params]
       class = "button"
 
@@ -50,3 +50,9 @@ identifier = "Resources"
 name = "Resources"
 url = "/resources"
 weight = 20
+
+[[menu.main]]
+identifier = "Videos"
+name = "Videos"
+url = "https://youtube.com/zerotoasic"
+weight = 50
