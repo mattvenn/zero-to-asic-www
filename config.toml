@@ -32,6 +32,12 @@ url = "/interviews"
 weight = 30
 
 [[menu.main]]
+identifier = "Matt Venn"
+name = "Matt Venn"
+url = "/matt_venn"
+weight = 40
+
+[[menu.main]]
 identifier = "Buy a ticket"
 name = "Buy a ticket"
 url = "/contact"
