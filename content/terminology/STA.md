@@ -8,14 +8,23 @@ featured_image: "sta.png"
 
 Static Timing Analysis checks that at the desired speed, there are no setup and hold violations.
 
-When the input clock rises, a flip-flop will capture and store the incoming data. If data changes in the setup time, then there is a chance the wrong data will be captured. This is a setup violation. The same thing applies to data changing after the clock, which is called a hold violation.
+When the input clock rises, a flip-flop will capture and store the incoming data. An ideal flip-flop would sample data exactly on the rising clock and immediately have that data available on the output.
+Real flip-flops need the data to stay steady (setup time) for some time before the clock edge, and to stay steady for some time after it (hold time).
 
-![setup and hold](/setup_and_hold.png) [Image source](https://www.designnews.com/electronics-test/how-track-down-setup-and-hold-violations-mixed-signal-oscilloscope)
+If we want to know how fast we can run some combinatorial logic in between 2 flops, we need to know that the flop delay + logic delay is less than the clock period - setup time. Setup time relates to 2 adjacent clock edges.
+
+![setup](/sta_setup.png)
+
+Hold time in comparison is related to a single clock edge. If we take the case where we put one flop's output directly into another's input (like in a shift register), then we need to make sure that the flops both receive the clock at the same time.
+
+![hold](/sta_hold.png)
+
+If the 2nd flop's clock is slightly late for any reason, then we risk the data from the 1st flop changing in the hold time of the 2nd flop.
 
 # OpenSTA
 
 [OpenLane](/terminology/openlane) uses a tool called [OpenSTA](https://github.com/The-OpenROAD-Project/OpenSTA).
-Its job is to find the fastest and slowest data paths in the design.
+Its job is to find the fastest and slowest data paths in the design and to check that setup and hold timings are met.
 
 The required timing is set in the OpenLane config file. By default its 10ns, which means we are targetting a clock frequency of 100MHz.
 
@@ -106,3 +115,7 @@ There are two calls to OpenSTA during a typical OpenLANE run:
 
 * In the synthesis exploration loop. Here the results can be used to iterate over different synthesis options to help meet timing requirements.
 * After extraction. This is the most accurate timing report as it is done on the finished layout. This file is called 27-opensta_spef.min_max.rpt (numbering can change depending on OpenLANE setup).
+
+# MPW1 issues
+
+[MPW1 silicon was faulty](/post/mpw1_silicon) because a hold time violation wasn't detected. This was due to the tools being setup incorrectly. In fact you can see in the above timing charts that the clock network delay for both setup and hold timing reports was 0. This is a clue that the tool wasn't working correctly, as there should always be some small delay in the clock network.

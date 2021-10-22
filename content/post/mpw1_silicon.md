@@ -9,7 +9,7 @@ image_pos: 0% 65%
 [MPW1](/post/asic_submitted) seems an age ago, we submitted in December 2020, but it needed some last minute [DRC fixes in February](/post/last_minute_drc/).
 
 Silicon was received a few weeks ago, and unfortunately we have some serious issues that will prevent most designs from working. This appears to be due to a bad clock tree
-in the management section of the chip. Additionally the tool meant to verify the clock tree was also broken.
+in the management section of the chip. Additionally, [OpenSTA](/terminology/sta), the tool meant to verify the clock tree was also broken.
 
 ![Tim Edwards](/tim_edwards_mpw1_fail.png)
 
