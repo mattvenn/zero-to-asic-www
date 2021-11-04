@@ -57,7 +57,7 @@ def create_tweet(term, term_rank, num_terms):
     else:
         term_name = term.capitalize()
     term_rank = num2words(term_rank, to="ordinal_num")
-    link = "https://www.zerotoasiccourse.com/terminology/%s" % term
+    link = "https://www.zerotoasiccourse.com/terminology/%s" % term.lower() # even if the page name is DRC, the link is drc
     twitter_text = "%s is the #ASIC terminology of the week!\n%s\n\nIn the last month, %s has been the %s most popular out of %d terms." % (term_name, link, term_name, term_rank, num_terms)
     print(twitter_text)
 
