@@ -63,7 +63,7 @@ def create_tweet(term, term_rank, num_terms):
 
     return twitter_text
 
-def tweet_it(tweet_text):
+def tweet_it(twitter_text):
     # Authenticate to Twitter
     auth = tweepy.OAuthHandler(api_key, api_key_secret)
     auth.set_access_token(access_token, access_token_secret)
