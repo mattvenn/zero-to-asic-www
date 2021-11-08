@@ -40,7 +40,7 @@ weight = 40
 [[menu.main]]
 identifier = "Buy a ticket"
 name = "Buy a ticket"
-url = "/contact"
+url = "/#tickets"
 weight = 60
 [menu.main.params]
       class = "button"
