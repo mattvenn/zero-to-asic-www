@@ -70,7 +70,7 @@ main {
     -webkit-transition: opacity 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
     transition: opacity 0.3s cubic-bezier(0.25, 0.1, 0.25, 1); }
   .zero-menuicon-bread-crust-top {
-    top: 14px;
+    top: 10px;
     -webkit-transform: translateY(-3px);
     transform: translateY(-3px);
     -webkit-transition: -webkit-transform 0.1596s cubic-bezier(0.52, 0.16, 0.52, 0.84) 0.1008s;
@@ -94,12 +94,21 @@ main {
     -webkit-transform: rotate(45deg);
     transform: rotate(45deg); }
   #zero-menustate:checked ~ .main-header__top-row .top-row__hamb-col .zero-menuicon-label .zero-menuicon-bread-crust-top, #zero-menustate:target ~ .top-row__hamb-col .zero-menuicon-label .zero-menuicon-bread-crust-top {
+    top: 14px;
     -webkit-transition: -webkit-transform 0.1806s cubic-bezier(0.04, 0.04, 0.12, 0.96);
     transition: -webkit-transform 0.1806s cubic-bezier(0.04, 0.04, 0.12, 0.96);
     transition: transform 0.1806s cubic-bezier(0.04, 0.04, 0.12, 0.96);
     transition: transform 0.1806s cubic-bezier(0.04, 0.04, 0.12, 0.96), -webkit-transform 0.1806s cubic-bezier(0.04, 0.04, 0.12, 0.96);
     -webkit-transform: none;
     transform: none; }
+  #zero-menustate:checked ~ .main-header__top-row .top-row__hamb-col .zero-menuicon-label .zero-menuicon-bread-crust-middle, #zero-menustate:target ~ .top-row__hamb-col .zero-menuicon-label .zero-menuicon-bread-crust-middle {
+    -webkit-transition: -webkit-transform 0.1806s cubic-bezier(0.04, 0.04, 0.12, 0.96);
+    transition: -webkit-transform 0.1806s cubic-bezier(0.04, 0.04, 0.12, 0.96);
+    transition: transform 0.1806s cubic-bezier(0.04, 0.04, 0.12, 0.96);
+    transition: transform 0.1806s cubic-bezier(0.04, 0.04, 0.12, 0.96), -webkit-transform 0.1806s cubic-bezier(0.04, 0.04, 0.12, 0.96);
+    -webkit-transform: none;
+    transform: none;
+    display: none; }
   #zero-menustate:checked ~ .main-header__top-row .top-row__hamb-col .zero-menuicon-label .zero-menuicon-bread-bottom, #zero-menustate:target ~ .top-row__hamb-col .zero-menuicon-label .zero-menuicon-bread-bottom {
     -webkit-transition: -webkit-transform 0.3192s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.1008s;
     transition: -webkit-transform 0.3192s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.1008s;
@@ -115,7 +124,14 @@ main {
     -webkit-transform: none;
     transform: none; }
   .zero-menuicon-bread-crust-top {
-    top: 14px;
+    -webkit-transform: translateY(-3px);
+    transform: translateY(-3px);
+    -webkit-transition: -webkit-transform 0.1596s cubic-bezier(0.52, 0.16, 0.52, 0.84) 0.1008s;
+    transition: -webkit-transform 0.1596s cubic-bezier(0.52, 0.16, 0.52, 0.84) 0.1008s;
+    transition: transform 0.1596s cubic-bezier(0.52, 0.16, 0.52, 0.84) 0.1008s;
+    transition: transform 0.1596s cubic-bezier(0.52, 0.16, 0.52, 0.84) 0.1008s, -webkit-transform 0.1596s cubic-bezier(0.52, 0.16, 0.52, 0.84) 0.1008s; }
+  .zero-menuicon-bread-crust-middle {
+    top: 15.5px;
     -webkit-transform: translateY(-3px);
     transform: translateY(-3px);
     -webkit-transition: -webkit-transform 0.1596s cubic-bezier(0.52, 0.16, 0.52, 0.84) 0.1008s;
@@ -154,7 +170,7 @@ main {
     position: relative; }
   .top-row__hamb-col {
     width: 50px;
-    height: 30px; }
+    height: 28px; }
   .main-header__top-row .top-row__mobile-menu {
     position: absolute;
     z-index: -1000;
