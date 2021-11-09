@@ -1,8 +1,8 @@
 ---
 description: Zero to ASIC Course
 title: Learn how to design chips!
-images: ["maximo_render_3.jpeg"]
-featured_image: "maximo_render_3.jpeg"
+images: ['maximo_render_3.jpeg']
+featured_image: 'maximo_render_3.jpeg'
 image_pos: 0% +10%
 type: page
 layout: single
@@ -17,83 +17,83 @@ aliases:
 
 Learn to design and fabricate your own [ASIC](/terminology/asic)! Thanks to the new Open Source [Process Development Kit](/terminology/pdk) from Google and Skywater along with the OpenLANE ASIC tools from [Efabless](https://efabless.com/).
 
-GCC revolutionised compiling, Linux revolutionised computing. Android revolutionised phones. Arduino revolutionised microcontrollers. RISCV is revolutionising ISAs. The next step is Open Source Silicon. 
+GCC revolutionised compiling, Linux revolutionised computing. Android revolutionised phones. Arduino revolutionised microcontrollers. RISCV is revolutionising ISAs. The next step is Open Source Silicon.
 
-This course will give you the experience of creating your own microchip, using free and open source tools. 
+This course will give you the experience of creating your own microchip, using free and open source tools.
 
 14 people who took the course in the last 6 months have [already submitted designs for MPW2](/post/mpw2-submitted/).
 
 ## Ticket options {#tickets}
 
-|                                                                                                   | Silicon           | Boron         | Arsenic |
-|-------------------------------------------------------------------------------------------------  |----------------   |-------------- |----------------   |
-| Access to 6 hours recorded video content & 11 projects                                            | ✅                | ✅                | ✅                |
-| Access to updates of the course material                                                          | ✅                | ✅                | ✅                |
-| Recorded solution videos                                                                          | ✅                | ✅                | ✅                |
-| Access to discord community server                                                                | ✅                | ✅                | ✅                |
-| Access to weekly call                                                                             | ✅                | ✅                | ✅                |
-| Access to the group submission - get your open source chip made for real! Max area 300 x 300 um **[ⓘ](#how-big)**  | ✅                | ✅                | ✅                |
-| Access to the material for the lifetime of the course **[ⓘ](#course-life)**                       | ✅                | ✅                | ✅                |
-| Your ASIC mounted on a PCB breakout board                                                         | $50 + P&P         | ✅                | ✅                |
-| How many chips will you receive                                                                   | 1                 | 3                 | 50                |
-| 1 to 1 office hours support                                                                       | ❌                | 2 hours                 | 4 hours                |
-| Application to ChipIgnite - design doesn't need to be open source. Max area 800 x 800 um          | ❌                | ❌                | ✅                |
-| Guaranteed ASIC manufacture **[ⓘ](#asic-def)**                                                    | ❌                | ❌                | ✅                |
-| Custom PCB design consultancy                                                                     | ❌                | ❌                | ✅                |
-| Team access **[ⓘ](#team-access)**                                                                 | ❌                | ❌                | ✅                |
-| Price | {{< button "https://buy.stripe.com/cN22aZd9O05Af7O8wC" "https://buy.stripe.com/test_fZedUTbpVg2caeQ002" "Buy for $650" >}}  | {{< button "https://buy.stripe.com/3cs6rf8Tyf0ucZGfZ3" "https://buy.stripe.com/test_14k04365BaHSgDe7st" "Buy for $950" >}}                                  | {{< button "/arsenic-details" "/arsenic-details" "Buy for $4950" >}}                       |
+|                                                                                                                   | Silicon                                                                                                                    | Boron                                                                                                                      | Arsenic                                                              |
+| ----------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------- |
+| Access to 6 hours recorded video content & 11 projects                                                            | ✅                                                                                                                         | ✅                                                                                                                         | ✅                                                                   |
+| Access to updates of the course material                                                                          | ✅                                                                                                                         | ✅                                                                                                                         | ✅                                                                   |
+| Recorded solution videos                                                                                          | ✅                                                                                                                         | ✅                                                                                                                         | ✅                                                                   |
+| Access to discord community server                                                                                | ✅                                                                                                                         | ✅                                                                                                                         | ✅                                                                   |
+| Access to weekly call                                                                                             | ✅                                                                                                                         | ✅                                                                                                                         | ✅                                                                   |
+| Access to the group submission - get your open source chip made for real! Max area 300 x 300 um **[ⓘ](#how-big)** | ✅                                                                                                                         | ✅                                                                                                                         | ✅                                                                   |
+| Access to the material for the lifetime of the course **[ⓘ](#course-life)**                                       | ✅                                                                                                                         | ✅                                                                                                                         | ✅                                                                   |
+| Your ASIC mounted on a PCB breakout board                                                                         | $50 + P&P                                                                                                                  | ✅                                                                                                                         | ✅                                                                   |
+| How many chips will you receive                                                                                   | 1                                                                                                                          | 3                                                                                                                          | 50                                                                   |
+| 1 to 1 office hours support                                                                                       | ❌                                                                                                                         | 2 hours                                                                                                                    | 4 hours                                                              |
+| Application to ChipIgnite - design doesn't need to be open source. Max area 800 x 800 um                          | ❌                                                                                                                         | ❌                                                                                                                         | ✅                                                                   |
+| Guaranteed ASIC manufacture **[ⓘ](#asic-def)**                                                                    | ❌                                                                                                                         | ❌                                                                                                                         | ✅                                                                   |
+| Custom PCB design consultancy                                                                                     | ❌                                                                                                                         | ❌                                                                                                                         | ✅                                                                   |
+| Team access **[ⓘ](#team-access)**                                                                                 | ❌                                                                                                                         | ❌                                                                                                                         | ✅                                                                   |
+| Price                                                                                                             | {{< button "https://buy.stripe.com/cN22aZd9O05Af7O8wC" "https://buy.stripe.com/test_fZedUTbpVg2caeQ002" "Buy for $650" >}} | {{< button "https://buy.stripe.com/3cs6rf8Tyf0ucZGfZ3" "https://buy.stripe.com/test_14k04365BaHSgDe7st" "Buy for $950" >}} | {{< button "/arsenic-details" "/arsenic-details" "Buy for $4950" >}} |
 
-* Check your email for onboarding information after your purchase.
-* Receipt provided upon purchase for deducting as a business expense.
-* [Contact us](/contact-form) if your business has any special requirements.
-* Secure payment handling by Stripe.
-* Not ready? [Join the mailing list to receive updates and promotional discount codes](/newsletter).
+-   Check your email for onboarding information after your purchase.
+-   Receipt provided upon purchase for deducting as a business expense.
+-   [Contact us](/contact-form) if your business has any special requirements.
+-   Secure payment handling by Stripe.
+-   Not ready? [Join the mailing list to receive updates and promotional discount codes](/newsletter).
 
 ## What do people say about the course?
 
 {{< youtube fjpFWogQl8Y >}}
 
 > The Zero To ASIC course took me on a fantastic journey from drawing
-and simulating a MOSFET, formal verification leading up to
-implementing a custom design with an open PDK and completely open
-source tools.  The course is crammed full of interesting material with
-great pacing and support from Matt, and it's been a fantastic
-opportunity to meet other folks with shared interests and different
-backgrounds.  The course has left me excited with opportunities for
-new projects and optimism for some working silicon!
+> and simulating a MOSFET, formal verification leading up to
+> implementing a custom design with an open PDK and completely open
+> source tools. The course is crammed full of interesting material with
+> great pacing and support from Matt, and it's been a fantastic
+> opportunity to meet other folks with shared interests and different
+> backgrounds. The course has left me excited with opportunities for
+> new projects and optimism for some working silicon!
 >
 > Jamie Iles
 
 ## Course Overview
 
-* [Full course details here](/course_content).
-* We will concentrate on digital design.
-* A virtual machine is available or you can install the tools manually. 
-* The course is continually updated for the latest tooling and PDK.
+-   [Full course details here](/course_content).
+-   We will concentrate on digital design.
+-   A virtual machine is available or you can install the tools manually.
+-   The course is continually updated for the latest tooling and PDK.
 
 ### Format
 
-* 11 hands-on projects, supported with text guides and over 6 hours of videos.
-* Support via:
-    * Recorded solutions videos.
-    * Discord community server.
-    * Weekly course hangout call.
-    * 1 to 1 office hours with Matt: access to expert help on the Boron and Arsenic level tickets.
-* Asynchronous - do in your own time.
-* A PCB will be optionally available to buy with ASIC pre-soldered for you.
-* High resolution set of digital images of the decapped ASIC - see [FAQ](#asic-def).
-* Access to the course materials for the lifetime of the course.
-* Course completion certificate.
+-   11 hands-on projects, supported with text guides and over 6 hours of videos.
+-   Support via:
+    -   Recorded solutions videos.
+    -   Discord community server.
+    -   Weekly course hangout call.
+    -   1 to 1 office hours with Matt: access to expert help on the Boron and Arsenic level tickets.
+-   Asynchronous - do in your own time.
+-   A PCB will be optionally available to buy with ASIC pre-soldered for you.
+-   High resolution set of digital images of the decapped ASIC - see [FAQ](#asic-def).
+-   Access to the course materials for the lifetime of the course.
+-   Course completion certificate.
 
 ### Prerequisites
 
-* Basic Linux command line experience helpful.
-* Some programming experience helpful.
-* No hardware or [HDL](/terminology/hdl) experience required!
+-   Basic Linux command line experience helpful.
+-   Some programming experience helpful.
+-   No hardware or [HDL](/terminology/hdl) experience required!
 
 [Back to top](#tickets)
 
---- 
+---
 
 ## FAQ
 
@@ -110,12 +110,11 @@ If you need bigger then you can make an individual application to Efabless.
 
 [Back to top](#tickets)
 
-
 #### Will I definitely get an ASIC with my design on it? {#asic-def}
 
 Chips are only guaranteed on the Arsenic level ticket. Boron and Silicon tickets are entered into the Google/Skywater free shuttle.
 
-The free shuttle is currently run as a lottery and while we have a good chance of getting in there is no guarantee. 
+The free shuttle is currently run as a lottery and while we have a good chance of getting in there is no guarantee.
 
 You are able to make your own application separately to the group if you wish.
 
@@ -125,7 +124,7 @@ If the application doesn’t make it onto the shuttle, then that also means we d
 
 #### How long does the whole course take to complete?
 
-It depends on your existing level of experience and how deep you want to go on your own project. Most people complete each section in 4 hours, so about 20 hours for coursework. 
+It depends on your existing level of experience and how deep you want to go on your own project. Most people complete each section in 4 hours, so about 20 hours for coursework.
 Then you will need some amount of time to prepare your own project.
 
 [Back to top](#tickets)
@@ -163,7 +162,6 @@ Take the course with 2 colleagues. You will work through the course material as 
 
 #### Anything else?
 
-[Send your questions here!](/contact-form) 
+[Send your questions here!](/contact-form)
 
 [Back to top](#tickets)
-
