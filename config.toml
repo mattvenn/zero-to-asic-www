@@ -33,9 +33,9 @@ weight = 20
 
 [[menu.main]]
 identifier = "Matt Venn"
-name = "Matt Venn"
+name = "About Matt Venn"
 url = "/matt_venn"
-weight = 40
+weight = 25
 
 [[menu.main]]
 identifier = "Buy a ticket"
@@ -49,13 +49,13 @@ weight = 60
 identifier = "Newsletter"
 name = "Newsletter"
 url = "/newsletter"
-weight = 20
+weight = 30
 
 [[menu.main]]
 identifier = "Resources"
 name = "Resources"
 url = "/resources"
-weight = 20
+weight = 30
 
 [[menu.main]]
 identifier = "Videos"
