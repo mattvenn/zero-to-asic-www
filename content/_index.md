@@ -64,6 +64,8 @@ This course will give you the experience of creating your own microchip, using f
 >
 > Jamie Iles
 
+Watch more [in depth feedback here](https://www.youtube.com/watch?v=TR8LiCWoOdg&list=PLyynFETmdQDTodkIg7rQM-z5GSRBHE8XC).
+
 ## Course Overview
 
 -   [Full course details here](/course_content).
