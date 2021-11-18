@@ -15,6 +15,7 @@ Also from the course we had 3 applicants with large projects that needed a perso
 * Exor's project contains two sudoku accelerator modules on the wishbone bus: https://efabless.com/projects/428
 * Sean's project TODO
 * Paweł's memory tester: https://efabless.com/projects/501
+* Analog with Harry
 
 
 The github repo is here: https://github.com/mattvenn/zero_to_asic_mpw3
