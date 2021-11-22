@@ -6,25 +6,24 @@ featured_image: "mpw2_multi_macro.png"
 image_pos: 0% +80%
 ---
 
-We submitted for MPW3! The tapeout date was delayed due to [issues with the toolchain](/post/mpw1_silicon).
+We submitted for MPW3! The tapeout date was delayed by a couple of weeks due to [issues with the toolchain](/post/mpw1_silicon).
 
 We had 7 new submissions from the course, 4 repeats from MPW1 and 2 with fixed clock trees, a new wishbone demo from me and the [OpenRAM block](/post/interview-with-matt-guthaus/).
 
-Also from the course we had 3 applicants with large projects that needed a personal application.
+We also had some people course make personal applications for a whole chip:
 
 * Exor's project contains two sudoku accelerator modules on the wishbone bus: https://efabless.com/projects/428
-* Sean's project TODO
 * Paweł's memory tester: https://efabless.com/projects/501
-* Analog with Harry
+* Sean's pretrained handwriting recognition neural network: https://efabless.com/projects/486
+* An Analogue op-amp submission by Marcus that was kindly included in this project: https://efabless.com/projects/406
 
-
-The github repo is here: https://github.com/mattvenn/zero_to_asic_mpw3
+The github repo for the group submission is here: https://github.com/mattvenn/zero_to_asic_mpw3
 
 And the efabless project is here: https://efabless.com/projects/392
 
 ![MPW3 submission](/mpw2_multi_macro.png)
 
-And to see how I put the application together check [here](#multi-project-tools).
+To see how I put the application together check [here](#multi-project-tools).
 
 ## RGB Mixer
 
