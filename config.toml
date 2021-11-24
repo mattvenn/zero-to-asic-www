@@ -10,6 +10,7 @@ theme = "ananke"
   description = "Learn how to make your own chips!"
   title = "Zero to ASIC Course"
   images = ["zero-to-asic-logo-white-bg.png"]
+  captcha_key = "6LeFKlcdAAAAAA6sEbdU78sUuy0lPezU-0H0JueA"
 
 [menu]
 
