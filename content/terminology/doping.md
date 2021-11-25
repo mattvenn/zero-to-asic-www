@@ -15,6 +15,6 @@ The elements we typically use are Boron for p-type (positive holes) doping and P
 
 The Arsenic is the poison in this fun tweet:
 
-{{< twitter 722931893256065024 >}}
+{{< twitter user="computerfact" id="722931893256065024" >}}
 
 For more information check this [article from technocrazed](https://www.technocrazed.com/2-5-electrons-and-u201cholesu2019u2019)

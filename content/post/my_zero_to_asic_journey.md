@@ -11,7 +11,7 @@ I began by investigating [QFlow](http://opencircuitdesign.com/qflow/). The [stan
 
 By May I was getting a few results out of QFlow and I was curious to discover how digital logic actually works on silicon. I experimented with [Magic](/terminology/magic) and managed to draw and simulate an inverter after taking one of [Kunal Ghosh's VLSI courses](https://www.vlsisystemdesign.com/basic_courses/). 
 
-{{< twitter 1274728518216306690 >}}
+{{< twitter user="matthewvenn" id="1274728518216306690" >}}
 
 Seeing such interest in this topic gave me a bit of an energy boost and I began wondering if I could find enough people to share the cost of producing an ASIC. I worked up a quick course structure and started getting feedback from people in the industry. It looked like if there 10 people all willing to put in $1000 we could do it.
 
@@ -24,7 +24,7 @@ I was quickly able to use OpenLANE to turn my [FPGA VGA clock design](/post/vga_
 In August Hackaday put a call out for talks to their #remoticon conference. I asked on Twitter to gauge interest and subsequently began working on a presentation.
 I just couldn't get it short enough to fit but they kindly gave me a bigger slot - it was still a tight squeeze covering everything in 1 hour! I think I practiced that presentation 4 times, and even did it in Spanish for my local hackerspace.
 
-{{< twitter 1298282514495213574 >}}
+{{< twitter user="matthewvenn" id="1298282514495213574" >}}
 
 My work situation had just changed and I was thinking that instead of looking for another electronics contracting job I could try creating a paid course. I decided to add a link to the end of the talk and find out how many people would be interested in paying for a course.
 
