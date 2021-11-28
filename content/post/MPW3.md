@@ -1,8 +1,9 @@
 ---
 title: "MPW3 submitted!"
 date: 2021-11-18T18:50:08+01:00
-images: ["mpw2_multi_macro.png"]
-featured_image: "mpw2_multi_macro.png"
+images: ["mpw3_multi_macro.png"]
+featured_image: "mpw3_multi_macro.png"
+tags: ["mpw", "course" ]
 image_pos: 0% +80%
 ---
 
@@ -21,7 +22,7 @@ The github repo for the group submission is here: https://github.com/mattvenn/ze
 
 And the efabless project is here: https://efabless.com/projects/392
 
-![MPW3 submission](/mpw2_multi_macro.png)
+![MPW3 submission](/mpw3_multi_macro.png)
 
 To see how I put the application together check [here](#multi-project-tools).
 

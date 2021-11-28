@@ -2,6 +2,7 @@
 title: "Caravel Wishbone Demo"
 date: 2021-05-19T17:25:37+02:00
 images: ["wishbone.png"]
+tags: ["caravel"]
 featured_image: "wishbone.png"
 ---
 

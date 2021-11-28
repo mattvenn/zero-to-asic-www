@@ -2,6 +2,7 @@
 title: "Understanding Caravel GPIO"
 date: 2021-02-15T13:36:29+01:00
 images: ["caravel_gpio.png"]
+tags: ["caravel"]
 featured_image: "caravel_gpio.png"
 ---
 

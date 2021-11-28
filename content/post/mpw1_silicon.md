@@ -2,6 +2,7 @@
 title: "MPW1 silicon has serious problems"
 date: 2021-10-22T15:50:39+02:00
 images: ["mpw1_wafer.jpg"]
+tags: ["mpw"]
 featured_image: "mpw1_wafer.jpg"
 image_pos: 0% 65%
 ---

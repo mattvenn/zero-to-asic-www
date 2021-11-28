@@ -1,9 +1,10 @@
 ---
-title: "ASIC submitted"
+title: "First ASIC submitted"
 date: 2020-12-23T18:07:33+01:00
 images: ["caravel-numbered.png"]
 featured_image: "caravel-numbered.png"
 description: "ASIC submitted!"
+tags: ["mpw"]
 ---
 
 Wow! What a journey. I'm very happy to announce our submission is in and accepted. Now we have a long wait to see if it works!

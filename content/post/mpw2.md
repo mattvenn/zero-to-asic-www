@@ -1,8 +1,9 @@
 ---
-title: "MPW2"
+title: "MPW2 announced by Efabless"
 date: 2021-05-19T13:15:24+02:00
 images: ["open_mpw_header.jpg"]
 featured_image: "open_mpw_header.jpg"
+tags: ["mpw"]
 ---
 
 Efabless have announced MPW2! The closing date is the 18th of June.

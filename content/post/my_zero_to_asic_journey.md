@@ -2,6 +2,7 @@
 title: "My Zero to ASIC journey"
 date: 2021-03-10T11:36:30+01:00
 images: ["matt_photo.jpg"]
+tags: ["course"]
 featured_image: "matt_photo.jpg"
 ---
 

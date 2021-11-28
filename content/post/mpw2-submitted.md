@@ -3,6 +3,7 @@ title: "MPW2 Submitted"
 date: 2021-06-24T16:51:19+02:00
 images: ["multi_macro.png"]
 featured_image: "multi_macro.png"
+tags: ["mpw", "course"]
 image_pos: 0% 20%
 ---
 
