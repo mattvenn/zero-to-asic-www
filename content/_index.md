@@ -4,6 +4,7 @@ title: Zero to ASIC Course
 images: ['maximo_render_3.jpeg']
 featured_image: 'maximo_render_3.jpeg'
 image_pos: 0% +10%
+tags: ["course"]
 type: page
 layout: single
 aliases:
@@ -45,7 +46,7 @@ This course will give you the experience of creating your own microchip, using f
 
 -   Check your email for onboarding information after your purchase.
 -   Receipt provided upon purchase for deducting as a business expense.
--   [Contact us](/contact-form) if your business has any special requirements.
+-   [Contact me](/contact-form) if your business has any special requirements.
 -   Secure payment handling by Stripe.
 -   Not ready? [Join the mailing list to receive updates and promotional discount codes](/newsletter).
 

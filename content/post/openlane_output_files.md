@@ -2,6 +2,7 @@
 title: "OpenLANE Output Files"
 date: 2021-04-16T13:06:58+02:00
 images: ["openlane-flow.png"]
+tags: ["tools"]
 featured_image: "openlane-flow.png"
 ---
 

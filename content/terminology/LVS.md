@@ -29,3 +29,7 @@ The end of the file shows the input and output are equivalent.
     Device classes inverter and inverter are equivalent.
     Circuits match uniquely.
 
+The most common types of LVS errors I've seen with OpenLane are:
+
+* when power supplies aren't connected for some reason,
+* there is a short circuit during routing.

@@ -2,6 +2,7 @@
 title: "Multi Project Harness"
 date: 2020-11-12T14:54:58+01:00
 images: ["multi-project-harness.png"]
+tags: ["mpw", "tools"]
 featured_image: "multi-project-harness.png"
 ---
 
