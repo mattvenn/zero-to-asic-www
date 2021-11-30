@@ -109,6 +109,11 @@
         "author": "Tommy Thorn",
         "video" : "https://youtu.be/j3oAQrng1-Y",
         "quote" : "I didn't know what to expect regarding formal verification and that was delightful, I thought it was very fun and totally new to me."
+        },
+        {
+        "author": "Renaldas Zioma",
+        "video" : "https://youtu.be/f6YwFEVPyQw",
+        "quote" : "At first I wasn’t interested in testing at all, but by the end of the course somehow it got quite fascinating just to figure out all the ways to test the design."
         }
         ]
 }
