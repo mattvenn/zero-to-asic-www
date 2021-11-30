@@ -1,0 +1,6 @@
+{{ $quotes := getJSON "quotes/quotes.json" }}
+{{ $quote := $quotes.quotes | shuffle | first 1 }}
+{{ $real_quote := index $quote 0 }}
+> {{ $real_quote.quote }}
+>
+> [{{ $real_quote.author }}]({{$real_quote.video}})

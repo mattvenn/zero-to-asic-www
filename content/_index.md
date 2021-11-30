@@ -54,16 +54,7 @@ Course participants have successfully submitted designs to [MPW2](/post/mpw2-sub
 
 {{< youtube fjpFWogQl8Y >}}
 
-> The Zero To ASIC course took me on a fantastic journey from drawing
-> and simulating a MOSFET, formal verification leading up to
-> implementing a custom design with an open PDK and completely open
-> source tools. The course is crammed full of interesting material with
-> great pacing and support from Matt, and it's been a fantastic
-> opportunity to meet other folks with shared interests and different
-> backgrounds. The course has left me excited with opportunities for
-> new projects and optimism for some working silicon!
->
-> Jamie Iles
+{{% random_quote %}}
 
 Watch more [in depth feedback here](https://www.youtube.com/watch?v=TR8LiCWoOdg&list=PLyynFETmdQDTodkIg7rQM-z5GSRBHE8XC).
 

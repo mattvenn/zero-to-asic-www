@@ -1,0 +1,14 @@
+{ 
+    "quotes": [
+        { 
+        "author": "Jamie Iles",
+        "video" : "https://youtu.be/TA8l_RdZa8o",
+        "quote" : "The Zero To ASIC course took me on a fantastic journey from drawing and simulating a MOSFET, formal verification leading up to implementing a custom design with an open PDK and completely open source tools. The course is crammed full of interesting material with great pacing and support from Matt, and it's been a fantastic opportunity to meet other folks with shared interests and different backgrounds. The course has left me excited with opportunities for new projects and optimism for some working silicon!"
+        },
+        {
+        "author": "Renaldas Zioma",
+        "video" : "https://youtu.be/f6YwFEVPyQw",
+        "quote" : "The Zero to ASIC course was great! Through this course I became more proficient with Verilog and started to not just appreciate, but actually enjoy the design verification! It offers the glimpse at the superpower too - seeing the traces of the original design in what used to be just squiggly lines of the masks before. Plus, I am getting my own piece of a silicon 🙂"
+        }
+        ]
+}
