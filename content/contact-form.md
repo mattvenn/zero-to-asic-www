@@ -8,3 +8,5 @@ featured_image: "maximo_render_1.jpeg"
 Got a question? Want to say hello? I look forward to hearing from you!
 
 {{< form-contact action="https://formspree.io/f/xpzkjrnw" >}}
+
+{{% random_quote %}}

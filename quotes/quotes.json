@@ -3,12 +3,112 @@
         { 
         "author": "Jamie Iles",
         "video" : "https://youtu.be/TA8l_RdZa8o",
+        "quote" : "I've really enjoyed the whole process, I've learned a lot. For a long time it’s been something I've wanted to do but the idea of just going at it on your own is a bit daunting. You're not really going to know what you're going to get out of it. And you're not going to know if what you've actually done is correct, so having an option to take a course with some other people has been a really great way of learning it."
+        },
+        { 
+        "author": "Jamie Iles",
+        "video" : "https://youtu.be/TA8l_RdZa8o",
+        "quote" : "It’s a fairly daunting prospect going into something like an ASIC, but I feel confident now that I could pick another project up and go from the start with the Verilog and end up with something that will hopefully work."
+        },
+        { 
+        "author": "Jamie Iles",
+        "video" : "https://youtu.be/TA8l_RdZa8o",
         "quote" : "The Zero To ASIC course took me on a fantastic journey from drawing and simulating a MOSFET, formal verification leading up to implementing a custom design with an open PDK and completely open source tools. The course is crammed full of interesting material with great pacing and support from Matt, and it's been a fantastic opportunity to meet other folks with shared interests and different backgrounds. The course has left me excited with opportunities for new projects and optimism for some working silicon!"
         },
         {
         "author": "Renaldas Zioma",
         "video" : "https://youtu.be/f6YwFEVPyQw",
         "quote" : "The Zero to ASIC course was great! Through this course I became more proficient with Verilog and started to not just appreciate, but actually enjoy the design verification! It offers the glimpse at the superpower too - seeing the traces of the original design in what used to be just squiggly lines of the masks before. Plus, I am getting my own piece of a silicon 🙂"
+        },
+        {
+        "author": "Mike Thompson",
+        "video" : "https://youtu.be/Rm3gPqxjxsY",
+        "quote" : "What I learned in 6 weeks in this course would have taken me 6 months on my own. This is a great way to accelerate it."
+        },
+        {
+        "author": "Mike Thompson",
+        "video" : "https://youtu.be/Rm3gPqxjxsY",
+        "quote" : "I would recommend this course to people who don't have any awareness of open source hardware development. It can be a bit of an eye opener, a lot of people in industry have a disconnected impression of what the landscape really is."
+        },
+        {
+        "author": "Mike Thompson",
+        "video" : "https://youtu.be/Rm3gPqxjxsY",
+        "quote" : "Matt Venn's Zero To ASIC course is a real eye-opener to the possibilities of open source hardware.  The course itself is a tour-de-force overview of almost all aspects of ASIC development from concept to GDSII.  It's also great fun and regardless of your background or previous experience, you'll learn a lot and have a great deal of fun doing it.  This course has inspired me to take the next step and submit my own design to efabless."
+        },
+        {
+        "author": "Robert Baruch",
+        "video" : "https://youtu.be/LdL1VyygSe4",
+        "quote" : "I've always looked at Magic and it was basically impenetrable to me. So I was really happy to learn how to actually use it and understand how to make an ASIC. I found found the course materials very easy to follow and the discord conversations were also very useful."
+        },
+        {
+        "author": "Robert Baruch",
+        "video" : "https://youtu.be/LdL1VyygSe4",
+        "quote" : "The really exciting part for me is when you see what you've written actually end up as laid out digital logic."
+        },
+        {
+        "author": "Ben Newhouse",
+        "video" : "https://youtu.be/iyZYq5Ijj6E",
+        "quote" : "ASICs are a chunk of the stack that just seems so impenetrable because typically you need enormous amounts of money and access to PDKs and Cadence and all this stuff. It seemed like an awesome way to fill in that missing piece of how computers work top to bottom."
+        },
+        {
+        "author": "Ben Newhouse",
+        "video" : "https://youtu.be/iyZYq5Ijj6E",
+        "quote" : "Getting connected to other people who were excited about this space and being in the same community and discord was really great."
+        },
+        {
+        "author": "Ben Newhouse",
+        "video" : "https://youtu.be/iyZYq5Ijj6E",
+        "quote" : "I hadn't done any verification before and it was a kind of light bulb moment of what it could  bring to your confidence in a particular digital design."
+        },
+        {
+        "author": "Matthew Beech",
+        "video" : "https://youtu.be/HiK-8OfxdsA",
+        "quote" : "Amazing course, lots of awesome help on the discord. I feel like there's a growing community surrounding the course which will help make everything more accessible. So don't be afraid to dive in!"
+        },
+        {
+        "author": "Matthew Beech",
+        "video" : "https://youtu.be/HiK-8OfxdsA",
+        "quote" : "It was a great fun way to introduce people to Verilog and basic digital design in general. You don't have to have done tons of FPGA stuff or be an expert at Verilog at all. If you’re interested in hardware in general I'd say it's accessible."
+        },
+        {
+        "author": "Erik Van Zijst",
+        "video" : "https://youtu.be/R7fbLyhYk1A",
+        "quote" : "This course is an incredible opportunity to make a step into a very very different field."
+        },
+        {
+        "author": "Erik Van Zijst",
+        "video" : "https://youtu.be/R7fbLyhYk1A",
+        "quote" : "I’m really really happy with the course and I'm really glad that I joined. It's always easy to postpone stuff and not do it because it's going to be hard and it's very far out of my comfort zone but I'm very glad that I did."
+        },
+        {
+        "author": "Tom Gwozdz",
+        "video" : "https://youtu.be/Cg236MVj57M",
+        "quote" : "I saw that Google was doing the free shuttle service and I thought that would be really cool to get into. I had no idea how to even begin such a process and then I saw the course and it's like “Hey this this is exactly what I need!"
+        },
+        {
+        "author": "Tom Gwozdz",
+        "video" : "https://youtu.be/Cg236MVj57M",
+        "quote" : "Anybody who wants to learn about ASIC design who's never done it, this was a great introduction. I really enjoyed the course, this has been a great learning experience."
+        },
+        {
+        "author": "Klas Nordmark",
+        "video" : "https://youtu.be/yNmvYHVZgQY",
+        "quote" : "For a very long time I’ve been fascinated by ASICs and have been close to them in my professional life as well, but not really as much into the detail as I would want. It’s been a fascination since grad school at least, so I've been interested in seeing more open source alternatives crop up, and now with the skywater PDK and OpenLane it seemed like the right time. It’s still a bit hard to get the motivation to get started, it feels like a bit of a hurdle so when I saw this course I just jumped right on it. It felt like a perfect way to get started."
+        },
+        {
+        "author": "Tommy Thorn",
+        "video" : "https://youtu.be/j3oAQrng1-Y",
+        "quote" : "I've always wanted to make chips of my own since forever, but until this initiative it was unbelievably expensive. So I just needed to acquire the knowledge to do it. I saw you going through the whole thing from RTL to a design and that meant you had the insights for all of it."
+        },
+        {
+        "author": "Tommy Thorn",
+        "video" : "https://youtu.be/j3oAQrng1-Y",
+        "quote" : "It is immensely helpful to have somebody who has gone through everything and know if something is not documented. You can read all day but you will not get the same out of it, so that was tremendously helpful."
+        },
+        {
+        "author": "Tommy Thorn",
+        "video" : "https://youtu.be/j3oAQrng1-Y",
+        "quote" : "I didn't know what to expect regarding formal verification and that was delightful, I thought it was very fun and totally new to me."
         }
         ]
 }
