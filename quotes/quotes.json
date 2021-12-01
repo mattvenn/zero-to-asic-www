@@ -131,7 +131,7 @@
         "quote" : "I love the layout of the course, you did a perfect job Matt. Building up the foundation and then getting into the depths of it. Having everything lined up. I love the walkthroughs at the end of each section. I did the work and then I looked back, maybe there's a better way and in your videos you point out some other interesting things as well so that was really helpful. So yes I love the course."
         },
         {
-        "author": "Paweł Sitarz",
+        "author": "Pawel Sitarz",
         "video" : "https://youtu.be/SS8-NXf2D3A",
         "quote" : "It was such a great opportunity to do something on my own and see a piece of silicon where there is my invention or my part doing things. It was in the back of my mind for a long time, I think it was my dream to put something into silicon but it was so expensive until this opportunity arrived."
         },
@@ -149,6 +149,21 @@
         "author": "Renaldas Zioma",
         "video" : "https://youtu.be/f6YwFEVPyQw",
         "quote" : "At first I wasn’t interested in testing at all, but by the end of the course somehow it got quite fascinating just to figure out all the ways to test the design."
+        },
+        {
+        "author": "Ameen Altajer",
+        "video" : "https://youtu.be/6yyV-A5kJLg",
+        "quote" : "I wanted to get my hands dirty and I think your course sums up the whole experience from the ground up. You start by understanding how MOFETs work, get hands-on with Verilog and then all the way to the stage where you can be part of the ASIC shuttle."
+        },
+        {
+        "author": "Ameen Altajer",
+        "video" : "https://youtu.be/6yyV-A5kJLg",
+        "quote" : "The Discord channel is my favorite thing, I get my hands on right before I sleep - there's a lot of cool things and people are so awesome, they're really helpful. The community side of the course is an important part of it."
+        },
+        {
+        "author": "Ameen Altajer",
+        "video" : "https://youtu.be/6yyV-A5kJLg",
+        "quote" : "This is probably the best course you can get your hands on for practical stuff. If you're a hands-on guy like me it's really worth it to have the course. You can do it hand in hand with whatever theory that you're following as well. Hands-on is king for me, I mean what's the point of reading if you can't experiment - this is the mindset of an engineer."
         }
         ]
 }
