@@ -136,3 +136,4 @@ You will learn:
 * How to prepare your repository.
 * Submit your design.
 
+{{% random_quote %}}
