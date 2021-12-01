@@ -109,6 +109,41 @@
         "author": "Tommy Thorn",
         "video" : "https://youtu.be/j3oAQrng1-Y",
         "quote" : "I didn't know what to expect regarding formal verification and that was delightful, I thought it was very fun and totally new to me."
+        },
+        {
+        "author": "Fran Gonzalez",
+        "video" : "https://youtu.be/9RKyRcI3XPY",
+        "quote" : "You can google pretty much anything and you can watch hundreds of hours of videos and get some level of understanding. But what’s extremely valuable is having this course and knowing that if you go from start to end you'll complete something."
+        },
+        {
+        "author": "Fran Gonzalez",
+        "video" : "https://youtu.be/9RKyRcI3XPY",
+        "quote" : "I’d absolutely recommend this course even if you've never done hardware design. We all have a phone with a couple of gigahertz worth of compute power in our hands but I don't think many people know exactly how that works."
+        },
+        {
+        "author": "Konrad Wilk",
+        "video" : "https://youtu.be/Y7wuLaZtdQ8",
+        "quote" : "I was like holy cow I can make my own CPU? I mean come on this is kind of fantastic making your own CPU. I gotta jump on that train!"
+        },
+        {
+        "author": "Konrad Wilk",
+        "video" : "https://youtu.be/Y7wuLaZtdQ8",
+        "quote" : "I love the layout of the course, you did a perfect job Matt. Building up the foundation and then getting into the depths of it. Having everything lined up. I love the walkthroughs at the end of each section. I did the work and then I looked back, maybe there's a better way and in your videos you point out some other interesting things as well so that was really helpful. So yes I love the course."
+        },
+        {
+        "author": "Paweł Sitarz",
+        "video" : "https://youtu.be/SS8-NXf2D3A ",
+        "quote" : "It was such a great opportunity to do something on my own and see a piece of silicon where there is my invention or my part doing things. It was in the back of my mind for a long time, I think it was my dream to put something into silicon but it was so expensive until this opportunity arrived."
+        },
+        {
+        "author": "Jonathan Pallant",
+        "video" : "https://youtu.be/TR8LiCWoOdg ",
+        "quote" : "The part I enjoyed the most was going back to the Verilog and seeing test benches pass. In particular the waveform viewer.  At the latter parts of course you're simulating the entire Caravel system on chip with a RISCV core. Being able to drill down into everything inside that core, I can log the program counter, I can log all the address and data buses and you can just see in exquisite detail what the system is doing, and it's doing that because I programmed it. Being able to drill down into that detail was really fascinating."
+        },
+        {
+        "author": "Jonathan Pallant",
+        "video" : "https://youtu.be/TR8LiCWoOdg ",
+        "quote" : "If you've got any interest in how the sausage is made you should get on the course and you should dig in and find out more. I mean this was the work of secret witches and wizards in mysterious cloaks casting strange incantations over a cauldron! This was all secret stuff and I love that this project is trying to do to silicon design what the open source community has been trying to do with software for the last 30 years. This feels like the next logical step and I think we'll look back and say well of course you can make your own chips that's just a thing and it will just be obvious and commonplace and I look forward to that."
         }
         ]
 }
