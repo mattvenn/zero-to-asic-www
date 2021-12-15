@@ -23,4 +23,4 @@ The most fundamental steps are:
 * [Place and Route](/terminology/place_and_route)
 * sign off: [Layout vs Schematic](/terminology/lvs), [Design Rule Check](/terminology/drc), [Static Timing Analysis](/terminology/sta)
 
-To see more about OpenLane's output files - [check this article](/posts/openlane_output_files)
+To see more about OpenLane's output files - [check this article](/post/openlane_output_files)

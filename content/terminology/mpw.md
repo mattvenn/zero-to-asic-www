@@ -11,6 +11,4 @@ between all the participants.
 
 ![mask](/mpw.jpg)
 
-Image from [EuroPractice](https://europractice-ic.com/mpw-prototyping/general/mpw-minisic/)
-
-The Google [shuttle](/terminology/shuttle) is an MPW.
+The Google [shuttle](/terminology/shuttle) is an example of an MPW.
