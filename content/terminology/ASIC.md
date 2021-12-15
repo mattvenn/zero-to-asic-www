@@ -7,8 +7,8 @@ featured_image: "asic-zoom.png"
 
 Application Specific Integrated Circuit
 
-An ASIC is a custom [IC](/terminology/IC). 
-Typically big semiconductor companies produce millions of chips, which offsets the large costs related to the [masks](./terminology/maskset).
+An ASIC is a custom [IC](/terminology/ic). 
+Typically big semiconductor companies produce millions of chips, which offsets the large costs related to the [masks](/terminology/maskset).
 An Application Specific IC is something you design when you need a chip that isn't available off-the-shelf.
 
 Here's a picture from [magic](/terminology/magic) showing a layout of my [VGA clock](/post/vga_clock)

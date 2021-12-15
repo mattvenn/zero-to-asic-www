@@ -8,7 +8,7 @@ A netlist is a machine readable file that contains all the connections between a
 
 They are one of the outputs of a [Synthesis](/terminology/synthesis) tool like Yosys.
 
-These examples are taken from http://www.clifford.at/yosys/screenshots.html
+These examples are taken from http://bygone.clairexen.net/yosys/screenshots.html
 
 If you have a counter design written in an [HDL](/terminology/hdl) like Verilog
 

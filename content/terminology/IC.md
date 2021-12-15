@@ -8,7 +8,7 @@ featured_image: "Fairchild-UA714HC.jpg"
 An Integrated Circuit is a collection of circuit elements all together on one piece of silicon.
 Example elements include:
 
-* transistors, for example [MOSFETS](/terminology/MOSFET)
+* transistors, for example [MOSFETS](/terminology/mosfet)
 * resistors
 * capacitors
 

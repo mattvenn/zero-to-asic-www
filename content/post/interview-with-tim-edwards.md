@@ -15,6 +15,6 @@ A lot of the work is infrastructure:
 * fetching files, 
 * compositing IDs,
 * generating fill layers,
-* a final [DRC](/terminology/DRC) run.
+* a final [DRC](/terminology/drc) run.
 
 {{< youtube tc4iPFeFLzQ >}}

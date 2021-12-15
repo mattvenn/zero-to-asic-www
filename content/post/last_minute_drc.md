@@ -14,7 +14,7 @@ In my recent [interview with Tim Edwards](/post/interview-with-tim-edwards), he 
 
 Well, you guessed it - some problems get through. It turned out that OpenLANE did detect them - but weren't reported in a way that constituted an error.
 
-This screenshot shows metal 5, the top most layer of the [Skywater stackup](/terminology/pdk). It should be reserved for the [Power Delivery Network](/terminology/PDN.md).
+This screenshot shows metal 5, the top most layer of the [Skywater stackup](/terminology/pdk). It should be reserved for the [Power Delivery Network](/terminology/pdn.md).
 
 Some [macros](/terminology/macro) had wires on metal5, even though the configuration should have prevented that.
 

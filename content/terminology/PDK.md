@@ -26,7 +26,7 @@ This table shows all the layers defined in the PDK that can be used in a design 
 
 ![layers](/sky130-layers.png)
 
-For the raw data, check the [mask definitions](https://skywater-pdk.readthedocs.io/en/latest/rules/masks.html)
+For the raw data, check the [mask definitions](https://skywater-pdk.readthedocs.io/en/main/rules/masks.html)
 
 You can get all the information here https://skywater-pdk.readthedocs.io/en/latest/
 The following is adapted from one of Tim Ansell's [slides](https://docs.google.com/presentation/d/e/2PACX-1vRtwZPc8ykkkgtUkHkoJZrP9jKOo3FYdKqbg-So0ic6_kx7ha1vHnxrWmuxWkTc9GfC8xl0TfEpMLwK/pub?start=false&loop=false&delayms=3000#slide=id.g8a122ff1a1_6_2113) in his [Fossi presentation](https://www.youtube.com/watch?v=EczW2IWdnOM&list=PLUg3wIOWD8yoZCg9XpFSgEgljx6MSdm9L)

@@ -16,4 +16,4 @@ how they pull the silicon ingot out of the molten material.
 
 {{< youtube ihkRwArnc1k >}}
 
-After the wafers are ready, they can be patterned using the [lithographic](/terminology/lithography) process, using a series of [masks](/terminology/maskset)
+After the wafers are ready, they can be patterned using the [photolithographic](/terminology/photolithography) process, using a series of [masks](/terminology/maskset)

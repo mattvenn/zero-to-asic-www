@@ -55,7 +55,7 @@ Image from [Texplained](https://twitter.com/reivilo_t/status/1324402794783215616
 Image from [Wikimedia](https://commons.wikimedia.org/wiki/File:DIP_zagotovka.jpg)
 
 ![MPW](/mpw.jpg)
-Image from [Europractice](https://europractice-ic.com/mpw-prototyping/general/mpw-minisic/)
+Image from [Europractice](https://europractice-ic.com/mpw-prototyping/)
 
 ![NMOS](/nmos.png)
 Image from [VLSI Systems by Mead & Conway](https://www.researchgate.net/publication/234388249_Introduction_to_VLSI_systems)
@@ -98,7 +98,7 @@ Image from [Design News](https://www.designnews.com/electronics-test/how-track-d
 Image from [Tim 'mithro' Ansell's FOSSi presentation](https://www.youtube.com/watch?v=EczW2IWdnOM)
 
 ![Stackup](/stackup.png)
-Image from [Skywater PDK docs](https://skywater-pdk.readthedocs.io/en/latest/)
+Image from [Skywater PDK docs](https://skywater-pdk.readthedocs.io/en/main/)
 
 ![Standard cell](/standardcell-3d.png)
 Image from [Wikipedia](https://en.wikipedia.org/wiki/Standard_cell)

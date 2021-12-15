@@ -19,4 +19,4 @@ If your design is broken in some way, then it is definitely worth learning how t
 
 {{< youtube a2sLfoinQds >}}
 
-You can read the [white paper here](http://www.clifford.at/yosys/files/yosys_appnote_011_design_investigation.pdf)
+You can read the [white paper here](http://bygone.clairexen.net/yosys/files/yosys_appnote_011_design_investigation.pdf)
