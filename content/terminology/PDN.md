@@ -23,3 +23,5 @@ Metal 4 is used for vertical lines that are cut for the macros, and Metal 5 rout
 When the metal 5 lines pass over the macro, vias are dropped to connect the macro's internal PDN to the user project area's PDN.
 
 ![pdn](/openlane_pdn.png)
+
+A common failure for small designs with the [OpenLane](/terminology/openlane) tools is that there isn't enough area for the PDN to get created. A simple fix is setting the absolute size of the die to make sure its large enough.
