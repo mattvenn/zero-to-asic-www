@@ -54,7 +54,7 @@ The cross hatching between all the project [macros](/terminology/macro) (yellow 
 ## 7 ASIC_watch
 
 * 4 digit 7 segment clock
-* author: Guillem Cabo
+* authors: Louis Ledoux & Guillem Cabo
 * https://github.com/GuillemCabo/ASIC_watch.git
 
 ## 8 vga-clock
