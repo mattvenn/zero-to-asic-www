@@ -33,5 +33,5 @@ jobs:
 
     # run the script
     - name: run tweet a term
-      run: python ./tweet_a_term.py --tweet
+      run: python ./tweet_a_term.py --tweet --week-offset -25
 

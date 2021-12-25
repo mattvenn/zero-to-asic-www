@@ -13,19 +13,17 @@ def fetch_analytics():
     analytics = run_report(property_id)
     return analytics
 
-def get_term_of_the_week(analytics, week=None):
+def get_term_of_the_week(analytics, week):
     # fetch the term of the week
     os.chdir("content/terminology")
     terms = glob.glob("*md")
+    terms.remove("_index.md")
 
     # glob is non-deterministic!
-    terms.sort()
-
-    if week is None:
-        week = datetime.datetime.today().isocalendar()[1]
+    terms = sorted(terms, key=str.casefold)
+    print(terms)
 
     print("num terms found %d" % len(terms))
-    print("this is week %d" % week)
     term = (terms[week % len(terms)])
     term = term.replace(".md", "")
 
@@ -38,14 +36,14 @@ def get_term_of_the_week(analytics, week=None):
         if 'terminology' in row.dimension_values[0].value: 
             num_terms += 1
             stat_url = row.dimension_values[0].value
-            print(stat_url)
+            #print(stat_url)
             stat_url = stat_url.replace(".md", "")
             stat_url = stat_url.replace("/terminology/", "")
             stat_url = stat_url.replace("/", "")
             # sometimes GA lists 2 urls that go to the same term like /drc & /DRC. So only take the first one
             if term_rank is None:
                 if term.lower() == stat_url.lower():
-                    print("-" * 80)
+                    #print("-" * 80)
                     print("found term! at pos %d" % num_terms)
                     term_rank = num_terms
 
@@ -85,11 +83,22 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description="tweet a term")
     parser.add_argument('--tweet', help="actually do the tweet", action='store_const', const=True)
     parser.add_argument('--week', help="force a specific week", type=int)
+    parser.add_argument('--week-offset', help="add this number to the week number", type=int, default=0)
 
     args = parser.parse_args()
     
     analytics = fetch_analytics()
-    term, term_rank, num_terms = get_term_of_the_week(analytics, args.week)
+
+    if args.week is None:
+        week = datetime.datetime.today().isocalendar()[1]
+    else:
+        week = args.week
+
+    week += args.week_offset
+
+    print("this is week %d" % week)
+
+    term, term_rank, num_terms = get_term_of_the_week(analytics, week)
     tweet = create_tweet(term, term_rank, num_terms)
 
     if args.tweet:
