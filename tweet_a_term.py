@@ -21,17 +21,19 @@ def get_term_of_the_week(analytics, week):
 
     # glob is non-deterministic!
     terms = sorted(terms, key=str.casefold)
-    print(terms)
+   # print(terms)
 
-    print("num terms found %d" % len(terms))
+   # print("num terms found %d" % len(terms))
     term = (terms[week % len(terms)])
+    term_file = term
     term = term.replace(".md", "")
 
-    print("looking for %s" % term)
+   # print("looking for %s" % term)
 
     # rank it
     num_terms = 0
     term_rank = None
+    """
     for row in analytics.rows:
         if 'terminology' in row.dimension_values[0].value: 
             num_terms += 1
@@ -46,16 +48,22 @@ def get_term_of_the_week(analytics, week):
                     #print("-" * 80)
                     print("found term! at pos %d" % num_terms)
                     term_rank = num_terms
+    """
+    term_rank = 0
+    # get the title
+    with open(term_file) as fh:
+        for line in fh.readlines():
+            if line.startswith('title: '):
+                title = line.split(':')[1].strip()
+                title = title.replace('"', '')
+                break
 
-    return term, term_rank, num_terms
+    return title, term, term_file, term_rank, num_terms
 
-def create_tweet(term, term_rank, num_terms):
-    if term.isupper():
-        term_name = term
-    else:
-        term_name = term.capitalize()
+def create_tweet(term, term_file, term_rank, num_terms):
+    term_name = term
     term_rank = num2words(term_rank, to="ordinal_num")
-    link = "https://www.zerotoasiccourse.com/terminology/%s" % term.lower() # even if the page name is DRC, the link is drc
+    link = "https://www.zerotoasiccourse.com/terminology/%s" % term_file
     twitter_text = "%s is the #ASIC terminology of the week!\n%s\n\nIn the last month, %s has been the %s most popular out of %d terms." % (term_name, link, term_name, term_rank, num_terms)
     print(twitter_text)
 
@@ -98,8 +106,8 @@ if __name__ == '__main__':
 
     print("this is week %d" % week)
 
-    term, term_rank, num_terms = get_term_of_the_week(analytics, week)
-    tweet = create_tweet(term, term_rank, num_terms)
+    title, term, term_file, term_rank, num_terms = get_term_of_the_week(analytics, week)
+    tweet = create_tweet(title, term_file, term_rank, num_terms)
 
     if args.tweet:
         tweet_it(tweet)
