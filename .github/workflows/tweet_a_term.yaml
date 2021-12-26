@@ -3,7 +3,7 @@ name: tweet-a-term
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 21 * * 1' # At 21:00 on Monday 
+    - cron: '0 19 * * 1' # At 21:00 UTC on Monday 
 jobs:
   tweet-a-term:
     # ubuntu
