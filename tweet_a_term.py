@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import requests
 import argparse
 from secrets import *
 import tweepy
@@ -8,95 +9,110 @@ from analytics import run_report
 import os
 import datetime
 
-def fetch_analytics():
-    # fetch google analytics report, have to do this first because the secrets are in a local file
-    analytics = run_report(property_id)
-    return analytics
+URL = "https://www.zerotoasiccourse.com"
 
-def get_term_of_the_week(analytics, week):
-    # fetch the term of the week
-    os.chdir("content/terminology")
-    terms = glob.glob("*md")
-    terms.remove("_index.md")
+class Term():
 
-    # glob is non-deterministic!
-    terms = sorted(terms, key=str.casefold)
-   # print(terms)
+    def __init__(self, analytics, term_file, num_terms):
+        self.file = term_file
+        self.analytics = analytics
+        self.num_terms = num_terms
 
-   # print("num terms found %d" % len(terms))
-    term = (terms[week % len(terms)])
-    term_file = term
-    term = term.replace(".md", "")
+        self.url_end = self.file.replace('content/terminology/', '')
+        self.url_end = self.url_end.lower().replace('.md', '')
+        self.url = URL + "/terminology/" + self.url_end
 
-   # print("looking for %s" % term)
+        self.term_rank = None
+        rank = 0
+        for row in self.analytics.rows:
+            if 'terminology' in row.dimension_values[0].value: 
+                stat_url = row.dimension_values[0].value
+                #print(stat_url)
+                stat_url = stat_url.replace(".md", "")
+                stat_url = stat_url.replace("/terminology/", "")
+                stat_url = stat_url.replace("/", "")
+                stat_url = stat_url.lower()
 
-    # rank it
-    num_terms = 0
-    term_rank = None
-    """
-    for row in analytics.rows:
-        if 'terminology' in row.dimension_values[0].value: 
-            num_terms += 1
-            stat_url = row.dimension_values[0].value
-            #print(stat_url)
-            stat_url = stat_url.replace(".md", "")
-            stat_url = stat_url.replace("/terminology/", "")
-            stat_url = stat_url.replace("/", "")
-            # sometimes GA lists 2 urls that go to the same term like /drc & /DRC. So only take the first one
-            if term_rank is None:
-                if term.lower() == stat_url.lower():
-                    #print("-" * 80)
-                    print("found term! at pos %d" % num_terms)
-                    term_rank = num_terms
-    """
-    term_rank = 0
-    # get the title
-    with open(term_file) as fh:
-        for line in fh.readlines():
-            if line.startswith('title: '):
-                title = line.split(':')[1].strip()
-                title = title.replace('"', '')
-                break
+                # skip blank urls
+                if stat_url == '':
+                    continue
 
-    return title, term, term_file, term_rank, num_terms
+                rank += 1
+                if self.url_end == stat_url:
+                    if self.term_rank is None:
+                        #print("found term! at pos %d" % rank)
+                        self.term_rank = rank
 
-def create_tweet(term, term_file, term_rank, num_terms):
-    term_name = term
-    term_rank = num2words(term_rank, to="ordinal_num")
-    link = "https://www.zerotoasiccourse.com/terminology/%s" % term_file
-    twitter_text = "%s is the #ASIC terminology of the week!\n%s\n\nIn the last month, %s has been the %s most popular out of %d terms." % (term_name, link, term_name, term_rank, num_terms)
-    print(twitter_text)
+        # get the title by reading the title definition from the file
+        with open(term_file) as fh:
+            for line in fh.readlines():
+                if line.startswith('title: '):
+                    title = line.split(':')[1].strip()
+                    self.title = title.replace('"', '')
+                    break
 
-    return twitter_text
 
-def tweet_it(twitter_text):
-    # Authenticate to Twitter
-    auth = tweepy.OAuthHandler(api_key, api_key_secret)
-    auth.set_access_token(access_token, access_token_secret)
-    api = tweepy.API(auth)
+        ordinal_rank = num2words(self.term_rank, to="ordinal_num")
+        self.twitter_text = "%s is the #ASIC terminology of the week!\n%s\n\nIn the last month, %s has been the %s most popular out of %d terms." % (
+            self.title, self.url, self.title, ordinal_rank, self.num_terms)
 
-    try:
-        api.verify_credentials()
-        print("Authentication Successful")
-    except:
-        print("Authentication Error")
+    def __str__(self):
+        return "%-40s %-20s %3s %s" % (self.file, self.title, self.term_rank, self.url)
 
-    try:
-        if api.update_status(status = twitter_text):
-            print("Posted")
-    except tweepy.error.TweepError as e:
-        print(e)
+    def test_url(self):
+        request_response = requests.head(self.url)
+        status_code = request_response.status_code
+        if status_code in [200, 301]:
+            print("ok")
+        else:
+            exit("problem with %s" % self.url)
+
+    def tweet(self):
+        # Authenticate to Twitter
+        auth = tweepy.OAuthHandler(api_key, api_key_secret)
+        auth.set_access_token(access_token, access_token_secret)
+        api = tweepy.API(auth)
+
+        try:
+            api.verify_credentials()
+            print("Authentication Successful")
+        except:
+            print("Authentication Error")
+
+        # tweet it
+        try:
+            if api.update_status(status = self.twitter_text):
+                print("Posted")
+        except tweepy.error.TweepError as e:
+            print(e)
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description="tweet a term")
     parser.add_argument('--tweet', help="actually do the tweet", action='store_const', const=True)
     parser.add_argument('--week', help="force a specific week", type=int)
     parser.add_argument('--week-offset', help="add this number to the week number", type=int, default=0)
+    parser.add_argument('--test-url', help="check url is ok", action='store_const', const=True)
 
     args = parser.parse_args()
     
-    analytics = fetch_analytics()
+    # fetch site's analytics - use function from the analytics.py file
+    analytics = run_report(property_id)
 
+    # get all the terminology files in order
+    term_files = glob.glob("content/terminology/*md")
+    term_files.remove("content/terminology/_index.md")
+    # glob is non-deterministic!
+    term_files = sorted(term_files, key=str.casefold)
+
+    # build list of terms
+    terms = []
+    for term_file in term_files:
+        term = Term(analytics, term_file, len(term_files))
+        if args.test_url:
+            term.test_url()
+        terms.append(term)
+
+    # pick the one to use
     if args.week is None:
         week = datetime.datetime.today().isocalendar()[1]
     else:
@@ -105,9 +121,9 @@ if __name__ == '__main__':
     week += args.week_offset
 
     print("this is week %d" % week)
-
-    title, term, term_file, term_rank, num_terms = get_term_of_the_week(analytics, week)
-    tweet = create_tweet(title, term_file, term_rank, num_terms)
+    term_of_the_week = terms[week % len(terms)]
+    print(term_of_the_week)
+    print(term_of_the_week.twitter_text)
 
     if args.tweet:
-        tweet_it(tweet)
+        term_of_the_week.tweet()

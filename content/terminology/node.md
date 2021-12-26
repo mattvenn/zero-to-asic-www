@@ -1,5 +1,5 @@
 ---
-title: "Node / Process"
+title: "Node"
 date: 2020-11-13T16:48:16+01:00
 images: ["half-pitch.png"]
 featured_image: "half-pitch.png"
