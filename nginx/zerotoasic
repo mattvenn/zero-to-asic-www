@@ -1,0 +1,36 @@
+server {
+	root /home/matt/zero_to_asic_www/public;
+	server_name zerotoasiccourse.com www.zerotoasiccourse.com;
+ location / {
+    try_files $uri $uri/ =404;
+  }
+
+    listen 443 ssl; # managed by Certbot
+    ssl_certificate /etc/letsencrypt/live/www.zerotoasiccourse.com/fullchain.pem; # managed by Certbot
+    ssl_certificate_key /etc/letsencrypt/live/www.zerotoasiccourse.com/privkey.pem; # managed by Certbot
+    include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
+    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
+
+   location ~* \.(?:jpg|jpeg|gif|png|ico|cur|gz|svg|mp4|ogg|ogv|webm|htc)$ {
+        expires 30d;
+    }
+
+    # CSS and Js
+    location ~* \.(css|js)$ {
+        expires 7d;
+    }
+
+}
+server {
+    if ($host = zerotoasiccourse.com) {
+        return 301 https://$host$request_uri;
+    } # managed by Certbot
+
+    if ($host = www.zerotoasiccourse.com) {
+        return 301 https://$host$request_uri;
+    } # managed by Certbot
+
+	listen 80;
+	server_name zerotoasiccourse.com www.zerotoasiccourse.com;
+    return 404; # managed by Certbot
+}
