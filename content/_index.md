@@ -16,7 +16,7 @@ aliases:
 
 ## Want to learn how to design chips?
 
-Learn to design and fabricate your own [ASIC](/terminology/asic)! Thanks to the new Open Source [Process Development Kit](/terminology/pdk) from Google and Skywater along with the OpenLANE ASIC tools from [Efabless](https://efabless.com/).
+Learn to design and fabricate your own [ASIC](/terminology/asic)! Thanks to the new Open Source [Process Development Kit](/terminology/pdk) from Google and Skywater along with the OpenLane ASIC tools from [Efabless](https://efabless.com/).
 
 GCC revolutionised compiling, Linux revolutionised computing. Android revolutionised phones. Arduino revolutionised microcontrollers. RISCV is revolutionising ISAs. The next step is Open Source Silicon.
 

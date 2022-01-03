@@ -32,9 +32,9 @@ The holes have less mobility than electrons, so you will typically see that for 
 
 To get the right ratios of charge carriers, the silicon needs to be [doped](/terminology/doping).
 
-This is quite a good video on the operating principles of a MOSFET:
+This is a good video on the operating principles of a MOSFET by Veritasium:
 
-{{< youtube Bfvyj88Hs_o >}}
+{{< youtube IcrBqCFLHIY >}}
 
 # Making a MOSFET
 
