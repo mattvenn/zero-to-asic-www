@@ -13,10 +13,11 @@ URL = "https://www.zerotoasiccourse.com"
 
 class Term():
 
-    def __init__(self, analytics, term_file, num_terms):
+    def __init__(self, analytics, term_file, num_terms, args):
         self.file = term_file
         self.analytics = analytics
         self.num_terms = num_terms
+        self.args = args
 
         self.url_end = self.file.replace('content/terminology/', '')
         self.url_end = self.url_end.lower().replace('.md', '')
@@ -40,7 +41,8 @@ class Term():
                 rank += 1
                 if self.url_end == stat_url:
                     if self.term_rank is None:
-                        #print("found term! at pos %d" % rank)
+                        if self.args.verbose:
+                            print("found term %s at pos %d" % (self.url_end, rank))
                         self.term_rank = rank
 
         # get the title by reading the title definition from the file
@@ -92,6 +94,7 @@ if __name__ == '__main__':
     parser.add_argument('--week', help="force a specific week", type=int)
     parser.add_argument('--week-offset', help="add this number to the week number", type=int, default=0)
     parser.add_argument('--test-url', help="check url is ok", action='store_const', const=True)
+    parser.add_argument('--verbose', help="debug", action='store_const', const=True)
 
     args = parser.parse_args()
     
@@ -107,7 +110,7 @@ if __name__ == '__main__':
     # build list of terms
     terms = []
     for term_file in term_files:
-        term = Term(analytics, term_file, len(term_files))
+        term = Term(analytics, term_file, len(term_files), args)
         if args.test_url:
             term.test_url()
         terms.append(term)
@@ -118,11 +121,14 @@ if __name__ == '__main__':
     else:
         week = args.week
 
+    if args.verbose:
+        print("this is week %d + offset %d = %s" % (week, args.week_offset, week + args.week_offset))
+
     week += args.week_offset
 
-    print("this is week %d" % week)
     term_of_the_week = terms[week % len(terms)]
-    print(term_of_the_week)
+    if args.verbose:
+        print(term_of_the_week)
     print(term_of_the_week.twitter_text)
 
     if args.tweet:
