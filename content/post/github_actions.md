@@ -34,5 +34,4 @@ If anything goes wrong, I get an email and I can correct the instructions before
 I'm also working on an action that will test if a project is ready for group submission with the [multi project tools](https://github.com/mattvenn/multi_project_tools). 
 The idea is that you could add this action to your repo and it would continually check that all the required tests pass and even build the GDS ready for submission.
 
-{{< twitter user="matthewvenn" id="1478071480814653444" >}}
-
+{{< twitter user="matthewvenn" id="1478071480814653443" >}}
