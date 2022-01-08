@@ -22,7 +22,7 @@ GCC revolutionised compiling, Linux revolutionised computing. Android revolution
 
 This course will give you the experience of creating your own microchip, using free and open source tools.
 
-30 people who have taken the course in the last year have have submitted designs for [MPW2](/post/mpw2-submitted/), [MPW3](/post/mpw3) and [MPW4](/post/mpw4_submitted).
+Of the 150 people who have taken the course, 30 have submitted designs for [MPW2](/post/mpw2-submitted/), [MPW3](/post/mpw3) and [MPW4](/post/mpw4_submitted).
 
 ## Ticket options {#tickets}
 
