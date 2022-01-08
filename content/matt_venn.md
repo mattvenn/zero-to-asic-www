@@ -22,5 +22,6 @@ If you want to learn more about how I got into this exciting world, see these li
 
 * Article about my [own Zero to ASIC journey](/post/my_zero_to_asic_journey/)
 * [My science communication website](https://www.mattvenn.net)
+* [An interview with SemiWiki](https://semiwiki.com/semiconductor-services/efabless/306426-an-user-view-of-efabless-platform-interview-with-matt-venn/)
 
 If you want to keep up to date with all things open source silicon, join the [mailing list](/newsletter).

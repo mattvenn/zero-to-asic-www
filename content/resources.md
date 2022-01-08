@@ -20,13 +20,13 @@ featured_image: "tapeout.png"
 # SkyWater/Google discussion & announcements
 
 * [Google/SkyWater Slack](https://slack.skywater.tools/)
-* [PDK docs](https://skywater-pdk.readthedocs.io/en/latest/)
+* [PDK docs](https://skywater-pdk.readthedocs.io/en/main/)
 * [Announce mailing list](https://groups.google.com/forum/#!forum/skywater-pdk-announce)
 
 # Tools
 
-* [OpenLANE](https://github.com/efabless/openlane) & [Documentation](https://openlane-docs.readthedocs.io/en/rtd-develop/)
-* [OpenLANE summary tool](https://github.com/mattvenn/openlane_summary) helps to explore the OpenLANE output files.
+* [OpenLane](https://github.com/efabless/openlane) & [Documentation](https://openlane-docs.readthedocs.io/en/rtd-develop/)
+* [OpenLane summary tool](https://github.com/mattvenn/openlane_summary) helps to explore the OpenLane output files.
 * [Magic](http://opencircuitdesign.com/magic/)
 * [KLayout](https://www.klayout.de/)
 * [Open Source FPGA toolchain](https://github.com/YosysHQ/fpga-toolchain)
@@ -35,14 +35,16 @@ featured_image: "tapeout.png"
 
 * [My course](/contact)
 * [Kunal’s udemy courses](https://www.udemy.com/course/vlsi-academy-custom-layout/)
-* [Grant Brown's OpenLANE course](https://gitlab.com/gab13c/openlane-workshop)
+* [Grant Brown's OpenLane course](https://gitlab.com/gab13c/openlane-workshop)
+* [Nand 2 Tetris](https://www.nand2tetris.org/)
 
 # Books
 
-* Weste & Harris: CMOS VLSI Design. Expensive but excellent.
-* search ‘introduction to VLSI systems’ by Carver Mead & Lynn Conway. Old but good.
+* CMOS VLSI Design by Weste & Harris: Expensive but excellent.
+* Introduction to VLSI systems by Carver Mead & Lynn Conway: Old but good.
 
 # FPGA
 
 * FPGA boards: [iCEBreaker](https://www.crowdsupply.com/1bitsquared/icebreaker-fpga), [TinyFPGA](https://tinyfpga.com/), [Black Ice](https://www.tindie.com/products/Folknology/blackice-mx/)
+* Will Green's [Project F](https://projectf.io/about/)
 * [WTFPGA course](https://github.com/esden/WTFpga)
