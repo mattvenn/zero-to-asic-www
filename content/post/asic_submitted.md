@@ -1,9 +1,8 @@
 ---
-title: "First ASIC submitted"
+title: "My first ASIC - MPW1 submitted"
 date: 2020-12-23T18:07:33+01:00
 images: ["caravel-numbered.png"]
 featured_image: "caravel-numbered.png"
-description: "ASIC submitted!"
 tags: ["mpw"]
 ---
 
