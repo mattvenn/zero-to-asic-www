@@ -16,13 +16,13 @@ aliases:
 
 ## Want to learn how to design chips?
 
-Learn to design and fabricate your own [ASIC](/terminology/asic)! Thanks to the new Open Source [Process Development Kit](/terminology/pdk) from Google and Skywater along with the OpenLane ASIC tools from [Efabless](https://efabless.com/).
+Learn to design your own [ASIC](/terminology/asic) and get it fabricated! Thanks to the new open source [Process Development Kit](/terminology/pdk) from Google and Skywater and the OpenLane ASIC tools from [Efabless](https://efabless.com/), we now have the opportunity to get involved in this exciting field without signing NDAs or paying a fortune for tool licenses.
 
-GCC revolutionised compiling, Linux revolutionised computing. Android revolutionised phones. Arduino revolutionised microcontrollers. RISCV is revolutionising ISAs. The next step is Open Source Silicon.
+GCC revolutionised compiling, Linux revolutionised computing. Android revolutionised phones. Arduino revolutionised microcontrollers. RISCV is revolutionising ISAs. The next step is open source Silicon.
 
 This course will give you the experience of creating your own microchip, using free and open source tools.
 
-25 people who have taken the course in the last year have have [already submitted designs for MPW2](/post/mpw2-submitted/) and [MPW3](/post/mpw3).
+Of the 150 people who have taken the course, 30 have submitted designs for [MPW2](/post/mpw2-submitted/), [MPW3](/post/mpw3) and [MPW4](/post/mpw4_submitted).
 
 ## Ticket options {#tickets}
 
