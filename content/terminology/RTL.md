@@ -15,4 +15,8 @@ Here's a quote from page 105 of the pdf of the book:
 
 ![rtl](/rtl.png)
 
-For a different viewpoint, this [thread in stackexchange](https://electronics.stackexchange.com/questions/69022/rtl-vs-hdl-whats-the-difference) tries to answer the question - what is the difference between [RTL and HDL](/terminology/hdl)
+For a different viewpoint, this [thread in stackexchange](https://electronics.stackexchange.com/questions/69022/rtl-vs-hdl-whats-the-difference) tries to answer the question - what is the difference between [RTL and HDL](/terminology/hdl).
+
+I made a video about how flip-flops work, and cover a bit about the difference between combinatorial and sequential logic at the beginning.
+
+{{< youtube 5PRuPVIjEcs >}}

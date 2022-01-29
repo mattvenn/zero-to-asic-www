@@ -24,3 +24,14 @@ The most fundamental steps are:
 * sign off: [Layout vs Schematic](/terminology/lvs), [Design Rule Check](/terminology/drc), [Static Timing Analysis](/terminology/sta)
 
 To see more about OpenLane's output files - [check this article](/post/openlane_output_files)
+
+OpenLane makes a lot of use of OpenROAD. [This is a project funded by DARPA to develop open source ASIC tooling](https://theopenroadproject.org/).
+
+You can watch some interviews I did with Tom Spyrou, lead dev of OpenROAD here.
+
+{{< youtube nSNQNp6Mz8Q >}}
+
+Tom also did a presentation for [OpenTapeOut](https://opentapeout.dev/).
+
+{{< youtube p2HVoj6OhaI >}}
+

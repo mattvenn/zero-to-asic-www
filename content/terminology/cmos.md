@@ -20,3 +20,7 @@ And here's how it could be laid out using a tool like [Magic](/terminology/magic
 
 ![cmos inverter](/inverter-magic-labelled.png)
 
+This video shows a sped up screen capture of me laying out a [DRC](/terminology/drc) clean inverter with Magic.
+
+{{< youtube IQ_DcWT_cbc >}}
+

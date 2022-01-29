@@ -29,3 +29,15 @@ You can browse them all [here](https://antmicro-skywater-pdk-docs.readthedocs.io
 ## D type Flip Flop
 
 ![inverter](/std-cell-dflop.png)
+
+# Reverse engineering a MUX
+
+If you want to know how these cells are put together, check this video out of me extracting the circuit from a MUX.
+
+{{< youtube NjctnVUxZIk >}}
+
+# How a flip flop works
+
+And for a complicated standard cell, see this video about how flip flops work, focussing on the sky130 D type.
+
+{{< youtube 5PRuPVIjEcs >}}
