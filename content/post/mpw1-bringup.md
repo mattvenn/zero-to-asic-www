@@ -28,7 +28,7 @@ Hacker extraordinaire tnt had also submitted a design to MPW1, which we [spoke a
 
 ![post mortem boards](/mpw1_bringup/postmortem.jpg)
 
-The board allows easy access to the pins and provides 3 adjustable voltage rails. An [icebreaker FPGA](https://1bitsquared.com/products/icebreaker) board. tnt wrote some gateware that allows us to control the voltage supplies and also supply the firmware by simulating a FLASH chip.
+The board allows easy access to the pins and provides 3 adjustable voltage rails. An [icebreaker FPGA](https://1bitsquared.com/products/icebreaker) board allows us to control the voltage supplies and also provide the firmware by simulating a FLASH chip.
 
 Board repository [here](https://github.com/PyFive-RISC-V/pyfive-mpw1-postmortem).
 
