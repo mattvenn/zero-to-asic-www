@@ -10,5 +10,3 @@ image_pos: 0% +10%
 
 * You will receive a receipt from stripe
 * You will receive an automatic email from me with information on how to get started
-
-{{< adwords-tag ABC >}}
