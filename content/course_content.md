@@ -7,8 +7,6 @@ featured_image: "maximo_render_3.jpeg"
 tags: ["course"]
 ---
 
-{{< coursecontent-tag >}}
-
 # Part 1: MOSFETs and the Skywater130 standard cells
 
 [MOSFETs](/terminology/mosfet) are the building blocks of the chips we will be learning how to make. While we don’t need an in depth knowledge of how they work, it’s useful to see how they are joined together into functional blocks known as standard cells - for example AND gates or Flip-Flops.
