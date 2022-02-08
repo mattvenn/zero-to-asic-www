@@ -58,6 +58,12 @@ Another thing to try is the chip's built in logic analyser. If I can get this to
 
 # Learn more
 
-tnt is working on a video documenting his process and tools, so make sure to subscribe to [his channel to find out when he publishes](https://www.youtube.com/c/SylvainMunaut).
+tnt has a video showing his own chips (kind of) working here.
+
+{{< youtube f_G5ad8SbHo >}}
+
+And he'll be documenting his bring-up methodology soon, so make sure to subscribe (and like! and ring the bell!).
+
+# Make your own!
 
 If you want to learn to design your own chips and get them made, [check out my course](/)!
