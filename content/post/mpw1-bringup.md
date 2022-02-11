@@ -6,6 +6,8 @@ featured_image: "mpw1_bringup/mpw1silicon.jpeg"
 images: ["mpw1_bringup/mpw1silicon.jpeg"]
 ---
 
+{{< youtube XEjc5ppRJuw >}}
+
 I submitted [my first ASIC designs](/post/asic_submitted) to the free Google shuttle in December of 2020.
 
 In October 2021, we heard there were serious [clock related problems](/post/mpw1_silicon/) with the management area of the chip due to issues with the toolchain. It seemed unlikely that anyone would be able to get anything beyond a single blinking LED from MPW1. The [hold violations](https://youtu.be/5PRuPVIjEcs) in the management system meant that the PicoRV32 cpu couldn't run and setup the GPIOs. So even if our designs work, we can't get access to them.
