@@ -22,6 +22,8 @@ class Term():
         self.url_end = self.file.replace('content/terminology/', '')
         self.url_end = self.url_end.lower().replace('.md', '')
         self.url = URL + "/terminology/" + self.url_end
+        # add tracking
+        self.url += '?utm_source=twitter&utm_medium=tweet&utm_campaign=terminology'
 
         self.term_rank = None
         rank = 0
