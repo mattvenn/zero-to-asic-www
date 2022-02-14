@@ -10,6 +10,11 @@
       <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         {{ .Content }}
       </div>
+
+
     </article>
+    <aside class="w-30-l mt6-l">
+      {{- partial "menu-contextual.html" . -}}
+    </aside>
   </div>
 {{ end }}

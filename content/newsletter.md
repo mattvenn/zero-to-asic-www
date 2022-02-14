@@ -2,6 +2,8 @@
 title: Newsletter
 images: ["maximo_render_2.jpeg"]
 featured_image: "maximo_render_2.jpeg"
+
+tags: ["course"]
 type: page
 ---
 

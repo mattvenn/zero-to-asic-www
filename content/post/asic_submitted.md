@@ -6,10 +6,10 @@ featured_image: "caravel-numbered.png"
 aliases:
     - mpw1_submitted
 
-tags: ["mpw"]
+tags: ["mpw", "course"]
 ---
 
-Wow! What a journey. I'm very happy to announce our submission is in and accepted. Now we have a long wait to see if it works!
+Wow! What a journey. I'm very happy to announce our submission is in and accepted. Now we have a long wait to see if it works! (it does! [Jump to the end](#update) for an update).
 
 Here's a picture of the final design. The outer edge and the block at the bottom are all part of [Caravel](/terminology/shuttle#caravel), the standard chip format that everyone on the shuttle has to use.  It includes a RISCV processor, RAM, UART, a wishbone bus and more.
 
@@ -84,3 +84,7 @@ It all got a bit messy at the end because there was a last minute change of the 
 
 Unfortunately I didn't manage to get any [artwork](/post/gds-artwork) placed. There wasn't a good way to integrate it with the tools, so it would have meant manually altering the power distribution network to remove wires, and then manually place the artwork blocks. I just didn't feel confident enough to do it without wrecking something - and I was really tired! So hopefully next time I will have worked it out.
 
+# Update
+
+* MPW1 chips had some [serious issues](/post/mpw1_silicon)
+* MPW1 chips bringup process and [are partially working!](/post/mpw1-bringup)

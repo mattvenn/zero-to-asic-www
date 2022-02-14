@@ -1,5 +1,5 @@
 ---
-title: "Course content"
+title: "Full course content"
 description: "What will I learn?"
 date: 2021-07-14T15:41:50+02:00
 images: ["maximo_render_3.jpeg"]

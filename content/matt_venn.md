@@ -1,8 +1,9 @@
 ---
-title: "Matt Venn"
+title: "About Matt Venn"
 images: ["matt_photo.jpg"]
 date: 2021-10-22T15:24:44+02:00
 featured_image: "matt_photo.jpg"
+tags: ["course"]
 ---
 
 Hi, I'm Matt Venn!
