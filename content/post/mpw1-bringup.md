@@ -58,6 +58,8 @@ Lots of room for improvement obviously, but great validation of the whole proces
 
 Another thing to try is the chip's built in logic analyser. If I can get this to work I can select another design to be active. There are 8 designs in total, and I'd like to try the WS2812 driver and VGA clock design too.
 
+The repository I'm using to document the process is here: https://github.com/mattvenn/mpw1-bringup
+
 # Learn more
 
 tnt has a video showing his own chips (kind of) working here.
