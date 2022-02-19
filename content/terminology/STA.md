@@ -9,7 +9,10 @@ featured_image: "sta.png"
 Static Timing Analysis checks that at the desired speed, there are no setup and hold violations.
 
 When the input clock rises, a flip-flop will capture and store the incoming data. An ideal flip-flop would sample data exactly on the rising clock and immediately have that data available on the output.
+
 Real flip-flops need the data to stay steady (setup time) for some time before the clock edge, and to stay steady for some time after it (hold time).
+
+{{< youtube 5PRuPVIjEcs >}}
 
 If we want to know how fast we can run some combinatorial logic in between 2 flops, we need to know that the flop delay + logic delay is less than the clock period - setup time. Setup time relates to 2 adjacent clock edges.
 
@@ -20,6 +23,13 @@ Hold time in comparison is related to a single clock edge. If we take the case w
 ![hold](/sta_hold.png)
 
 If the 2nd flop's clock is slightly late for any reason, then we risk the data from the 1st flop changing in the hold time of the 2nd flop.
+
+# Google / Efabless / Skywater MPW1 hold problems
+
+The first Google sponsored shuttle had severe hold problems that resulted in the RISCV core not working correctly.
+This was because the clock network had too much skew. The STA tool should have detected it, but it was misconfigured.  [Read more here](/post/mpw1_silicon).
+
+Luckily we were able to [find some work arounds](/post/mpw1-bringup), and I managed to get results from all my MPW1 designs.
 
 # OpenSTA
 
@@ -149,4 +159,4 @@ There are currently 5 calls to OpenSTA during a typical OpenLane including:
 
 # MPW1 issues
 
-[MPW1 silicon was faulty](/post/mpw1_silicon) because a hold time violation wasn't detected. This was due to the tools being setup incorrectly. In fact you can see in the above timing charts that the clock network delay for both setup and hold timing reports was 0. This is a clue that the tool wasn't working correctly, as there should always be some small delay in the clock network.
+As mentioned above, [MPW1 silicon was faulty](/post/mpw1_silicon) because a hold time violation wasn't detected. This was due to the tools being setup incorrectly. In fact you can see in the above timing charts that the clock network delay for both setup and hold timing reports was 0. This is a clue that the tool wasn't working correctly, as there should always be some small delay in the clock network.
