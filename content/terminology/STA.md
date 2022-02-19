@@ -6,7 +6,7 @@ images: ["sta.png"]
 featured_image: "sta.png"
 ---
 
-Static Timing Analysis checks that at the desired speed, there are no setup and hold violations.
+Static Timing Analysis checks that the design has no setup and hold violations. This is very important, and a failure here could cost you a respin of your ASIC.
 
 When the input clock rises, a flip-flop will capture and store the incoming data. An ideal flip-flop would sample data exactly on the rising clock and immediately have that data available on the output.
 
@@ -36,7 +36,7 @@ Luckily we were able to [find some work arounds](/post/mpw1-bringup), and I mana
 [OpenLane](/terminology/openlane) uses a tool called [OpenSTA](https://github.com/The-OpenROAD-Project/OpenSTA).
 Its job is to find the fastest and slowest data paths in the design and to check that setup and hold timings are met.
 
-The required timing is set in the OpenLane config file. By default its 10ns, which means we are targetting a clock frequency of 100MHz.
+The required timing is set in the OpenLane config file. By default its 10ns, which means we are targetting a clock frequency of 100MHz. It can read the timing information about the standard cells and wiring from the [PDK](/terminology/pdk).
 
 # Min report - validating hold timing
 
@@ -145,6 +145,8 @@ In this case, the data isn't ready in time, so we get a VIOLATED result.
                                      -1.26   slack (VIOLATED)
 
 
+As it's a setup violation, the design should still work at a slower clock.
+
 # Different reports
 
 The reports are split into min and max files.
@@ -157,6 +159,6 @@ There are currently 5 calls to OpenSTA during a typical OpenLane including:
     * 23-spef_extraction_sta.min.rpt (numbering can change depending on OpenLane setup).
     * 23-spef_extraction_sta.max.rpt
 
-# MPW1 issues
+# A clue could have alerted us to MPW1 issues
 
 As mentioned above, [MPW1 silicon was faulty](/post/mpw1_silicon) because a hold time violation wasn't detected. This was due to the tools being setup incorrectly. In fact you can see in the above timing charts that the clock network delay for both setup and hold timing reports was 0. This is a clue that the tool wasn't working correctly, as there should always be some small delay in the clock network.
