@@ -86,5 +86,6 @@ Unfortunately I didn't manage to get any [artwork](/post/gds-artwork) placed. Th
 
 # Update
 
-* MPW1 chips had some [serious issues](/post/mpw1_silicon)
-* MPW1 chips bringup process and [are partially working!](/post/mpw1-bringup)
+* MPW1 chips had some [serious issues](/post/mpw1_silicon).
+* MPW1 chips bringup process and [are partially working!](/post/mpw1-bringup).
+* All my designs on [MPW1 are working](/post/mpw1-is-alive)!

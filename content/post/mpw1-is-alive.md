@@ -1,13 +1,13 @@
 ---
 title: "MPW1 is Alive"
 date: 2022-02-24T12:41:10+01:00
-tags: ["course"]
+tags: ["mpw", "course"]
 featured_image: "mpw1-all-working.png"
 images: ["mpw1-all-working.png"]
 image_pos: 0% +20%
 ---
 
-Yes! I have got all the designs I submitted to MPW1 working:
+Yes! All the designs I [submitted to MPW1](/post/mpw1_submitted) are working:
 
 * ✅ 7 segment display
 * ✅ TPM2137 CTF
@@ -35,3 +35,7 @@ My challenge to reverse engineer the password from the [GDS](/terminology/gds) w
 https://github.com/georgerennie/Matt_Venn_q3k_TPM2137_Solution
 
 Congratulations Geo!
+
+## Texplained
+
+Thanks to Olivier over at [Texplained](https://www.texplained.com/) for the scans. Check them out for IC reverse engineering and data extraction, as well as training.
