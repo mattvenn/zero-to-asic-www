@@ -6,13 +6,15 @@ featured_image: "std-cell-inverter.png"
 ---
 
 One of the many things a [PDK](/terminology/pdk) contains is the standard cell library.
-This is a collection of all the analogue and digital building blocks used to build an IC.
+This is a collection of all the analogue and digital building blocks used to build an IC like AND, OR, NOT gates, flip flops, IO pads and so on.
 
-Even though they look flat, they are 3 dimensional structures.
+# Reverse engineering a MUX
 
-![3d standard cell](/standardcell-3d.png) [Image source](https://en.wikipedia.org/wiki/File:Eda-fabrication.PNG)
+If you want to know how these cells are put together, check this video out of me extracting the circuit from a MUX.
 
-# SkyWater 130nm examples
+{{< youtube NjctnVUxZIk >}}
+
+# SkyWater130 examples
 
 Here are some examples taken from the high density SkyWater 130nm standard cell library.
 
@@ -30,11 +32,6 @@ You can browse them all [here](https://antmicro-skywater-pdk-docs.readthedocs.io
 
 ![inverter](/std-cell-dflop.png)
 
-# Reverse engineering a MUX
-
-If you want to know how these cells are put together, check this video out of me extracting the circuit from a MUX.
-
-{{< youtube NjctnVUxZIk >}}
 
 # How a flip flop works
 
