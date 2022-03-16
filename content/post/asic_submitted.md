@@ -49,7 +49,7 @@ The cross hatching between all the project [macros](/terminology/macro) (yellow 
 
 ## 6 spinet
 
-* multi node computer controller
+* SPI-connected network hub
 * author: Richard Miller
 * https://github.com/millerresearch/spinet
 
