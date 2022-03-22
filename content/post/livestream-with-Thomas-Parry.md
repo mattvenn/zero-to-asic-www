@@ -41,4 +41,4 @@ The livestream will be on the Zero to ASIC youtube channel. Go there now and cli
 # Links
 
 * Connect with Thomas on linkedin: https://www.linkedin.com/in/thomas-parry-60419468/
-* Satellite Tranceiver on MPW2: https://efabless.com/projects/139
+* Satellite Tranceiver on MPW2: https://platform.efabless.com/projects/139

@@ -25,5 +25,5 @@ In this interview with Matt Guthaus, we talk about:
 # Resources
 
 * WOSET link: https://woset-workshop.github.io/ 
-* MPW2 application: https://www.efabless.com/projects/187
+* MPW2 application: https://platform.efabless.com/projects/187
 * FOSSi dialup on OpenRAM: https://www.youtube.com/watch?v=9Lw83kFtnc4

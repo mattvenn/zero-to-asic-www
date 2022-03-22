@@ -18,9 +18,9 @@ The biggest changes are:
 * An alternative analogue specific 'Caravan' harness
 * The submission process has been streamlined to make it faster and easier to submit
 
-You can browse the current applications here: https://efabless.com/open_shuttle_program/2.
+You can browse the current applications here: https://platform.efabless.com/projects/shuttle_name/MPW-2
 
-I have already made an application for people on the course here: https://efabless.com/projects/66. This will be updated as I receive
+I have already made an application for people on the course here: https://platform.efabless.com/projects/66. This will be updated as I receive
 more designs from the course.
 
 The Zero to ASIC Course material has been updated, and I have expanded part 5 to include dedicated projects for personal and group submissions.

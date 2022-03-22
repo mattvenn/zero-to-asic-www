@@ -11,8 +11,7 @@ We did it! 14 people from the course got their designs into the group submission
 
 ![MPW2 submission](/multi_macro.png)
 
-You can get all the details on all the projects from the
-[Efabless submission](https://efabless.com/projects/66)
+You can get all the details on all the projects submitted to MPW2 [here](https://platform.efabless.com/projects/shuttle_name/MPW-2).
 
 And see how I put the application together [here](#multi-project-tools).
 

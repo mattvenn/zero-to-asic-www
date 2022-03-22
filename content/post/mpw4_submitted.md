@@ -16,7 +16,7 @@ some custom standard cells in the shape of skulls!
 We also implemented the [shared SRAM](https://docs.google.com/document/d/1wLjU6hkAoYvSWNBAyTj8HmIV70eJWU3apa9_OEpsd3Y/edit), which means that
 the group projects have access to a local fast memory (like a blockram on an FPGA).
 
-Here's the [github repo for the group submission](https://github.com/mattvenn/zero_to_asic_mpw4) and the [Efabless project](https://efabless.com/projects/596).
+Here's the [github repo for the group submission](https://github.com/mattvenn/zero_to_asic_mpw4) and the [Efabless project](https://platform.efabless.com/projects/596).
 
 It was my first time submitting 2 applications for the shuttle as I also did a rerun of [MPW2](/post/mpw2-submitted) to fix clock issues.
 

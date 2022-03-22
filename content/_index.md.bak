@@ -16,21 +16,18 @@ aliases:
 
 ## Want to learn how to design chips?
 
-Learn to design your own [ASIC](/terminology/asic) and get it fabricated! Thanks to the new open source [Process Development Kit](/terminology/pdk) from Google and Skywater and the OpenLane ASIC tools from [Efabless](https://efabless.com/), we now have the opportunity to get involved in this exciting field without signing NDAs or paying a fortune for tool licenses.
+Learn to design and fabricate your own [ASIC](/terminology/asic)! Thanks to the new Open Source [Process Development Kit](/terminology/pdk) from Google and Skywater along with the OpenLANE ASIC tools from [Efabless](https://efabless.com/).
 
-GCC revolutionised compiling, Linux revolutionised computing. Android revolutionised phones. Arduino revolutionised microcontrollers. RISCV is revolutionising ISAs. The next step is open source Silicon.
+GCC revolutionised compiling, Linux revolutionised computing. Android revolutionised phones. Arduino revolutionised microcontrollers. RISCV is revolutionising ISAs. The next step is Open Source Silicon.
 
 This course will give you the experience of creating your own microchip, using free and open source tools.
 
-Of the 150 people who have taken the course, 35 have submitted designs for [MPW2](/post/mpw2-submitted/), [MPW3](/post/mpw3), [MPW4](/post/mpw4_submitted) and [MPW5](/post/mpw5_submitted).
-
-We have just received [MPW1 and the chips are working!](/post/mpw1-is-alive)
+25 people who have taken the course in the last year have have [already submitted designs for MPW2](/post/mpw2-submitted/) and [MPW3](/post/mpw3).
 
 ## Ticket options {#tickets}
 
 |                                                                                                                   | Silicon                                                                                                                    | Boron                                                                                                                      | Arsenic                                                              |
 | ----------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------- |
-|                                                                                                                   | {{< button "https://buy.stripe.com/cN22aZd9O05Af7O8wC" "https://buy.stripe.com/test_fZedUTbpVg2caeQ002" "Buy for $650" >}} | {{< button "https://buy.stripe.com/3cs6rf8Tyf0ucZGfZ3" "https://buy.stripe.com/test_14k04365BaHSgDe7st" "Buy for $950" >}} | {{< button "/arsenic-details" "/arsenic-details" "Buy for $4950" >}} |
 | Access to 6 hours recorded video content & 11 projects                                                            | ✅                                                                                                                         | ✅                                                                                                                         | ✅                                                                   |
 | Access to updates of the course material                                                                          | ✅                                                                                                                         | ✅                                                                                                                         | ✅                                                                   |
 | Recorded solution videos                                                                                          | ✅                                                                                                                         | ✅                                                                                                                         | ✅                                                                   |
@@ -45,7 +42,7 @@ We have just received [MPW1 and the chips are working!](/post/mpw1-is-alive)
 | Guaranteed ASIC manufacture **[ⓘ](#asic-def)**                                                                    | ❌                                                                                                                         | ❌                                                                                                                         | ✅                                                                   |
 | Custom PCB design consultancy                                                                                     | ❌                                                                                                                         | ❌                                                                                                                         | ✅                                                                   |
 | Team access **[ⓘ](#team-access)**                                                                                 | ❌                                                                                                                         | ❌                                                                                                                         | ✅                                                                   |
-|                                                                                                                   | {{< button "https://buy.stripe.com/cN22aZd9O05Af7O8wC" "https://buy.stripe.com/test_fZedUTbpVg2caeQ002" "Buy for $650" >}} | {{< button "https://buy.stripe.com/3cs6rf8Tyf0ucZGfZ3" "https://buy.stripe.com/test_14k04365BaHSgDe7st" "Buy for $950" >}} | {{< button "/arsenic-details" "/arsenic-details" "Buy for $4950" >}} |
+| Price                                                                                                             | {{< button "https://buy.stripe.com/cN22aZd9O05Af7O8wC" "https://buy.stripe.com/test_fZedUTbpVg2caeQ002" "Buy for $650" >}} | {{< button "https://buy.stripe.com/3cs6rf8Tyf0ucZGfZ3" "https://buy.stripe.com/test_14k04365BaHSgDe7st" "Buy for $950" >}} | {{< button "/arsenic-details" "/arsenic-details" "Buy for $4950" >}} |
 
 -   Check your email for onboarding information after your purchase.
 -   Receipt provided upon purchase for deducting as a business expense.

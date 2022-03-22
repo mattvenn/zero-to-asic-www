@@ -30,6 +30,6 @@ Enjoy!
 
 * FABulous FPGA framework: https://github.com/FPGA-Research-Manchester/FABulous
 * MPW2 applications: 
-    * Fabric test: https://www.efabless.com/projects/202
-    * FuseRISC: https://efabless.com/projects/134
+    * Fabric test: https://platform.efabless.com/projects/202
+    * FuseRISC: https://platform.efabless.com/projects/134
 

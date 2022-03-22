@@ -13,14 +13,14 @@ We had 7 new submissions from the course, 4 repeats from MPW1 and 2 with fixed c
 
 We also had some people course make personal applications for a whole chip:
 
-* Exor's project contains two sudoku accelerator modules on the wishbone bus: https://efabless.com/projects/428
-* Paweł's memory tester: https://efabless.com/projects/501
-* Sean's pretrained handwriting recognition neural network: https://efabless.com/projects/486
-* An Analogue op-amp submission by Marcus that was kindly included in this project: https://efabless.com/projects/406
+* Exor's project contains two sudoku accelerator modules on the wishbone bus: https://platform.efabless.com/projects/428
+* Paweł's memory tester: https://platform.efabless.com/projects/501
+* Sean's pretrained handwriting recognition neural network: https://platform.efabless.com/projects/486
+* An Analogue op-amp submission by Marcus that was kindly included in this project: https://platform.efabless.com/projects/406
 
 The github repo for the group submission is here: https://github.com/mattvenn/zero_to_asic_mpw3
 
-And the efabless project is here: https://efabless.com/projects/392
+And the Efabless project is here: https://platform.efabless.com/projects/392
 
 ![MPW3 submission](/mpw3_multi_macro.png)
 
