@@ -13,7 +13,7 @@ There are a couple of extra tools we can use to increase our confidence that the
 # Coverage
 
 A coverage tool tests how complete your simulation or verification efforts actually are.
-I'm only aware of one free coverage tool we can use for [HDL](/terminology/hdl), and that's [Symbiotic EDA's mcy](https://mcy.readthedocs.io/en/latest/tutorial.html).
+I'm only aware of one free coverage tool we can use for [HDL](/terminology/hdl), and that's [YosysHQ's mcy](https://mcy.readthedocs.io/en/latest/tutorial.html).
 
 # Formal Verification
 
@@ -28,7 +28,7 @@ I can do that by adding an _assertion_ to my design:
 Then I run a tool that uses a solver to prove that this assertion will always hold. If there is any way it can fail it will produce a short trace called a counter example. 
 Even though this example is very simple it's good to know that if I do something that accidentally messes up this property the assertion will fail, alerting me.
 
-I have made a short course on Formal Verification for Symbiotic EDA you can follow here:
+I have made a short course on Formal Verification you can follow here:
 
 {{< youtube _5R35QFsXM4 >}}
 
