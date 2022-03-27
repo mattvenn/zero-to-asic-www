@@ -5,8 +5,31 @@ images: ["die.jpg"]
 featured_image: "die.jpg"
 ---
 
-Very Large Scale Integration - this term started getting used in the 70s when millions of [MOSFETs](/terminology/mosfet) were
+Very Large Scale Integration - this term started getting used in the 70s when thousands of [MOSFETs](/terminology/mosfet) were
 integrated together to make one [IC](/terminology/ic).
+
+![timeline](/timeline.jpg)
+
+Image from https://www.computerhistory.org/siliconengine/
+
+Some notable dates:
+
+| What                                  | Who                             | When     |
+|---------------------------------------|---------------------------------|----------|
+| First transistor                      | Morris Tanenbaum                | 1954     |
+| First [IC](/terminology/ic)           | Kilby & Noyce                   | 1958     |
+| First [MOSFET](/terminology/mosfet)   | Mohamed M. Atalla & Dawon Kahng | 1959     |
+| [CMOS](/terminology/cmos) invented    | Frank Wanlass                   | 1963     |
+| Intel 4004, 2300 transistors          | Federico Faggin                 | 1971     |
+| 6502 CPU with 3510 transistors        | MOS technolog y                 | 1975     |
+| Z80 CPU with 8500 transistors         | Federico Faggin                 | 1976     |
+| Introduction to VLSI Systems published| Mead & Conway                   | 1980     |
+| Intel 486 with 1M transistors         | Intel                           | 1988     |
+| Intel Pentium 3.1M transistors        | Intel                           | 1993     |
+| Intel Pentium 4 551M transistors      | Intel                           | 2002     |
+| Mac M1 Ultra 114B transistors         | Apple                           | 2022     |
+
+---
 
 The first book I read about VLSI was by Carver Mead & [Lynn Conway](https://ai.eecs.umich.edu/people/conway/conway.html) - Introduction to VLSI systems. It's pretty dated now but still an interesting read, giving a general overview of the ideas involved.
 
@@ -25,9 +48,10 @@ I thought it would be fun to take our last [group submission for MPW5](/post/mpw
              HSV Mixer       4951 cells
               SkullFET        847 cells
 
-Summing across all designs we have a total of 91569 standard cells.
+Summing across all designs we have a total of 91569 [standard cells](/terminology/standardcell), but the number of transistors will be a lot higher.
+A flip flop has around 30 transistors, whereas a single inverter has only 2.
 
-And here's the floorplan of our submission:
+Here's the floorplan of our MPW5 submission:
 
 ![MPW5 submission](/mpw5_multi_macro.png)
 
