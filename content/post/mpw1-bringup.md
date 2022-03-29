@@ -1,7 +1,7 @@
 ---
 title: "MPW1 Bringup"
 date: 2022-01-30T09:49:21+01:00
-tags: ["course"]
+tags: ["course", "mpw"]
 featured_image: "mpw1_bringup/mpw1silicon.jpeg"
 images: ["mpw1_bringup/mpw1silicon.jpeg"]
 ---
