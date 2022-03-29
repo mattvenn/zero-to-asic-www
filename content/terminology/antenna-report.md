@@ -49,7 +49,7 @@ We have the name of the net, in this case '_1438_'.
 Then 5 subsections related to the layers of the chips that each have a PAR or CAR value on the left and a ratio on the right.
 PAR and CAR refer to Partial or Cumulative Antenna Ratio. 
 
-From [this reference](http://free-online-ebooks.appspot.com/enc/14.17/lefdefref/PAE.html):
+From [this reference on page 375](https://www.ispd.cc/contests/18/lefdefref.pdf):
 
 * A PAR tells you if any single metallization step is likely to inflict damage to a gate.
 * A CAR adds the damages on successive layers together to accumulate them as the layers are built up.
