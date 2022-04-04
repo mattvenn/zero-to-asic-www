@@ -6,6 +6,10 @@ featured_image: "tapeout.png"
 tags: ["course"]
 ---
 
+# Awesome opensource ASIC resources
+
+* [Awesome opensource ASIC resources](https://github.com/mattvenn/awesome-opensource-asic/blob/main/README.md)
+
 # Talks, Interviews & Podcast
 
 * [Zero to ASIC Hackaday #remoticon talk on youtube](https://youtu.be/ILZ6fDHZ_eo) and [slides](http://bit.ly/0-ASIC-slides)
@@ -36,7 +40,6 @@ tags: ["course"]
 
 * [My course](/contact)
 * [Kunal’s udemy courses](https://www.udemy.com/course/vlsi-academy-custom-layout/)
-* [Grant Brown's OpenLane course](https://gitlab.com/gab13c/openlane-workshop)
 * [Nand 2 Tetris](https://www.nand2tetris.org/)
 
 # Books
