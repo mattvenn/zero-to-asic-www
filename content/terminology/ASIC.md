@@ -5,11 +5,17 @@ images: ["asic-zoom.png"]
 featured_image: "asic-zoom.png"
 ---
 
-Application Specific Integrated Circuit
+Application Specific Integrated Circuit. An ASIC is a custom [IC](/terminology/ic).  You might make an ASIC because:
 
-An ASIC is a custom [IC](/terminology/ic). 
-Typically big semiconductor companies produce millions of chips, which offsets the large costs related to the [masks](/terminology/maskset).
-An Application Specific IC is something you design when you need a chip that isn't available off-the-shelf.
+* You need a chip that isn't available off-the-shelf,
+* You can save money by merging a lot of components into one,
+* Recently, for fun!
+
+If your design only needs digital logic, you might be able to use an [FPGA](/terminology/fpga). An advantage of ASICs is that they can combine digital and analogue circuits together in one chip. A disadvantage is that errors often cannot be fixed afterwards, hence the heavy use of [verification](/terminology/verification).
+
+Big semiconductor companies produce millions of chips, which can offset the large costs related to the [masks](/terminology/maskset). For example, a full maskset for the 130nm process at the Skywater [foundry](/terminology/foundry) costs about $200k.
+
+Until recently, an additional cost was the license fee for the ASIC software tools. Now we have the open source tools like [OpenLane](/terminology/openlane) that have opened the door to experimentation and learning.
 
 Here's a picture from [magic](/terminology/magic) showing a layout of my [VGA clock](/post/vga_clock)
 
