@@ -9,7 +9,7 @@ This is one of the first projects I [hardened](/terminology/harden) using [OpenL
 
 News update: my clock works!
 
-{{< twitter 1509491474722967553 >}}
+{{< twitter user="matthewvenn" id="1509491474722967553" >}}
 
 It shows the time on an LCD panel. It will be part of my first [tapeout](/terminology/tapeout).
 
