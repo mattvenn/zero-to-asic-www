@@ -42,7 +42,7 @@ Expert will present their tip of the week for digital design, tooling, methodolo
 
 ## Pricing
 
-Pricing is challenging to get right, as depending on where you live $240 may sound totally reasonable or out of the question.
+Pricing is challenging to get right, as depending on your financial situation, $240 may sound totally reasonable or out of the question.
 I am trying an experiment with the pricing for this call to make it more accessible.
 
 If you can, please pay full price for the call. If not, then I have 2 sets of discount codes:
