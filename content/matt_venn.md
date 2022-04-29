@@ -26,3 +26,5 @@ If you want to learn more about how I got into this exciting world, see these li
 * [An interview with SemiWiki](https://semiwiki.com/semiconductor-services/efabless/306426-an-user-view-of-efabless-platform-interview-with-matt-venn/)
 
 If you want to keep up to date with all things open source silicon, join the [mailing list](/newsletter).
+
+I also do mentoring and coaching - see my [codementor.io profile](https://www.codementor.io/@mattvenn).
