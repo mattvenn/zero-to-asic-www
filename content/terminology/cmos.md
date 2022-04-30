@@ -6,11 +6,13 @@ images: ["inverter-schematic-labelled.png"]
 featured_image: "inverter-schematic-labelled.png"
 ---
 
+CMOS was introduced to [ICs](/terminology/ic) in the late 1960s. Before then, [NMOS](/terminology/nmos) was used for digital logic. NMOS isn't very energy efficient because the pullup resistor is dissipating energy when the N type transitor is on. 
+
+To get better energy efficiency, an extra P type transistor replaces the pullup resistor. Only one transistor is on at a time.
+
 https://en.wikipedia.org/wiki/CMOS:
 
 > Complementary Metal Oxide Semiconductor (CMOS) is a type of [MOSFET](/terminology/mosfet) fabrication [process](/terminology/node) that uses complementary and symmetrical pairs of p-type and n-type MOSFETs to build logic functions. 
-
-It is low powered compared to [NMOS](/terminology/nmos).
 
 Here is a CMOS inverter showing the complementary N and P type MOSFETs.
 
