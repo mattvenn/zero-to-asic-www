@@ -1,5 +1,5 @@
 ---
-title: "Level up your RTL"
+title: "Level up your digital design"
 date: 2021-09-21T15:11:16+02:00
 images: ["simulation.png"]
 featured_image: "simulation.png"
@@ -7,14 +7,14 @@ image_pos: 0% 0%
 type: page
 ---
 
-## Want to level up your RTL?
+## Want to level up your digital design?
 
-* 6 x 1 hour calls, one per week, time & date TODO.
+* 6 x 1 hour livestreams, Wednesdays at 20:00 CEST, starting 25th May, ending 29th June.
 * limited to 16 people
 * calls facilitated by Matt
 * expert guidance with tnt and whitequark,
-* post your questions / designs beforehand to get discussed in the call
-* calls will be recorded and be available to participants after the call
+* post your questions / designs beforehand to get discussed in the stream
+* streams will be recorded and be available to participants
 * parts of the recordings may later be published on my youtube channel
 
 ![digital design logo](/digitaldesigncall.png)
@@ -25,11 +25,13 @@ Tnt is well known in the open source FPGA community, and one of his most recent 
 
 Whitequark has been involved with the open source EDA tools since their foundation, and has made many contributions to the toolchain, as well as Amaranth - a high level design language. Recently she designed the [Glasgow interface explorer](https://www.crowdsupply.com/1bitsquared/glasgow) and posted a [great thread on digital design over on twitter](https://twitter.com/whitequark/status/1510525555191558150).
 
-## Call structure
+## Structure
+
+The call will be in the form of a private Youtube livestream.
 
 ### Quick questions: 15 mins
 
-Participants submit questions in advance. On the call we will get through as many as we can.
+Participants submit questions in advance. On the stream we will get through as many as we can.
 There may be time on the call for new questions that weren’t submitted beforehand, otherwise will go on the list for next time.
 
 ### Deeper dive: 35 mins
@@ -51,7 +53,7 @@ If you can, please pay full price for the call. If not, then I have 2 sets of di
 * 6 codes that give a $80 discount. Use code DIGI80,
 * Please only use the codes if you are unable to pay the full price.
 
-{{< button "https://buy.stripe.com/00gaHv6Lq19E7FmbIR" "" "Buy a ticket" >}}
+{{< button "https://buy.stripe.com/test_aEU3gffGb4ju9aM7sv" "https://buy.stripe.com/00gaHv6Lq19E7FmbIR" "Buy a ticket" >}}
 
 * Check your email for information on how to join the call after your purchase.
 * Receipt provided upon purchase for deducting as a business expense.
