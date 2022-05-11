@@ -9,7 +9,7 @@ type: page
 
 ## Want to level up your digital design?
 
-* 6 x 1 hour livestreams, Wednesdays at 20:00 CEST, starting 25th May, ending 29th June.
+* 6 x 1 hour livestreams, Wednesdays at [20:00 CEST](https://dateful.com/time-zone-converter?t=18%3A00&tz=GMT&), starting 25th May, ending 29th June.
 * limited to 16 people
 * calls facilitated by Matt
 * expert guidance with tnt and whitequark,
