@@ -53,7 +53,7 @@ If you can, please pay full price for the call. If not, then I have 2 sets of di
 * 6 codes that give a $80 discount. Use code DIGI80,
 * Please only use the codes if you are unable to pay the full price.
 
-{{< button "https://buy.stripe.com/test_aEU3gffGb4ju9aM7sv" "https://buy.stripe.com/00gaHv6Lq19E7FmbIR" "Buy a ticket" >}}
+{{< button "https://buy.stripe.com/00gaHv6Lq19E7FmbIR" "https://buy.stripe.com/test_aEU3gffGb4ju9aM7sv" "Buy a ticket" >}}
 
-* Check your email for information on how to join the call after your purchase.
+* After purchase you will receive a confirmation email with further information on how to join the streams.
 * Receipt provided upon purchase for deducting as a business expense.
