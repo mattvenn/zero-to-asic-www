@@ -2,6 +2,7 @@
 title: "Level up your digital design"
 date: 2021-09-21T15:11:16+02:00
 images: ["simulation.png"]
+draft: true
 featured_image: "simulation.png"
 image_pos: 0% 0%
 type: page
