@@ -13,7 +13,7 @@ We did it! 14 people from the course got their designs into the group submission
 
 You can get all the details on all the projects submitted to MPW2 [here](https://platform.efabless.com/projects/shuttle_name/MPW-2).
 
-And see how I put the application together [here](#multi-project-tools).
+And see how I put the application together [here](#multi-project-tools), with the [repo here](https://github.com/mattvenn/caravel_user_project).
 
 # Project listing
 
