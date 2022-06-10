@@ -35,3 +35,10 @@ I'm also working on an action that will test if a project is ready for group sub
 The idea is that you could add this action to your repo and it would continually check that all the required tests pass and even build the GDS ready for submission.
 
 {{< twitter user="matthewvenn" id="1478071480814653443" >}}
+
+# Update
+
+The group project action and multi tools actions are both live and working well. We used them for [MPW6 submission](/post/mpw6_submitted).
+
+* [multi project tools](https://github.com/mattvenn/zero_to_asic_mpw6/actions/workflows/multi_tool.yaml),
+* [submission template](https://github.com/mattvenn/wrapped_project_template/actions/workflows/multi_tool.yaml).

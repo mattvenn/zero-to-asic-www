@@ -24,3 +24,7 @@ His work has already been used by [Teo, who has been using the notebooks to meas
 You can play with the notebooks yourself here: https://github.com/chipsalliance/silicon-notebooks.
 
 Follow Proppy on [Twitter](https://twitter.com/proppy).
+
+# Github Actions
+
+You can also read about [my work using Github Actions here](/post/github_actions).
