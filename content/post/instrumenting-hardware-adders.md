@@ -9,6 +9,8 @@ featured_image: "instrumented_adder.png"
 Following my [interview with Teo](/post/interview-with-teo) on optimising hardware adders, I thought
 it would be a great project to tapeout on MPW6.
 
+{{< youtube O38i5Y98m44 >}} 
+
 I wrote about the process on twitter:
 
 {{< twitter user="matthewvenn" id="1526591700122185728" >}}
@@ -45,5 +47,3 @@ When the integration counter finishes we can divide one by the other to get the 
 * Kogge-Stone
 
 The repository we taped out on [MPW6](/post/mpw6_submitted) is here: https://github.com/mattvenn/wrapped_instrumented_adder. There are 5 different branches, one for each type of adder.
-
-Video coming soon!
