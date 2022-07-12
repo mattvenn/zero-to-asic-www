@@ -12,8 +12,11 @@ So instead of drawing out an [inverter](/post/inverter) using a tool like [Magic
 
 Which describes what an inverter does. The ! means invert.
 
-Common HDLs are Verilog and VHDL. There are also higher level languages like nMigen, Migen, chisel, spinal. These are often implemented 
-as a library to a programming language like Python. Then you can express more complex hardware in fewer lines.
+Common HDLs are Verilog and VHDL. There are also higher level languages like [Amaranth](https://amaranth-lang.org/docs/amaranth/latest/index.html), [Chisel](https://www.chisel-lang.org/) & [Spinal](https://github.com/SpinalHDL/SpinalHDL).
+
+The [VexRiscv RISCV](https://github.com/SpinalHDL/VexRiscv) processor in the [harness we use for Efabless submissions](/terminology/shuttle#caravel) is written in Spinal, by Charles Papon.
+
+These are often implemented as a library to a programming language like Python or Scala. Then you can express more complex hardware in fewer lines.
 
 Verilog is the most common HDL and the one most well supported by the Open Source tools. It's well known for the number of 'foot guns' it has!
 Be careful, describing hardware with an HDL is nothing like programming a CPU with a sequential language like C or Python.
@@ -24,5 +27,4 @@ A CPU executes one instruction at a time and if you want parallelism you either 
 
 A good short course (targetted at FPGAs) introducing Verilog is [WTFPGA](https://github.com/esden/WTFpga)
 
-After writing your design in an HDL, you have to [synthesise](/terminology/synthesis) into a [netlist](/terminology/netlist) so it can be recreated in the 
-actual building blocks you have in the [PDK](/terminology/pdk)
+After writing your design in an HDL, you have to [synthesise](/terminology/synthesis) into a [netlist](/terminology/netlist) so it can be recreated in the actual building blocks you have in the [PDK](/terminology/pdk)
