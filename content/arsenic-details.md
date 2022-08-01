@@ -7,7 +7,7 @@ image_pos: 0% +10%
 type: page
 ---
 
-I'm currently pausing Arsenic tickets. Please contact me to discuss options for you and your team.
+Please contact me to discuss options for you and your team. Let me know your aims and how many people you want to take the course.
 
 {{< form-contact action="https://formspree.io/f/xpzkjrnw" >}}
 
