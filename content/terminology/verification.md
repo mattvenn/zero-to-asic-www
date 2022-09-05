@@ -27,8 +27,3 @@ I can do that by adding an _assertion_ to my design:
 
 Then I run a tool that uses a solver to prove that this assertion will always hold. If there is any way it can fail it will produce a short trace called a counter example. 
 Even though this example is very simple it's good to know that if I do something that accidentally messes up this property the assertion will fail, alerting me.
-
-I have made a short course on Formal Verification you can follow here:
-
-{{< youtube _5R35QFsXM4 >}}
-
