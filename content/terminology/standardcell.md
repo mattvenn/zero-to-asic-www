@@ -8,6 +8,12 @@ featured_image: "std-cell-inverter.png"
 One of the many things a [PDK](/terminology/pdk) contains is the standard cell library.
 This is a collection of all the analogue and digital building blocks used to build an IC like AND, OR, NOT gates, flip flops, IO pads and so on.
 
+# Crafting Standard cells with James Stine
+
+For lots of interesting questions and answers about making open source standard cell libraries, this interview with James Stine is really good.
+
+{{< youtube 5J8LJoUxCHk >}}
+
 # Reverse engineering a MUX
 
 If you want to know how these cells are put together, check this video out of me extracting the circuit from a MUX.
@@ -31,7 +37,6 @@ You can browse them all [here](https://antmicro-skywater-pdk-docs.readthedocs.io
 ## D type Flip Flop
 
 ![inverter](/std-cell-dflop.png)
-
 
 # How a flip flop works
 
