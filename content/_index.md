@@ -128,7 +128,7 @@ Then you will need some amount of time to prepare your own project.
 
 #### Is there a time limit to complete the course?
 
-You can take as long as you want with the course materials.
+You can take as long as you want with the course materials. Office hours expire 3 months after you onboard.
 
 [Back to top](#tickets)
 
