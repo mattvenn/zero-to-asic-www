@@ -1,0 +1,11 @@
+{{ if and (or .IsPage .IsSection) .Site.Params.editURL }}
+      {{ $File := .File }}
+      {{ $Site := .Site }}
+      {{with $File.Path }}
+      <div id="top-github-link">
+        Spotted an error? <a class="github-link" title='Edit this page' href="{{ $Site.Params.editURL }}{{ replace $File.Dir "\\" "/" }}{{ $File.LogicalName }}" target="blank">
+          <span id="top-github-link-text">Edit this page</span>
+        </a>
+      </div>
+      {{ end }}
+{{ end }}
