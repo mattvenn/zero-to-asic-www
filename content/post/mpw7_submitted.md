@@ -1,6 +1,6 @@
 ---
 title: "MPW7 submitted!"
-date: 2022-10-06T08:00:00+01:00
+date: 2022-09-14T08:00:00+01:00
 tags: ["mpw", "course" ]
 images: ["mpw7_multi_macro.png"]
 featured_image: "mpw7_multi_macro.png"
@@ -8,9 +8,9 @@ featured_image: "mpw7_multi_macro.png"
 
 We submitted for MPW7! I am particularly excited about this submission because we were able to submit the Zero to ASIC course designs as well as the first [TinyTapeout](https://mailchi.mp/574276e3c9d7/tinytapeout) design. 
 
-MPW7 has by far had the most submissions of the MPW shuttles so far with 109 submitted projects as of 13 September.
+MPW7 has by far had the most submissions of the MPW shuttles so far with 72 submitted projects as of 13 September.
 
-Congratulations to everyone on the course submission! We had 9 projects from the course, with 1 demo arbitrary function generator from me, a 32-bit RISC-V based processor by Farhad, an in silico version of [Conway’s Game of Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life) from Uri and a [Spiking Neural Network](https://en.wikipedia.org/wiki/Spiking_neural_network) (SNN) accelerator by Peng Zhou. We also implemented 1kByte of RAM with open-source [OpenRAM](https://openram.org/).
+Congratulations to everyone on the course submission! We had 9 projects from the course, with 1 demo arbitrary function generator from me, a 32-bit RISC-V based processor by Farhad, an in silicon version of [Conway’s Game of Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life) from Uri and a [Spiking Neural Network](https://en.wikipedia.org/wiki/Spiking_neural_network) (SNN) accelerator by Peng Zhou. We also implemented 1kByte of RAM with open-source [OpenRAM](https://openram.org/).
      
      
 ![MPW7 submission](/mpw7_multi_macro.png)
