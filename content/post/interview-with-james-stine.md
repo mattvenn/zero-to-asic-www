@@ -7,7 +7,7 @@ tags: ["interviews" ]
 ---
 In this interview with Professor James Stine, we talk about:
 
-* Why Open Source is the key to innovation
+* Why is Open Source the key to innovation?
 * What do students struggle with most when learning to design standard cell libraries?
 * What are the biggest misconceptions engineers have about standard cells?
 * What’s James' tool flow?
