@@ -22,7 +22,7 @@ These 3D structures are an excellent way to visualize how the different metal an
 ![3Dand](/3d_and.jpeg)
 3D-printed AND gate, courtesy of Thorsten Knoll
 
-In the Zero to ASIC course you will learn how to generate the [GDS](https://www.zerotoasiccourse.com/terminology/gds2/) needed to not only 3D print your design, but also fabricate your chip in silicon. No [VLSI](/terminology/vlsi/), [RTL](/terminology/rtl/), or prior [tapeout](/terminology/tapeout/) experience required.
+In the Zero to ASIC course you will learn how to generate the [GDS](/terminology/gds2/) needed to not only 3D print your design, but also fabricate your chip in silicon. No [VLSI](/terminology/vlsi/), [RTL](/terminology/rtl/), or prior [tapeout](/terminology/tapeout/) experience required.
 
 Interested in chip design but hoping to tackle a smaller project first? Check out [Tiny Tapeout](https://tinytapeout.com/). With an easy-to-use a graphical user interface, you can design your own ASIC in less than an evening!
 
