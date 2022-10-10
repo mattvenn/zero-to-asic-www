@@ -1,9 +1,9 @@
 ---
-title: "3D Cells"
+title: "3D printed standard cells"
 date: 2022-10-08T08:00:00+01:00
 tags: ["3D printing","GDS", "course" ]
-images: ["3d_and.jpg"]
-featured_image: "blender_inverter.png"
+images: ["3d_and.jpeg"]
+featured_image: "3d_and.jpeg"
 ---
 
 ASICs pack in billions of [transistors](/terminology/mosfet/) per square centimeter, making their construction and functionality impossible to understand with the naked eye.
@@ -21,13 +21,6 @@ These 3D structures are an excellent way to visualize how the different metal an
 
 ![3Dand](/3d_and.jpeg)
 3D-printed AND gate, courtesy of Thorsten Knoll
-
-3D rendering of the files on your computer is also an excellent way to visualize an ASIC. There's [video for that](https://discord.com/channels/778248761054986292/872889375384555622/1027258297226625084) by Maximo ([@maxiborga](https://twitter.com/maxiborga) on Twitter). Check out this [GDS-to-STL file converter](https://github.com/mbalestrini/gdsiistl) that enables you to import the files in image editing software like [Blender](https://www.blender.org/).
-
-![3Dinverter](/blender_inverter.png)
-3D-rendered inverter
-
-{{< youtube gBjQI3GrBHU >}}
 
 In the Zero to ASIC course you will learn how to generate the [GDS](https://www.zerotoasiccourse.com/terminology/gds2/) needed to not only 3D print your design, but also fabricate your chip in silicon. No [VLSI](/terminology/vlsi/), [RTL](/terminology/rtl/), or prior [tapeout](/terminology/tapeout/) experience required.
 

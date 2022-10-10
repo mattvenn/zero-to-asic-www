@@ -1,8 +1,8 @@
 ---
 title: "Interview with James Stine - Open Source Cells"
 date: 2022-10-08T08:00:00+01:00
-images: ["blender_inverter.jpg"]
-featured_image: "blender_inverter.png"
+images: ["jamesstine.png"]
+featured_image: "jamesstine.png"
 tags: ["interviews" ]
 ---
 In this interview with Professor James Stine, we talk about:
@@ -24,7 +24,7 @@ Text of the interview is included below.
 
 # Resources
 
-* Contact James here: james.stine@okstate.edu or on Twitter: [@JamesStineJr](https://twitter.com/JamesStineJr)
+* Follow James on Twitter: [@JamesStineJr](https://twitter.com/JamesStineJr)
 * [What is a Standard Cell?](/terminology/standardcell/)
 * How is [HDL](/terminology/hdl/) [synthesized?](/terminology/synthesis/)
 
