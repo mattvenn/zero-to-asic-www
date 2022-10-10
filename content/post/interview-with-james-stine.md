@@ -1,5 +1,5 @@
 ---
-title: "Interview with James Stine - Open Source Cells"
+title: "Interview with James Stine - Open Source Standard Cells"
 date: 2022-10-08T08:00:00+01:00
 images: ["jamesstine.png"]
 featured_image: "jamesstine.png"
