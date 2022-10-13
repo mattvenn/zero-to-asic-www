@@ -1,5 +1,5 @@
 ---
-title: "3D printed standard cells"
+title: "3D Printed Standard Cells"
 date: 2022-10-08T08:00:00+01:00
 tags: ["3D printing","GDS", "course" ]
 images: ["3d_and.jpeg"]
