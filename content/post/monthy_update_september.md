@@ -2,11 +2,13 @@
 title: "Monthly Update - September"
 date: 2022-10-13T10:00:00+01:00
 tags: ["3D rendering","ASIC", "course" ]
-images: ["mouse_chip.jpg"]
-featured_image: "mouse_chip.jpg"
+images: ["monthly_update_sept22.jpg"]
+featured_image: "monthly_update_sept22.jpg"
 ---
 
 Welcome to the September 2022 monthly update!
+
+[Video Version](https://www.youtube.com/watch?v=s6ivoKTLqME)
 
 Here are the main topics from last month:
 * [MPW7](/post/mpw7_submitted/) submission,
@@ -22,9 +24,9 @@ The deadline for MPW7 was the 14th of September and the Zero to ASIC course subm
 There were 72 projects submitted and that passed tape out. There are about 100 that were submitted overall, and you can see all these different projects on the [E-fabless platform page](https://platform.efabless.com/projects/MPW7/) if you want to take a better look.
 
 I've already picked out some of my favorites:
-* A RISC-V processor with a 5 GHz transceiver
-* An out-of-order RISC-V Core and
-* A CAN controller,
+* [A RISC-V processor with a 5 GHz transceiver](https://platform.efabless.com/projects/1163)
+* [An out-of-order RISC-V Core](https://platform.efabless.com/projects/1232) and
+* [A CAN controller](https://platform.efabless.com/projects/1321),
 so have a look, pick your favorites, and let me know which authors you'd like me to invite to do an interview.
 
 ## E-Fabless Project Browser Tool
