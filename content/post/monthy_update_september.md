@@ -1,5 +1,5 @@
 ---
-title: "Monthly Update - September"
+title: "Monthly Update - September 2022"
 date: 2022-10-13T10:00:00+01:00
 tags: ["3D rendering","ASIC", "course" ]
 images: ["monthly_update_sept22.jpg"]
@@ -8,7 +8,7 @@ featured_image: "monthly_update_sept22.jpg"
 
 Welcome to the September 2022 monthly update!
 
-[Video Version](https://www.youtube.com/watch?v=s6ivoKTLqME)
+{{< youtube s6ivoKTLqME >}}
 
 Here are the main topics from last month:
 * [MPW7](/post/mpw7_submitted/) submission,
