@@ -87,6 +87,7 @@ Watch more [in depth feedback here](https://www.youtube.com/watch?v=TR8LiCWoOdg&
 -   Basic Linux command line experience helpful.
 -   Some programming experience helpful.
 -   No hardware or [HDL](/terminology/hdl) experience required!
+-   Please note that M1 Macs are not well supported at this time.
 
 [Back to top](#tickets)
 
