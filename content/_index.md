@@ -52,6 +52,7 @@ We have just received [MPW1 and the chips are working!](/post/mpw1-is-alive)
 -   [Contact me](/contact-form) if your business has any special requirements.
 -   Secure payment handling by Stripe.
 -   Not ready? [Join the mailing list to receive updates and promotional discount codes](/newsletter).
+-   Are the pricing options too expensive? Apply for the Zero to ASIC low-cost ticket grant **[ⓘ](#lowcost-grant)**
 
 ## What do people say about the course?
 
@@ -155,6 +156,12 @@ For as long as I'm running this course.
 #### What is team access? {#team-access}
 
 Take the course with your colleagues. You will work through the course material as a group and submit a single design between you. Weekly sync calls will keep you on track to complete the course.
+
+[Back to top](#tickets)
+
+#### Is there a cheaper option? {#lowcost-grant}
+
+I have opened a grant that provides a Silicon-level ticket option for the Zero to ASIC course for those unable to afford the course. Go to the [Google Form](https://forms.gle/LAYVnqF1pWbQF5ti6) for more information.
 
 [Back to top](#tickets)
 
