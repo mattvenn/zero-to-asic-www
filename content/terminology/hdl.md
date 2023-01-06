@@ -25,6 +25,6 @@ Circuits operate all at once, parallelism is easy. If you want sequences of thin
 
 A CPU executes one instruction at a time and if you want parallelism you either 'fake' it by interleaving programs or you have multiple cores on your CPU.
 
-A good short course (targetted at FPGAs) introducing Verilog is [WTFPGA](https://github.com/esden/WTFpga)
+A good short course (targetted at FPGAs) introducing Verilog is [WTFPGA](https://github.com/icebreaker-fpga/icebreaker-workshop)
 
 After writing your design in an HDL, you have to [synthesise](/terminology/synthesis) into a [netlist](/terminology/netlist) so it can be recreated in the actual building blocks you have in the [PDK](/terminology/pdk)
