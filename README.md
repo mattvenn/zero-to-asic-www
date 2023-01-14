@@ -15,7 +15,7 @@
 
 ## Submitting Changes
 1. Push changes from your local repository to your fork
-2. Submit a pull request from the [zero-to-asic-www repository](https://github.com/mattvenn/zero-to-asic-www)
+2. Submit a pull request at the [zero-to-asic-www](https://github.com/mattvenn/zero-to-asic-www) repository
 
 
 # github actions
