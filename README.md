@@ -1,6 +1,6 @@
-# Setting up the *Zero to ASIC* Webpage Repository for Edits
+# Setting up the `zero-to-asic-www` Repository for Edits
 1. Install [Hugo](https://gohugo.io/installation/) on your machine if you haven't already
-2. Fork Matt Venn's [zero-to-asic-www repository](https://github.com/mattvenn/zero-to-asic-www)
+2. Fork the [zero-to-asic-www](https://github.com/mattvenn/zero-to-asic-www) repository
 3. Recursively clone your fork into a folder on your machine: `git clone --recursive <https://github.com/<githubusername>/<githubreponame>.git> `. This will create a new folder `<githubreponame>`.
 4. From the command line or powershell, navigate into the folder with the cloned repository, and test the website: 
       * Enter `hugo server`. If you receive an error in the terminal indicating `render of page failed`, you likely forgot to add `--recursive` to `git clone`
