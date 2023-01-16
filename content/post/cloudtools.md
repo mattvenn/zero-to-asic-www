@@ -6,11 +6,11 @@ images: ["inverterjupyter.png"]
 featured_image: "inverterjupyter.png"
 ---
 
-For a long time, ASIC development tools have been inaccessible due to cost or complexity. Even as free, open-source tools became available, getting them installed felt like untangling a Gordian Knot, cutting off would-be designers from the start.
+ASIC development tools have often been inaccessible due to cost and complexity. Even as free, open-source tools have become available, the complexity of building and installing the tools has slowed their use by would-be designers.
 
-A key in opening ASIC development to the masses has thus been to provide free, easy-to-use development tools. Thankfully new efforts in cloud-based tools using open-source software are making ASIC development easier than ever. 
+A challenge in making ASIC development more accessible has been to provide free, easy-to-use development tools. Thankfully development of cloud-based tools using open-source software are making chip design easier than ever. 
 
-Google is creating collaborative cloud notebooks for ASIC design. In June 2022, I had the chance to talk with [@Proppy](https://twitter.com/proppy), a Tokyo-based Google engineer who's enabling people to collaborative ASIC in the cloud with [Jupyter and Colab notebooks](https://github.com/chipsalliance/silicon-notebooks).
+In June 2022, I had the chance to talk with [@Proppy](https://twitter.com/proppy), a Tokyo-based Google engineer who's enabling people to collaborative ASIC in the cloud with [Jupyter and Colab notebooks](https://github.com/chipsalliance/silicon-notebooks).
 
 In the interview we discussed:
 
@@ -27,9 +27,9 @@ In the interview we discussed:
 
 {{< youtube yCyOVq5ZHYg >}}
 
-Proppy has further helped facilitate ASIC design with his [TinyUser Project](/post/tinyuserproject) enabling quick and easy submissions to the Open MPW shuttles.
+Proppy has further helped ASIC designer with his [TinyUser Project](/post/tinyuserproject) enabling quick and easy submissions to the Open MPW shuttles.
 
-For Zero to ASIC, GitHub's cloud-based tool *Actions* is an essential part of the design flow. They help to continuously build the tools to verify their functionality, as well as to build the final [GDS](/terminology/gds) files and extract their key parameters. 
+Other cloud tools exist as well that simplify the ASIC design flow. For the Zero to ASIC course, GitHub's cloud-based *Actions* are an essential part of the flow. They help to continuously build the tools to verify their functionality, as well as to build the final [GDS](/terminology/gds) files and extract their key parameters. 
 
-You can read more about my initial experiences with GitHub actions [here](/post/github_actions)
+You can read more about my experiences with GitHub actions [here](/post/github_actions)
 
