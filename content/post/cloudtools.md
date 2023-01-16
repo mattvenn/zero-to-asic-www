@@ -23,10 +23,13 @@ In the interview we discussed:
 * Extracting design metrics 
 * More complicated RISC-V SoC example
 * Optimizing designs for specific parameters
-* Visualization of optimization results 
+* Visualizing the optimization results 
 
 {{< youtube yCyOVq5ZHYg >}}
 
-For Zero to ASIC, GitHub's cloud-based tool *Actions* is an essential part of the design flow. They help to continuously build the tools to verify their functionality, as well as to build the final [GDS](/terminology/gds) files and extract their key parameters. You can read more about my initial experiences with GitHub actions [here](/posts/github_actions). 
+Proppy has further helped facilitate ASIC design with his [TinyUser Project](/post/tinyuserproject) enabling quick and easy submissions to the Open MPW shuttles.
 
+For Zero to ASIC, GitHub's cloud-based tool *Actions* is an essential part of the design flow. They help to continuously build the tools to verify their functionality, as well as to build the final [GDS](/terminology/gds) files and extract their key parameters. 
+
+You can read more about my initial experiences with GitHub actions [here](/post/github_actions)
 

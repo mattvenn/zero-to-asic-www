@@ -13,9 +13,8 @@ An exciting new opportunity for developing open-source silicon reached fruition 
 Open-source PDKs like GF180 and [Skywater 130 nm](https://github.com/google/skywater-pdk) are essential for making silicon design more accessible. To now have GlobalFoundries involved with fabricating designs will hopefully mean increased opportunities to turn designs into silicon.
 
 GF180's first [multi-project wafer (MPW) tapeout](/terminology/tapeout) was in December 2022, and several people from the Zero to ASIC and TinyTapeout communities were able to submit designs. Here are some highlights:
-* [TinyUserProject](https://platform.efabless.com/projects/1608) enabling quick and easy submissions to the [Open MPW shuttles](https://developers.google.com/silicon) ([find out more here](/post/tinyuserproject/)),
-* [FABulous eFPGA fabric](https://github.com/gatecat/fabulous_mpw0gf) ([@Gatecatte](https://twitter.com/gatecatte)),
-* A [TinyTapeout design](https://tinytapeout.com/digital_design/design_7seg/) that outputs "TinyTapeout" sequentially on a 7-segment display ([@mattvenn](https://twitter.com/matthewvenn)),
+* [TinyUserProject](/post/tinyuserproject/) enabling quick and easy submissions to the [Open MPW shuttles](https://developers.google.com/silicon),
+* [TinyTapeout design](https://tinytapeout.com/digital_design/design_7seg/) that outputs "TinyTapeout" sequentially on a 7-segment display ([@mattvenn](https://twitter.com/matthewvenn)),
 * [Test structures](https://platform.efabless.com/projects/1559) like D-triggers with and without set/reset, designed using [Wokwi](https://wokwi.com/projects/339800239192932947) ([Shaos](https://github.com/shaos))
 * [SkullFET GF180](https://platform.efabless.com/projects/1580) implementing *barebones* transistors shaped like skulls ([@urishaked](https://twitter.com/UriShaked))
 
