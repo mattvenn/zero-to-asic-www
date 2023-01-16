@@ -7,11 +7,11 @@
       * Open a web browser and enter `localhost:1313` as the URL. The Zero to ASIC website should load.
 
 ## Getting Started with Edits
-* **Verify edits:** Check any changes first locally using `hugo server` and going to `localhost:1313` in your browser before making a pull request
 * **Blog Posts:** Create new markdown files in the `content/post/` directory 
    * For a blog post to appear in the *Related* sidebar, it needs to include the tag "course" in the markdown file header
 * **Images:** Most  images are stored in the `static` directory
 * **Linking to Other Site Pages:** Use relative paths for hyperlinks going to other pages from the website. For example, to link to a terminology page, use `[wordofinterest](/terminology/wordofinterest)` rather than `[wordofinterest](https://zerotoasiccourse.com/terminology/wordofinterest)`
+* **Verify edits:** Check any changes first locally using `hugo server` and going to `localhost:1313` in your browser before making a pull request
 
 ## Submitting Changes
 1. Push changes from your local repository to your fork
