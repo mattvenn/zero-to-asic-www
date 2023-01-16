@@ -38,7 +38,7 @@ The idea is that you could add this action to your repo and it would continually
 
 # Update
 
-The group project action and multi tools actions are both live and working well. We use them regularly now, including for [MPW6](/post/mpw6_submitted), [MPW7](/post/mpw7_submitted), and MPW8 submissions, as well as [TinyTapeout](http://tinytapeout.com/) and [GF180](/post/tinyuserproject/). 
+The group project action and multi tools actions are both live and working well. We use them regularly now, including for [MPW6](/post/mpw6_submitted), [MPW7](/post/mpw7_submitted), and [MPW8](/post/mpw8_submitted) submissions, as well as [TinyTapeout](http://tinytapeout.com/) and [GF180](/post/tinyuserproject/). 
 
 * [multi project tools](https://github.com/mattvenn/zero_to_asic_mpw8/actions/workflows/multi_tool.yaml),
 * [submission template](https://github.com/mattvenn/wrapped_project_template/actions/workflows/multi_tool.yaml).
