@@ -27,7 +27,7 @@ In the interview we discussed:
 
 {{< youtube yCyOVq5ZHYg >}}
 
-Proppy has further helped ASIC designer with his [TinyUser Project](/post/tinyuserproject) enabling quick and easy submissions to the Open MPW shuttles.
+Proppy has further helped lower the bar to ASIC design with [TinyUser Project](/post/tinyuserproject), enabling quick and easy submissions to the Open MPW shuttles.
 
 Other cloud tools exist as well that simplify the ASIC design flow. For the Zero to ASIC course, GitHub's cloud-based *Actions* are an essential part of the flow. They help to continuously build the tools to verify their functionality, as well as to build the final [GDS](/terminology/gds) files and extract their key parameters. 
 
