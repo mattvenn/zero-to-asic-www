@@ -6,7 +6,7 @@ images: ["stackup.png"]
 featured_image: "stackup.png"
 ---
 
-The Process Design Kit is a library of all the specifications that describe a particular factories' particular chip fabrication process.
+The Process Design Kit is a library of all the specifications that describe a particular factories' particular chip fabrication process. This often includes representations of the design rules and devices which can be used by particular implementation and verification tools that have been checked and approved by the fab. This may include software representations of items such as transistors which will be automatically layed out with the dimensions that meet the rules for the process (often called pcells for 'parameterized cells' - the designed says what size is wanted, the pcell does the rest).
 
 In our case we have access to the Skywater factories 130 nanometer [process](/terminology/node), usually called sky130. 
 
