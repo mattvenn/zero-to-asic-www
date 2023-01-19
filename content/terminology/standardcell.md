@@ -6,7 +6,12 @@ featured_image: "std-cell-inverter.png"
 ---
 
 One of the many things a [PDK](/terminology/pdk) contains is the standard cell library.
-This is a collection of all the analogue and digital building blocks used to build an IC like AND, OR, NOT gates, flip flops, IO pads and so on.
+This is a collection of all digital building blocks used to build an IC like AND, OR, NOT gates, flip-flops, etc. There will be other libraries for specialised functions such aas IO pads, and any analogue blocks or memory macros, and so on.
+
+Standard cell libraries are a set of cells that have common characteristics and physical layout. The most obvious element is that the cells have a common height. Because the cells will be placed side by side with abutting edges, all items that cross these edges need to be at fixed positions and have fixed sizes. These items typically include the power and ground rails and the wells. 
+In addition the cells, because they touch, they need to be DRC legal in all combinations. This means that items that do not cross the boundary need to be moved away from it by at least half the minimum spacing rule for that layer.
+Because the wells are in common positions, this implies that the P and N transistor sizes will be similar in all cells - and indeed the sizes of these are one of the terms that help define what the standard cell height is. This in turn leads to the logic thresholds for the cells being similar - indeed this is a requirement for STA to work correctly ie that all cells think that the point a 1 becomes a 0 are similar.
+Another item that is considered in settuing the cell height is the number of wiring pitches across them that are available, both on the layers used in the cells and on those above. It helps for the cells to be an integer multiple of the dominant wiring pitches high, so that we dont waste space.
 
 # Crafting Standard cells with James Stine
 
