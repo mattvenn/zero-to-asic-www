@@ -16,6 +16,8 @@ Example elements include:
 Here is an example of a fairly small IC, a type of amplifier called an Op-Amp.
 The image is from [zeptobars](https://zeptobars.com/en/read/Fairchild-UA714HC-precision-opamp-fuses-trimming)
 
+The orange zig-zag elements are resistors, the large areas at the top are capacitors, the squares with circular elements in their centres are bipolar transistors, and the thin silver elements are wires joining these components together. Such a circuit could have been made using discrete components on a circuit board, but it would have higher cost and lower performance. By integrating all of these elements together, the cost and performance are improved.
+
 ![Fairchild-UA714HC](/Fairchild-UA714HC.jpg)
 
 From [wikipedia](https://en.wikipedia.org/wiki/Invention_of_the_integrated_circuit): There is no consensus on who invented the IC. The American press of the 1960s named four people: Kilby, Lehovec, Noyce and Hoerni; in the 1970s the list was shortened to Kilby and Noyce.
