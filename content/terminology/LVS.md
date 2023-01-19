@@ -34,7 +34,8 @@ The most common types of LVS errors I've seen with OpenLane are:
 * when power supplies aren't connected for some reason,
 * there is a short circuit during routing.
 
-Verification essentially tries to show that the final design meets the designer's intention. This takes various stages, but can in outline like this:
+Verification essentially tries to show that the final design meets the designer's intention. This takes various stages:
+
 1) simulate the initial design (HDL or schematic) to show it behaves in the intended way
 2) synthesise this down to a netlist,
 3) simulate this again to show it still works - or use other tools such as formal proof to show it is equivalent to the original design 
