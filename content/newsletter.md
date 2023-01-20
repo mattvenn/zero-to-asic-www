@@ -7,12 +7,15 @@ tags: ["course"]
 type: page
 ---
 
-Sign up to the newsletter to keep up to date with all things Zero to ASIC!
+Sign up to the Zero to ASIC course newsletter!
 
 {{< mail-chimp >}}
 
-* Get discount codes for the course
-* Early access to new material and videos
-* Latest news in the open source ASIC world
+* Discount codes for the course
+* Course updates
+* Related projects like [TinyTapeout](https://tinytapeout.com) and SiliWiz
+* Early access to new material
+* Interviews & Videos
+* News from the world of open source silicon
 
 {{% random_quote %}}
