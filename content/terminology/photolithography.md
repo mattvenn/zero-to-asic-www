@@ -17,15 +17,15 @@ A series of [masks](/terminology/maskset) is used to build up a 3 dimensional st
 
 Each step is fundamentally the same:
 
-* deposit a layer of silicon dioxide (glass) on the surface of the wafer
-* coat the glass with photoresist (which is a light sensitive organic compound, similar to photographic emulsion)
-* bake it
-* use a mask to cover certain areas and use light (often UV) to illuminate the areas not covered
-* develop the photoresist, which will wash out the areas exposed. This leaves holes through to the glass
-* etch the glass through the holes in the resist - this turns the glass into a 'hard mask'
-* strip away the remaining photoresist
-* now use the hard mask to control where the next step can take effect, for instance we could implant dopants ([implanting](/terminology/doping) to change the electrochemical properties)  and only where there are holes in the hard mask will the dopant reach the silicon beneath. Or we can etch away underlying metal (in older aluminimum processes), or in modern copper processes grow metal in the trenches in the glass.
-* if no longer need the hard mask, strip it away and repeat the whole process for the next layer up.
+* Deposit a layer of silicon dioxide (glass) on the surface of the wafer
+* Coat the glass with photoresist (which is a light sensitive organic compound, similar to photographic emulsion)
+* Bake it
+* Use a mask to cover certain areas and use light (often UV) to illuminate the areas not covered
+* Develop the photoresist, which will wash out the areas exposed. This leaves holes through to the glass
+* Etch the glass through the holes in the resist - this turns the glass into a 'hard mask'
+* Strip away the remaining photoresist
+* Now use the hard mask to control where the next step can take effect, for instance we could [implant dopants](/terminology/doping) to change the electrochemical properties. The dopant will reach the silicon beneath only where there are holes in the hard mask. Or we can etch away underlying metal (in older aluminimum processes), or in modern copper processes grow metal in the trenches in the glass.
+* If no longer need the hard mask, strip it away and repeat the whole process for the next layer up.
 
 Photolithography is the key that allows us to take the patterns we create in a tool like [Magic](/terminology/magic) or [OpenLane](/terminology/openlane) and miniaturise them down to the nanometer scale. It also lets us easily tile the same design over the [wafer](/terminology/wafer) to make the individual [dies](/terminology/die). It allows us to use a prepared image of the chip to make millions of copies reliably and rapidly.
 
