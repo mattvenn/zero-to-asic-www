@@ -6,23 +6,23 @@ images: ["sta.png"]
 featured_image: "sta.png"
 ---
 
-Static Timing Analysis checks that the design has no setup and hold violations. This is very important, and a failure here could cost you a respin of your ASIC.
+Static Timing Analysis (STA) checks that the design has no setup and hold violations. This is very important, and a failure here could cost you a respin of your ASIC. It is a way of verifying timing quickly without the complexity and time taken to find such issues using back-annotated digital (or even analogue) simulations. Setup violations imply that the circuit runs too slowly to work at the given clock rate, hold violations imply the circuit will fail at any clock speed.
 
-When the input clock rises, a flip-flop will capture and store the incoming data. An ideal flip-flop would sample data exactly on the rising clock and immediately have that data available on the output.
+When the input clock rises, a flip-flop will capture and store the incoming data. An ideal flip-flop would sample data exactly on the rising clock and immediately have that data available on the output and be insensitive to the input value until the next rising clock edge.
 
 Real flip-flops need the data to stay steady (setup time) for some time before the clock edge, and to stay steady for some time after it (hold time).
 
 {{< youtube 5PRuPVIjEcs >}}
 
-If we want to know how fast we can run some combinatorial logic in between 2 flops, we need to know that the flop delay + logic delay is less than the clock period - setup time. Setup time relates to 2 adjacent clock edges.
+If we want to know how fast we can run some combinational logic in between 2 flops, we need to know that the flop delay + logic delay is less than the clock period - setup time. Setup time relates to 2 adjacent clock edges. If the path takes too long then the design will fail at this clock speed, but we may be able to fix it by slowing down the supplied clock.
 
 ![setup](/sta_setup.png)
 
-Hold time in comparison is related to a single clock edge. If we take the case where we put one flop's output directly into another's input (like in a shift register), then we need to make sure that the flops both receive the clock at the same time.
+Hold time in comparison is related to a single clock edge. If we take the case where we put one flop's output directly into another's input (like in a shift register), then we need to make sure that the flops both receive the clock at the same time and that the second flop does not need the data to stay stable longer after the clock edge than the first flop delivers. 
 
 ![hold](/sta_hold.png)
 
-If the 2nd flop's clock is slightly late for any reason, then we risk the data from the 1st flop changing in the hold time of the 2nd flop.
+If the 2nd flop's clock is slightly late for any reason, then we risk the data from the 1st flop changing in the hold time of the 2nd flop and hence the value for clock cycle 2 shoots through and overrides the value for clock cycle 1. If this occurs then the design will fail, and we cannot fix it by running the clock more slowly.
 
 # Google / Efabless / Skywater MPW1 hold problems
 
@@ -34,7 +34,7 @@ Luckily we were able to [find some work arounds](/post/mpw1-bringup), and I mana
 # OpenSTA
 
 [OpenLane](/terminology/openlane) uses a tool called [OpenSTA](https://github.com/The-OpenROAD-Project/OpenSTA).
-Its job is to find the fastest and slowest data paths in the design and to check that setup and hold timings are met.
+Its job is to find the fastest and slowest data paths in the design and to check that setup and hold timings are met. Typically we look for setup issues at the slowest process corner, and hold issues at the fastest process corner.
 
 The required timing is set in the OpenLane config file. By default its 10ns, which means we are targetting a clock frequency of 100MHz. It can read the timing information about the standard cells and wiring from the [PDK](/terminology/pdk).
 
@@ -86,6 +86,8 @@ To validate setup timing, OpenSTA does a 'max' timing analysis. This uses the mo
 
 For the max report, the longest path is found (2.14ns). This must be shorter than the data required time (0.88ns). You can see the library setup time incorporated in the calculation for required time below.
 In this case, the data isn't ready in time, so we get a VIOLATED result.
+
+Fanout is the number of gates attached to each signal, Cap is the capacitance (gate plus wiring), Slew is the edge rate, Delay is the delay of the cell, and the wiring (although here the wire delays are shown as zero), and Time is the accumulated time up to this point, relative to the original input clock edge. The ^ or v shows the edge is rising or falling. 
 
     Startpoint: _1474_ (rising edge-triggered flip-flop clocked by wb_clk_i)
     Endpoint: _1452_ (rising edge-triggered flip-flop clocked by user_clock2)
@@ -153,7 +155,7 @@ The reports are split into min and max files.
 
 There are currently 5 calls to OpenSTA during a typical OpenLane including:
 
-* In the synthesis exploration loop. Here the results can be used to iterate over different synthesis options to help meet timing requirements.
+* In the synthesis exploration loop. Here the results can be used to iterate over different synthesis options to help meet timing requirements. For instance, if STA shows a path is too slow, then synthesis can use stronger cells to drive signals harder and faster.
 * After resizing cells (to get better timing performance - [see this video](https://www.youtube.com/watch?v=ajwZVAVo3yk))
 * After extraction. This is the most accurate timing report as it is done on the finished layout. These files are called:
     * 23-spef_extraction_sta.min.rpt (numbering can change depending on OpenLane setup).
@@ -161,4 +163,4 @@ There are currently 5 calls to OpenSTA during a typical OpenLane including:
 
 # A clue could have alerted us to MPW1 issues
 
-As mentioned above, [MPW1 silicon was faulty](/post/mpw1_silicon) because a hold time violation wasn't detected. This was due to the tools being setup incorrectly. In fact you can see in the above timing charts that the clock network delay for both setup and hold timing reports was 0. This is a clue that the tool wasn't working correctly, as there should always be some small delay in the clock network.
+As mentioned above, [MPW1 silicon was faulty](/post/mpw1_silicon) because a hold time violation wasn't detected. This was due to the tools being setup incorrectly. In fact you can see in the above timing charts that the clock network delay for both setup and hold timing reports was 0. This is a clue that the tool wasn't working correctly, as there should always be some small delay in the clock network, particularly if wiring has been extracted.
