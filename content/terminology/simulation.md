@@ -10,7 +10,7 @@ Simulation lets us see the design working. It's useful for debugging while desig
 
 There are two main types of simulations: digital simulation, and analogue or circuit simulation. Digital simulation models all signals as either 1's and 0's or a small number of values to model tristates and uninitialised values. Analogue simulation model voltages and currents and look in detail at the way devices work. Analogue simulations are very compute intensive - it is unusual to simulate circuits larger than a few hundred transistors. Digital simulators are designed to verify the functionality of large circuits, but are not accurate on voltages and may not even estimate timing delays at all. The fastest digital simulators only capture the values at the end of each clock cycle (cycle-based simulators). 
 
-The classic analogue chip simulator is SPICE (Simulation Program with Integrated Circuit Emphasis). It is often used to characterise standard cells, to build the timing models that underly STA.
+The classic analogue chip simulator is [SPICE](/terminology/spice) (Simulation Program with Integrated Circuit Emphasis). It is often used to characterise standard cells, to build the timing models that underly STA.
 
 There are quite a few Open Source digital simulators available: [Icarus Verilog](http://iverilog.icarus.com/), [Verilator](https://www.veripool.org/wiki/verilator) and recently [CXXRTL](https://tomverbeure.github.io/2020/08/08/CXXRTL-the-New-Yosys-Simulation-Backend.html).
 
