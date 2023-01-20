@@ -27,6 +27,6 @@ If things are going well, you normally don't need to interact much with yosys. I
 
 If your design is broken in some way, then it is definitely worth learning how to use the built in _show_ tool.
 
-{{< youtube a2sLfoinQds >}}
+<!-- {{< youtube a2sLfoinQds >}} -->
 
 You can read the [yosys show white paper here](http://bygone.clairexen.net/yosys/files/yosys_appnote_011_design_investigation.pdf).
