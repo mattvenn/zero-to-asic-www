@@ -14,7 +14,7 @@ Real flip-flops need the data to stay steady (setup time) for some time before t
 
 {{< youtube 5PRuPVIjEcs >}}
 
-If we want to know how fast we can run some combinatorial logic in between 2 flops, we need to know that the flop delay + logic delay is less than the clock period - setup time. Setup time relates to 2 adjacent clock edges. If the path takes too long then the design will fail at this clock speed, but we may be able to fix it by slowing down the supplied clock.
+If we want to know how fast we can run some combinational logic in between 2 flops, we need to know that the flop delay + logic delay is less than the clock period - setup time. Setup time relates to 2 adjacent clock edges. If the path takes too long then the design will fail at this clock speed, but we may be able to fix it by slowing down the supplied clock.
 
 ![setup](/sta_setup.png)
 
