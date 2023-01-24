@@ -20,3 +20,5 @@ For a different viewpoint, this [thread in stackexchange](https://electronics.st
 I made a video about how flip-flops work, and cover a bit about the difference between combinatorial and sequential logic at the beginning.
 
 {{< youtube 5PRuPVIjEcs >}}
+
+Verilog and VHDL are both hardware description langauages (HDLs). They can describe all sorts of things, some of which are implementable by logic synthesis (ie synthesizable) and lots of things which are not. They can both describe netlists, ie the wiring together of pre-existing cells, and can also describe test harnesses and stimuli. The subset of these HDLs that is meant to describe real hardware behaviour (other than as netlist) is often referred to as RTL, but not all of this is synthesizable.
