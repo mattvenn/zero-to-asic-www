@@ -1,5 +1,7 @@
-# Setting up the `zero-to-asic-www` Repository for Edits
-1. Install [Hugo](https://gohugo.io/installation/) on your machine if you haven't already
+# Contributing to the Zero to ASIC Website
+1. Install hugo:
+    * Linux: `snap install hugo`
+    * Other platforms: https://gohugo.io/getting-started/installing/
 2. Fork the [zero-to-asic-www](https://github.com/mattvenn/zero-to-asic-www) repository
 3. Recursively clone your fork into a folder on your machine: `git clone --recursive <https://github.com/<githubusername>/<githubreponame>.git> `. This will create a new folder `<githubreponame>`.
 4. From a command line, navigate into the folder with the cloned repository, and test the website: 
@@ -15,7 +17,7 @@
 
 ## Submitting Changes
 1. Push changes from your local repository to your fork
-2. Submit a pull request at the [zero-to-asic-www](https://github.com/mattvenn/zero-to-asic-www) repository
+2. Submit a pull request
 
 
 # github actions
