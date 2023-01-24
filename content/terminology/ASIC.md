@@ -5,7 +5,9 @@ images: ["asic-zoom.png"]
 featured_image: "asic-zoom.png"
 ---
 
-Application Specific Integrated Circuit. An ASIC is a custom [IC](/terminology/ic).  You might make an ASIC because:
+Application Specific Integrated Circuit. An ASIC is a custom [IC](/terminology/ic), which means it is not a standard product such as a microprocessor, memory, standard logic chip or generic component which might be available from several or many different manufacturers. It will often add functionality not available from a standard product, or combine the functions of many standard products at a lower total price.
+
+You might make an ASIC because:
 
 * You need a chip that isn't available off-the-shelf,
 * You can save money by merging a lot of components into one,
