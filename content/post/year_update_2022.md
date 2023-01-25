@@ -1,5 +1,5 @@
 ---
-title: "Year in Review 2022 and future aims"
+title: "Review of 2022 and aims for 2023"
 date: 2023-01-22T10:00:00+01:00
 tags: ["ASIC", "course" ]
 images: ["year_update_2022.jpg"]
@@ -50,7 +50,7 @@ Currently I am working with
 * [Chipflow](https://www.chipflow.io/) on communications and building a system-on-chip with [Amaranth](https://github.com/amaranth-lang/amaranth)
 * Zero to ASIC course and TinyTapeout to lower the barrier to ASIC design and help people get to their first tapeout
 
-There has been a some confusion between the *Zero to ASIC course* and the [ZeroASIC](https://www.zeroasic.com/) startup. I'm not involved in their efforts, but feel free to check out their site! They're developing a great Verilog-to-GDS flow called silicon compiler.
+There has been some confusion between the *Zero to ASIC course* and the [ZeroASIC](https://www.zeroasic.com/) startup. I'm not involved in their efforts, but feel free to check out their site! They're developing a great Verilog-to-GDS flow called silicon compiler.
 
 ## Goals for 2023
 Here are some of the goals I'd like to accomplish in 2023 with the community:
