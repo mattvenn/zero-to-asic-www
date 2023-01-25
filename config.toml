@@ -2,6 +2,7 @@ baseURL = "https://www.zerotoasiccourse.com/"
 languageCode = "en-us"
 title = "Zero to ASIC Course"
 theme = "ananke"
+Paginate = 9
 
 [params]
   site_logo = "/zero-to-asic-logo-white-transp.png"
