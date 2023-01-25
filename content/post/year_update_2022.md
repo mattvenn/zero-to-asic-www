@@ -67,13 +67,6 @@ Here are some of the goals I'd like to accomplish in 2023 with the community:
 * Make the Zero to ASIC course more accessible, for example with the [low-cost ticket grant](/#grant)
 
 ## A Few Thoughts on Open-Source Silicon
-* Hard to admit Moore's law is slowing down, but perhaps this is a good push towards more innovation
+* It's hard to admit Moore's law is slowing down, but perhaps this can be a good push towards more innovation
 * There's still lots of room for innovation, such as advanced chip packaging and in application specific designs
 * So few people have access to semiconductors despire their ubiquity. As we lower the barrier to silicon, we can hopefully bring even more creativity to the problems.
-
-Here are two inspirational quotes on the topic:
-
-*I am, somehow, less interested in the weight and convolutions of Einstein’s brain than in the near certainty that people of equal talent have lived and died in cotton fields and sweatshops.* - Jay Gould
-
-*Thousands of geniuses live and die undiscovered - either by themselves or by other.* - Mark Twain 
-
