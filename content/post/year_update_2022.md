@@ -3,6 +3,7 @@ title: "Review of 2022 and aims for 2023"
 date: 2023-01-22T10:00:00+01:00
 tags: ["ASIC", "course" ]
 images: ["year_update_2022.jpg"]
+image_pos: 0% +5%
 featured_image: "year_update_2022.jpg"
 ---
 
