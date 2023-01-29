@@ -24,7 +24,7 @@ They are the most manufactured object in the world: 1.3×10^22 of them have been
 Image is from [components101](https://components101.com/articles/mosfet-symbol-working-operation-types-and-applications)
 
 When a voltage is applied across the gate and body, an electric field is formed in the channel.
-This field attacts the charge carriers to the channel region where they can then work to conduct electricity.
+This field attracts the charge carriers to the channel region where they can then work to conduct electricity.
 
 In an N type MOSFET built on a P type substrate, the majority charge carriers are holes, and it's the minority carriers (the electrons) that get attacted to the gate and form the conductive channel between the drain and source. 
 
