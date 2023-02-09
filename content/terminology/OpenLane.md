@@ -25,9 +25,11 @@ The most fundamental steps are:
 
 To see more about OpenLane's output files - [check this article](/post/openlane_output_files)
 
-OpenLane makes a lot of use of OpenROAD. [This is a project funded by DARPA to develop open source ASIC tooling](https://theopenroadproject.org/).
+OpenLane is a flow controller built using OpenROAD-- the main application for RTL-GDSII flows: [This is a project funded by DARPA to develop open source ASIC tooling](https://theopenroadproject.org/).
+Here is the link to [OpenROAD documentation and Tutorials](https://openroad.readthedocs.io/en/latest/).
+Find useful resources here: [OpenROAD Resources](https://theopenroadproject.org/resources/).
 
-You can watch some interviews I did with Tom Spyrou, lead dev of OpenROAD here.
+You can watch some interviews I did with Tom Spyrou, lead dev of OpenROAD here:
 
 {{< youtube nSNQNp6Mz8Q >}}
 
