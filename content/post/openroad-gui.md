@@ -24,7 +24,7 @@ I recently spoke with Matt Liberty, and OpenROAD maintainer, and he showed me ho
 If you're using OpenLane to harden your ASIC designs, and you want to use the GUI, you'll need to modify the Makefile
 first. Find the line that starts with `DOCKER_OPTIONS` and on the next line, add this:
 
-    `DOCKER_OPTIONS += --privileged`
+    DOCKER_OPTIONS += --privileged
 
 Then here are the instructions to first harden a design, and then inspect it:
 
