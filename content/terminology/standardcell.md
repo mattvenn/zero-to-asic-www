@@ -6,7 +6,7 @@ featured_image: "std-cell-inverter.png"
 ---
 
 One of the many things a [PDK](/terminology/pdk) contains is the standard cell library.
-This is a collection of all digital building blocks used to build an IC like AND, OR, NOT gates, flip-flops, etc. There will be other libraries for specialised functions such aas IO pads, and any analogue blocks or memory macros, and so on.
+This is a collection of all digital building blocks used to build an IC like AND, OR, NOT gates, flip-flops, etc. There will be other libraries for specialised functions such as IO pads, and any analogue blocks or memory macros, and so on.
 
 Standard cell libraries are a set of cells that have common characteristics and physical layout. The most obvious element is that the cells have a common height. Because the cells will be placed side by side with abutting edges, all items that cross these edges need to be at fixed positions and have fixed sizes. These items typically include the power and ground rails and the wells. 
 In addition the cells, because they touch, they need to be DRC legal in all combinations. This means that items that do not cross the boundary need to be moved away from it by at least half the minimum spacing rule for that layer.
