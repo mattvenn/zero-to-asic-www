@@ -21,8 +21,11 @@ I recently spoke with Matt Liberty, and OpenROAD maintainer, and he showed me ho
 
 {{< youtube NuFJLy9ywVg >}}
 
-If you're using OpenLane to harden your ASIC designs, and you want to use the GUI, you'll need to modify the Makefile
-first. Find the line that starts with `DOCKER_OPTIONS` and on the next line, add this:
+## OpenLane
+
+If you're using OpenLane to harden your ASIC designs, and you want to use the GUI, you might [hit a segfault](https://github.com/The-OpenROAD-Project/OpenLane/issues/1772). If so, you'll need to modify the OpenLane top level Makefile.
+
+Find the line that starts with `DOCKER_OPTIONS` and on the next line, add this:
 
     DOCKER_OPTIONS += --privileged
 
