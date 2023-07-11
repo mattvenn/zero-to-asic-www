@@ -73,22 +73,13 @@ class Term():
 
     def tweet(self):
         # Authenticate to Twitter
-        auth = tweepy.OAuthHandler(api_key, api_key_secret)
-        auth.set_access_token(access_token, access_token_secret)
-        api = tweepy.API(auth)
-
-        try:
-            api.verify_credentials()
-            print("Authentication Successful")
-        except:
-            print("Authentication Error")
+        client = tweepy.Client(
+            consumer_key=api_key, consumer_secret=api_key_secret,
+            access_token=access_token, access_token_secret=access_token_secret)
 
         # tweet it
-        try:
-            if api.update_status(status = self.twitter_text):
-                print("Posted")
-        except tweepy.error.TweepError as e:
-            print(e)
+        response = client.create_tweet( text=self.twitter_text)
+        print(response)
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description="tweet a term")
