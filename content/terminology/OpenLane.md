@@ -25,9 +25,14 @@ The most fundamental steps are:
 
 To see more about OpenLane's output files - [check this article](/post/openlane_output_files)
 
-OpenLane makes a lot of use of OpenROAD. [This is a project funded by DARPA to develop open source ASIC tooling](https://theopenroadproject.org/).
+## OpenROAD
 
-You can watch some interviews I did with Tom Spyrou, lead dev of OpenROAD here.
+OpenLane is an open source ASIC flow built using OpenROAD. [OpenROAD is a project funded by DARPA to develop open source ASIC tooling](https://theopenroadproject.org/).
+
+Here is the [OpenROAD documentation and Tutorials](https://openroad.readthedocs.io/en/latest/) and some 
+[useful resources](https://theopenroadproject.org/resources/).
+
+You can watch some interviews I did with Tom Spyrou, lead dev of OpenROAD here:
 
 {{< youtube nSNQNp6Mz8Q >}}
 

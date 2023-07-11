@@ -12,7 +12,7 @@ In an FPGA those will be lookup tables (LUTs) and flip-flops.
 For ASIC, we have a large library of [standard cells](/terminology/standardcell); things like AND, OR, NOT and MUX gates as well as lots of flip-flop variants.
 
 Synthesis proceeds in roughly this sequence:
-1) convert the RTL into a set of equivalent lgocial operations, or generic cells
+1) convert the RTL into a set of equivalent logical operations, or generic cells
 2) map the generic cells to ones available in the library
 3) analyse the timing of the circuit and identify areas that need improvement
 4) change the way the troublesome areas are implemented aiming to fix timing
