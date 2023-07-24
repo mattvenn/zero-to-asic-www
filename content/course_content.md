@@ -102,12 +102,11 @@ We will take a quick look at [Formal Verification](/terminology/verification) an
 
 ## Part 5: Google/Skywater/Efabless shuttle
 
-The way to make ASIC fabrication cheaper is to parcel out the wafer into chunks and sell each chunk individually, this is known as a shuttle service or an [MPW](/terminology/mpw). Google has sponsored a shuttle service that will be running once every few months during 2021.
-Efabless are providing the intermediary services between the Skywater factory and applicants.
+The way to make ASIC fabrication cheaper is to parcel out the wafer into chunks and sell each chunk individually, this is known as a shuttle service or an [MPW](/terminology/mpw). Google sponsored a shuttle service that ran every quarter from 2021 to 2022. The pace is now slower, and with a lot more contention.
 
-All applicants need to make use of a wrapper design called Caravel that encloses your own design. This wrapper includes a RISCV CPU, some memory and some peripherals. This can help take some of the burden off your own design as you can make use of existing peripherals.
+To replace the lottery shuttle have developed [TinyTapeout](https://www.tinytapeout.com) a multi-multi-project wafer service that allows us to guarantee silicon for hundreds of people at a time. You will have a guaranteed slot on a Tiny Tapeout shuttle.
 
-We will be combining all the designs together using a special multiplexer harness I have developed. This allows us to put many independent designs into the one application.
+You can also apply directly to [Efabless](https://efabless.com) for a chipIgnite shuttle. This makes use of a wrapper design called Caravel that encloses your own design. This wrapper includes a RISCV CPU, some memory and some peripherals. This can help take some of the burden off your own design as you can make use of existing peripherals.
 
 You will learn:
 

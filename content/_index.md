@@ -36,13 +36,12 @@ We have just received [MPW1 and the chips are working!](/post/mpw1-is-alive)
 | Recorded solution videos                                                                                          | ✅                                                                                                                         | ✅                                                                                                                         | ✅                                                                   |
 | Access to discord community server                                                                                | ✅                                                                                                                         | ✅                                                                                                                         | ✅                                                                   |
 | Access to weekly call                                                                                             | ✅                                                                                                                         | ✅                                                                                                                         | ✅                                                                   |
-| Access to the group submission - get your open source chip made for real! Max area 300 x 300 um **[ⓘ](#how-big)** | ✅                                                                                                                         | ✅                                                                                                                         | ✅                                                                   |
 | Access to the material for the lifetime of the course **[ⓘ](#course-life)**                                       | ✅                                                                                                                         | ✅                                                                                                                         | ✅                                                                   |
+| Guaranteed ASIC manufacture **[ⓘ](#asic-def)**                                                                    | ✅                                                                                                                         | ✅                                                                                                                         | ✅                                                                   |
 | Your ASIC mounted on a PCB breakout board                                                                         | $50 + P&P                                                                                                                  | ✅                                                                                                                         | ✅                                                                   |
-| How many chips will you receive                                                                                   | 1                                                                                                                          | 3                                                                                                                          | 300                                                                  |
-| 1 to 1 office hours support                                                                                       | ❌                                                                                                                         | 2 hours                                                                                                                    | 8 hours                                                              |
+| How many chips will you receive                                                                                   | 1                                                                                                                          | 1                                                                                                                          | 100                                                                  |
+| 1 to 1 office hours support                                                                                       | ❌                                                                                                                         | 2 hours                                                                                                                    | 4 hours                                                              |
 | Application to ChipIgnite - design can be closed source                                                           | ❌                                                                                                                         | ❌                                                                                                                         | ✅                                                                   |
-| Guaranteed ASIC manufacture **[ⓘ](#asic-def)**                                                                    | ❌                                                                                                                         | ❌                                                                                                                         | ✅                                                                   |
 | Custom PCB design consultancy                                                                                     | ❌                                                                                                                         | ❌                                                                                                                         | ✅                                                                   |
 | Team access **[ⓘ](#team-access)**                                                                                 | ❌                                                                                                                         | ❌                                                                                                                         | ✅                                                                   |
 |                                                                                                                   | {{< button "https://buy.stripe.com/cN22aZd9O05Af7O8wC" "https://buy.stripe.com/test_fZedUTbpVg2caeQ002" "Buy for $650" >}} | {{< button "https://buy.stripe.com/3cs6rf8Tyf0ucZGfZ3" "https://buy.stripe.com/test_14k04365BaHSgDe7st" "Buy for $950" >}} | {{< button "/arsenic-details" "/arsenic-details" "POA" >}} |
@@ -102,22 +101,15 @@ I'm so confident you will love the course, if for any reason you are unhappy you
 
 [Back to top](#tickets)
 
-#### How big can I make my custom project? {#how-big}
+#### Will I definitely get an ASIC with my design on it? {#asic-def}
 
-Your project needs to be 300 x 300 um. See the [MPW2 submission](/post/mpw2-submitted/) for ideas about what is possible in this space.
-If you need bigger then you can make an individual application to Efabless.
+Yes! We are now using [TinyTapeout](https://www.tinytapeout.com) to guarantee ASIC manufacture. 
 
 [Back to top](#tickets)
 
-#### Will I definitely get an ASIC with my design on it? {#asic-def}
+#### How big can I make my custom project? {#how-big}
 
-Chips are only guaranteed on the Arsenic level ticket. Boron and Silicon tickets are entered into the Google/Skywater free shuttle.
-
-The free shuttle is currently run as a lottery and while we have a good chance of getting in there is no guarantee.
-
-You are able to make your own application separately to the group if you wish.
-
-If the application doesn’t make it onto the shuttle, then that also means we don’t get the decapped photos.
+Your project area starts at 100 x 160um. You can pay extra for more space. 
 
 [Back to top](#tickets)
 
@@ -136,8 +128,7 @@ You can take as long as you want with the course materials. Office hours expire 
 
 #### When do I need to submit my final design?
 
-It depends on the next shuttle. As we don't know this in advance I will announce this through discord and email. If you want to submit to the group project I will give you a deadline of 2 weeks
-before the shuttle closing date to make sure I have enough time to aggregate all the designs into a single submissions.
+See [TinyTapeout](https://www.tinytapeout.com) for the next shuttle closing date.
 
 [Back to top](#tickets)
 
