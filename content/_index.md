@@ -12,7 +12,7 @@ aliases:
     - /index
 ---
 
-{{< youtube Jf3ltgG5uck >}}
+{{< youtube v2VKxFhl6Aw >}}
 
 ## Want to learn how to design chips?
 
@@ -22,7 +22,7 @@ GCC revolutionised compiling, Linux revolutionised computing. Android revolution
 
 This course will give you the experience of creating your own microchip, using free and open source tools.
 
-Of the 250 people who have taken the course, 50 have submitted designs for [MPW2](/post/mpw2-submitted/), [MPW3](/post/mpw3), [MPW4](/post/mpw4_submitted), [MPW5](/post/mpw5_submitted), [MPW6](/post/mpw6_submitted), [MPW7](/post/mpw7_submitted) and [MPW8](/post/mpw8_submitted).
+Of the 330 people who have taken the course, 50 have submitted designs for [MPW2](/post/mpw2-submitted/), [MPW3](/post/mpw3), [MPW4](/post/mpw4_submitted), [MPW5](/post/mpw5_submitted), [MPW6](/post/mpw6_submitted), [MPW7](/post/mpw7_submitted) and [MPW8](/post/mpw8_submitted).
 
 We have just received [MPW1 and the chips are working!](/post/mpw1-is-alive)
 
