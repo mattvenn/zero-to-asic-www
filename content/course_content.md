@@ -113,7 +113,7 @@ You will learn:
 * The component parts of [Caravel](/terminology/shuttle).
 * How big a space there is inside for your designs.
 * How to simulate it, including your own design.
-* How to fulfil the application process and make your own application should you wish.
+* How to fulfill the application process and make your own application should you wish.
 
 ## Project 5.1: Simulate your design inside Caravel
 
