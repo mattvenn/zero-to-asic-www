@@ -29,19 +29,24 @@ If you want to know how these cells are put together, check this video out of me
 
 Here are some examples taken from the high density SkyWater 130nm standard cell library.
 
-You can browse them all [here](https://antmicro-skywater-pdk-docs.readthedocs.io/en/test-submodules-in-rtd/contents/libraries/sky130_fd_sc_hd/README.html)
+You can browse them all [here](https://skywater-pdk.readthedocs.io/en/main/index.html)
 
 ## Inverter
 
+[Inverter](https://skywater-pdk.readthedocs.io/en/main/contents/libraries/sky130_fd_sc_hd/cells/inv)
 ![inverter](/std-cell-inverter.png)
 
 ## XOR
 
-![inverter](/std-cell-xor2.png)
+[XOR](https://skywater-pdk.readthedocs.io/en/main/contents/libraries/sky130_fd_sc_hd/cells/xor2)
+
+![xor](/std-cell-xor2.png)
 
 ## D type Flip Flop
 
-![inverter](/std-cell-dflop.png)
+[D flop](https://skywater-pdk.readthedocs.io/en/main/contents/libraries/sky130_fd_sc_hd/cells/dfxtp/README.html)
+
+![d flop](/std-cell-dflop.png)
 
 # How a flip flop works
 
