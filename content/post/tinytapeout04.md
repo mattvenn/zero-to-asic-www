@@ -1,7 +1,7 @@
 ---
 title: "Tiny Tapeout 4"
 date: 2023-09-15T13:48:11+02:00
-tags: ["ASIC", "course","Tiny tapeout"]
+tags: ["ASIC", "course","Tiny tapeout", "MPW"]
 images: ["tinytapeout04.png"]
 featured_image: "tinytapeout04.png"
 ---
@@ -15,12 +15,15 @@ Top level statistics:
 * Maximum utilisation was 87.18% for [project 016](https://tinytapeout.com/runs/tt04/016)
 * Total wire length was 2607 mm
 
-In the words of one of our first time submitters "Just yesterday, I was dreaming of a tapeout cooperative, and it turns out to exist. Thanks to you all!! Looking forward to TT05!"
-
 Thanks to everyone who submitted and all the contributors. Also a huge thanks to [Efabless Corporation](https://efabless.com/) for sponsoring the project!
+
 
 Tiny Tapeout 5 is already open and will close in early November 2023.
 
 You can watch the introduction video here:
 
 {{< youtube bm9xOJzWh10 >}}
+
+* "Thanks to the hard work of the Tiny Tapeout team, making your own ASIC has gone from an impossible dream to a weekend project!"
+* "TinyTapeout is a fantastic way to take your digital design skills to the next level. With great tools and a friendly community, every day working on it was interesting and fun. I’m looking forward to the next TinyTapeout!" 
+* [More from submitters](https://tinytapeout.com/runs/tt04/#testimonials).
