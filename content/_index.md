@@ -20,7 +20,7 @@ Learn to design your own [ASIC](/terminology/asic) and get it fabricated! Thanks
 
 GCC revolutionised compiling, Linux revolutionised computing. Android revolutionised phones. Arduino revolutionised microcontrollers. RISCV is revolutionising ISAs. The next step is open source Silicon.
 
-This course will give you the experience of creating your own microchip, using free and open source tools.
+This course will give you the experience of designing and creating your own microchip, using free and open source tools.
 
 Of the 330 people who have taken the course, 50 have submitted designs for [MPW2](/post/mpw2-submitted/), [MPW3](/post/mpw3), [MPW4](/post/mpw4_submitted), [MPW5](/post/mpw5_submitted), [MPW6](/post/mpw6_submitted), [MPW7](/post/mpw7_submitted) and [MPW8](/post/mpw8_submitted).
 
@@ -77,14 +77,14 @@ Watch more [in depth feedback here](https://www.youtube.com/watch?v=TR8LiCWoOdg&
     -   Weekly course hangout call.
     -   1 to 1 office hours with Matt: access to expert help on the Boron and Arsenic level tickets.
 -   Asynchronous - do in your own time.
--   A PCB will be optionally available to buy with ASIC pre-soldered for you.
+-   Guaranteed ASIC manufacture with [TinyTapeout](https://www.tinytapeout.com).
 -   High resolution set of digital images of the decapped ASIC - see [FAQ](#asic-def).
 -   Access to the course materials for the lifetime of the course.
 -   Course completion certificate.
 
 ### Prerequisites
 
--   Basic Linux command line experience helpful.
+-   Basic Linux command line experience, Git & Make is helpful.
 -   Some programming experience helpful.
 -   No hardware or [HDL](/terminology/hdl) experience required!
 -   Please note that M1 Macs are not well supported at this time.
