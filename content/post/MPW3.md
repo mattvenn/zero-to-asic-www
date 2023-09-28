@@ -9,6 +9,14 @@ image_pos: 0% +80%
 
 We submitted for MPW3! The tapeout date was delayed by a couple of weeks due to [issues with the toolchain](/post/mpw1_silicon).
 
+## Update!
+
+We received silicon in June 2023 (18 months later!) and I was able to get both my designs partially working. 
+
+{{< youtube T8SNGpDH6Zs >}}
+
+## MPW3
+
 We had 7 new submissions from the course, 4 repeats from MPW1 and 2 with fixed clock trees, a new wishbone demo from me and the [OpenRAM block](/post/interview-with-matt-guthaus/).
 
 We also had some people course make personal applications for a whole chip:
