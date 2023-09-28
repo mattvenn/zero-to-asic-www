@@ -13,7 +13,7 @@ We submitted for MPW3! The tapeout date was delayed by a couple of weeks due to 
 
 We received silicon in June 2023 (18 months later!) and I was able to get both my designs partially working. 
 
-{{< youtube T8SNGpDH6Zs >}}
+{{< youtube 2a5gfNHcDig >}}
 
 ## MPW3
 
