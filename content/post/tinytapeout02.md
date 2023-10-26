@@ -8,6 +8,8 @@ featured_image: "tinytapeout02.png"
 
 I'm happy to announce that [TinyTapeout02](https://tinytapeout.com/runs/tt02/) was successfully submitted for manufacture in December 2022! 164 designs were included on the tapeout.
 
+**Update!** [TinyTapeout 2 chips are back and working!](/post/tt02-silicon-is-alive)
+
 If you're unfamiliar, TinyTapeout is an educational project that makes it easier and cheaper than ever to get your digital designs manufactured on a real chip! We had a first trial, [TinyTapeout01](https://tinytapeout.com/runs/tt01/) in September 2022 that was destined for MPW7. 
 
 TinyTapeout01 helped establish a baseline architecture for the design, wherein up to 500 submissions could be tiled onto a single chip and connected via a custom scanchain. Using the scanchain, each design had access to 8 inputs and ouputs, and an individual design could be accessed by selecting its address with an external DIP switch. The downside to TinyTapeout01 was that it relied on the lottery system for MPW7, so there was no guarantee it would be fabricated.
