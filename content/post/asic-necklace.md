@@ -59,7 +59,7 @@ We blocked the light by covering everything outside the logo with copper, draped
 
 # Electronics
 
-The chips I used were extremely rare, an exclusive vintage we submitted to [Efabless chipIgnite](https://efabless.com/). 
+The chips I used were extremely rare, an [exclusive 2022 vintage](/post/mpw6_submitted/) we submitted to [Efabless chipIgnite](https://efabless.com/). 
 
 Unfortunately it doesn't contain my WS2812 LED driver [macro](/terminology/macro), so for the LEDs, I went with the easier to drive [APA102s](https://cdn-shop.adafruit.com/product-files/2477/APA102C-iPixelLED.pdf).
 
@@ -140,7 +140,7 @@ Now go and enjoy the high resolution [gallery of my favourite photos](https://ph
 # Resources
 
 * [All the photos](https://photos.app.goo.gl/Urtsa7ztqAidyRfUA)
-* The necklace on Adam's [open jewelry](https://open.jewelry/jewelry/7/) site.
+* The necklace on Adam's [open jewelry](https://open.jewelry/jewelry/7/) site
 * [3D CAD](https://cad.onshape.com/documents/c94b1292cdd70523373dfc49/w/5a27a2dce2dc4d92de3e72a3/e/d27912885e214c193a7992b3?renderMode=0&uiState=654a3a25f0cd5e4bcf412c07)
 * [Firmware](https://github.com/mattvenn/asic-necklace-fw)
 * [PCBs repository pending]()
