@@ -10,7 +10,7 @@ For the last few years I've worn an old 4 inch wafer to conferences or whenever 
 
 ![old necklace](/necklace/old_necklace.JPG)
 
-The problem with the necklace is that it's too hip-hop, and not enough "15 million dollar Nikon Lithography Stepper". I decided to make a new necklace that:
+The problem with the necklace is that it's too hip-hop, and not enough "15 million dollar Nikon Lithography Stepper" so I decided to make a new necklace that:
 
 * looks amazing,
 * has animated LEDs,
@@ -43,7 +43,7 @@ The 3D printed parts are black nylon printed with [Multi Jet Fusion](https://www
 
 # Electronics
 
-Obviously I wanted to use my own chips to drive the LEDs. To make it easier I chose the APA102s as they have a separate clock and data line. That means any issues with precise timings are eliminated. 
+Obviously I wanted to use my own chips to drive the LEDs. To make it easier I chose the [APA102s](https://cdn-shop.adafruit.com/product-files/2477/APA102C-iPixelLED.pdf) as they have a separate clock and data line. That makes them much easier to drive than WS2812s. 
 The signals run from the centre board around the chain via FFCs - flat flexible cables. This was definitely a mistake and will be fixed in the future with some hardier connectors.
 
 The chip I used is the one we submitted for [MPW6](/post/mpw6_submitted). I used the RISCV processor to bitbang the LEDs and I plan to use one of the ring oscillator tests as a crude temperature sensor to change the speed of the animation.
@@ -56,9 +56,7 @@ We did some basic testing with the LEDs to see how they'd diffuse through the PC
 
 ![led testing](/necklace/Y0-chain-APA102C-exp.jpg)
 
-Pat did some [pretty nice work on estimating power usage on the LEDs](/necklace/APA102CAnalysis.pdf), and that helped us size the battery. We went with a 400mAh LiPo that lasts for about 2 hours. I keep some spares in my pocket and swap them over when it runs out.
-
-The bottom PCBs were just cheap 2 layer with black solder mask. The top boards were a lot more expensive: matte black with gold coated traces.
+Pat did some [pretty nice work on estimating power usage on the LEDs](/necklace/APA102CAnalysis.pdf), and that helped us size the battery. We went with a 400mAh LiPo that lasts for about 2 hours. I keep some spares in my pocket and swap them over when it runs out. We supply the LEDs with the LiPo voltage directly so we don't waste energy on voltage drop over a regulator.
 
 # Decorative pattern
 
@@ -75,8 +73,8 @@ Adam finally came up with something that fit the link, looked good and connected
 Finally, we started ordering parts.
 
 * Aluminium links from [Runzemetal](https://runzemetal.m.en.alibaba.com/index.html) on the 14th,
-* Plastics from [?](?) on the 22nd, and
-* PCBs from [PCBWay](https://www.pcbway.com/) on the 25th
+* Plastics from [?](?) on the 22nd,
+* PCBs from [PCBWay](https://www.pcbway.com/) on the 25th,
 * Parts from [Adafruit](https://www.adafruit.com/) and [DigiKey](https://www.digikey.es/) on the 25th.
 
 This was cutting it extremely close to the deadline! I wanted to debut the necklace at [Hackaday Supercon](https://hackaday.io/superconference/), and the PCBs needed to land with Pat before his flight on the 31st. 
@@ -129,6 +127,7 @@ Here's a high resolution [gallery of my favourite photos](https://photos.app.goo
 
 * [All the photos](https://photos.app.goo.gl/Urtsa7ztqAidyRfUA)
 * The necklace on Adam's [open jewelry](https://open.jewelry/jewelry/7/) site.
+* [3D CAD](https://cad.onshape.com/documents/c94b1292cdd70523373dfc49/w/5a27a2dce2dc4d92de3e72a3/e/d27912885e214c193a7992b3?renderMode=0&uiState=654a3a25f0cd5e4bcf412c07)
 * [Firmware](https://github.com/mattvenn/asic-necklace-fw)
 * [PCBs repository pending]()
 * [OSHWA certification pending]()
