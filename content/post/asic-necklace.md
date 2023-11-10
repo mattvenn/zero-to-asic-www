@@ -110,7 +110,7 @@ At 500 grams, it's a lot heavier than my previous necklace! It took some time to
 Over the 3 days we exposed some design flaws:
 
 * The wafer clip was meant to be a "snap fit", but it wasn't quite snappy enough and the wafer fell off a couple of times.
-* The clearance between the aluminium and the PCBs was meant to limit the chain to around a 15 degree movement but it can actually around 45 degrees.
+* The clearance between the aluminium and the PCBs was meant to limit the chain to around 15 degrees of movement but it can actually move around 45 degrees.
 * The FFC cables are too exposed, fragile and can get pulled out by excessive chain flexing.
 
 We weren't sure about the FFC so we designed in a backup: extra pads on the back of the boards we could just solder wires to. I had to fix the chain twice during the con when cables failed. 
