@@ -26,17 +26,17 @@ I started with some concept sketches in August 2023. I always prefer paper and p
 
 The challenging part was making strong, flexible, conductive and most importantly - good looking links.
 
-After a few iterations we decided on gold anodized CNC aluminium links held between sandwiches of PCBs. The top PCB acts as a decorative light diffusor while the bottom holds the LED and passes the signals around the chain.
+After a few iterations we decided on gold anodized CNC aluminium links held between sandwiches of black PCBs. The top PCB acts as a decorative light diffusor while the bottom holds the LED and passes the signals around the chain.
 
 # 3D design
 
 Adam did the design with [Onshape (account needed to view the design)](https://cad.onshape.com/documents/c94b1292cdd70523373dfc49/w/5a27a2dce2dc4d92de3e72a3/e/d27912885e214c193a7992b3?renderMode=0&uiState=654a3a25f0cd5e4bcf412c07), which certainly made collaboration easier. 
 
-We realised that the edges of the PCB sandwichs wouldn't look great so Adam designed a black 3D printed spacer that holds the top and bottom PCBs apart while covering the sides of the boards. The bottom boards have a [surface mount soldered nut](https://www.adafruit.com/product/4207?gclid=EAIaIQobChMI6KT4h5eMggMVRUxHAR0z6gJoEAQYAiABEgI8WPD_BwE) and the top board is screwed on with some nice [low profile machine head bolts](?).
+We realised that the edges of the PCB sandwiches wouldn't look great so Adam designed a spacer that holds the top and bottom PCBs apart while covering the sides of the boards. The bottom boards have a [surface mount soldered nut](https://www.adafruit.com/product/4207?gclid=EAIaIQobChMI6KT4h5eMggMVRUxHAR0z6gJoEAQYAiABEgI8WPD_BwE) and the top board is screwed on with some nice [low profile machine head bolts](?).
 
 ![cross section side link](/necklace/link_side.png)
 
-The 3D printed spacers are nylon printed with [Multi Jet Fusion](https://www.protolabs.com/services/3d-printing/multi-jet-fusion/), a technique that gives very nice results with hardly any layer lines. Adam used this technique a lot when he worked at Boston Dynamics.
+The spacers are black nylon printed with [Multi Jet Fusion](https://www.protolabs.com/services/3d-printing/multi-jet-fusion/), a technique that results in an industrial look and feel. Adam used this technique a lot when he worked at Boston Dynamics.
 
 
 # Decorative pattern
@@ -45,7 +45,7 @@ I knew I wanted something that represented a [MOSFET](/terminology/mosfet), as t
 
 ![mosfet patterns](/necklace/mosfet_patterns.png)
 
-I was really struggling to come up with a design that I was happy with, but finally Adam came up with something that was proportional to the link, looked good and connected a 3 pin device to a 4 symmetric wires. Yes I know MOSFETs are 4 pin devices. No, I couldn't get it to look good in the space we had.
+I was really struggling to come up with a design that I was happy with, but finally Adam came up with something that was proportional to the link, looked good and connected a 3 pin device to a 4 symmetric wires. Yes I know MOSFETs are 4 pin devices. No, I couldn't get it to look good in the space we had!
 
 # Diffusion 
 
@@ -67,11 +67,11 @@ I used the chip's on-board [VexRiscv](https://github.com/SpinalHDL/VexRiscv) RIS
 
 ![tip](/necklace/tiptop-floorplan.png)
 
-For the schematic we started with Pat's [minimal viable ASIC board](https://github.com/TinyTapeout/caravel-mvp-pcb). It's a template schematic that includes all you need to boot a chipIgnite or Google funded MPW lottery chips. To customise it for the necklace we added a couple of buttons and some decorative stripes that serve double duty as capacitive touch sensors.
+For the schematic we started with Pat's [minimal viable ASIC board](https://github.com/TinyTapeout/caravel-mvp-pcb). It's a template schematic that includes all you need to boot a chipIgnite or Google funded MPW lottery chip. To customise it for the necklace we added a couple of buttons and some decorative stripes that serve double duty as capacitive touch sensors.
 
 Pat did some [very nice work on estimating power usage on the LEDs](/necklace/APA102CAnalysis.pdf), and that helped us size the battery. 
-The APA102's datasheet says 'Applied voltage 5VDC', but we run them direct from the LiPo and they work fine.
-We went with a 400mAh LiPo that lasts for a measly 2 hours. Always prepared, I keep some spares in my pocket and swap them over when no-one's looking.
+The APA102's datasheet says 'Applied voltage 5VDC', but we run them direct from the LiPo's lower voltage and they work fine.
+We went with a 400mAh battery that lasts for a measly 2 hours. Always prepared, I keep some spares in my pocket and swap them over when no-one's looking.
 
 
 # Ordering
@@ -86,7 +86,7 @@ I wanted to debut the necklace at [Hackaday Supercon](https://hackaday.io/superc
 
 ![fingers crossed](/necklace/fingers_crossed.png)
 
-Aluminium links and plastics arrived on the 31st and fitted well. Thanks Esden and Timon for the CNC factory recommendation!
+Aluminium links and plastics arrived on the 31st and fitted well. Thanks Esden and Timon for the Runzemetal recommendation. They did [Glasgow's beautiful case](https://www.crowdsupply.com/1bitsquared/glasgow/updates/case-development).
 
 ![plastics and links](/necklace/plastics_link_test.jpg)
 
@@ -117,13 +117,13 @@ At a princely 500 grams, it's a lot heavier than my previous necklace. It took s
 
 ![matt con](/necklace/matt_con.jpg)
 
-You might think I stood out, but the con's blinky game was so strong I blended right in.
+You might think I stood out, but the con's blinky game was [so strong](https://chaos.social/@maketvee@leds.social/111371853605341695) I blended right in.
 
 # Improvements
 
-Over the 3 days we exposed some design flaws:
+Over the next 3 days we exposed some design flaws:
 
-* The wafer clip was meant to be a "snap fit", but it wasn't quite snappy enough and the wafer fell off a couple of times.
+* The wafer clip was meant to be a snap fit, but it wasn't quite snappy enough and the wafer fell off a couple of times.
 * The clearance between the aluminium and the PCBs was meant to limit the chain to around 15 degrees of movement but it can actually move around 45 degrees.
 * The FFC cables are too exposed, fragile and can get pulled out by excessive chain flexing.
 
