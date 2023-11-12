@@ -30,7 +30,8 @@ After a few iterations we decided on gold anodized CNC aluminium links held betw
 
 # 3D design
 
-Adam did the design with [Onshape (account needed to view the design)](https://cad.onshape.com/documents/c94b1292cdd70523373dfc49/w/5a27a2dce2dc4d92de3e72a3/e/d27912885e214c193a7992b3?renderMode=0&uiState=654a3a25f0cd5e4bcf412c07), which certainly made collaboration easier. 
+Adam did the design with [Onshape (account needed to view the design)](https://cad.onshape.com/documents/c94b1292cdd70523373dfc49/w/5a27a2dce2dc4d92de3e72a3/e/d27912885e214c193a7992b3?renderMode=0&uiState=654a3a25f0cd5e4bcf412c07), a web based CAD tool. 
+I was able to view the design, give feedback and make measurements all inside my browser. 
 
 We realised that the edges of the PCB sandwiches wouldn't look great so Adam designed a spacer that holds the top and bottom PCBs apart while covering the sides of the boards. The bottom boards have a [surface mount soldered nut](https://www.adafruit.com/product/4207?gclid=EAIaIQobChMI6KT4h5eMggMVRUxHAR0z6gJoEAQYAiABEgI8WPD_BwE) and the top board is screwed on with some nice [low profile machine head bolts](?).
 
@@ -41,11 +42,12 @@ The spacers are black nylon printed with [Multi Jet Fusion](https://www.protolab
 
 # Decorative pattern
 
-I knew I wanted something that represented a [MOSFET](/terminology/mosfet), as they're fundamental to all my chip design so far. I also thought it would be cool to have the MOSFET connections run around the chain as a metaphorical secondary electronic chain carried by the physical chain.
+I knew I wanted something that represented a [MOSFET](/terminology/mosfet), as they're fundamental to all my chip design so far. 
+I also liked the idea of showing a simplified circuit diagram that represented the hidden electronics inside the chain.
 
 ![mosfet patterns](/necklace/mosfet_patterns.png)
 
-I was really struggling to come up with a design that I was happy with, but finally Adam came up with something that was proportional to the link, looked good and connected a 3 pin device to a 4 symmetric wires. Yes I know MOSFETs are 4 pin devices. No, I couldn't get it to look good in the space we had!
+I was really struggling to come up with a design that I was happy with, but finally Adam came up with something that was proportional to the link, looked good and connected a 3 pin device to a 4 symmetric wires. Yes I know MOSFETs are 4 pin devices. No, I couldn't get it to look good in the space we had - some artistic license was taken!
 
 # Diffusion 
 
@@ -86,7 +88,7 @@ I wanted to debut the necklace at [Hackaday Supercon](https://hackaday.io/superc
 
 ![fingers crossed](/necklace/fingers_crossed.png)
 
-Aluminium links and plastics arrived on the 31st and fitted well. Thanks Esden and Timon for the Runzemetal recommendation. They did [Glasgow's beautiful case](https://www.crowdsupply.com/1bitsquared/glasgow/updates/case-development).
+Aluminium links and plastics arrived on the 31st and fitted well. Esden and Timon recommended Runzemetal after they did the beautiful case for Whitequark's [Glasgow](https://www.crowdsupply.com/1bitsquared/glasgow/updates/case-development).
 
 ![plastics and links](/necklace/plastics_link_test.jpg)
 
@@ -125,7 +127,7 @@ Over the next 3 days we exposed some design flaws:
 
 * The wafer clip was meant to be a snap fit, but it wasn't quite snappy enough and the wafer fell off a couple of times.
 * The clearance between the aluminium and the PCBs was meant to limit the chain to around 15 degrees of movement but it can actually move around 45 degrees.
-* The FFC cables are too exposed, fragile and can get pulled out by excessive chain flexing.
+* The FFC cables are too exposed and can get pulled out of their tiny sockets by the excessive chain flexing that often happens when I'm fighting other electronic super heroes.
 
 We were never convinced by the FFCs so as consummate professionals we had designed in a backup: extra pads on the back of the boards we could just solder wires to. I executed a high pressure fix right before my interview with [Make](https://makezine.com/article/maker-news/hackaday-supercon-2023-lights-up-pasadena/)!
 
@@ -138,6 +140,8 @@ Thanks to Bruce and Majenta at Supplyframe for letting me use the [design lab](h
 Now go and enjoy the high resolution [gallery of my favourite photos](https://photos.app.goo.gl/3chxmgiNRyWBmcy26)!
 
 # Resources
+
+The necklace is open source hardware and software, inspectable down to the transistors in the microchip.
 
 * [All the photos](https://photos.app.goo.gl/Urtsa7ztqAidyRfUA)
 * The necklace on Adam's [open jewelry](https://open.jewelry/jewelry/7/) site
