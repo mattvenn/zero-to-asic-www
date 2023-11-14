@@ -14,9 +14,9 @@ While it's a fantastic conversation starter, the problem with this necklace is t
 
 A project like this needs a great team - and I got lucky with [Pat Deegan](https://psychogenic.com/) and [Adam Zeloof](https://adam.zeloof.xyz/).
 
-Read on to follow the development story, or go [straight to the photos](#photoshoot).
-
-![chain link](/necklace/chain_link.JPG)
+Read on to follow the development story, go [straight to the photos](#photoshoot) or watch the video.
+ 
+{{< youtube QxjvktltZ9E >}}
 
 # Concept Design
 
@@ -120,6 +120,8 @@ At a princely 500 grams, it's a lot heavier than my previous necklace. It took s
 ![matt con](/necklace/matt_con.jpg)
 
 You might think I stood out, but the con's blinky game was [so strong](https://chaos.social/@maketvee@leds.social/111371853605341695) I blended right in.
+
+![katz creates](/necklace/kat-creates.jpg)
 
 # Improvements
 
