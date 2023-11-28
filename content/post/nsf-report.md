@@ -22,6 +22,6 @@ engaging and inspiring K-12 students.
 > The NCDC should restart and manage a free instructional tape-out program in which students in
 community colleges, 4-year universities, and graduate students can tape-out their class design.
 
-For too long the semiconductor industry has been inaccessible, limiting opportunity and stifling innovation. Now is the time to enable anyone with the interest to try microelectronics, and perhaps plant a seed that develops into the workforce of the future.
+For too long the semiconductor industry has been inaccessible, limiting opportunity and stifling innovation. Now is the time to enable anyone with an interest to try microelectronics, and perhaps plant a seed that develops into the workforce of the future.
 
 You can read the [full report here](https://nsf-ic-education.com/), or you can check my [highlighted version here](/2311.02055-highlights.pdf).
