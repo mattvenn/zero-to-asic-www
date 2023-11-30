@@ -147,9 +147,9 @@ The necklace is open source hardware and software, inspectable down to the trans
 
 * [All the photos](https://photos.app.goo.gl/Urtsa7ztqAidyRfUA)
 * The necklace on Adam's [open jewelry](https://open.jewelry/jewelry/7/) site
-* [3D CAD](https://cad.onshape.com/documents/c94b1292cdd70523373dfc49/w/5a27a2dce2dc4d92de3e72a3/e/d27912885e214c193a7992b3?renderMode=0&uiState=654a3a25f0cd5e4bcf412c07)
-* [Firmware](https://github.com/mattvenn/asic-necklace-fw)
-* [PCBs repository pending](https://github.com/psychogenic/asic-necklace-pcbs)
+* [3D CAD](https://cad.onshape.com/documents/c94b1292cdd70523373dfc49/w/5a27a2dce2dc4d92de3e72a3/e/d27912885e214c193a7992b3?renderMode=0&uiState=654a3a25f0cd5e4bcf412c07) license CC-BY-SA-4.0
+* [Firmware](https://github.com/mattvenn/asic-necklace-fw) license Apache 2
+* [PCBs repository pending](https://github.com/psychogenic/asic-necklace-pcbs) license CC-BY-NC-SA-4.0
 * [OSHWA certification pending]()
 
 # Press
