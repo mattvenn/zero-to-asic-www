@@ -9,6 +9,8 @@ I've just updated the VGA clock PCB to take advantage of a batch of new chips.
 
 I think my [VGA clock](/post/vga_clock) design might be the world's first certified [open source hardware down to the chip level](/post/vga_clock_pcb).
 
+![vga clock](/vga_clock.jpg)
+
 Unfortunately the [MPW1 chips](/post/mpw1_silicon/) were very hard to use and the new ones have a different pinout and footprint. I've been using the clock design as a test project for all the [Tiny Tapeout](https://tinytapeout.com/) chips past TT03. To test the new mux structure introduced at TT04, we ran an experimental [TT3.5](https://github.com/TinyTapeout/tinytapeout-03p5) chip. The chips are back and the clock works as expected (phew!)
 
 As we have a hundred chips but no customers, I've decided to do a re-spin on the board and finally fulfill my plan to sell a few and donate the proceeds to [OSHWA](https://www.oshwa.org/).
