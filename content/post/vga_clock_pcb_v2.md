@@ -13,7 +13,7 @@ I think my [VGA clock](/post/vga_clock) design might be the world's first certif
 
 Unfortunately the [MPW1 chips](/post/mpw1_silicon/) were very hard to use and the new ones have a different pinout and footprint. I've been using the clock design as a test project for all the [Tiny Tapeout](https://tinytapeout.com/) chips past TT03. To test the new mux structure introduced at TT04, we ran an experimental [TT3.5](https://github.com/TinyTapeout/tinytapeout-03p5) chip. The chips are back and the clock works as expected (phew!)
 
-As we have a hundred chips but no customers, I've decided to do a re-spin on the board and finally fulfill my plan to sell a few and donate the proceeds to [OSHWA](https://www.oshwa.org/).
+As we have a hundred chips but no customers, I've decided re-spin the board and finally fulfill my plan to sell a few and donate the proceeds to [OSHWA](https://www.oshwa.org/).
 
 ![3d render of the clock pcb](/vga_clock_pcbv2_render.png)
 
