@@ -5,7 +5,7 @@ images: ["inverter-sim.png"]
 featured_image: "inverter-sim.png"
 ---
 
-PEX stands for Parastic Extraction (often called just 'extraction').
+PEX stands for Parasitic Extraction (often called just 'extraction').
 When we build a circuit on a chip we have an intention in mind, for example an ideal inverter inverts the incoming signal immediately and with no delay.
 
 In reality the inverter will have capacitance on both the input (due to the gate) and the output (due to the diode in the drain) and the wiring of the circuit will have both (parallel) capacitance and (series) resistance. Typically, the modelling of the devices or standard cells takes into account the elements due to the transistors, but knows nothing about the wiring we add later. 
