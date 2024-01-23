@@ -10,7 +10,7 @@ So instead of drawing out an [inverter](/post/inverter) using a tool like [Magic
 
     output = !input;
 
-Which describes what an inverter does. The ! means invert. This is a description of what the circuit does, similar to a programming language like C (although everything happens at once, not in sequence). This is referred to as a 'register transfer language' or RTL. You can also describe a circuit schematic in an HDL, and then it is referred to as a netlist.
+Which describes what an inverter does. The ! means invert. This is a description of what the circuit does, similar to a programming language like C (although everything happens at once, not in sequence). This is referred to as a 'register transfer language' or [RTL](/terminology/rtl). You can also describe a circuit schematic in an HDL, and then it is referred to as a netlist.
 
 Common HDLs are Verilog and VHDL. There are also higher level languages like [Amaranth](https://amaranth-lang.org/docs/amaranth/latest/index.html), [Chisel](https://www.chisel-lang.org/) & [Spinal](https://github.com/SpinalHDL/SpinalHDL).
 
