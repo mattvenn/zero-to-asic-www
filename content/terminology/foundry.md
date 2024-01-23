@@ -7,6 +7,8 @@ featured_image: "skywater-foundry.jpg"
 
 Foundry is the fancy semiconductor word for factory. You have to admit, silicon foundry does sound cool.
 
+{{< youtube aBDJQ9NYTEU >}}
+
 Another term used for this is a 'fabrication plant' or 'fab'. All chips come from fabs, but when a fab is used to produce ASICs for other companies (ie the company that owns the fab is not the one that designed the chip) then it is typically referred to as a foundry. SkyWater, TSMC, Global Foundries are foundries that produce chips for many different ASIC design houses.
 
 ![SkyWater foundry](/skywater-foundry.jpg)
