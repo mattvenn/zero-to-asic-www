@@ -30,7 +30,7 @@ tags: ["course"]
 
 # Tools
 
-* [OpenLane](https://github.com/efabless/openlane) & [Documentation](https://openlane-docs.readthedocs.io/en/rtd-develop/)
+* [OpenLane](https://github.com/efabless/openlane) & [Documentation](https://openlane.readthedocs.io/en/latest/)
 * [OpenLane summary tool](https://github.com/mattvenn/openlane_summary) helps to explore the OpenLane output files.
 * [Magic](http://opencircuitdesign.com/magic/)
 * [KLayout](https://www.klayout.de/)
