@@ -7,15 +7,15 @@ image_pos: 0% +5%
 featured_image: "year_update_2022.jpg"
 ---
 
-Welcome to my highlights from 2022! It was a big year for open-source silicon, especially the Zero to ASIC course and [TinyTapeout](https://tinytapeout.com). Let's look at some of the highlights and then some aims for 2023.
+Welcome to my highlights from 2022! It was a big year for open-source silicon, especially the Zero to ASIC course and [Tiny Tapeout](https://tinytapeout.com). Let's look at some of the highlights and then some aims for 2023.
 
 {{< youtube bS2Siyw3i2M >}}
 
 Here are a few of the highlights:
 * Four Zero to ASIC course tapeouts: [MPW5](/post/mpw5_submitted/), [MPW6](/post/mpw6_submitted/), [MPW7](/post/mpw7_submitted/), and [MPW8](/post/mpw8_submitted/)
-* Rolled out TinyTapeout [01](https://tinytapeout.com/runs/tt01/) and [02](https://tinytapeout.com/runs/tt02/), helping nearly 250 people tapeout their designs,
+* Rolled out Tiny Tapeout [1](https://tinytapeout.com/runs/tt01/) and [2](https://tinytapeout.com/runs/tt02/), helping nearly 250 people tapeout their designs,
 * I personally submitted my 19th tapeout
-* Presented and hosted a TinyTapeout workshop at the Hackaday SuperCon in Novemeber 2022. Met tons of people, including Sam Zeloof [@szeloof](https://twitter.com/szeloof).
+* Presented and hosted a Tiny Tapeout workshop at the Hackaday SuperCon in Novemeber 2022. Met tons of people, including Sam Zeloof [@szeloof](https://twitter.com/szeloof).
 * YouTube Channel had 82k views and 2.5k new subscribers
 * Introduced [Siliwiz](https://www.youtube.com/watch?v=V9xCa4RNfCM)
 
@@ -28,19 +28,19 @@ Additionally, I received [MPW1](/post/mpw1-is-alive/) and [MPW2](https://twitter
 Personally I learned a lot about ASIC design, reaching my 19th tapeout. 
 
 ## Expanding Access to Open-Source Silicon
-In addition to Zero to ASIC, I also launched the TinyTapeout program. 
+In addition to Zero to ASIC, I also launched the Tiny Tapeout program. 
 
-TinyTapeout further lowers the barrier to entry to silicon. I was so excited to see kids submitting designs. The youngest submitter so far is 4-year-old Ms. Nguyen-Taylor with ["Heart Zoe Mom Dad"](https://tinytapeout.com/runs/tt02/031/).
+Tiny Tapeout further lowers the barrier to entry to silicon. I was so excited to see kids submitting designs. The youngest submitter so far is 4-year-old Ms. Nguyen-Taylor with ["Heart Zoe Mom Dad"](https://tinytapeout.com/runs/tt02/031/).
 
 It was also great to introduce SiliWiz, enabling people to get real-time feedback while designing circuits in silicon.
 
-Keep an eye out for TinyTapeout 03 and further updates on Siliwiz in 2023!
+Keep an eye out for Tiny Tapeout 3 and further updates on Siliwiz in 2023!
 
 ## Social Media
 In 2022 my top social media posts were:
 * My [VGA clock](https://twitter.com/matthewvenn/status/1509491474722967553?s=20) submitted on MPW1
 * Living in a world where my [9-year-old can design a chip](https://twitter.com/matthewvenn/status/1566377267298697221)
-* Closing out [TinyTapeout 02](https://twitter.com/matthewvenn/status/1598736789119930380?s=20)
+* Closing out [Tiny Tapeout 2](https://twitter.com/matthewvenn/status/1598736789119930380?s=20)
 
 ## Clarifying My Roles
 There had been some confusion about my specific roles in the open-silicon community.
@@ -49,7 +49,7 @@ Currently I am working with
 * [Yosys HQ](https://www.yosyshq.com/) on training, marketing, and sales
 * [EFabless](https://efabless.com/) on community management and communications
 * [Chipflow](https://www.chipflow.io/) on communications and building a system-on-chip with [Amaranth](https://github.com/amaranth-lang/amaranth)
-* Zero to ASIC course and TinyTapeout to lower the barrier to ASIC design and help people get to their first tapeout
+* Zero to ASIC course and Tiny Tapeout to lower the barrier to ASIC design and help people get to their first tapeout
 
 There has been some confusion between the *Zero to ASIC course* and the [ZeroASIC](https://www.zeroasic.com/) startup. I'm not involved in their efforts, but feel free to check out their site! They're developing a great Verilog-to-GDS flow called silicon compiler.
 
@@ -63,7 +63,7 @@ Here are some of the goals I'd like to accomplish in 2023 with the community:
 * Update the course, including more information about timing closure. This is a critical aspect of ASIC design, and there's not much information out there.
 * Visit IHP and tour their foundry
 * Meet with Tomas Aidukas to do an [x-ray tomography scan](https://www.youtube.com/watch?v=lEvf16Op2U8) of the MPW1 designs
-* Run TinyTapeout 03, 04, 05, and 06, with improvements to the scanchain multiplexer. I'm also keen to start working wiht more universities and schools.
+* Run Tiny Tapeout 3, 4, 5, and 6, with improvements to the scanchain multiplexer. I'm also keen to start working wiht more universities and schools.
 * Taping out with SkyWater 90nm process
 * Make the Zero to ASIC course more accessible, for example with the [low-cost ticket grant](/#grant)
 
