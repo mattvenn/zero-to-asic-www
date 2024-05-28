@@ -1,24 +1,26 @@
 ---
 title: "VGA clock PCB updated for new chips"
 date: 2023-12-30T16:26:18+02:00
-images: ["vga_clock_pcbv2_render.png"]
-featured_image: "vga_clock_pcbv2_render.png"
+images: ["vga_clock_pmod.jpg"]
+featured_image: "vga_clock_pmod.jpg"
 ---
 
-I've just updated the VGA clock PCB to take advantage of a batch of new chips.
-
-I think my [VGA clock](/post/vga_clock) design might be the world's first certified [open source hardware down to the chip level](/post/vga_clock_pcb).
+My [VGA clock](/post/vga_clock) design is the world's first certified [open source hardware down to the chip level](/post/vga_clock_pcb).
 
 ![vga clock](/vga_clock.jpg)
 
-Unfortunately the [MPW1 chips](/post/mpw1_silicon/) were very hard to use and the new ones have a different pinout and footprint. I've been using the clock design as a test project for all the [Tiny Tapeout](https://tinytapeout.com/) chips past TT03. To test the new mux structure introduced at TT04, we ran an experimental [TT3.5](https://github.com/TinyTapeout/tinytapeout-03p5) chip. The chips are back and the clock works as expected (phew!)
+Unfortunately the [MPW1 chips](/post/mpw1_silicon/) were very hard to use and the new ones have a different pinout and footprint. I've been using the clock design as a test project for all the [Tiny Tapeout](https://tinytapeout.com/) chips past TT03. 
 
-As we have a hundred chips but no customers, I've decided re-spin the board and finally fulfill my plan to sell a few and donate the proceeds to [OSHWA](https://www.oshwa.org/).
+To test the new mux structure introduced at TT04, we ran an experimental [TT3.5](https://github.com/TinyTapeout/tinytapeout-03p5) chip. The chips are back and the clock works as expected (phew!)
 
-![3d render of the clock pcb](/vga_clock_pcbv2_render.png)
+As we have a hundred chips but no customers, I've decided to create a VGA PMOD that turns the dev board into a dedicated clock.
 
-The new board's repo is here: https://github.com/mattvenn/tt-vga-clock-pcb
+![VGA clock PMOD](/vga_clock_pmod.jpg)
 
-Until the docs are updated the [OSHWA certification](https://certification.oshwa.org/es000023.html) refers to the previous version.
+More information and resources can be found here: https://bit.ly/vga-asic-clock.
 
-If you're interested to know when the boards go on sale, [leave your email on this form](https://docs.google.com/forms/d/1T6BmjGyFQyqTNji1qao1T61LZW5fL_B2eHlydXzalR4/edit).
+The new PCB is here: https://github.com/tinytapeout/tt-vga-clock-pmod.
+
+To buy a kit head to the [Tiny Tapeout store](https://store.tinytapeout.com/products/TT03p5-Development-Kit-VGA-PMOD-p655428056).
+
+For every kit sold, I will donate $100 to [OSHWA](https://www.oshwa.org/).

@@ -7,7 +7,7 @@ featured_image: "vga_clock.jpg"
 
 This is one of the first projects I [hardened](/terminology/harden) using [OpenLane](/terminology/openlane).
 
-News update: my clock works!
+News update: my clock works! And you can [buy a kit here](https://store.tinytapeout.com/products/TT03p5-Development-Kit-VGA-PMOD-p655428056)!
 
 {{< twitter user="matthewvenn" id="1509491474722967553" >}}
 

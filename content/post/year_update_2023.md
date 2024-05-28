@@ -87,7 +87,7 @@ We’re seeing a continued take up of open source tools in academia and I hope t
 
 It would be great to get a more solid and tested open source IP library that will make complex designs easier and faster to tapeout. I also think we’ll see more EDA tools available online from jupyter notebooks, github actions and web assembly like the [new fully online FPGA toolchain from Catherine “Whitequark](https://twitter.com/whitequark/status/1738722422646292688)”.
 
-{{< twitter 1738722422646292688 >}}
+{{< twitter user="whitequark" id="1738722422646292688" >}}
 
 As for my goals, even though I failed to get 1000 new people involved last year, this year I’m aiming for 2000! It’s going to be tough to reach, but if we fill every Tiny Tapeout shuttle, it’s possible.
 

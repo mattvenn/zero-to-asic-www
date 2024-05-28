@@ -6,7 +6,9 @@ featured_image: "vga_pcb.png"
 ---
 
 I'm very pleased to get [OSHWA certification](https://certification.oshwa.org/es000023.html) for my [ASIC clock](https://www.zerotoasiccourse.com/post/vga_clock/). 
-Who knows, maybe this is a world first!
+I'm pretty sure this is the world's first certified open source hardware down to the chip level!
+
+Update! The [PCB has been updated here](/post/vga_clock_pcb_v2).
 
 The clock was submitted as part of [MPW1](/post/asic_submitted). We're expecting silicon back in August/September, so it was time to get the PCB ready
 and try to source the other components!
