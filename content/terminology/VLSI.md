@@ -10,7 +10,7 @@ integrated together to make one [IC](/terminology/ic).
 
 ![timeline](/timeline.jpg)
 
-Image from https://www.computerhistory.org/siliconengine/
+Image from https://www.computerhistory.org/
 
 Some notable dates:
 
