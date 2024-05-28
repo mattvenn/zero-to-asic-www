@@ -1,5 +1,5 @@
 ---
-title: "TinyTapeout 02 Silicon Is Alive!"
+title: "Tiny Tapeout 2 Silicon Is Alive!"
 date: 2023-10-26T15:42:45+02:00
 tags: ["ASIC", "course","Tiny tapeout"]
 images: ["tinytapeout02_is_alive.png"]

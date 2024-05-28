@@ -6,7 +6,7 @@ images: ["mpw7_multi_macro.png"]
 featured_image: "mpw7_multi_macro.png"
 ---
 
-We submitted for MPW7! I am particularly excited about this submission because we were able to submit the Zero to ASIC course designs as well as the first [TinyTapeout](https://mailchi.mp/574276e3c9d7/tinytapeout) design. 
+We submitted for MPW7! I am particularly excited about this submission because we were able to submit the Zero to ASIC course designs as well as the first [Tiny Tapeout](https://mailchi.mp/574276e3c9d7/tinytapeout) design. 
 
 MPW7 has by far had the most submissions of the MPW shuttles so far with 72 submitted projects as of 13 September.
 
@@ -17,7 +17,7 @@ Congratulations to everyone on the course submission! We had 9 projects from the
 
 Here's the [github repo for the group submission](https://github.com/mattvenn/zero_to_asic_mpw7) and the [Efabless project](https://platform.efabless.com/projects/1180).
 
-Curious about TinyTapeout? Check out the [github repo](https://github.com/mattvenn/tinytapeout-mpw7) and the [Efabless project](https://platform.efabless.com/projects/1229).
+Curious about Tiny Tapeout? Check out the [github repo](https://github.com/mattvenn/tinytapeout-mpw7) and the [Efabless project](https://platform.efabless.com/projects/1229).
 
 And here's a list of the projects - congratulations again everyone!
 

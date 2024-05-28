@@ -1,7 +1,7 @@
 ---
 title: "Tiny Tapeout 4"
 date: 2023-09-15T13:48:11+02:00
-tags: ["ASIC", "course","Tiny tapeout", "MPW"]
+tags: ["ASIC", "course","Tiny Tapeout", "MPW"]
 images: ["tinytapeout04.png"]
 featured_image: "tinytapeout04.png"
 ---
@@ -25,5 +25,5 @@ You can watch the introduction video here:
 {{< youtube bm9xOJzWh10 >}}
 
 * "Thanks to the hard work of the Tiny Tapeout team, making your own ASIC has gone from an impossible dream to a weekend project!"
-* "TinyTapeout is a fantastic way to take your digital design skills to the next level. With great tools and a friendly community, every day working on it was interesting and fun. I’m looking forward to the next TinyTapeout!" 
+* "Tiny Tapeout is a fantastic way to take your digital design skills to the next level. With great tools and a friendly community, every day working on it was interesting and fun. I’m looking forward to the next Tiny Tapeout!" 
 * [More from submitters](https://tinytapeout.com/runs/tt04/#testimonials).
