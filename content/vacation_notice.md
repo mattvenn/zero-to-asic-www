@@ -9,9 +9,9 @@ type: page
 
 # Vacation notice
 
-* Matt is away on holiday from 31st July to the 11th of August.
-* You can still buy a ticket and prepare your tools installation.
-* Onboarding and access to the course material can be booked for after 11th August.
+* Matt is away on holiday from 16th August to the 3rd of September.
+* You can still buy a ticket, prepare your tools installation and join the community.
+* Onboarding and access to the course material can be booked for after 3rd September.
 
 | Silicon           | Boron         | Arsenic |
 |----------------   |-------------- |----------------   |
