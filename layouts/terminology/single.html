@@ -50,7 +50,7 @@
       {{- .Content -}}
 
         <h2>Course feedback</h2>
-        {{ $quotes := getJSON "quotes/quotes.json" }}
+        {{ $quotes := site.Data.quotes }}
         {{ $quote := $quotes.quotes | shuffle | first 1 }}
         {{ $real_quote := index $quote 0 }}
         <blockquote>
@@ -62,9 +62,6 @@
 
       {{- partial "tags.html" . -}}
       <div class="mt6 instapaper_ignoref">
-      {{ if .Site.DisqusShortname }}
-        {{ template "_internal/disqus.html" . }}
-      {{ end }}
       {{ if .Site.Params.commentoEnable }}
         {{- partial "commento.html" . -}}
       {{ end }}

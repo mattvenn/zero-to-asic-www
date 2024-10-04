@@ -1,4 +1,4 @@
-{{ $quotes := getJSON "quotes/quotes.json" }}
+{{ $quotes := site.Data.quotes }}
 {{ $quote := $quotes.quotes | shuffle | first 1 }}
 {{ $real_quote := index $quote 0 }}
 > {{ $real_quote.quote }}
