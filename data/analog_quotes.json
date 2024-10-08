@@ -1,0 +1,47 @@
+{ 
+    "quotes": [
+        { 
+        "author": "Kolos",
+        "quote" : "Zero To Asic is the best chip design course I have ever seen or heard about. Changed my future career goals thanks to this experience."
+        },
+        { 
+        "author": "James Meech",
+        "quote" : "The course was great and beats any analog courses I took at university in terms of practical hands on experience."
+        },
+        { 
+        "author": "Diego Satizabal",
+        "quote" : "A great course to really learn about Analog ASICs and electronics in general, great material and support community." },
+        { 
+        "author": "Kolos",
+        "quote" : "This is the most comprehensive IC design course on the internet. I loved working on my mixer module and Matt's team helped every time I got stuck. I will do further tapeouts for sure."
+        },
+        { 
+        "author": "John Wynen",
+        "quote" : "Access to Harald and his materials was fantastic"
+        },
+        { 
+        "author": "Sudhansu",
+        "quote" : "The zero to asic course is a wonderful course put together by Matt . He and his team have meticulously planned the course with lots of good examples and support to get started with the tools for designing your own chips. Hats off to the team for developing such a course and making it available for the users."
+        },
+        { 
+        "author": "Vishal Bingi",
+        "quote" : "After a long wait, I finally got the chance to take the Zero to ASIC Analog Course, and it’s fantastic! The comprehensive curriculum covers everything from schematic capture to GDS file generation, offering a deep understanding of the entire design process, along with plenty of debugging opportunities. I highly recommend that every Analog Design Engineer acquire these skills to become a full-stack developer in this complex yet fascinating field."
+        },
+        { 
+        "author": "Argunda",
+        "quote" : "Having studied analog theory in college but not having the opportunity to tape out left a void in my heart. This course really was the “missing semester” for taping out analog and mixed signal designs. I highly recommend it anyone who wants to bridge this skill gap! "
+        },
+        {
+        "author": "Brandon Ramos",
+        "quote" : "This course was very intuitive and had many resources for when I got stuck. The content is broken down into several sections that are easy to digest for all levels of expertise. The Discord channel and weekly calls are where I can ask questions and stay up to date with what is happening in the community. I am very glad to be a part of it and have submitted digital and mixed-signal designs."
+        },
+        {
+        "author": "Devin",
+        "quote" : "This course has fundamentally changed how I will teach VLSI in the future. Having used and taught the closed source tools, I am now a convert to the open-source tool chain. This course was the guiding force to get over the initial hump of the learning curve near painlessly."
+        },
+        {
+        "author": "Diego",
+        "quote" : "The Zero to Asic analog course is a wonderful course put together by Matt . He and his team have meticulously planned the course with lots of good examples and support to get started with the tools for designing your own chips. Hats off to the team for developing such a course and making it available for the users."
+        }
+        ]
+}

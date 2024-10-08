@@ -9,9 +9,19 @@ type: page
 layout: single
 ---
 
-{{< youtube v2VKxFhl6Aw >}}
+{{< youtube FDefLN4mLWk >}}
 
 ## Want to learn how to design analog and mixed signal chips?
+
+The Zero to ASIC analog course will guide you through the process of taping out analog integrated circuits using open-source tools. While digital design often relies on hardware description languages and automated synthesis, analog design involves more in depth simulation and drawing circuit layouts by hand. You'll learn to use tools like Xschem for schematic capture, NGspice for simulation, and Magic for layout. 
+
+The course focuses on the Sky130 [Process Design Kit](/terminology/pdk), a readily available open-source PDK well-suited for mixed-signal designs. You'll gain practical experience by drawing schematics, simulating, and ultimately taping out your own analog circuits, culminating in the fabrication of a physical chip through [Tiny Tapeout](https://tinytapeout.com). 
+
+Join the growing movement of open source analog chip designers by taking this course!
+
+**Circuit design is not covered in the course - you can use one of our examples or bring your own schematic.**
+
+{{% random_analog_quote %}}
 
 ## Ticket options {#tickets}
 
@@ -41,6 +51,8 @@ layout: single
 -   Not ready? [Join the mailing list to receive updates and promotional discount codes](/newsletter).
 
 ## What do people say about the course?
+
+{{% random_analog_quote %}}
 
 {{% random_analog_quote %}}
 
@@ -87,8 +99,8 @@ I'm so confident you will love the course, if for any reason you are unhappy you
 
 Yes! We are now using [TinyTapeout](https://www.tinytapeout.com) to guarantee ASIC manufacture. 
 
-* Silicon ticket includes [1 free tile](https://tinytapeout.com/faq/#how-big-can-my-design-be). PCB mounted chip is currently $50 extra.
-* Boron ticket includes 1 free tile, and 1 PCB mounted chip.
+* Silicon ticket includes [2 free tiles](https://tinytapeout.com/faq/#how-big-can-my-design-be) and 2 analog pins. PCB mounted chip is currently $100 extra.
+* Boron ticket includes 2 free tiles, 4 analog pins, and 1 PCB mounted chip.
 
 [Back to top](#tickets)
 

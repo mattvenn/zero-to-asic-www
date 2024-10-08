@@ -105,7 +105,7 @@ I'm so confident you will love the course, if for any reason you are unhappy you
 
 Yes! We are now using [TinyTapeout](https://www.tinytapeout.com) to guarantee ASIC manufacture. 
 
-* Silicon ticket includes [1 free tile](https://tinytapeout.com/faq/#how-big-can-my-design-be). PCB mounted chip is currently $50 extra.
+* Silicon ticket includes [1 free tile](https://tinytapeout.com/faq/#how-big-can-my-design-be). PCB mounted chip is currently $100 extra.
 * Boron ticket includes 1 free tile, and 1 PCB mounted chip.
 
 [Back to top](#tickets)
