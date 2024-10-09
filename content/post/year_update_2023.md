@@ -9,8 +9,6 @@ featured_image: "year_update_2023.jpg"
 
 Hi and happy new year! Welcome to my year in review video of 2023. We’ll revisit the biggest moments of open source semiconductors, the goals I failed and those I met, and set some new ones for 2024!
 
-{{< youtube RBdZX3fBYTM >}}
-
 # So, let’s start with the biggest news of 2023. 
 
 Last year saw the end of the Google sponsored lottery shuttles. We were expecting around another 8 shuttles for sky130, GF180 and the start of sky90. The last shuttle was GFMPW1, which closed late last year and the Sky 130 PDK is now in the safe hands of the [chips alliance](https://opensource.googleblog.com/2023/11/open-source-pdks-joining-linux-foundation-chips-alliance.html).
@@ -26,6 +24,8 @@ We also saw huge investments in the semiconductor industry with the EU and US ch
 The US national science foundation workshop report was published that covered a lot of ground, and one of the key recommendations was [making the industry more accessible.](https://www.zerotoasiccourse.com/post/nsf-report/) Open source tools were mentioned throughout as a way of achieving this, as well as a call for free tape outs and training for young people, starting in high school and continuing to university level.
 
 Another great bit of news from 2023 was that the hold violation issues we struggled with in 2022 were resolved and all the Google MPW and Efabless chipIgnite shuttles from MPW6 onwards have been a breeze to bring up and get working.
+
+{{< youtube RBdZX3fBYTM >}}
 
 # What else happened in 2023?
 

@@ -1,7 +1,7 @@
 ---
 title: "Analog with Digital Standard Cells"
 date: 2023-05-12T13:48:11+02:00
-tags: [ "interviews" ]
+tags: [ "analog", "interviews" ]
 images: ["synthesized_temperature_sensor.png"]
 featured_image: "synthesized_temperature_sensor.png"
 ---
