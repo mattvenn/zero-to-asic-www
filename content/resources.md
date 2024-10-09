@@ -38,7 +38,8 @@ tags: ["course"]
 
 # Courses
 
-* [My course](/contact)
+* [My digital course](/)
+* [My analog course](/analog)
 * [Kunal’s udemy courses](https://www.udemy.com/course/vlsi-academy-custom-layout/)
 * [Nand 2 Tetris](https://www.nand2tetris.org/)
 
