@@ -1,6 +1,6 @@
 ---
-title: Zero to ASIC Course
-#description: Learn how to design chips!
+title: Zero to ASIC Digital Course
+description: Learn how to design chips!
 images: ['maximo_render_3.jpeg']
 featured_image: 'maximo_render_3.jpeg'
 image_pos: 0% +10%

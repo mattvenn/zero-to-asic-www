@@ -2,9 +2,10 @@
 title: "Full Analog Course Content"
 description: "What will I learn on the Analog Course?"
 date: 2021-07-14T15:41:50+02:00
-images: ["maximo_render_3.jpeg"]
-featured_image: "maximo_render_3.jpeg"
-tags: ["course"]
+featured_image: 'analog_background.png'
+image_pos: 0% 50%
+tags: ["analog", "course"]
+type: page
 ---
 
 # Part 1: Schematic Capture with Xschem
