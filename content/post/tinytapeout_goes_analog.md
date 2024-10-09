@@ -2,7 +2,7 @@
 title: "Tiny Tapeout Goes Analog!"
 date: 2024-04-20T13:34:51+02:00
 tags: ["Tiny Tapeout", "analog"]
-images: ["tt_paper.png"]
+images: ["555_timer.jpeg"]
 featured_image: "555_timer.jpeg"
 ---
 
