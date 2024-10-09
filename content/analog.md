@@ -1,6 +1,6 @@
 ---
 title: Zero to ASIC Analog Course
-#description: Learn how to design Analog ASICs!
+description: Learn how to design Analog ASICs!
 images: ['analog_background.png']
 featured_image: 'analog_background.png'
 image_pos: 0% 50%

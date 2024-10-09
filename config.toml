@@ -23,6 +23,12 @@ url = "/terminology"
 weight = 40
 
 [[menu.main]]
+identifier = "Analog Course"
+name = "Analog Course"
+url = "/analog"
+weight = 10
+
+[[menu.main]]
 identifier = "Articles"
 name = "Articles"
 url = "/post"
