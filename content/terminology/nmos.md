@@ -24,3 +24,8 @@ If the input is high, the gate is charged and the MOSFET conducts. This pulls th
 NMOS logic has the advantage that we don't need to manufacture P type transistors and so the processing is cheaper and quicker to perform.
 
 The disadvantage with NMOS logic is that the pullup resistors waste a tiny bit of current when the transistor is on. If you have millions of these then you are wasting electricity as heat and your chips get hot and slow down. [CMOS](/terminology/cmos) was invented to solve this shortcoming. Another disadvantage is that the pulldown and pullup strengths are not well matched, leading to asymmetric waveforms. If we make the resistor smaller, so it pulls up more quickly, this wastes even more power.
+
+To explore how this works for yourself, try my online [SiliWiz tool](https://app.siliwiz.com/?preset=nmos) - there's a [lesson about NMOS here](https://tinytapeout.com/siliwiz/nmos/).
+
+![siliwiz](/siliwiznmos.png)
+
