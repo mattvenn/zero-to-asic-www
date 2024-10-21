@@ -28,5 +28,5 @@ We sent [John McMaster](https://twitter.com/johndmcmaster) some chips to take a 
 
 {{< youtube gg_-dsuFY0I >}}
 
-And you can browse his [microphotographed die here](https://siliconpr0n.org/map/gsky/mpw1-00010001/mz_mit10x/#x=2094&y=9248&z=7)
+And you can browse his [microphotographed die here](https://siliconpr0n.org/map/gsky/mpw1-00010001/mcmaster_mz_mit10x/#x=2094&y=9248&z=7)
 
