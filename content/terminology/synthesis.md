@@ -29,4 +29,4 @@ If your design is broken in some way, then it is definitely worth learning how t
 
 <!-- {{< youtube a2sLfoinQds >}} -->
 
-You can read the [yosys show white paper here](http://bygone.clairexen.net/yosys/files/yosys_appnote_011_design_investigation.pdf).
+You can read the [documentation about design investigation here](https://yosyshq.readthedocs.io/projects/yosys/en/0.35/appendix/APPNOTE_011_Design_Investigation.html).
