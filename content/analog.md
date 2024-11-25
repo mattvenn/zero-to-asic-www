@@ -9,7 +9,7 @@ type: page
 layout: single
 ---
 
-{{< youtube FDefLN4mLWk >}}
+{{< youtube wM4cobfjMMQ >}}
 
 ## Want to learn how to design analog and mixed signal chips?
 
