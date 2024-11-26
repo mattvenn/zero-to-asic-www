@@ -40,8 +40,28 @@
         "quote" : "This course has fundamentally changed how I will teach VLSI in the future. Having used and taught the closed source tools, I am now a convert to the open-source tool chain. This course was the guiding force to get over the initial hump of the learning curve near painlessly."
         },
         {
-        "author": "Diego",
+        "author": "Sudhansu Mishra",
         "quote" : "The Zero to Asic analog course is a wonderful course put together by Matt . He and his team have meticulously planned the course with lots of good examples and support to get started with the tools for designing your own chips. Hats off to the team for developing such a course and making it available for the users."
+        },
+        {
+        "author": "Sean Patrick",
+        "quote" : "The Zero to ASIC community is incredibly helpful and welcoming. Having access to a group of knowledgeable and supportive folks willing to help you learn and troubleshoot your design is priceless."
+        },
+        {
+        "author": "Alexander Jaeger",
+        "quote" : "Congratulations to the team on building this course - It is major step in democratisation of IC design."
+        },
+        {
+        "author": "Kwadwo Opong-Mensah",
+        "quote" : "Excellent resource for chip design enthusiasts to learn the basics of analog chip design with open source tools."
+        },
+        {
+        "author": "Bruce MacKinnon",
+        "quote" : "The fastest way I know to get 'behind the scenes' and learn how analog ASIC design and implementation really works. This was one of the most educational three months I've ever had."
+        },
+        {
+        "author": "ReJ aka Renaldas Zioma",
+        "quote" : "I took this course twice, and that probably means something! No, not what you're thinking—it means that beyond learning how to design, test, and tape-out your analog circuit, you gain access to the expertise of the best in the analog design community!"
         }
         ]
 }
