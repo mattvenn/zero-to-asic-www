@@ -398,3 +398,35 @@ table{
         padding: 0 4px;
     }
 }
+
+// FRONT PAGE COURSE LIST
+.measure-full{
+    max-width: 59em;
+}
+
+.course-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    &__el{
+        width: 48%;
+        margin-bottom: 20px;
+
+        h2:not(.course-title){
+            font-size: 1.2em;
+            margin: 0;
+        }
+
+    }
+}
+
+@media screen and (max-width: 968px){
+    .course-list{
+        &__el{
+            margin: auto;
+            width: 90%;
+            margin-bottom: 30px;
+        }
+    }
+}
