@@ -1,0 +1,10 @@
+{{ $quotes := site.Data.analog_quotes }}
+{{ $quote := $quotes.quotes | shuffle | first 1 }}
+{{ $real_quote := index $quote 0 }}
+> {{ $real_quote.quote }}
+>
+> {{ if isset $real_quote "video" }}
+> [{{ $real_quote.author }}]({{$real_quote.video}})
+{{ else }}
+> {{ $real_quote.author }}
+{{ end }}
