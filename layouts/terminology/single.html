@@ -50,7 +50,7 @@
       {{- .Content -}}
 
         <h2>Course feedback</h2>
-        {{ $quotes := site.Data.quotes }}
+        {{ $quotes := site.Data.analog_quotes }}
         {{ $quote := $quotes.quotes | shuffle | first 1 }}
         {{ $real_quote := index $quote 0 }}
         <blockquote>
