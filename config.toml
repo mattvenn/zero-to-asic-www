@@ -16,6 +16,7 @@ title = "Zero to ASIC Course"
 images = ["zero-to-asic-logo-white-bg.png"]
 captcha_key = "6LeFKlcdAAAAAA6sEbdU78sUuy0lPezU-0H0JueA"
 editURL = "https://github.com/mattvenn/zero-to-asic-www/edit/main/content/"
+newsletter_link = "https://www.zerotoasiccourse.com/newsletter/"
 
 [menu]
 
