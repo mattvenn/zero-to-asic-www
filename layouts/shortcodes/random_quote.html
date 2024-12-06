@@ -1,10 +1,38 @@
-{{ $quotes := site.Data.analog_quotes }}
-{{ $quote := $quotes.quotes | shuffle | first 1 }}
+{{ $type := string (index .Params 0) }}
+{{ $type }}
+
+{{ $quotes := site.Data.quotes }}
+{{ $analog_quotes := site.Data.analog_quotes }}
+
+{{ $all_quotes := slice }}
+
+{{ range index $quotes "quotes" }}
+    {{- $single_quote := dict "author" .author "quote" .quote "video" .video "source" "digital" -}}
+    {{- $all_quotes = $all_quotes | append $single_quote -}}
+{{ end }}
+
+{{ range index $analog_quotes "quotes" }}
+    {{- $single_quote := dict "author" .author "quote" .quote "video" .video "source" "analog" -}}
+    {{- $all_quotes = $all_quotes | append $single_quote -}}
+{{ end }}
+
+{{- $all_quotes = $all_quotes | shuffle -}}
+
+{{ $quotes := slice }}
+{{ if eq $type "analog" }}
+    {{ $quotes = where $all_quotes "source" "analog" | first 1 }}
+{{ else if eq $type "digital" }}
+    {{ $quotes = where $all_quotes "source" "digital" | first 1 }}
+{{ else }}
+    {{ $quotes = $all_quotes | shuffle | first 1 }}
+{{ end }}
+
+{{ $quote := $quotes | shuffle | first 1 }}
 {{ $real_quote := index $quote 0 }}
 > {{ $real_quote.quote }}
 >
-> {{ if isset $real_quote "video" }}
-> [{{ $real_quote.author }}]({{$real_quote.video}})
+> {{ if index $real_quote "video" }}
+> [{{ $real_quote.author }}]({{$real_quote.video}}) ({{ $real_quote.source }} course)
 {{ else }}
-> {{ $real_quote.author }}
+> {{ $real_quote.author }} ({{ $real_quote.source }} course)
 {{ end }}
