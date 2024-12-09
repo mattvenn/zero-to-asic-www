@@ -4,6 +4,9 @@ title = "Zero to ASIC Course"
 theme = "ananke"
 ignoreLogs = ['warning-goldmark-raw-html']
 
+[markup.goldmark.renderer]
+unsafe = true
+
 [pagination]
 pageSize = 9
 

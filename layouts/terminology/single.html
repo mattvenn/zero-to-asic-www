@@ -50,26 +50,16 @@
       {{- .Content -}}
 
         <h2>Course feedback</h2>
-        {{ $quotes := site.Data.analog_quotes }}
-        {{ $quote := $quotes.quotes | shuffle | first 1 }}
-        {{ $real_quote := index $quote 0 }}
-        <blockquote>
-        {{ $real_quote.quote }}
-        <p>
-        <a href="{{ $real_quote.video }}">{{$real_quote.author}}</a>
-        </blockquote>
+        {{- partial "random_quote" (dict "ctx" . "type" "any") -}}
 
-
-      {{- partial "tags.html" . -}}
-      <div class="mt6 instapaper_ignoref">
-      {{ if .Site.Params.commentoEnable }}
-        {{- partial "commento.html" . -}}
-      {{ end }}
-      </div>
-
-
+        {{- partial "tags.html" . -}}
+        <div class="mt6 instapaper_ignoref">
+        {{ if .Site.Params.commentoEnable }}
+          {{- partial "commento.html" . -}}
+        {{ end }}
+        </div>
     </div>
-
+    
     <aside class="w-30-l mt6-l">
       {{- partial "menu-contextual.html" . -}}
     </aside>
