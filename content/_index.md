@@ -22,7 +22,7 @@ courses:
 
           Of the 500 people who have taken the course, 150 have submitted designs for [MPW2](/post/mpw2-submitted/), [MPW3](/post/mpw3), [MPW4](/post/mpw4_submitted), [MPW5](/post/mpw5_submitted), [MPW6](/post/mpw6_submitted), [MPW7](/post/mpw7_submitted), [MPW8](/post/mpw8_submitted) and [Tiny Tapeout](https://tinytapeout.com).
 
-          [Find out more!](/digital)
+          {{< button  "/digital" "Find out more!">}}
 
     - title: 'Analog course'
       image: '/courses/analog-course.jpg'
@@ -36,9 +36,7 @@ courses:
 
           Join the growing movement of open source analog chip designers by taking this course!
 
-          **Circuit design is not covered in the course - you can use one of our examples or bring your own schematic.**
-
-          [Find out more!](/analog)
+          {{< button  "/analog" "Find out more!">}}
 
 aliases:
     - /contact
