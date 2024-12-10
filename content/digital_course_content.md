@@ -1,10 +1,12 @@
 ---
-title: "Full course content"
+title: "Full Digital Course Content"
 description: "What will I learn?"
 date: 2021-07-14T15:41:50+02:00
 images: ["maximo_render_3.jpeg"]
 featured_image: "maximo_render_3.jpeg"
 tags: ["course"]
+aliases:
+    - /course_content
 ---
 
 # Part 1: MOSFETs and the Skywater130 standard cells

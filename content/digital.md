@@ -51,7 +51,7 @@ Watch more [in depth feedback here](https://www.youtube.com/watch?v=TR8LiCWoOdg&
 
 ## Course Overview
 
--   [Full course details here](/course_content).
+-   [Full course details here](/digital_course_content).
 -   We will concentrate on digital design.
 -   A virtual machine is available or you can install the tools manually.
 -   The course is continually updated for the latest tooling and PDK.
