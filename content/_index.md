@@ -1,5 +1,5 @@
 ---
-title: Zero to ASIC Digital Course
+title: Zero to ASIC Courses
 description: Learn how to design chips!
 images: ['maximo_render_3.jpeg']
 featured_image: 'maximo_render_3.jpeg'
@@ -8,11 +8,27 @@ tags: ['course']
 type: home
 layout: single
 courses:
-    - title: 'Zero to ASIC Analog course'
+    - title: 'Digital course'
+      image: '/courses/digital-course.jpg'
+      url: '/digital'
+      description: |
+          ## Want to learn how to design digital chips?
+
+          Learn to design your own [ASIC](/terminology/asic) and get it fabricated! Thanks to the new open source [Process Development Kit](/terminology/pdk) from Google and Skywater and the OpenLane ASIC tools from [Efabless](https://efabless.com/), we now have the opportunity to get involved in this exciting field without signing NDAs or paying a fortune for tool licenses.
+
+          GCC revolutionised compiling, Linux revolutionised computing. Android revolutionised phones. Arduino revolutionised microcontrollers. RISCV is revolutionising ISAs. The next step is open source silicon.
+
+          This course will give you the experience of designing your own microchip using free and open source tools and getting it manufactured on an open source [PDK](/terminology/pdk).
+
+          Of the 500 people who have taken the course, 150 have submitted designs for [MPW2](/post/mpw2-submitted/), [MPW3](/post/mpw3), [MPW4](/post/mpw4_submitted), [MPW5](/post/mpw5_submitted), [MPW6](/post/mpw6_submitted), [MPW7](/post/mpw7_submitted), [MPW8](/post/mpw8_submitted) and [Tiny Tapeout](https://tinytapeout.com).
+
+          [Find out more!](/digital)
+
+    - title: 'Analog course'
       image: '/courses/analog-course.jpg'
       url: '/analog'
       description: |
-          ## Want to learn how to design analog and mixed signal chips?
+          ## Want to learn how to design analog chips?
 
           The Zero to ASIC Analog course will guide you through the process of taping out analog integrated circuits using open-source tools. While digital design often relies on hardware description languages and automated synthesis, analog design involves more in depth simulation and drawing circuit layouts by hand. You'll learn to use tools like Xschem for schematic capture, NGspice for simulation, and Magic for layout. 
 
@@ -22,21 +38,8 @@ courses:
 
           **Circuit design is not covered in the course - you can use one of our examples or bring your own schematic.**
 
-    - title: 'The Zero to ASIC Digital course'
-      image: '/courses/digital-course.jpg'
-      url: '/digital'
-      description: |
-          ## Want to learn how to design chips?
+          [Find out more!](/analog)
 
-          Learn to design your own [ASIC](/terminology/asic) and get it fabricated! Thanks to the new open source [Process Development Kit](/terminology/pdk) from Google and Skywater and the OpenLane ASIC tools from [Efabless](https://efabless.com/), we now have the opportunity to get involved in this exciting field without signing NDAs or paying a fortune for tool licenses.
-
-          GCC revolutionised compiling, Linux revolutionised computing. Android revolutionised phones. Arduino revolutionised microcontrollers. RISCV is revolutionising ISAs. The next step is open source silicon.
-
-          This course will give you the experience of designing your own microchip using free and open source tools and getting it manufactured on an open source [PDK](/terminology/pdk).
-
-          Of the 430 people who have taken the course, 70 have submitted designs for [MPW2](/post/mpw2-submitted/), [MPW3](/post/mpw3), [MPW4](/post/mpw4_submitted), [MPW5](/post/mpw5_submitted), [MPW6](/post/mpw6_submitted), [MPW7](/post/mpw7_submitted), [MPW8](/post/mpw8_submitted) and [Tiny Tapeout](https://tinytapeout.com)
-
-          We have received [MPW1, 2 and 3 and the chips are mostly working!](/post/mpw1-is-alive)
 aliases:
     - /contact
     - /index

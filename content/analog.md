@@ -11,18 +11,6 @@ layout: single
 
 {{< youtube wM4cobfjMMQ >}}
 
-## Want to learn how to design analog and mixed signal chips?
-
-The Zero to ASIC Analog course will guide you through the process of taping out analog integrated circuits using open-source tools. While digital design often relies on hardware description languages and automated synthesis, analog design involves more in depth simulation and drawing circuit layouts by hand. You'll learn to use tools like Xschem for schematic capture, NGspice for simulation, and Magic for layout. 
-
-The course focuses on the Sky130 [Process Design Kit](/terminology/pdk), a readily available open-source PDK well-suited for mixed-signal designs. You'll gain practical experience by drawing schematics, simulating, and ultimately taping out your own analog circuits, culminating in the fabrication of a physical chip through [Tiny Tapeout](https://tinytapeout.com). 
-
-Join the growing movement of open source analog chip designers by taking this course!
-
-**Circuit design is not covered in the course - you can use one of our examples or bring your own schematic.**
-
-{{% random_analog_quote %}}
-
 ## Analog ticket options {#tickets}
 
 |                                                                                                                   | Silicon                                                                                                                    | Boron                                                                                                                      | Arsenic                                                              |
@@ -52,15 +40,15 @@ Join the growing movement of open source analog chip designers by taking this co
 
 ## What do people say about the course?
 
-{{% random_analog_quote %}}
+{{% random_quote "analog" %}}
 
 {{< youtube JXnd_EIWe5I >}}
 
-{{% random_analog_quote %}}
+{{% random_quote "analog" %}}
 
 {{< youtube Z7clVT1LPpY >}}
 
-{{% random_analog_quote %}}
+{{% random_quote "analog" %}}
 
 ## Course Overview
 

@@ -20,9 +20,9 @@ While it’s possible to just draw transistors directly - for example in [SiliWi
 
 ## Lab 1.2: Draw your own circuit
 
-* Draw your own circuit and get it ready for simulation
-* If you don't have a circuit ready, you can use one of the demos
-* Follow best practices
+* Draw your own circuit and get it ready for simulation.
+* If you don't have a circuit ready, you can use one of the demos.
+* Follow best practices.
 
 # Part 2: Simulation
 
