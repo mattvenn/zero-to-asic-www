@@ -4,9 +4,6 @@ title = "Zero to ASIC Course"
 theme = "ananke"
 ignoreLogs = ['warning-goldmark-raw-html']
 
-[markup.goldmark.renderer]
-unsafe = true
-
 [pagination]
 pageSize = 9
 
@@ -28,12 +25,6 @@ identifier = "Terminology"
 name = "Terminology"
 url = "/terminology"
 weight = 40
-
-[[menu.main]]
-identifier = "Analog Course"
-name = "Analog Course"
-url = "/analog"
-weight = 10
 
 [[menu.main]]
 identifier = "Articles"
