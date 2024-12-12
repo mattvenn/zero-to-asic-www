@@ -9,7 +9,11 @@
     <a href="{{ .Permalink }}"><img src="/{{ .Params.featured_image }}"/></a>
     <br/>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      {{ .Summary  }}
+      {{ if .Params.custom_summary }}
+        {{ .Params.custom_summary | markdownify }}
+      {{ else }}
+        {{ .Summary }}
+      {{ end }}
     </div>
   </div>
 </div>

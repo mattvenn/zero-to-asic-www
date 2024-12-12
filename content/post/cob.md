@@ -1,9 +1,15 @@
 ---
-title: "Chip On Board"
+title: 'Chip On Board'
 date: 2024-12-12T14:36:11+01:00
-tags: ["ASIC", "MPW"]
-images: ["cob.jpg"]
-featured_image: "cob.jpg"
+tags: ['ASIC', 'MPW']
+images: ['cob.jpg']
+featured_image: 'cob.jpg'
+custom_summary: |
+    Our first COB (chip on board) chips are working! This has been a dream of mine for a few years, and it’s finally a reality!
+
+    We're used to seeing chips as little black boxes on a circuit board, but what's inside?
+
+    The first part of the journey started with Tamas creating this cool circuit board.
 ---
 
 Our first COB (chip on board) chips are working! This has been a dream of mine for a few years, and it’s finally a reality!
@@ -16,12 +22,11 @@ The first part of the journey started with Tamas creating this cool circuit boar
 
 ![layout](/cob_layout.jpg)
 
-
 Then Stuart visited a wire bonding ‘factory’ while he was in Shenzhen. It’s nothing like you might imagine. The machines are old and dusty and practically no effort was made on keeping the room clean. The dies are actually pretty hardy, as they’re covered in a thin layer of glass to protect them. There are little holes in this passivation layer that expose the bond pads.
 
 ![cob setup](/cob_setup.jpg)
 
-After the dies are glued onto the circuit boards and the machines are set up, the bonding happens automatically.  We had 50 boards made, which I’ll be using for prizes and gifts for people.
+After the dies are glued onto the circuit boards and the machines are set up, the bonding happens automatically. We had 50 boards made, which I’ll be using for prizes and gifts for people.
 
 ![bonding](/cob_bond.jpg)
 
