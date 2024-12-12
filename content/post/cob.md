@@ -26,7 +26,7 @@ Then Stuart visited a wire bonding ‘factory’ while he was in Shenzhen. It’
 
 ![cob setup](/cob_setup.jpg)
 
-After the dies are glued onto the circuit boards and the machines are set up, the bonding happens automatically. We had 50 boards made, which I’ll be using for prizes and gifts for people.
+After the dies are glued onto the circuit boards and the machines are set up, the bonding happens automatically. 
 
 ![bonding](/cob_bond.jpg)
 
@@ -41,5 +41,7 @@ After plugging it into a tester board, and loading a ‘blink’ program I can s
 ![cob working](/cob_working.jpg)
 
 I would love to have this as an option for [Tiny Tapeout](https://tinytapeout.com), but it required getting hold of bare dies, which isn’t an option for us at the moment. The long wires also affect the performance of the chip, because they add unwanted inductance.
+
+Although the chips work, I don't have plans to provide them with a demoboard needed to power them up and get a design working. They're more intended as nice gifts or prizes for people. 
 
 For the rest of the photos and lots of videos, check out [Stuart’s album](https://photos.google.com/share/AF1QipPvHwLy1QsDnQShTJTSbDiQ6kdWi2avBRBA2i7dXp9sm7P3BI3qjYkOHsiN2lh8zg?key=TFBDZ09Kd18zS1VURjRadEc1UUFQRDExSWxpakJ3).
