@@ -2,26 +2,28 @@
 title: "Tiny Tapeout 9"
 date: 2024-11-15T13:48:11+02:00
 tags: ["ASIC", "course","Tiny Tapeout", "MPW"]
-images: ["tt09-chiprender.png"]
-featured_image: "tt09-chiprender.png"
+images: ["tt09-chiprender-landscape.png"]
+featured_image: "tt09-chiprender-landscape.png"
 ---
 
-Tiny Tapeout 9 closed with 95% utilisation! Look at this beauty!
-
-![tt09 chiprender](/tt09-chiprender.png)
-
-You can download the [full resolution image here](https://github.com/TinyTapeout/tinytapeout-chip-renders/blob/main/shuttles/tt09/full_gds.png).
-
-TT09 was our best ever run, with 369 designs submitted from 21 countries.
+Tiny Tapeout 9 closed with 95% utilisation!  It was our best ever run, with 369 designs submitted from 21 countries.
 
 Among the digital projects we had an Atari 2600 (with games), a wide range of CPUs and even some SDR projects.
 
 On the analog side we had PLLs, opamps, ADCs, DACs and time to digital converters.
 
 For all the projects, check the [chip's page](https://tinytapeout.com/runs/tt09).
+
 I printed the datasheet, and it's hefty! Download it [here](https://tinytapeout.github.io/tinytapeout-09/datasheet.pdf).
 
 ![datasheet](/tt09-datasheet.jpg)
+
+And just look at this beauty!
+
+![tt09 chiprender](/tt09-chiprender.png)
+
+You can download the [full resolution image here](https://github.com/TinyTapeout/tinytapeout-chip-renders/blob/main/shuttles/tt09/full_gds.png).
+
 
 ## Leaving it to the last minute
 
