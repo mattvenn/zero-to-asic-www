@@ -2,6 +2,7 @@
 title: "Test Equipment Grant"
 date: 2024-12-14T20:10:27+01:00
 tags: ["grant"]
+images: ['test-gear.jpg']
 featured_image: "test-gear.jpg"
 description: "Apply for a grant to spend on test equipment"
 ---
