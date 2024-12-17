@@ -32,6 +32,9 @@ https://docs.github.com/en/actions/learn-github-actions/events-that-trigger-work
 
 # secrets
 
-gpg --symmetric --cipher-algo AES256 my_secret.json
+use encrypt.sh to encrypt
+use decrypt.sh to decrypt
 
-shell script to decrypt: decrypt.sh
+password in tweet-a-term bitwarden
+
+if testing, make sure to put password in single quotes!

@@ -53,17 +53,16 @@ class Term():
                     title = line.split(':')[1].strip()
                     self.title = title.replace('"', '')
                     break
+                if line.startswith('featured_image: '):
+                    image = line.split(':')[1].strip()
+                    self.image = title.replace('"', '')
+                    break
 
 
-        ordinal_rank = num2words(self.term_rank, to="ordinal_num")
+        self.ordinal_rank = num2words(self.term_rank, to="ordinal_num")
         # add tracking
         self.twitter_text = "%s is the #ASIC terminology of the week!\n%s\n\nIn the last month, %s has been the %s most popular out of %d terms." % (
-            self.title, self.url + '?utm_source=twitter&utm_medium=tweet&utm_campaign=terminology', self.title, ordinal_rank, self.num_terms)
-        from atproto import client_utils
-        self.skeet_text = client_utils.TextBuilder()
-        self.skeet_text.text("%s is the #ASIC terminology of the week!\n\n" % self.title)
-        self.skeet_text.link(self.url, self.url + '?utm_source=bluesky&utm_medium=tweet&utm_campaign=terminology')
-        self.skeet_text.text("\n\nIn the last month, %s has been the %s most popular out of %d terms." % (self.title, ordinal_rank, self.num_terms))
+            self.title, self.url + '?utm_source=twitter&utm_medium=tweet&utm_campaign=terminology', self.title, self.ordinal_rank, self.num_terms)
 
     def __str__(self):
         return "%-40s %-20s %3s %s" % (self.file, self.title, self.term_rank, self.url)
@@ -88,10 +87,34 @@ class Term():
 
     def skeet(self):
         from atproto import Client
+        from atproto import models
+        from atproto import client_utils
 
         client = Client()
-        client.login('mattvenn.net', 'password')
-        post = client.send_post(self.skeet_text)
+        client.login(bluesky_handle, bluesky_password)
+
+        if args.verbose:
+            print("image is " + self.image)
+        with open('static/' + self.image, 'rb') as f:
+          img_data = f.read()
+
+        self.skeet_text = client_utils.TextBuilder()
+        self.skeet_text.text("%s is the " % self.title)
+        self.skeet_text.link("#ASIC", "https://bsky.app/hashtag/asic")
+        self.skeet_text.text(" terminology of the week!\n")
+        self.skeet_text.text("In the last month, %s has been the %s most popular out of %d terms." % (self.title, self.ordinal_rank, self.num_terms))
+
+        thumb = client.upload_blob(img_data)
+        embed = models.AppBskyEmbedExternal.Main(
+            external=models.AppBskyEmbedExternal.External(
+                title=self.title,
+                description="%s is the ASIC terminology of the week!\n\n" % self.title,
+                uri=self.url + '?utm_source=bluesky&utm_medium=tweet&utm_campaign=terminology',
+                thumb=thumb.blob,
+            )
+        )
+        
+        post = client.send_post(self.skeet_text, embed=embed)
         print(post)
 
 if __name__ == '__main__':
