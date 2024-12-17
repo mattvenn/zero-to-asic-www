@@ -93,8 +93,6 @@ class Term():
         client = Client()
         client.login(bluesky_handle, bluesky_password)
 
-        if args.verbose:
-            print("image is " + self.image)
         with open('static/' + self.image, 'rb') as f:
           img_data = f.read()
 
