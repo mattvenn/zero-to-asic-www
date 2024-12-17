@@ -52,12 +52,12 @@ class Term():
                 if line.startswith('title: '):
                     title = line.split(':')[1].strip()
                     self.title = title.replace('"', '')
-                    break
                 if line.startswith('featured_image: '):
                     image = line.split(':')[1].strip()
-                    self.image = title.replace('"', '')
-                    break
+                    self.image = image.replace('"', '')
 
+        if args.verbose:
+            print(f"{term_file},{self.title},{self.image}")
 
         self.ordinal_rank = num2words(self.term_rank, to="ordinal_num")
         # add tracking
