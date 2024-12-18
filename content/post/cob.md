@@ -24,6 +24,8 @@ The first part of the journey started with Tamas creating this cool circuit boar
 
 Then Stuart visited an old friend’s wire bonding factory in the outskirts of Shenzhen. It’s nothing like you might imagine. While IC manufacturing itself requires a very strict level of cleanliness, places like this show what can be done once the ICs are finished. This is not necessarily what all wire bonding places look like, but the yields spoke for themselves: (63 wires per IC, 30 boards made, 1890 wires total, 3 wires failed = 0.159% fail)
 
+{{< youtube XJmWoBJjvlI >}}
+
 The machines are 20+ old and still going strong – the operators are highly skilled in both running and maintaining them. 
 
 The dies are actually pretty hardy, as they’re covered in a thin layer of glass to protect them. There are little holes in this passivation layer that expose the bond pads. We stored them in a dry cabinet before bonding, to avoid oxidation of the pads before bonding.
