@@ -7,6 +7,8 @@ featured_image: "test-gear.jpg"
 description: "Apply for a grant to spend on test equipment"
 ---
 
+**Applications for the grant is now closed.**
+
 It's become a cliche, but hardware is hard!
 One reason why hardware is harder than software is that the time between revisions is often longer. We need to wait for new PCBs, or for components to be delivered. Or for more new PCBs after we realise we got it wrong!
 
