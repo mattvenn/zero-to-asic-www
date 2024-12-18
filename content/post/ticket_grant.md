@@ -1,7 +1,7 @@
 ---
 title: "Zero to ASIC course Ticket Grant"
 date: 2023-01-02T08:00:00+01:00
-tags: ["ASIC", "course" ]
+tags: ["ASIC", "course", "grant"]
 images: ['maximo_render_3.jpeg']
 featured_image: 'maximo_render_3.jpeg'
 ---

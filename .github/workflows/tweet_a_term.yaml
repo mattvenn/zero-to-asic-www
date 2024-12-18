@@ -35,3 +35,6 @@ jobs:
     - name: run tweet a term
       run: python ./tweet_a_term.py --tweet --week-offset 26 --verbose
 
+    - name: run skeet a term
+      run: python ./tweet_a_term.py --skeet --week-offset 26 --verbose
+
