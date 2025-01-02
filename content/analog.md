@@ -53,7 +53,7 @@ layout: single
 ## Course Overview
 
 -   [Full course details here](/analog_course_content).
--   We will concentrate on analog circuit layout and tapeout with [Tiny Tapeout](https://tinytapeout.com/specs/analog/).
+-   We will concentrate on analog circuit layout and tapeout.
 -   A virtual machine is available or you can install the tools manually.
 -   The course is continually updated for the latest tooling and PDK.
 
@@ -66,7 +66,7 @@ layout: single
     -   Twice Monthly analog specific call.
     -   1 to 1 office hours with Matt: access to expert help on the Boron and Arsenic level tickets.
 -   Asynchronous - do in your own time.
--   Guaranteed ASIC manufacture with [TinyTapeout](https://www.tinytapeout.com).
+-   Guaranteed ASIC manufacture with [TinyTapeout](https://www.tinytapeout.com) ([specs](https://tinytapeout.com/specs/analog/)).
 -   High resolution set of digital images of the decapped ASIC - see [FAQ](#asic-def).
 -   Access to the course materials for the lifetime of the course.
 -   Course completion certificate.
