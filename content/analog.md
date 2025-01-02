@@ -53,7 +53,7 @@ layout: single
 ## Course Overview
 
 -   [Full course details here](/analog_course_content).
--   We will concentrate on analog circuit layout and tapeout.
+-   We will concentrate on analog circuit layout and tapeout with [Tiny Tapeout](https://tinytapeout.com/specs/analog/).
 -   A virtual machine is available or you can install the tools manually.
 -   The course is continually updated for the latest tooling and PDK.
 

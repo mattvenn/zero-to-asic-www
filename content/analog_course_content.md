@@ -89,7 +89,7 @@ Part of what makes this course unique and exciting is that you will be able to p
 
 ## Lab 6.1
 
-* Get your design ready to submit.
+* Get your design ready to submit to [Tiny Tapeout](https://tinytapeout.com/specs/analog/).
 * Create the [GDS](/terminology/gds2) and LEF files needed.
 * Document your design.
 * Submit to the next Tiny Tapeout shuttle!
