@@ -5,6 +5,12 @@ tags: ["ASIC", "course" ]
 images: ["year_update_2024.png"]
 featured_image: "year_update_2024.png"
 image_pos: 0% +10%
+custom_summary: |
+    Wow what a year! In this post I’m going to look back over 2024 and share some of my highlights and the goals I met and those that I failed. Then I’ll share my ambitions and predictions for 2025.
+
+    With all the open source tapeouts, events, workshops and news, there’s a ton to cover - so let’s jump in!
+
+    I aimed for 2000 new people to get started with open source silicon via my courses and tiny tapeout.
 ---
 
 Wow what a year! In this post I’m going to look back over 2024 and share some of my highlights and the goals I met and those that I failed. Then I’ll share my ambitions and predictions for 2025.
