@@ -7,7 +7,7 @@ image_pos: 0% +5%
 featured_image: "year_update_2023.jpg"
 ---
 
-Hi and happy new year! Welcome to my year in review video of 2023. We’ll revisit the biggest moments of open source semiconductors, the goals I failed and those I met, and set some new ones for 2024!
+Hi and happy new year! Welcome to my year in review post of 2023. We’ll revisit the biggest moments of open source semiconductors, the goals I failed and those I met, and set some new ones for 2024!
 
 # So, let’s start with the biggest news of 2023. 
 
