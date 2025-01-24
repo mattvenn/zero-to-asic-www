@@ -1,9 +1,11 @@
 ---
-title: "3D Sky130 Inverter"
+title: "Sky130 Inverter Instructions"
 tags: ["3D printing","GDS"]
 date: 2025-01-24T12:48:53+01:00
-images: ["3Dcell/complete.jpg"]
-featured_image: "3Dcell/complete.jpg"
+images: ["3Dcell/parts.jpg"]
+featured_image: "3Dcell/parts.jpg"
+custom_summary: |
+    Instructions for building the Sky130 1:30000 scale inverter. Kits available or print your own!
 ---
 
 ## Parts
