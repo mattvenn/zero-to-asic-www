@@ -5,7 +5,7 @@ date: 2025-01-24T12:48:53+01:00
 images: ["3Dcell/parts.jpg"]
 featured_image: "3Dcell/parts.jpg"
 custom_summary: |
-    Instructions for building the Sky130 1:30000 scale inverter. Kits available or print your own!
+    Instructions for building the Sky130 30000:1 scale inverter. Kits available or print your own!
 ---
 
 ## Parts
@@ -28,7 +28,7 @@ The P diffusion is larger because the positive charge carriers are slower than t
 
 The poly silicon gate is what controls the P [MOSFET](/terminology/mosfet) on the top and the N MOSFET below. 
 
-The gate is 150nm wide, or at 1:30000, 4.5mm.
+The gate is 150nm wide, or at 30000:1, 4.5mm.
 
 The input to the inverter is the **A** port, on the local interconnect layer. When the input is high, the top P MOSFET is off and the botton N MOSFET is on.
 
@@ -62,13 +62,13 @@ If you want to have the model standing at an angle, add the stand.
 
 ## Completed
 
-Congratulations! You now have your own 1:30000 scale Sky130 inverter! 
+Congratulations! You now have your own 30000:1 scale Sky130 inverter! 
 
 If you want to see it in action, check out the [simulation in SiliWiz](https://app.siliwiz.com/). As the input goes high, the output goes low.
 
 ![completed](/3Dcell/complete.jpg)
 
-While the inverter is to scale in X and Y dimensions, it's been shrunk in the Z dimension. This is because otherwise it would be too tall and fragile. From the [Sky130 cross section](/terminology/pdk), the local interconnect via is 0.9 microns, so at 1:30000 it would be 30mm tall.
+While the inverter is to scale in X and Y dimensions, it's been shrunk in the Z dimension. This is because otherwise it would be too tall and fragile. From the [Sky130 cross section](/terminology/pdk), the local interconnect via is 0.9 microns, so at 30000:1 it would be 30mm tall.
 
 
 # Resources
