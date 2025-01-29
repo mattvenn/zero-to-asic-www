@@ -24,6 +24,8 @@ Start by inserting the [N and P doped diffusion](/terminology/doping) into the s
 
 The P diffusion is larger because the positive charge carriers are slower than the negative charge carriers.
 
+Around the P diffusion you can see a slight depression in the substrate. This normally invisible "well" of N diffusion surrounds the P diffusion and insulates it from the substrate.
+
 ![diffusion](/3Dcell/diffusion.jpg)
 
 ## Poly silicon gate and A input
