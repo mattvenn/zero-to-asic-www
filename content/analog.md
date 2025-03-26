@@ -9,6 +9,12 @@ type: page
 layout: single
 ---
 
+## Important News!
+
+Efabless has [just shut down](https://www.linkedin.com/posts/tinytapeout_were-very-sad-to-hear-that-efabless-corporation-activity-7301638170297720832-n7Ru?utm_source=share&utm_medium=member_desktop&rcm=ACoAADBBa0IBN25zxsEN43Y0wLw41Q7UfjJhMV0). This has caused a temporary disruption to our route to silicon.
+
+The course continues to run, but in the event that I'm unable to find a future manufacturer, I will offer a refund of the tiles and chips included in course tickets. For more information, check the [FAQ](https://tinytapeout.com/efabless-faq).
+
 {{< youtube wM4cobfjMMQ >}}
 
 ## Analog ticket options {#tickets}
