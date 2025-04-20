@@ -77,7 +77,7 @@ While the inverter is to scale in X and Y dimensions, it's been shrunk in the Z 
 
 # Resources
 
-* Buy a kit! Coming soon.
+* [Buy a kit and support my work!](https://store.tinytapeout.com/products/Sky130-Inverter-Model-Kit-p727081769)
 * [Try the SiliWiz lessons to draw and simulate your own inverter](https://tinytapeout.com/siliwiz/)
 * [Download the STLs and .3mf file](/3Dcell/sky130_inverter.zip)
 * [View and fork the CAD](https://cad.onshape.com/documents/0028930fc0a28cbd8d0bc42b/w/654e56b5a01f78bba7a65678/e/1e7773b38bc6e65d94707c96)
