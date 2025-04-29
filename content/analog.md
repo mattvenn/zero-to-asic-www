@@ -11,9 +11,9 @@ layout: single
 
 ## Important News!
 
-Efabless has [just shut down](https://www.linkedin.com/posts/tinytapeout_were-very-sad-to-hear-that-efabless-corporation-activity-7301638170297720832-n7Ru?utm_source=share&utm_medium=member_desktop&rcm=ACoAADBBa0IBN25zxsEN43Y0wLw41Q7UfjJhMV0). This has caused a temporary disruption to our route to silicon.
+Efabless [recently shut down](https://www.linkedin.com/posts/tinytapeout_were-very-sad-to-hear-that-efabless-corporation-activity-7301638170297720832-n7Ru?utm_source=share&utm_medium=member_desktop&rcm=ACoAADBBa0IBN25zxsEN43Y0wLw41Q7UfjJhMV0) causing a temporary disruption to our route to silicon. 
 
-The course continues to run, but in the event that I'm unable to find a future manufacturer, I will offer a refund of the tiles and chips included in course tickets. For more information, check the [FAQ](https://tinytapeout.com/efabless-faq).
+We now have a new shuttle open with IHP, with more coming soon. For more information, check the [FAQ](https://tinytapeout.com/efabless-faq).
 
 {{< youtube wM4cobfjMMQ >}}
 
@@ -60,6 +60,7 @@ The course continues to run, but in the event that I'm unable to find a future m
 
 -   [Full course details here](/analog_course_content).
 -   We will concentrate on analog circuit layout and tapeout.
+-   ** Circuit design is not covered in the course - you can use one of our examples or bring your own schematic.**
 -   A virtual machine is available or you can install the tools manually.
 -   The course is continually updated for the latest tooling and PDK.
 
