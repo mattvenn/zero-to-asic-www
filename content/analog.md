@@ -60,7 +60,7 @@ We now have a new shuttle open with IHP, with more coming soon. For more informa
 
 -   [Full course details here](/analog_course_content).
 -   We will concentrate on analog circuit layout and tapeout.
--   ** Circuit design is not covered in the course - you can use one of our examples or bring your own schematic.**
+-   **Circuit design is not covered in the course - you can use one of our examples or bring your own schematic.**
 -   A virtual machine is available or you can install the tools manually.
 -   The course is continually updated for the latest tooling and PDK.
 
