@@ -37,4 +37,5 @@ use decrypt.sh to decrypt
 
 password in tweet-a-term bitwarden
 
-if testing, make sure to put password in single quotes!
+**if testing, make sure to put password in single quotes!**
+**single quotes!!!!**
