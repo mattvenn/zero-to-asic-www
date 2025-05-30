@@ -11,9 +11,7 @@ layout: single
 
 ## Important News!
 
-Efabless [recently shut down](https://www.linkedin.com/posts/tinytapeout_were-very-sad-to-hear-that-efabless-corporation-activity-7301638170297720832-n7Ru?utm_source=share&utm_medium=member_desktop&rcm=ACoAADBBa0IBN25zxsEN43Y0wLw41Q7UfjJhMV0) causing a temporary disruption to our route to silicon. 
-
-We now have a new shuttle open with IHP, with more coming soon. For more information, check the [FAQ](https://tinytapeout.com/efabless-faq).
+All systems are go for tapeout! You might have seen that [Efabless went out of business](https://tinytapeout.com/efabless-faq). We are now working with [IHP](https://www.ihp-microelectronics.com/) & [ChipFoundry](https://chipfoundry.io) to provide silicon for the course, and you can check the [future schedule here](https://tinytapeout.com/runs/#future-chips).
 
 {{< youtube wM4cobfjMMQ >}}
 
