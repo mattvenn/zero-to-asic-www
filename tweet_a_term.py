@@ -103,6 +103,7 @@ class Term():
         self.skeet_text.text("In the last month, %s has been the %s most popular out of %d terms." % (self.title, self.ordinal_rank, self.num_terms))
 
         thumb = client.upload_blob(img_data)
+        import ipdb; ipdb.set_trace()
         embed = models.AppBskyEmbedExternal.Main(
             external=models.AppBskyEmbedExternal.External(
                 title=self.title,

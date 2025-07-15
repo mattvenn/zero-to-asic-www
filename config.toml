@@ -47,13 +47,13 @@ name = "About Matt Venn"
 url = "/matt_venn"
 weight = 25
 
-#[[menu.main]]
-#identifier = "Buy a ticket"
-#name = "Buy a ticket"
-#url = "/#tickets"
-#weight = 60
-#[menu.main.params]
-#class = "button"
+[[menu.main]]
+identifier = "Buy a ticket"
+name = "Buy a ticket"
+url = "/"
+weight = 60
+[menu.main.params]
+class = "button"
 
 [[menu.main]]
 identifier = "Newsletter"

@@ -21,7 +21,7 @@ courses:
 
           Of the 500 people who have taken the course, 150 have submitted designs for [MPW2](/post/mpw2-submitted/), [MPW3](/post/mpw3), [MPW4](/post/mpw4_submitted), [MPW5](/post/mpw5_submitted), [MPW6](/post/mpw6_submitted), [MPW7](/post/mpw7_submitted), [MPW8](/post/mpw8_submitted) and [Tiny Tapeout](https://tinytapeout.com).
 
-          {{< button  "/digital" "Find out more!">}}
+          {{< button  "/digital" "Ticket options">}}
 
     - title: 'Analog course'
       image: '/courses/analog-course.jpg'
@@ -29,15 +29,16 @@ courses:
       description: |
           ## Want to learn how to design analog chips?
 
-          The Zero to ASIC Analog course will guide you through the process of taping out analog integrated circuits using open-source tools. While digital design often relies on hardware description languages and automated synthesis, analog design involves more in depth simulation and drawing circuit layouts by hand. You'll learn to use tools like Xschem for schematic capture, NGspice for simulation, and Magic for layout. 
+          The Zero to [ASIC](/terminology/asic) Analog course will guide you through the process of taping out analog integrated circuits using open-source tools. While digital design often relies on hardware description languages and automated synthesis, analog design involves more in depth simulation and drawing circuit layouts by hand. You'll learn to use tools like Xschem for schematic capture, NGspice for simulation, and Magic for layout. 
 
           The course focuses on the Sky130 [Process Design Kit](/terminology/pdk), a readily available open-source PDK well-suited for mixed-signal designs. You'll gain practical experience by drawing schematics, simulating, and ultimately taping out your own analog circuits, culminating in the fabrication of a physical chip through [Tiny Tapeout](https://tinytapeout.com/specs/analog). 
 
           Join the growing movement of open source analog chip designers by taking this course!
 
-          {{< button  "/analog" "Find out more!">}}
+          {{< button  "/analog" "Ticket options">}}
 
 aliases:
     - /contact
     - /index
+
 ---
