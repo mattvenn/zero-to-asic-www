@@ -42,8 +42,18 @@ aliases:
     - /index
 ---
 
-## Welcome to Zero to ASIC!
+## Testimonials
 
-We are a community of chip designers and enthusiasts who are passionate about open source silicon. Our goal is to make chip design accessible to everyone, from beginners to experienced engineers.
+{{% random_quote %}}
+{{% random_quote %}}
+{{% random_quote %}}
 
-![Alt text here](maximo_render_3.jpeg)
+## Learn more!
+
+* Sign up to the [Newsletter](/newsletter),
+* Find out more about your instructor [Matt Venn](/matt_venn),
+* Read an [Article](/post),
+* Learn some [Terminology](/terminology).
+
+
+
