@@ -16,5 +16,8 @@
       {{- end -}}
     </div>
     {{- end -}}
+    <div>
+      {{- .Content | markdownify -}}
+    </div>
   </article>
 {{ end }}

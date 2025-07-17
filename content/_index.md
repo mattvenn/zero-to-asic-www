@@ -40,5 +40,10 @@ courses:
 aliases:
     - /contact
     - /index
-
 ---
+
+## Welcome to Zero to ASIC!
+
+We are a community of chip designers and enthusiasts who are passionate about open source silicon. Our goal is to make chip design accessible to everyone, from beginners to experienced engineers.
+
+![Alt text here](maximo_render_3.jpeg)
