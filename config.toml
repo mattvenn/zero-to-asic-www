@@ -50,7 +50,7 @@ weight = 25
 [[menu.main]]
 identifier = "Buy a ticket"
 name = "Buy a ticket"
-url = "/"
+url = "/#want-to-learn-how-to-design-digital-chips"
 weight = 60
 [menu.main.params]
 class = "button"
