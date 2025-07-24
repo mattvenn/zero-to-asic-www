@@ -13,7 +13,7 @@ courses:
       description: |
           ## Want to learn how to design digital chips?
 
-          Learn to design your own [ASIC](/terminology/asic) and get it fabricated! Thanks to the new open source [Process Development Kit](/terminology/pdk) from Google and Skywater and the OpenLane ASIC tools from [Efabless](https://efabless.com/), we now have the opportunity to get involved in this exciting field without signing NDAs or paying a fortune for tool licenses.
+          Learn to design your own [ASIC](/terminology/asic) and get it fabricated! Thanks to the open source [Process Development Kit](/terminology/pdk) from Google and Skywater and the OpenLane ASIC tools from [Efabless](https://efabless.com/), we now have the opportunity to get involved in this exciting field without signing NDAs or paying a fortune for tool licenses.
 
           GCC revolutionised compiling, Linux revolutionised computing. Android revolutionised phones. Arduino revolutionised microcontrollers. RISCV is revolutionising ISAs. The next step is open source silicon.
 
