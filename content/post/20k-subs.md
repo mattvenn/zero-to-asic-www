@@ -10,9 +10,9 @@ Since I started my channel in December 2020, I’ve posted 181 videos that have 
 
 I’d say my all time favourite was when **I used a particle accelerator to look inside my own microchips!**
 
-I met Tomas Aidukas at the Free Silicon Conference. In his talk, he showed an amazing 3D view inside a microchip - captured using a technique called ptychographic X-ray computed tomography. I asked if he’d be interested in imaging one of my open source chips. It turned out that having the source files for the chip was actually really useful. A few months later I was able to visit and make a film about it.
-
 {{< youtube kTJZ3uTPhKw >}}
+
+I met Tomas Aidukas at the Free Silicon Conference. In his talk, he showed an amazing 3D view inside a microchip - captured using a technique called ptychographic X-ray computed tomography. I asked if he’d be interested in imaging one of my open source chips. It turned out that having the source files for the chip was actually really useful. A few months later I was able to visit and make a film about it.
 
 It was my first time making a video ‘on location’ and I learnt a lot. I had a lot of fun making it and it was amazing to see the inside of a chip I’d designed. One of my favourite memories was scooting around the synchrotron!
 
@@ -25,18 +25,22 @@ This was a really confusing topic for me and it took a couple weeks of work to g
 As well as technical deep dives and lab visits, I’ve also really enjoyed interviewing people. Most people I ask are happy to be interviewed and I’ve learnt a lot from them, and I hope you will too!
 
 I think interviewing is pretty hard and I’ve still got a lot to learn. It’s hard to pick, but one of my favorites was **Analog ASIC design with digital standard cells!**
-with Harald Pretl. That was so cool because he did something I thought was impossible and then explained how it worked really well. Even better, when we got the chips back, the design worked as planned!
+with Harald Pretl. 
 
 {{< youtube skC292_dALM >}}
 
+That was so cool because he did something I thought was impossible and then explained how it worked really well. Even better, when we got the chips back, the design worked as planned!
+
 My most under-rated video has got to be **Inside the cleanroom - How computer chips get made!**
-This video took so long to make, from getting permission and a special camera man from IHP, to commissioning my first animations, to editing 4 hours of footage down to just 17 minutes. I still think it’s one of the best ‘how chips are made’ videos out there and I really expected it to do a lot better. I blame it on releasing it too close to Christmas, but it could probably also have started with a punchier intro showing off the cool machines in action.
 
 {{< youtube aBDJQ9NYTEU >}}
 
-Finally, if you’re new to open source silicon and want to get started, then I think I did a great job with **Getting started with open source ASICs: community, tools & demos!** It weighs in at 30 minutes and I used that time to cover context, community, the tools, what’s there and what’s still missing, as well as how to get started with making your first ASIC.
+This video took so long to make, from getting permission and a special camera man from IHP, to commissioning my first animations, to editing 4 hours of footage down to just 17 minutes. I still think it’s one of the best ‘how chips are made’ videos out there and I really expected it to do a lot better. I blame it on releasing it too close to Christmas, but it could probably also have started with a punchier intro showing off the cool machines in action.
+
+Finally, if you’re new to open source silicon and want to get started, then I think I did a great job with **Getting started with open source ASICs: community, tools & demos!** 
 
 {{< youtube hSFUd7S2otE >}}
 
-I hope you’ll check out my channel and enjoy these older videos. With 10 new ones on the way, now’s the perfect time to subscribe!
+It weighs in at 30 minutes and I used that time to cover context, community, the tools, what’s there and what’s still missing, as well as how to get started with making your first ASIC.
 
+I hope you’ll check out my channel and enjoy these older videos. With 10 new ones on the way, now’s the perfect time to subscribe!
