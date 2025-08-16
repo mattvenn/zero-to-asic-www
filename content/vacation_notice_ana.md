@@ -4,6 +4,7 @@ description: Learn how to make your own custom chips!
 images: ["maximo_render_3.jpeg"]
 featured_image: "maximo_render_3.jpeg"
 image_pos: 0% +10%
+buttonSet: "normal"
 type: page
 ---
 
@@ -15,4 +16,4 @@ type: page
 
 | Silicon           | Boron         | Arsenic |
 |----------------   |-------------- |----------------   |
-|{{< button "https://buy.stripe.com/6oE5nb4Di5pU2l2eVg" "Buy for $650" >}} | {{< button "https://buy.stripe.com/5kAeXLfhW3hM1gY14r" "Buy for $1050" >}} | {{< button "/arsenic-details" "POA" >}} |
+| {{< buybutton "ana_silicon">}} | {{< buybutton "ana_boron">}} | {{< buybutton "ana_arsenic" >}} |

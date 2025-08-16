@@ -4,6 +4,7 @@ title = "Zero to ASIC Course"
 theme = "ananke"
 ignoreLogs = ['warning-goldmark-raw-html']
 
+
 [pagination]
 pageSize = 9
 
@@ -11,6 +12,7 @@ pageSize = 9
 unsafe = true
 
 [params]
+buttonSet = "normal"
 site_logo = "/zero-to-asic-logo-white-transp.png"
 favicon = "/zero-to-asic-logo-transp.png"
 stripe_test = "false"
@@ -20,6 +22,22 @@ images = ["zero-to-asic-logo-white-bg.png"]
 captcha_key = "6LeFKlcdAAAAAA6sEbdU78sUuy0lPezU-0H0JueA"
 editURL = "https://github.com/mattvenn/zero-to-asic-www/edit/main/content/"
 newsletter_link = "https://www.zerotoasiccourse.com/newsletter/"
+
+[params.urls.vacation]
+dig_silicon = { url = "/vacation_notice_dig", text = "Buy for $650" }
+dig_boron = { url = "/vacation_notice_dig", text = "Buy for $950" }
+dig_arsenic = { url = "/arsenic-details", text = "POA" }
+ana_silicon = { url = "/vacation_notice_ana", text = "Buy for $650" }
+ana_boron = { url = "/vacation_notice_ana", text = "Buy for $1050" }
+ana_arsenic = { url = "/arsenic-details", text = "POA" }
+
+[params.urls.normal]
+dig_silicon = { url = "https://buy.stripe.com/cN22aZd9O05Af7O8wC", text = "Buy for $650" }
+dig_boron = { url = "https://buy.stripe.com/3cs6rf8Tyf0ucZGfZ3", text = "Buy for $950" }
+dig_arsenic = { url = "/arsenic-details", text = "POA" }
+ana_silicon = { url = "https://buy.stripe.com/6oE5nb4Di5pU2l2eVg", text = "Buy for $650" }
+ana_boron = { url = "https://buy.stripe.com/5kAeXLfhW3hM1gY14r", text = "Buy for $1050" }
+ana_arsenic = { url = "/arsenic-details", text = "POA" }
 
 [menu]
 
