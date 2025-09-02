@@ -1,0 +1,16 @@
+{{ $id := .Get 0 }}   <!-- first positional argument -->
+{{ $set := .Page.Params.buttonSet | default site.Params.buttonSet }}
+{{ $urls := index site.Params.urls $set }}
+{{ $entry := index $urls $id }}
+
+<style type="text/css">
+       
+
+</style>
+<div id="sellbutton">
+    <a href="{{$entry.url}}">
+    <button class='button'>
+         {{$entry.text}}
+    </button>
+    </a>
+</div>
