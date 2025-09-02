@@ -196,6 +196,11 @@
         {
         "author": "Eduardo Holguin",
         "quote" : "The course was very interesting, and the knowledge I obtained has proven to be very useful. It's great how accessible fabrication has become thanks to TinyTapeout and SkyWater 130."
+        },
+        {
+        "author": "Pathan Rehman Ahmed Khan",
+        "quote" : "Huge thanks to Matt Venn for creating the phenomenal Zero to ASIC course and making chip design accessible to beginners like me. The course structure, step-by-step tutorials, and Matt's dedication to answering every doubt made this complex field understandable. Even more generous was the discounted course access and free tile opportunity!",
+        "video" : "https://www.linkedin.com/posts/p-r-a-k_tinytapeout-chipdesign-opensource-activity-7367479826259066881-OCN7"
         }
         ]
 }
