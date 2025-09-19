@@ -2,8 +2,8 @@
 title: "Celebrating 20k YouTube Subscribers"
 date: 2025-08-16T17:10:37+02:00
 tags: ["videos"]
-images: ["20ksubs.png"]
-featured_image: "20ksubs.png"
+images: ["20k_subs.jpg"]
+featured_image: "20k_subs.jpg"
 ---
 
 Since I started my channel in December 2020, I’ve posted 181 videos that have been watched 660k times for a total of 35k hours! To celebrate reaching 20k subscribers I wanted to share some of the ones I'm especially proud of, and why they matter to me.
