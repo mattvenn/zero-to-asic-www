@@ -5,7 +5,7 @@ images: ["floorplan.png"]
 featured_image: "floorplan.png"
 ---
 
-The floorplanning stage is where [OpenLane](/terminology/openlane) decides how big an area we need to fit everything in.
+The floorplanning stage is where [LibreLane](/terminology/librelane) decides how big an area we need to fit everything in.
 All the required [standard cells](/terminology/standardcell) are placed in the bottom left corner, ready for the [place and route](/terminology/place_and_route) stage.
 
 ![floorplan](/floorplan.png)
