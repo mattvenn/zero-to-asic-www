@@ -35,4 +35,4 @@ the Skywater [PDK](/terminology/pdk), so they need to be broken down into more s
 ![show RTL](/show_cmos.png)
 
 These blocks are now simple enough that they can be mapped onto the [standard cells](/terminology/standardcell) we have in the PDK.
-The synthesis process is the first step in the [OpenLane](/terminology/openlane) tool.
+The synthesis process is the first step in the [LibreLane](/terminology/librelane) tool.

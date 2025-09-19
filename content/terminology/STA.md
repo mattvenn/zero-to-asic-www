@@ -33,10 +33,10 @@ Luckily we were able to [find some work arounds](/post/mpw1-bringup), and I mana
 
 # OpenSTA
 
-[OpenLane](/terminology/openlane) uses a tool called [OpenSTA](https://github.com/The-OpenROAD-Project/OpenSTA).
+[LibreLane](/terminology/librelane) uses a tool called [OpenSTA](https://github.com/The-OpenROAD-Project/OpenSTA).
 Its job is to find the fastest and slowest data paths in the design and to check that setup and hold timings are met. Typically we look for setup issues at the slowest process corner, and hold issues at the fastest process corner.
 
-The required timing is set in the OpenLane config file. By default its 10ns, which means we are targetting a clock frequency of 100MHz. It can read the timing information about the standard cells and wiring from the [PDK](/terminology/pdk).
+The required timing is set in the LibreLane config file. By default its 10ns, which means we are targetting a clock frequency of 100MHz. It can read the timing information about the standard cells and wiring from the [PDK](/terminology/pdk).
 
 # Min report - validating hold timing
 
@@ -153,12 +153,12 @@ As it's a setup violation, the design should still work at a slower clock.
 
 The reports are split into min and max files.
 
-There are currently 5 calls to OpenSTA during a typical OpenLane including:
+There are currently 5 calls to OpenSTA during a typical LibreLane including:
 
 * In the synthesis exploration loop. Here the results can be used to iterate over different synthesis options to help meet timing requirements. For instance, if STA shows a path is too slow, then synthesis can use stronger cells to drive signals harder and faster.
 * After resizing cells (to get better timing performance - [see this video](https://www.youtube.com/watch?v=ajwZVAVo3yk))
 * After extraction. This is the most accurate timing report as it is done on the finished layout. These files are called:
-    * 23-spef_extraction_sta.min.rpt (numbering can change depending on OpenLane setup).
+    * 23-spef_extraction_sta.min.rpt (numbering can change depending on LibreLane setup).
     * 23-spef_extraction_sta.max.rpt
 
 # A clue could have alerted us to MPW1 issues

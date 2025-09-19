@@ -1,8 +1,8 @@
 ---
 title: "LibreLane"
 date: 2020-11-12T17:39:49+01:00
-images: ["openlane-flow.png"]
-featured_image: "openlane-flow.png"
+images: ["librelane-flow.png"]
+featured_image: "librelane-flow.png"
 aliases:
     - /terminology/openlane
 ---
@@ -15,7 +15,7 @@ OpenLane was released in 2021 and you can watch [Mohamed Shalan's OpenLane FOSSI
 
 Here's the overview:
 
-![LibreLane flow](/openlane-flow.png)
+![LibreLane flow](/librelane-flow.png)
 
 We put our [HDL](/terminology/hdl) in at one end, and out the other comes the [GDS2](/terminology/gds2) files that are the standard file format for the [foundry](/terminology/foundry). 
 

@@ -24,14 +24,14 @@ tags: ["course"]
 
 # SkyWater/Google discussion & announcements
 
-* [Google/SkyWater Slack](https://slack.skywater.tools/)
+* [FOSSi Chat](https://fossi-chat.org)
 * [PDK docs](https://skywater-pdk.readthedocs.io/en/main/)
 * [Announce mailing list](https://groups.google.com/forum/#!forum/skywater-pdk-announce)
 
 # Tools
 
-* [OpenLane](https://github.com/efabless/openlane) & [Documentation](https://openlane.readthedocs.io/en/latest/)
-* [OpenLane summary tool](https://github.com/mattvenn/openlane_summary) helps to explore the OpenLane output files.
+* [LibreLane](https://github.com/librelane/librelane) & [Documentation](https://librelane.readthedocs.io/en/latest/)
+* [LibreLane summary tool](https://github.com/mattvenn/librelane_summary) helps to explore the LibreLane output files.
 * [Magic](http://opencircuitdesign.com/magic/)
 * [KLayout](https://www.klayout.de/)
 * [Open Source FPGA toolchain](https://github.com/YosysHQ/fpga-toolchain)

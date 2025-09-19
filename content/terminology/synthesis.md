@@ -21,7 +21,7 @@ Synthesis proceeds in roughly this sequence:
 It is a very complex and detailed process with lots of tuning options to trade off area vs speed. Until Claire Wolf wrote yosys, it was thought that only huge semiconducter companies
 had the resouces to write a synthesis tool.
 
-[Yosys](https://github.com/YosysHQ/yosys) is the Open Source tool that has been crucial in enabling the Open Source ASIC flow we have in [OpenLane](/terminology/openlane).
+[Yosys](https://github.com/YosysHQ/yosys) is the Open Source tool that has been crucial in enabling the Open Source ASIC flow we have in [LibreLane](/terminology/librelane).
 
 If things are going well, you normally don't need to interact much with yosys. It will be part of a tool flow or Makefile.
 
