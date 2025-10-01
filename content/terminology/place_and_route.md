@@ -6,7 +6,7 @@ featured_image: "placement-coarse.png"
 ---
 
 Place and Route are two steps in the automated process of turning some [HDL](/terminology/hdl) into [GDS2](/terminology/gds2) files.
-We will look at how [OpenLane](/terminology/openlane) does these steps using the [seven segment seconds](https://github.com/mattvenn/seven-segment-seconds) example.
+We will look at how [LibreLane](/terminology/librelane) does these steps using the [seven segment seconds](https://github.com/mattvenn/seven-segment-seconds) example.
 
 I have used my [presentation tools](https://github.com/mattvenn/remoticon-presentation-tools) to generate these images.
 

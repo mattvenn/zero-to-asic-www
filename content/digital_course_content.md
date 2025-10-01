@@ -79,9 +79,9 @@ We will take a quick look at [Formal Verification](/terminology/verification) an
 * Write some assertions that prove the design is safe in a multi project environment.
 * Run the formal tools to make the proof.
 
-# Part 4: OpenLANE
+# Part 4: LibreLane
 
-[OpenLANE](/terminology/openlane) is an automated set of tools to turn a digital design into the files needed for creating an ASIC. It is automated but it needs to be configured correctly to get usable results. We will cover:
+[LibreLane](/terminology/librelane) is an automated set of tools to turn a digital design into the files needed for creating an ASIC. It is automated but it needs to be configured correctly to get usable results. We will cover:
 
 * The different stages of the flow.
 * How to interpret results, logs and errors.
@@ -91,13 +91,13 @@ We will take a quick look at [Formal Verification](/terminology/verification) an
 
 ## Project 4.1: harden an example design
 
-* Choose an example design from the OpenLANE.
+* Choose an example design from the LibreLane.
 * Read the config and check the documentation.
 * Run the tools and inspect the results.
 
 ## Project 4.2: harden your design
 
-* Use OpenLane to create the [GDS](/terminology/gds2) files for your own design
+* Use LibreLane to create the [GDS](/terminology/gds2) files for your own design
 * Learn how to resolve some basic errors
 * Learn how to use the design exploration tools to help find the best results
 * Make adjustments to your config for either personal or group submission.

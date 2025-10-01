@@ -63,8 +63,8 @@ Image from [VLSI Systems by Mead & Conway](https://www.researchgate.net/publicat
 ![Node table](/node-table.png)
 Image from [der8auer youtube channel](https://www.youtube.com/watch?v=1kQUXpZpLXI)
 
-![OpenLANE flow](/openlane-flow.png)
-Image from [OpenLANE docs](https://github.com/efabless/openlane)
+![LibreLane flow](/librelane-flow.png)
+Image from [LibreLane docs](https://librelane.readthedocs.io/en/latest/)
 
 ![OpenRAM](/openram.jpg)
 Image from [OpenRAM](https://openram.soe.ucsc.edu/)

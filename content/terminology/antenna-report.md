@@ -12,7 +12,7 @@ Antenna rules are part of the [DRC](/terminology/drc).
 When the ASIC is being built up layer by layer, we have the gates of the MOSFETS built first. Then we use the metal layers to connect them into bigger blocks.
 The metal layers are etched using a plasma which is made of ionised atoms, and the electrical charge from this can build up on already existing wires. The more static charge that builds up, the higher the voltage that is seen. If some part of the wiring attaches to a transistor gate, then the voltage may be high enough to cause that gate to be destroyed - this is similar to a charge building in clouds and finally a lightning bolt (spark) can break through the air. The antenna rule controls the ratio of metal area to gate area because this reflects the amount of voltage that may build up and the size of the gate over which the strain needs to be borne. If there is a diode in the same part of the wiring then this will act to drain away charge and so it increases the lmit on the ratio between metal and gate by a large amount. 
 
-After OpenLANE finishes, we have an antenna report in this file: ./reports/routing/41-antenna.rpt (number may change with OpenLane config)
+After LibreLane finishes, we have an antenna report in this file: ./reports/routing/41-antenna.rpt (number may change with LibreLane config)
 
 The antenna report is a long collection of smaller reports like this:
 
@@ -68,21 +68,13 @@ And:
 
 > Most violations are not worth fixing unless they exceed the ratio by 2x
 
-OpenLANE automatically inserts antenna diode cells to protect nets. Note that adding diodes increases the net capacitance and may slow signals down. As this addition of diodes happens late on in the flow, there is a risk that it will degrade timing.
+LibreLane automatically inserts antenna diode cells to protect nets. Note that adding diodes increases the net capacitance and may slow signals down. As this addition of diodes happens late on in the flow, there is a risk that it will degrade timing.
 
 There is another way to fix antenna rule violations - by adding jumps to higher metal layers in the middle of a large 'antenna'. For instance, if a section of metal2 is causing a violation, then breaking it in half and jumping to metal3 for a short distance, or doing this near the gate(s) that are at risk, means that the antenna size on metal2 attached to the gate is reduced. It may also mean that by the time all of the original metal2 wiring is in the section of the net attached to the gate, that also some diode will also be attached and hence the charge will be drained away anyway.
 
-One way to try to reduce antenna violations is to try increasing the number of iterations that OpenLANE will try to reduce antenna violations.
+LibreLane no longer supports `DIODE_INSERTION_STRATEGY`, instead using 2 flags, `GRT_REPAIR_ANTENNAS` and `RUN_HEURISTIC_DIODE_INSERTION`. For more information, check the [LibreLane docs](https://librelane.readthedocs.io/en/latest/getting_started/migrants/variables.html#migrating-diode-insertion-strategy).
 
-    GLB_RT_MAX_DIODE_INS_ITERS (default is 2, only active if insertion strategy is 3)
+## LibreLane summary tool
 
-You can also try a different insertion strategy. This configuration variable is called:
-
-    DIODE_INSERTION_STRATEGY (default is 3)
-
-You can find the definition here in the [OpenLANE docs](https://openlane-docs.readthedocs.io/en/rtd-develop/configuration/README.html).
-
-## OpenLANE summary tool
-
-The [OpenLANE summary tools](/post/openlane_output_files) can list antenna violations with the --antenna flag
+The [LibreLane summary tools](/post/librelane_output_files) can list antenna violations with the --antenna flag
 

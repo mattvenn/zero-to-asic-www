@@ -103,6 +103,6 @@ A truly unique selling point of custom ASIC design is mixed signal. We can build
 * Guided walkthrough of a mixed signal design.
 * Best practice structure of your files.
 * How to do cosimulation of digital and analog together.
-* A brief introduction to OpenLane for building the digital block.
+* A brief introduction to LibreLane for building the digital block.
 
 {{% random_analog_quote %}}

@@ -13,13 +13,13 @@ courses:
       description: |
           ## Want to learn how to design digital chips?
 
-          Learn to design your own [ASIC](/terminology/asic) and get it fabricated! Thanks to the open source [Process Development Kit](/terminology/pdk) from Google and Skywater and the OpenLane ASIC tools from [Efabless](https://efabless.com/), we now have the opportunity to get involved in this exciting field without signing NDAs or paying a fortune for tool licenses.
+          Learn to design your own [ASIC](/terminology/asic) and get it fabricated! Thanks to the open source [Process Development Kit](/terminology/pdk) from Google and Skywater and the LibreLane ASIC flow, we now have the opportunity to get involved in this exciting field without signing NDAs or paying a fortune for tool licenses.
 
           GCC revolutionised compiling, Linux revolutionised computing. Android revolutionised phones. Arduino revolutionised microcontrollers. RISCV is revolutionising ISAs. The next step is open source silicon.
 
           This course will give you the experience of designing your own microchip using free and open source tools and getting it manufactured on an open source [PDK](/terminology/pdk).
 
-          Of the 500 people who have taken the course, 150 have submitted designs for [MPW2](/post/mpw2-submitted/), [MPW3](/post/mpw3), [MPW4](/post/mpw4_submitted), [MPW5](/post/mpw5_submitted), [MPW6](/post/mpw6_submitted), [MPW7](/post/mpw7_submitted), [MPW8](/post/mpw8_submitted) and [Tiny Tapeout](https://tinytapeout.com).
+          Of the 650 people who have taken the course, 200 have submitted designs for [MPW2](/post/mpw2-submitted/), [MPW3](/post/mpw3), [MPW4](/post/mpw4_submitted), [MPW5](/post/mpw5_submitted), [MPW6](/post/mpw6_submitted), [MPW7](/post/mpw7_submitted), [MPW8](/post/mpw8_submitted) and [Tiny Tapeout](https://tinytapeout.com).
 
           {{< button  "/digital" "Ticket options">}}
 
@@ -54,6 +54,4 @@ aliases:
 * Find out more about your instructor [Matt Venn](/matt_venn),
 * Read an [Article](/post),
 * Learn some [Terminology](/terminology).
-
-
 

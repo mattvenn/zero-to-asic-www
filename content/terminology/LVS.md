@@ -10,7 +10,7 @@ Layout vs Schematic (or LVS) is an important [verification](/terminology/verific
 
 After the design has been finished and we have the [GDS2](/terminology/gds2) files that we can send to the [foundry](/terminology/foundry), we want to check that the design is the same as the input that was described by the [HDL](/terminology/hdl) or schematic.
 
-In the [OpenLane](/terminology/openlane) tool, at the end we have the LVS step. The [netlist](/terminology/netlist) is extracted using [Magic](/terminology/magic)
+In the [LibreLane](/terminology/librelane) tool, at the end we have the LVS step. The [netlist](/terminology/netlist) is extracted using [Magic](/terminology/magic)
 A tool called [Netgen](http://opencircuitdesign.com/netgen/) can compare this extracted netlist with the one we get after the [synthesis](/terminology/synthesis) step.
 
 You will get some reports in the run directory. In the inverter example I have this file: results/lvs/inverter.lvs.log
@@ -29,7 +29,7 @@ The end of the file shows the input and output are equivalent.
     Device classes inverter and inverter are equivalent.
     Circuits match uniquely.
 
-The most common types of LVS errors I've seen with OpenLane are:
+The most common types of LVS errors I've seen with LibreLane are:
 
 * when power supplies aren't connected for some reason,
 * there is a short circuit during routing.

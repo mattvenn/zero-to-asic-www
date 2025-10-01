@@ -23,6 +23,6 @@ It's quite dated in its user interface, which takes a while to get used to.
 
 It has a [fairly decent tutorial here](http://opencircuitdesign.com/magic/magic_docs.html)
 
-I would say it's worth learning how to navigate a design but probably you won't be doing much actual layout with it. A tool like [OpenLane](/terminology/openlane) in combination with the [Skywater PDK](/terminology/pdk) automates a lot of it.
+I would say it's worth learning how to navigate a design but probably you won't be doing much actual layout with it unless you are doing [analog layout](/analog). A tool like [LibreLane](/terminology/librelane) in combination with the [Skywater PDK](/terminology/pdk) automates a lot of it.
 
 An alternative tool for viewing files associated with chip design is [klayout](https://www.klayout.de/)

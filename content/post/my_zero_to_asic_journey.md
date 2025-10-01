@@ -19,7 +19,7 @@ Seeing such interest in this topic gave me a bit of an energy boost and I began 
 This was when I first met Mohammed Kassem and Tim Edwards from [Efabless](https://efabless.com/) who have continued to be extremely helpful. I also spoke to Olof Kindgren who I'd met at WOSH. He said I should talk to Tim Ansell because there was something in the pipeline that might change how I was planning to make an ASIC!
 
 Then in late June 2020 we had the [announcement from Tim](https://www.youtube.com/watch?v=EczW2IWdnOM) about the Open Source PDK and the Google sponsored shuttle. 
-This of course changed everything! We now had an Open Source, production ready [PDK](/terminology/pdk) along with a new set of tools called [OpenLANE](/terminology/openlane) that aimed to turn your [HDL](/terminology/hdl) into the files needed for ASIC manufacture. 
+This of course changed everything! We now had an Open Source, production ready [PDK](/terminology/pdk) along with a new set of tools called [OpenLane](/terminology/openlane) that aimed to turn your [HDL](/terminology/hdl) into the files needed for ASIC manufacture. 
 I was quickly able to use OpenLANE to turn my [FPGA VGA clock design](/post/vga_clock/) into [GDS2 files](/terminology/gds2).
 
 In August Hackaday put a call out for talks to their #remoticon conference. I asked on Twitter to gauge interest and subsequently began working on a presentation.
