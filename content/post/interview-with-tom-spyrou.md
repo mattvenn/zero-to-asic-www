@@ -1,8 +1,8 @@
 ---
 title: "Interview With Tom Spyrou"
 date: 2021-08-02T14:16:05+02:00
-images: ["openlane-flow.png"]
-featured_image: "openlane-flow.png"
+images: ["librelane-flow.png"]
+featured_image: "librelane-flow.png"
 tags: ["interviews", "videos"]
 ---
 
