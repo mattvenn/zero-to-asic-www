@@ -62,6 +62,10 @@
         {
         "author": "ReJ aka Renaldas Zioma",
         "quote" : "I took this course twice, and that probably means something! No, not what you're thinking—it means that beyond learning how to design, test, and tape-out your analog circuit, you gain access to the expertise of the best in the analog design community!"
+        },
+        {
+        "author": "Michael Bikovitsky",
+        "quote" : "After submitting a digital project for Tiny Tapeout 2, I wanted to up the complexity level and do something analog. The analog course gave me the knowledge and tools to do so. It is perhaps the only place that can get you from 0 to a working analog design ready for tapeout in a matter of weeks."
         }
         ]
 }
