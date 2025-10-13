@@ -12,7 +12,7 @@ aliases:
     - /index
 ---
 
-{{< youtube f5qoNEVn4gk >}}
+{{< youtube v2VKxFhl6Aw >}}
 
 ## Digital ticket options {#tickets}
 
@@ -53,7 +53,7 @@ Watch more [in depth feedback here](https://www.youtube.com/watch?v=TR8LiCWoOdg&
 
 -   [Full course details here](/digital_course_content).
 -   We will concentrate on digital design.
--   Tools are provided with the [IIC OSIC Docker](https://github.com/iic-jku/IIC-OSIC-TOOLS)
+-   Tools are provided with the [IIC OSIC Docker](https://github.com/iic-jku/IIC-OSIC-TOOLS).
 -   The course is continually updated for the latest tooling and PDK.
 
 ### Format
@@ -75,7 +75,6 @@ Watch more [in depth feedback here](https://www.youtube.com/watch?v=TR8LiCWoOdg&
 -   Basic Linux command line experience, Git & Make is helpful.
 -   Some programming experience helpful.
 -   No hardware or [HDL](/terminology/hdl) experience required!
--   Please note that M1 Macs are not well supported at this time.
 
 [Back to top](#tickets)
 

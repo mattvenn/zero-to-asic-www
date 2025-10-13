@@ -76,7 +76,7 @@ layout: single
 
 -   Basic Linux command line experience, Git & Make is helpful.
 -   Some programming experience helpful.
--   Please note that M1 Macs are not well supported at this time.
+-   Apple Silicon Mac users will need to use the Docker instead of the Virtual Machine. The videos were made with the VM so there are some differences.
 
 [Back to top](#tickets)
 
