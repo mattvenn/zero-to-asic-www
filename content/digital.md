@@ -12,11 +12,7 @@ aliases:
     - /index
 ---
 
-## Important News!
-
-All systems are go for tapeout! You might have seen that [Efabless went out of business](https://tinytapeout.com/efabless-faq). We are now working with [IHP](https://www.ihp-microelectronics.com/) & [ChipFoundry](https://chipfoundry.io) to provide silicon for the course, and you can check the [future schedule here](https://tinytapeout.com/runs/#future-chips).
-
-{{< youtube v2VKxFhl6Aw >}}
+{{< youtube f5qoNEVn4gk >}}
 
 ## Digital ticket options {#tickets}
 
