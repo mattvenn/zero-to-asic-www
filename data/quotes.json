@@ -201,6 +201,10 @@
         "author": "Pathan Rehman Ahmed Khan",
         "quote" : "Huge thanks to Matt Venn for creating the phenomenal Zero to ASIC course and making chip design accessible to beginners like me. The course structure, step-by-step tutorials, and Matt's dedication to answering every doubt made this complex field understandable. Even more generous was the discounted course access and free tile opportunity!",
         "video" : "https://www.linkedin.com/posts/p-r-a-k_tinytapeout-chipdesign-opensource-activity-7367479826259066881-OCN7"
+        },
+        {
+        "author": "Marvin B",
+        "quote" : "I can highly recommend the Zero to ASIC course, especially to other students.  Thanks to the grant program I was able to get a Silicon Level ticket and actually fabricate my own chip.  It was a great opportunity to take something I learned at university in my case, Huffman coding and implement it in real silicon.  The course made the whole process understandable and achievable."
         }
-        ]
+    ]
 }
