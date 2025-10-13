@@ -106,7 +106,9 @@ We will take a quick look at [Formal Verification](/terminology/verification) an
 
 The way to make ASIC fabrication cheaper is to parcel out the wafer into chunks and sell each chunk individually, this is known as a shuttle service or an [MPW](/terminology/mpw). Google sponsored a shuttle service that ran every quarter from 2021 to 2022.
 
-To replace the lottery shuttle we have developed [TinyTapeout](https://www.tinytapeout.com) a multi-project-chip service that allows us to guarantee silicon for hundreds of people at a time. You will have a guaranteed slot on a Tiny Tapeout shuttle.
+When the lottery shuttle ended, we developed [Tiny Tapeout](https://www.tinytapeout.com) a multi-project-chip service that allows us to guarantee silicon for hundreds of people at a time. 
+
+A guaranteed slot on a Tiny Tapeout shuttle is included in all course tickets!
 
 ## Project 5.1: Submit to Tiny Tapeout
 
