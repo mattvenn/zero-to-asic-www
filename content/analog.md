@@ -9,10 +9,6 @@ type: page
 layout: single
 ---
 
-## Important News!
-
-All systems are go for tapeout! You might have seen that [Efabless went out of business](https://tinytapeout.com/efabless-faq). We are now working with [IHP](https://www.ihp-microelectronics.com/) & [ChipFoundry](https://chipfoundry.io) to provide silicon for the course, and you can check the [future schedule here](https://tinytapeout.com/runs/#future-chips).
-
 {{< youtube wM4cobfjMMQ >}}
 
 ## Analog ticket options {#tickets}
@@ -80,7 +76,7 @@ All systems are go for tapeout! You might have seen that [Efabless went out of b
 
 -   Basic Linux command line experience, Git & Make is helpful.
 -   Some programming experience helpful.
--   Please note that M1 Macs are not well supported at this time.
+-   Apple Silicon Mac users will need to use the Docker instead of the Virtual Machine. The videos were made with the VM so there are some differences.
 
 [Back to top](#tickets)
 

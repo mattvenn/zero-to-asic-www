@@ -16,18 +16,15 @@ These [slides taken from his talk](https://docs.google.com/presentation/d/e/2PAC
 
 ![shuttle](/shuttle.png)
 
-## Caravel
+## Chip Foundry Shuttle
 
-Normally in an MPW you would have the whole [die](/terminology/die) to yourself. In the Google/Skywater Shuttle all the designs will be within the user project area of the [Caravel harness](https://github.com/efabless/caravel). 
-Caravel has its own RISCV processor and a neat [datasheet](https://caravel-harness.readthedocs.io/en/latest/?badge=latest). 
+Normally in an MPW you would have the whole [die](/terminology/die) to yourself. In the [ChipFoundry](https://chipfoundry.io/) Shuttle all the designs will be within the user project area of the [Caravel harness](https://github.com/chipfoundry/caravel). 
+
+Caravel has its own RISCV processor and a neat [datasheet](https://caravel-harness.readthedocs.io/en/latest/). 
 The idea here is to make it easier to bring up and debug your designs at the cost of some area.
 
 ![Caravel harness](/ciic_harness.png)
 
 Read [this post to find out what you could fit in](/post/how-much-can-we-fit) the user space.
 
-The Google shuttle will return chips in type of packaging called [Wafer Level Chip Scale Packaging](/terminology/wlcsp).
-
-## Requirements
-
-[Efabless have put up a page](https://efabless.com/open_shuttle_program) that has more details on the requirements for entry to the shuttle.
+The Google shuttle returned chips in type of packaging called [Wafer Level Chip Scale Packaging](/terminology/wlcsp) and then the easier to handle QFN.

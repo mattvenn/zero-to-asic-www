@@ -89,50 +89,34 @@ We will take a quick look at [Formal Verification](/terminology/verification) an
 * Layout vs Schematic ([LVS](/terminology/lvs))
 * Basic configuration setting.
 
-## Project 4.1: harden an example design
+## Project 4.1: Harden an example design
 
 * Choose an example design from the LibreLane.
 * Read the config and check the documentation.
 * Run the tools and inspect the results.
 
-## Project 4.2: harden your design
+## Project 4.2: Harden your design
 
 * Use LibreLane to create the [GDS](/terminology/gds2) files for your own design
 * Learn how to resolve some basic errors
 * Learn how to use the design exploration tools to help find the best results
 * Make adjustments to your config for either personal or group submission.
 
-# Part 5: Google/Skywater/Efabless shuttle
+# Part 5: Getting to Silicon!
 
-The way to make ASIC fabrication cheaper is to parcel out the wafer into chunks and sell each chunk individually, this is known as a shuttle service or an [MPW](/terminology/mpw). Google sponsored a shuttle service that ran every quarter from 2021 to 2022. The pace is now slower, and with a lot more contention.
+The way to make ASIC fabrication cheaper is to parcel out the wafer into chunks and sell each chunk individually, this is known as a shuttle service or an [MPW](/terminology/mpw). Google sponsored a shuttle service that ran every quarter from 2021 to 2022.
 
-To replace the lottery shuttle we have developed [TinyTapeout](https://www.tinytapeout.com) a multi-multi-project wafer service that allows us to guarantee silicon for hundreds of people at a time. You will have a guaranteed slot on a Tiny Tapeout shuttle.
+When the lottery shuttle ended, we developed [Tiny Tapeout](https://www.tinytapeout.com) a multi-project-chip service that allows us to guarantee silicon for hundreds of people at a time. 
 
-You can also apply directly to [Efabless](https://efabless.com) for a chipIgnite shuttle. This makes use of a wrapper design called Caravel that encloses your own design. This wrapper includes a RISCV CPU, some memory and some peripherals. This can help take some of the burden off your own design as you can make use of existing peripherals.
+A guaranteed slot on a Tiny Tapeout shuttle is included in all course tickets!
+
+## Project 5.1: Submit to Tiny Tapeout
 
 You will learn:
 
-* The component parts of [Caravel](/terminology/shuttle).
-* How big a space there is inside for your designs.
-* How to simulate it, including your own design.
-* How to fulfill the application process and make your own application should you wish.
-
-## Project 5.1: Simulate your design inside Caravel
-
-* Run Caravel’s example project’s test.
-* Add your design to Caravel: design files, SoC firmware, testbench.
-* Simulate your design within Caravel.
-
-## Project 5.2: Making a personal submission to Efabless
-
-* Get your design’s GDS files in place.
-* Build the final GDS for Caravel.
-* Run the checker script.
-
-## Project 5.3: Making a group submission
-
-* Wrap your small design ready for aggregating into the group submission.
-* How to prepare your repository.
-* Submit your design.
+* How Tiny Tapeout works
+* How to run the GitHub actions to create your design's GDS
+* How to run gate level verification
+* How to submit your design onto the next Tiny Tapeout shuttle.
 
 {{% random_quote %}}

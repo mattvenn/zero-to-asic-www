@@ -12,10 +12,6 @@ aliases:
     - /index
 ---
 
-## Important News!
-
-All systems are go for tapeout! You might have seen that [Efabless went out of business](https://tinytapeout.com/efabless-faq). We are now working with [IHP](https://www.ihp-microelectronics.com/) & [ChipFoundry](https://chipfoundry.io) to provide silicon for the course, and you can check the [future schedule here](https://tinytapeout.com/runs/#future-chips).
-
 {{< youtube v2VKxFhl6Aw >}}
 
 ## Digital ticket options {#tickets}
@@ -23,7 +19,7 @@ All systems are go for tapeout! You might have seen that [Efabless went out of b
 |                                                                                                                   | Silicon                                                                                                                    | Boron                                                                                                                      | Arsenic                                                              |
 | ----------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------- |
 |                                                                                                                   | {{< buybutton "dig_silicon">}} | {{< buybutton "dig_boron">}} | {{< buybutton "dig_arsenic" >}} |
-| Access to 6 hours recorded video content & 11 projects                                                            | ✅                                                                                                                         | ✅                                                                                                                         | ✅                                                                   |
+| Access to 6 hours recorded video content & 9 projects                                                             | ✅                                                                                                                         | ✅                                                                                                                         | ✅                                                                   |
 | Access to updates of the course material                                                                          | ✅                                                                                                                         | ✅                                                                                                                         | ✅                                                                   |
 | Recorded solution videos                                                                                          | ✅                                                                                                                         | ✅                                                                                                                         | ✅                                                                   |
 | Access to discord community server                                                                                | ✅                                                                                                                         | ✅                                                                                                                         | ✅                                                                   |
@@ -33,7 +29,7 @@ All systems are go for tapeout! You might have seen that [Efabless went out of b
 | Your ASIC mounted on a PCB breakout board                                                                         | $150 + Postage                                                                                                                  | ✅                                                                                                                         | ✅                                                                   |
 | How many chips will you receive                                                                                   | 1                                                                                                                          | 1                                                                                                                          | 100                                                                  |
 | 1 to 1 office hours support                                                                                       | ❌                                                                                                                         | 2 hours                                                                                                                    | 4 hours                                                              |
-| Application to ChipIgnite - design can be closed source                                                           | ❌                                                                                                                         | ❌                                                                                                                         | ✅                                                                   |
+| Application to ChipFoundry's ChipIgnite - design can be closed source                                                           | ❌                                                                                                                         | ❌                                                                                                                         | ✅                                                                   |
 | Custom PCB design consultancy                                                                                     | ❌                                                                                                                         | ❌                                                                                                                         | ✅                                                                   |
 | Team access **[ⓘ](#team-access)**                                                                                 | ❌                                                                                                                         | ❌                                                                                                                         | ✅                                                                   |
 |                                                                                                                   | {{< buybutton "dig_silicon">}} | {{< buybutton "dig_boron">}} | {{< buybutton "dig_arsenic" >}} |
@@ -57,12 +53,12 @@ Watch more [in depth feedback here](https://www.youtube.com/watch?v=TR8LiCWoOdg&
 
 -   [Full course details here](/digital_course_content).
 -   We will concentrate on digital design.
--   A virtual machine is available or you can install the tools manually.
+-   Tools are provided with the [IIC OSIC Docker](https://github.com/iic-jku/IIC-OSIC-TOOLS).
 -   The course is continually updated for the latest tooling and PDK.
 
 ### Format
 
--   11 hands-on projects, supported with text guides and over 6 hours of videos.
+-   9 hands-on projects, supported with text guides and over 6 hours of videos.
 -   Support via:
     -   Recorded solutions videos.
     -   Discord community server.
@@ -79,7 +75,6 @@ Watch more [in depth feedback here](https://www.youtube.com/watch?v=TR8LiCWoOdg&
 -   Basic Linux command line experience, Git & Make is helpful.
 -   Some programming experience helpful.
 -   No hardware or [HDL](/terminology/hdl) experience required!
--   Please note that M1 Macs are not well supported at this time.
 
 [Back to top](#tickets)
 

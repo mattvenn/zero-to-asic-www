@@ -10,14 +10,15 @@ tags: ["course"]
 
 > Matthew Venn is a science & technology communicator and electronic engineer. He brings 20 years of engineering experience to create excellent and innovative learning experiences for people all over the world.
 
-I have helped people like you to tape out on all 6 Google/Efabless shuttles. I can teach you how to design chips and how to get them made!
+I have helped people like you to create thousands of designs. I can teach you how to design chips and how to get them made!
 
 {{% random_quote %}}
 
 ### Connect with me
 
-* [Twitter](https://twitter.com/matthewvenn)
 * [Linked.in](https://www.linkedin.com/in/matt-venn/)
+* [BlueSky](https://bsky.app/profile/mattvenn.net)
+* [Twitter](https://twitter.com/matthewvenn)
 * Join the [mailing list](/newsletter)
 * I also do mentoring and coaching - see my [codementor.io profile](https://www.codementor.io/@mattvenn).
 
