@@ -64,7 +64,7 @@ layout: single
 -   Support via:
     -   Recorded solutions videos.
     -   Discord community server.
-    -   Twice Monthly analog specific call.
+    -   Twice Monthly analog specific call. Harald is currently joining once per month.
     -   1 to 1 office hours with Matt: access to expert help on the Boron and Arsenic level tickets.
 -   Asynchronous - do in your own time.
 -   Guaranteed ASIC manufacture with [TinyTapeout](https://www.tinytapeout.com) ([specs](https://tinytapeout.com/specs/analog/)).
