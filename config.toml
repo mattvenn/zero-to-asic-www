@@ -24,19 +24,19 @@ editURL = "https://github.com/mattvenn/zero-to-asic-www/edit/main/content/"
 newsletter_link = "https://www.zerotoasiccourse.com/newsletter/"
 
 [params.urls.vacation]
-dig_silicon = { url = "/vacation_notice_dig", text = "Buy for $650" }
-dig_boron = { url = "/vacation_notice_dig", text = "Buy for $950" }
+dig_silicon = { url = "/vacation_notice_dig", text = "Buy for $699" }
+ana_silicon = { url = "/vacation_notice_ana", text = "Buy for $699" }
+dig_boron = { url = "/vacation_notice_dig", text = "Buy for $999" }
+ana_boron = { url = "/vacation_notice_ana", text = "Buy for $1099" }
 dig_arsenic = { url = "/arsenic-details", text = "POA" }
-ana_silicon = { url = "/vacation_notice_ana", text = "Buy for $650" }
-ana_boron = { url = "/vacation_notice_ana", text = "Buy for $1050" }
 ana_arsenic = { url = "/arsenic-details", text = "POA" }
 
 [params.urls.normal]
-dig_silicon = { url = "https://buy.stripe.com/cN22aZd9O05Af7O8wC", text = "Buy for $650" }
-dig_boron = { url = "https://buy.stripe.com/3cs6rf8Tyf0ucZGfZ3", text = "Buy for $950" }
+dig_silicon = { url = "https://buy.stripe.com/00w3cu2zH3uVguO0254gg0w", text = "Buy for $699" }
+ana_silicon = { url = "https://buy.stripe.com/6oU14m4HP3uVa6q2ad4gg0t", text = "Buy for $699" }
+dig_boron = { url = "https://buy.stripe.com/dRmeVccah5D37YibKN4gg0u", text = "Buy for $999" }
+ana_boron = { url = "https://buy.stripe.com/cNi7sK8Y5ghHbaueWZ4gg0s", text = "Buy for $1099" }
 dig_arsenic = { url = "/arsenic-details", text = "POA" }
-ana_silicon = { url = "https://buy.stripe.com/6oE5nb4Di5pU2l2eVg", text = "Buy for $650" }
-ana_boron = { url = "https://buy.stripe.com/5kAeXLfhW3hM1gY14r", text = "Buy for $1050" }
 ana_arsenic = { url = "/arsenic-details", text = "POA" }
 
 [menu]
