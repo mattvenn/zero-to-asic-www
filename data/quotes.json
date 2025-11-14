@@ -205,6 +205,26 @@
         {
         "author": "Marvin B",
         "quote" : "I can highly recommend the Zero to ASIC course, especially to other students.  Thanks to the grant program I was able to get a Silicon Level ticket and actually fabricate my own chip.  It was a great opportunity to take something I learned at university in my case, Huffman coding and implement it in real silicon.  The course made the whole process understandable and achievable."
+        },
+        {
+        "author": "Andrey",
+        "quote" : "The course helped me to understand how digital designs are produced in industry. If you're interested in electronics, take this course - I mean it's an amazing course!",
+        "video" : "https://youtu.be/dj-lvYe8F5o"
+        },
+        {
+        "author": "Kilian",
+        "quote" : "People are very helpful in the course, on the discord server, the community is really awesome. The amount of stuff available to dig into is really amazing.",
+        "video" : "https://youtu.be/EkAMyneATTQ"
+        },
+        {
+        "author": "Emrys",
+        "quote" : "It provides a solid foundation and hands on experiece, I did a tapeout and I finished it just weeks after joining the course. I was surprised seeing how many people from different backgrounds were taking the course, not just in engineering but also from fields like medicine.",
+        "video" : "https://youtu.be/vriOj3VcTd0"
+        },
+        {
+        "author": "Anderson",
+        "quote" : "This course is really valuable, especially university students like me. I really wished I could have got access earlier, I just didn't know about it.",
+        "video" : "https://youtu.be/Ggc3CIFrftA"
         }
     ]
 }
