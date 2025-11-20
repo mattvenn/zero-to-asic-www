@@ -9,6 +9,10 @@ type: page
 layout: single
 ---
 
+# Save $150 in the upcoming Black Friday sale!
+
+Discount available from 28th to 30th November. Subscribe to the [newsletter](/newsletter) to receive the coupon.
+
 {{< youtube wM4cobfjMMQ >}}
 
 ## Analog ticket options {#tickets}
