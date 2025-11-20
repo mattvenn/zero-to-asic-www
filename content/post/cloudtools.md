@@ -1,7 +1,7 @@
 ---
 title: "Cloud Tools for ASIC Development"
 date: 2023-01-15T10:00:00+01:00
-tags: ["ASIC", "MPW", "course"]
+tags: ["ASIC", "MPW"]
 images: ["inverterjupyter.png"]
 featured_image: "inverterjupyter.png"
 ---
