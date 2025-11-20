@@ -27,6 +27,7 @@ Discount available from 28th to 30th November. Subscribe to the [newsletter](/ne
 | Access to weekly community call                                                                                   | ✅                                                                                                                         | ✅                                                                                                                         | ✅                                                                   |
 | Access to twice monthly call with analog expert Prof. Harald Pretl.                                               | ✅                                                                                                                         | ✅                                                                                                                         | ✅                                                                   |
 | Access to the material for the lifetime of the course **[ⓘ](#course-life)**                                       | ✅                                                                                                                         | ✅                                                                                                                         | ✅                                                                   |
+| Personal onboarding and introduction  | ✅ | ✅  | ✅ |
 | Guaranteed ASIC manufacture **[ⓘ](#asic-def)**                                                                    | ✅  160x225 um, 2 analog pins                                                                                              | ✅  334x225 um, 4 analog pins                                                                                              | ✅                                                                   |
 | Your ASIC mounted on a PCB breakout board                                                                         | $150 + Postage                                                                                                             | ✅                                                                                                                         | ✅                                                                   |
 | How many chips will you receive                                                                                   | 1                                                                                                                          | 1                                                                                                                          | 100                                                                  |
@@ -56,7 +57,7 @@ Discount available from 28th to 30th November. Subscribe to the [newsletter](/ne
 
 ## Course Overview
 
--   [Full course details here](/analog_course_content).
+-   Read the [full course syllabus](/analog_course_content).
 -   We will concentrate on analog circuit layout and tapeout.
 -   **Circuit design is not covered in the course - you can use one of our examples or bring your own schematic.**
 -   A virtual machine is available or you can install the tools manually.

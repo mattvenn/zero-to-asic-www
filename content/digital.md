@@ -29,6 +29,7 @@ Discount available from 28th to 30th November. Subscribe to the [newsletter](/ne
 | Access to discord community server                                                                                | ✅                                                                                                                         | ✅                                                                                                                         | ✅                                                                   |
 | Access to weekly call                                                                                             | ✅                                                                                                                         | ✅                                                                                                                         | ✅                                                                   |
 | Access to the material for the lifetime of the course **[ⓘ](#course-life)**                                       | ✅                                                                                                                         | ✅                                                                                                                         | ✅                                                                   |
+| Personal onboarding and introduction  | ✅ | ✅  | ✅ |
 | Guaranteed ASIC manufacture **[ⓘ](#asic-def)**                                                                    | ✅                                                                                                                         | ✅                                                                                                                         | ✅                                                                   |
 | Your ASIC mounted on a PCB breakout board                                                                         | $150 + Postage                                                                                                                  | ✅                                                                                                                         | ✅                                                                   |
 | How many chips will you receive                                                                                   | 1                                                                                                                          | 1                                                                                                                          | 100                                                                  |
@@ -55,7 +56,7 @@ Watch more [in depth feedback here](https://www.youtube.com/watch?v=TR8LiCWoOdg&
 
 ## Course Overview
 
--   [Full course details here](/digital_course_content).
+-   Read the [full course syllabus](/digital_course_content).
 -   We will concentrate on digital design.
 -   Tools are provided with the [IIC OSIC Docker](https://github.com/iic-jku/IIC-OSIC-TOOLS).
 -   The course is continually updated for the latest tooling and PDK.
