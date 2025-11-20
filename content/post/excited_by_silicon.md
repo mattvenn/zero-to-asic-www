@@ -1,5 +1,5 @@
 ---
-title: "Excited by silicon"
+title: "Excited by silicon!"
 tags: ["essay", "ecosystem"]
 images: ["excite/wafer.png"]
 featured_image: "excite/wafer.png"
@@ -56,7 +56,7 @@ One of the most exciting developments has been the work done to integrate [OpenE
 * The [Tiny Tapeout 3D viewer](https://gds-viewer.tinytapeout.com/?model=https%3A%2F%2Fshuttle-assets.tinytapeout.com%2Ftt07%2Ftt_um_rnunes2311_12bit_sar_adc%2Ftt_um_rnunes2311_12bit_sar_adc.oas&process=SKY130) has become the standard way to visualise GDS and recently got some new features including cross section views, animated rotation and layer expansion.
 * Alex created a [fantastic 3D simulator](https://znah.net/tt09/) that shows digital designs running in the browser.
 
-[![simulation](/excite/simulation.png)](https://znah.net/tt09/))
+[![simulation](/excite/simulation.png)](https://znah.net/tt09/)
 
 Open tools allow easier integration of machine learning, and Andrew Kahng has continued to [make improvements with synthesis and routing](https://arxiv.org/pdf/2506.08332?).
 
@@ -83,7 +83,7 @@ We also have a growing collection of analog IP, covering ADC, DAC, bandgap, opam
 
 I [predicted that 2025](https://www.zerotoasiccourse.com/post/year_update_2024/) would be the year when we'd start seeing more radio projects, so it's been satisfying to see Sylvain's [SDR](https://hackaday.com/2025/02/11/a-tiny-tapeout-sdr/) experiment and a [WSPR transmitter](https://tinytapeout.com/chips/ttsky25b/tt_um_TinyWhisper) from a Austrian university collaboration getting taped out.
 
-[![WSPR layout](/excite/wspr.png)](https://tinytapeout.com/chips/ttsky25b/tt_um_TinyWhisper))
+[![WSPR layout](/excite/wspr.png)](https://tinytapeout.com/chips/ttsky25b/tt_um_TinyWhisper)
 
 Having said that we won't see commercial chips until we have more IP, I think there are some exceptions: security and retro. The [HEP](https://www.ihp-microelectronics.com/news/detail/hep) and [Open Titan](https://www.electronicdesign.com/blogs/the-briefing/article/55038396/electronic-design-open-for-business-open-source-silicon) security implementations and the open source [Z80](https://hackaday.com/2024/04/28/the-z80-is-dead-long-live-the-free-z80/) replacement are all good candidates.
 
@@ -103,7 +103,7 @@ We saw the first real silicon art from [Bleeptrack](https://bleeptrack.de/), who
 
 Just around the corner we have the first [open source silicon in space](https://www.linkedin.com/feed/update/urn:li:activity:7396173179930619904/), with a partnership between BME university in Hungary and participants of Tiny Tapeout 6. The chip will ride on a [pocketqube](https://en.wikipedia.org/wiki/PocketQube) satellite in low earth orbit and run a series of experiments testing the chip.
 
-![rocket](/excite/rocket.png)
+[![rocket](/excite/rocket.png)](https://nextspaceflight.com/launches/details/7138/)
 
 On social media the most active place at the moment seems to be LinkedIn, with many people posting their projects and showing off working silicon.
 
