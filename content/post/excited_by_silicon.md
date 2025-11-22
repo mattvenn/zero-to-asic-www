@@ -77,11 +77,15 @@ Progress has been slow but steady, and we can expect to see more and higher qual
 
 We already have quite a large library from the 1000+ projects taped out over at the [Tiny Tapeout Index](https://github.com/TinyTapeout/tinytapeout-index). There you can search by author, title, description, and poll the [feedback](https://app.tinytapeout.com/api/shuttles/tt08/feedback) to check the design's test status.
 
-Sylvain Munaut has been busy working on ROMs and SRAMs that have been utilised by projects like the [uLinux capable RISC-V](https://tinytapeout.com/chips/ttsky25b/tt_um_kianv_rv32_regfile)  and the [TV-B-Gone](https://tinytapeout.com/chips/ttsky25b/tt_um_tv_b_gone_rom).
+Sylvain Munaut has been busy working on ROMs and SRAMs that have been utilised by projects like the [uLinux capable RISC-V](https://tinytapeout.com/chips/ttsky25b/tt_um_kianv_rv32_regfile) and the [TV-B-Gone](https://tinytapeout.com/chips/ttsky25b/tt_um_tv_b_gone_rom).
 
 We also have a growing collection of analog IP, covering ADC, DAC, bandgap, opamps etc. For a list of all Tiny Tapeout analog designs up to September 2025 check [here](https://gist.github.com/urish/34291f0533671b9de7c19736adb774f4). One notably missing element is non volatile memory.
 
-I [predicted that 2025](https://www.zerotoasiccourse.com/post/year_update_2024/) would be the year when we'd start seeing more radio projects, so it's been satisfying to see Sylvain's [SDR](https://hackaday.com/2025/02/11/a-tiny-tapeout-sdr/) experiment and a [WSPR transmitter](https://tinytapeout.com/chips/ttsky25b/tt_um_TinyWhisper) from a Austrian university collaboration getting taped out.
+An additional challenge for analog is qualifying the silicon. Does it meet the specifications? These measurements can often be challenging to make, or require expensive equipment. 
+
+At volume, the percentage of correctly working designs, or yield, becomes important. Right now, yield isn't a priority for open source IP authors, and it's unclear who will have the incentive to address it.
+
+I [predicted that 2025](https://www.zerotoasiccourse.com/post/year_update_2024/) would be the year when we'd start seeing more radio projects, so it's been satisfying to see Sylvain's [SDR](https://hackaday.com/2025/02/11/a-tiny-tapeout-sdr/) experiment and a [WSPR transmitter](https://tinytapeout.com/chips/ttsky25b/tt_um_TinyWhisper) from a Austrian and German university collaboration getting taped out.
 
 [![WSPR layout](/excite/wspr.png)](https://tinytapeout.com/chips/ttsky25b/tt_um_TinyWhisper)
 
