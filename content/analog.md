@@ -9,10 +9,6 @@ type: page
 layout: single
 ---
 
-# Save $150 until Monday 1st December!
-
-Apply the code Z2ABLACK25 at checkout to claim one of 40 available discounts.
-
 {{< youtube wM4cobfjMMQ >}}
 
 ## Analog ticket options {#tickets}

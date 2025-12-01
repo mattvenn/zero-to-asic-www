@@ -12,10 +12,6 @@ aliases:
     - /index
 ---
 
-# Save $150 until Monday 1st December!
-
-Apply the code Z2ABLACK25 at checkout to claim one of 40 available discounts.
-
 {{< youtube GjEnA3LUDdo >}}
 
 ## Digital ticket options {#tickets}
