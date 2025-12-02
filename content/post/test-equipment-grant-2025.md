@@ -19,6 +19,7 @@ I struggled with the cost of hardware development for years, and when someone do
 
 > "Thanks so much to Matt's grant! I was able to get a Digilent Analog Discovery, and it quickly became one of my go-to workshop tools. Having the ability to see voltage signals, capture waveforms, and measure impedance made a huge difference: no more guessing from vague multimeter readings! It really helped me dive deeper and accelerate my projects!" Guillaume.
 
+> "I am very grateful to Matt and for the opportunity provided by the “Test Equipment Grant 2024.” I was able to obtain an Analog Discovery, which has become a portable, multipurpose tool in the laboratory. I frequently perform impedance spectroscopy measurements, even at frequencies close to one megahertz, with ease." Edwin.
 
 # Limitations
 
@@ -42,3 +43,4 @@ I will review your application and contact you via email before the 5th of Decem
 
 > "I vividly remember taking up the subject of communication systems and somewhat struggling with the practical or hands-on component of it. Not because I lacked interest or intuition, but because writing codes and running simulations on MATLAB felt dull and boring; it created no waves in the air and certainly not in my mind — felt like a grey loop of effort without spark . But thanks to the test equipment grant by Matt Venn, the entire subject went from dull and boring to fun and scoring." Ram.
 
+> "I really appreciated what you invested, and it actually inspired me to go much deeper into Electronics this year, buying an Oscilloscop, an Megaohm Meter, a Bench Lab Power Supply and an LCR-Meter, to allow me to work even better on Electronics, especially LED circuits." Ruben.
