@@ -1,5 +1,5 @@
 ---
-title: "Zero to ASIC course Ticket Grant"
+title: "Zero to ASIC course grant"
 date: 2023-01-02T08:00:00+01:00
 tags: ["ASIC", "course", "grant"]
 images: ['maximo_render_3.jpeg']
@@ -10,9 +10,11 @@ I am excited to introduce a grant for the Zero to ASIC digital course.
 
 The grant will provide a [Silicon-level ticket](/#tickets) for selected participants. Two grants will be awarded per month.
 
+The grant is for people who are unable to pay the full price, please only apply if you need it.
+
 ## Course goals
 
-This course aims to revolutionize open-source silicon by training engineers, hobbyists and enthusiasts to make their own ASICs. During the course, you will design a circuit that will be submitted to the Google lottery MPW to be manufactured in silicon!
+This course aims to revolutionize open-source silicon by training engineers, hobbyists and enthusiasts to make their own ASICs. During the course, you will design a circuit that will be submitted to [Tiny Tapeout](https://tinytapeout.com) to be manufactured in silicon!
 
 ## Participation Requirements
 
