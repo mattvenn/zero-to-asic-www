@@ -39,3 +39,6 @@ I struggled with the cost of hardware development for years, and when someone do
 [Apply for the grant here](https://forms.gle/rLJeSPmcFwu34CBNA).
 
 I will review your application and contact you via email before the 5th of December.
+
+> "I vividly remember taking up the subject of communication systems and somewhat struggling with the practical or hands-on component of it. Not because I lacked interest or intuition, but because writing codes and running simulations on MATLAB felt dull and boring; it created no waves in the air and certainly not in my mind — felt like a grey loop of effort without spark . But thanks to the test equipment grant by Matt Venn, the entire subject went from dull and boring to fun and scoring." Ram.
+
