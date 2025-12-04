@@ -17,6 +17,8 @@ I struggled with the cost of hardware development for years, and when someone do
 
 [Last year I awarded 10 grants](https://www.zerotoasiccourse.com/post/test-equipment-grant/) to people all over the world. This year I'm going to piggyback on Digilent's Cyber Week sale, and cover up to 75% of the cost of the [Digilent Analog Discovery 3](https://digilent.com/shop/analog-discovery-3/).
 
+This grant is for people who would otherwise not be able to afford test equipment.
+
 > "Thanks so much to Matt's grant! I was able to get a Digilent Analog Discovery, and it quickly became one of my go-to workshop tools. Having the ability to see voltage signals, capture waveforms, and measure impedance made a huge difference: no more guessing from vague multimeter readings! It really helped me dive deeper and accelerate my projects!" Guillaume.
 
 > "I am very grateful to Matt and for the opportunity provided by the “Test Equipment Grant 2024.” I was able to obtain an Analog Discovery, which has become a portable, multipurpose tool in the laboratory. I frequently perform impedance spectroscopy measurements, even at frequencies close to one megahertz, with ease." Edwin.
