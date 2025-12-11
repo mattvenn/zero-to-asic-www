@@ -1,7 +1,7 @@
 ---
 title: "Full Analog Course Content"
 description: "What will I learn on the Analog Course?"
-date: 2021-07-14T15:41:50+02:00
+date: 2025-09-14T15:41:50+02:00
 featured_image: 'analog_background.png'
 image_pos: 0% 50%
 tags: ["analog", "course"]
