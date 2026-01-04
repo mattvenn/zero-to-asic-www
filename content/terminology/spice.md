@@ -13,4 +13,4 @@ Here's an [example spice simulation file](https://github.com/mattvenn/magic-inve
 
 And here's a nice demo of me showing how a flip-flop works by simulating a Sky130 D type flip flop with SPICE.
 
-{{< youtube id="5PRuPVIjEcs?start=621" >}}
+{{< youtube id="5PRuPVIjEcs" start=621 >}}
