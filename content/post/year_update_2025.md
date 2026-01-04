@@ -2,8 +2,8 @@
 title: "Review of 2025 and goals for 2026"
 date: 2026-01-04T14:24:44+01:00
 tags: ["ASIC", "course" ]
-images: ["keepcalmandmakeasics.png"]
-featured_image: "keepcalmandmakeasics.png"
+images: ["keepcalmandmakeasics.jpeg"]
+featured_image: "keepcalmandmakeasics.jpeg"
 image_pos: 0% +50%
 description: ""
 ---
@@ -12,7 +12,7 @@ For the first time, open silicon wasn’t just a niche experiment in 2025 - it w
 
 Efabless [going out of business](https://www.linkedin.com/posts/tinytapeout_were-very-sad-to-hear-that-efabless-corporation-activity-7301638170297720832-n7Ru) at the end of March hit the community like a hammer. They weren’t just an MPW provider - they offered hundreds of packaged parts with no NDAs, great pricing, and a level of openness that was rare in silicon. Losing them left hundreds of designs, including 500 Tiny Tapeout projects from [TT08](https://tinytapeout.com/chips/tt08/) and [TT09](https://tinytapeout.com/chips/tt09), seemingly stuck in fabrication limbo.
 
-![keep calm and make asics](/keepcalmandmakeasics.png)
+![keep calm and make asics](/keepcalmandmakeasics.jpeg)
 
 The vacuum left by Efabless didn’t last long. Within months, new fabs and MPW options appeared - Tim Ansell launched[ wafer.space](http://wafer.space), Jeff and Mohammed (ex-Efabless) started[ ChipFoundry.io](http://ChipFoundry.io), and Cadence kicked off a SKY130 shuttle. At the same time, community infrastructure strengthened: OpenLane became LibreLane under FOSSi stewardship, and[ fossi-chat.org](http://fossi-chat.org) replaced the old Slack. 
 
@@ -37,7 +37,9 @@ I also started a[ weekly stream](https://www.youtube.com/playlist?list=PLyynFETm
 
 #### Tiny Tapeout
 
-Even with the bumpy start of the year, [Tiny Tapeout](https://tinytapeout.com/chips) sent over a thousand designs across 6 chips to 3 different fabs, including our first test chips for the GF180mcu process. Many of those designs came from high schoolers - attendees of my exciting and engaging Tiny Tapeout workshops.
+Even with the bumpy start of the year, [Tiny Tapeout](https://tinytapeout.com/chips) sent over a thousand designs across 6 chips to 3 different fabs, including our first test chips for the GF180mcu process. Many of those designs came from high schoolers and students - attendees of my exciting and engaging Tiny Tapeout workshops.
+
+![denmark workshop](/denmark_workshop.jpg)
 
 At the same time those young people were making their first tapeouts, the Tiny Tapeout annual survey showed growing numbers of people from industry quietly taking advantage of cheap and NDA free tapeouts.
 
@@ -61,7 +63,7 @@ With TT08 chips assumed lost to the silicon graveyard, it was fantastic news whe
 
 One of the lessons we learned through exploring other MPW options was how expensive packaging is. It can easily be the same price as the die itself! A cheaper method is Chip on Board (CoB), which we have continued to explore with this stunning variant of the TT08 chips.
 
-![cob](/2025_cob.png)
+![cob](/2025_cob.jpeg)
 
 Apparently, the logical next step after chip-on-board is chip-in-orbit. After a fruitful collaboration with BME University in Hungary and their HUNITY PocketQube satellite platform. It was launched by SpaceX’s transporter 15 on November 28th. 
 
