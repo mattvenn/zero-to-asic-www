@@ -41,7 +41,7 @@ Even with the bumpy start of the year, [Tiny Tapeout](https://tinytapeout.com/ch
 
 ![denmark workshop](/denmark_workshop.jpg)
 
-At the same time those young people were making their first tapeouts, the Tiny Tapeout annual survey showed growing numbers of people from industry quietly taking advantage of cheap and NDA free tapeouts.
+At the same time those young people were making their first tapeouts, the Tiny Tapeout annual survey showed growing numbers of people from industry taking advantage of cheap, NDA free tapeouts.
 
 ![tt survey](/tt_survey_2025_background.png)
 
@@ -61,11 +61,11 @@ We’ve all seen silicon doodles, the art that old school designers squeezed in 
 
 With TT08 chips assumed lost to the silicon graveyard, it was fantastic news when ChipFoundry bought the Efabless IP, finished the packaging of CI2409 and sent us chips. It gave us the chance to judge the demoscene competition, which is close to complete as I write this. There are some mind blowing entries and I’m looking forward to sharing the winners soon. 
 
-One of the lessons we learned through exploring other MPW options was how expensive packaging is. It can easily be the same price as the die itself! A cheaper method is Chip on Board (CoB), which we have continued to explore with this stunning variant of the TT08 chips.
+One of the lessons we learned through exploring other MPW options was how expensive packaging is. It can easily be the same price as the die itself! A cheaper method is Chip on Board (CoB), which we have continued to explore with this [stunning variant of the TT08 chips](https://store.tinytapeout.com/products/TT08-Development-Kit-Chip-on-Board-edition-p797024321).
 
 ![cob](/2025_cob.jpeg)
 
-Apparently, the logical next step after chip-on-board is chip-in-orbit. After a fruitful collaboration with BME University in Hungary and their HUNITY PocketQube satellite platform. It was launched by SpaceX’s transporter 15 on November 28th. 
+Apparently, the logical next step after chip-on-board is chip-in-orbit. After a fruitful collaboration with BME University in Hungary and their [HUNITY](https://gnd.bme.hu/hunity) PocketQube satellite platform. It was launched by SpaceX’s transporter 15 on November 28th. 
 
 {{< youtube id=KVwK8GkDfow start=1813 >}}
 
@@ -82,8 +82,6 @@ What stopped that happening was people showing up anyway. So I want to start wit
 
 And then there’s the wider group who quietly made the impossible possible this year:
 
-
-
 * [SwissChips](https://swisschips.ethz.ch/) - providing free tapeouts to Swiss students and funding IHP development work.
 * [Texplained](https://texplained.com/) - providing high quality [chip imaging](https://tinytapeout.com/decap/tt07) and reverse engineering services.
 * [IHP](https://www.ihp-microelectronics.com/) - providing access to open source silicon manufacturing here in Europe, and letting me interview their scientists and film in their cleanroom.
@@ -92,7 +90,6 @@ And then there’s the wider group who quietly made the impossible possible this
 * [Tillitis](https://www.tillitis.se/) and [Wit](https://www.wit.com/) for sponsoring development work to support GF180mcu on Tiny Tapeout.
 * [Synopsys](https://www.synopsys.com/) and Patrick Haspell for early access to GF180mcu and sponsoring Tiny Tapeout workshops. 
 * A collaboration with [Digilent](https://digilent.com/) allowed me to [subsidize 75% of the cost of the AD3](https://www.zerotoasiccourse.com/post/test-equipment-grant-2025/), an excellent device for people to get started with real world, practical electronics experiments. 
-
 
 ### Goals for 2026
 
