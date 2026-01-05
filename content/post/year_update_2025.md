@@ -10,13 +10,13 @@ description: ""
 
 For the first time, open silicon wasn’t just a niche experiment in 2025 - it was a real ecosystem spanning three fabs and thousands of designs. And then one company collapsed and hundreds of chips effectively disappeared overnight.
 
-Efabless [going out of business](https://www.linkedin.com/posts/tinytapeout_were-very-sad-to-hear-that-efabless-corporation-activity-7301638170297720832-n7Ru) at the end of March hit the community like a hammer. They weren’t just an MPW provider - they offered hundreds of packaged parts with no NDAs, great pricing, and a level of openness that was rare in silicon. Losing them left hundreds of designs, including 500 Tiny Tapeout projects from [TT08](https://tinytapeout.com/chips/tt08/) and [TT09](https://tinytapeout.com/chips/tt09), seemingly stuck in fabrication limbo.
+Efabless [going out of business](https://www.linkedin.com/posts/tinytapeout_were-very-sad-to-hear-that-efabless-corporation-activity-7301638170297720832-n7Ru) at the end of February hit the community like a hammer. They weren’t just an MPW provider - they offered hundreds of packaged parts with no NDAs, great pricing, and a level of openness that was rare in silicon. Losing them left hundreds of designs, including 500 Tiny Tapeout projects from [TT08](https://tinytapeout.com/chips/tt08/) and [TT09](https://tinytapeout.com/chips/tt09), seemingly stuck in fabrication limbo.
 
 ![keep calm and make asics](/keepcalmandmakeasics.jpeg)
 
 The vacuum left by Efabless didn’t last long. Within months, new fabs and MPW options appeared - Tim Ansell launched[ wafer.space](http://wafer.space), Jeff and Mohammed (ex-Efabless) started[ ChipFoundry.io](http://ChipFoundry.io), and Cadence kicked off a SKY130 shuttle. At the same time, community infrastructure strengthened: OpenLane became LibreLane under FOSSi stewardship, and[ fossi-chat.org](http://fossi-chat.org) replaced the old Slack. 
 
-Thanks to a combination of foresight and luck, Tiny Tapeout had already started working with IHP as part of the [SwissChips](https://swisschips.ethz.ch/) initiative, so we were able to combine all the lost designs onto the absolutely packed [TTIHP25a](https://tinytapeout.com/chips/ttihp25a/). 
+Thanks to a combination of foresight and luck, Tiny Tapeout had already started working with IHP as part of the [SwissChips](https://swisschips.ethz.ch/) initiative, so we were able to combine most of the lost designs onto the absolutely packed [TTIHP25a](https://tinytapeout.com/chips/ttihp25a/). 
 
 With the existential crisis out of the way, 2025 quietly turned into a very productive year.
 
@@ -78,7 +78,7 @@ None of this happens in a vacuum - even when some of it literally leaves the pla
 
 It would have been easy to lose momentum and wallow in despondency - I had more than one late night wondering whether we’d just watched years of work evaporate.
 
-What stopped that happening was people showing up anyway. So I want to start with a big thanks to the Zero to ASIC course team, the Tiny Tapeout team and the FOSSi foundation team.
+What stopped that happening was people showing up anyway. So I want to start with a big thanks to the Zero to ASIC, Tiny Tapeout and FOSSi teams and communities.
 
 And then there’s the wider group who quietly made the impossible possible this year:
 
