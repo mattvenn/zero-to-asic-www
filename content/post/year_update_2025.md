@@ -37,7 +37,7 @@ I also started a[ weekly stream](https://www.youtube.com/playlist?list=PLyynFETm
 
 #### Tiny Tapeout
 
-Even with the bumpy start of the year, [Tiny Tapeout](https://tinytapeout.com/chips) sent over a thousand designs across 6 chips to 3 different fabs, including our first test chips for the GF180mcu process. Many of those designs came from high schoolers and students - attendees of my exciting and engaging Tiny Tapeout workshops.
+Even with the bumpy start of the year, [Tiny Tapeout](https://tinytapeout.com/chips) sent over a thousand designs across 12 chips to 3 different fabs, including our first test chips for the GF180mcu process. Many of those designs came from high schoolers and students - attendees of my exciting and engaging Tiny Tapeout workshops.
 
 ![denmark workshop](/denmark_workshop.jpg)
 
@@ -95,7 +95,7 @@ And then there’s the wider group who quietly made the impossible possible this
 
 * My focus this year is to see the 1 student 1 chip initiative spread from SwissChips across Europe. If you’re a student then you should be able to get a free tapeout.
 * This year we will enable workshop attendees to test their designs on an FPGA. Development boards have already been designed and manufacture is currently under way.
-* Demand for Tiny Tapeout workshops is so high, the next step is to make an online or hybrid version. Expect the first ones to happen early in 2026, timed to hit the TTSKY26a and TTIHP26a tapeouts.
+* Demand for Tiny Tapeout workshops is so high, I want find people to lead them and also to try an online version. Expect the first online versions to happen early in 2026, timed to hit the TTSKY26a and TTIHP26a tapeouts.
 * My newsletter is due an update, and I’m also going to commit to sending an update at least once a month. If you want to follow along, [sign up here](https://zerotoasiccourse.com/newsletter/).
 
 2026 is going to bring more accessibility, better tools, more first-time designers, and lots of surprises from the community!
