@@ -1,7 +1,7 @@
 ---
 title: "Review of 2024 and aims for 2025"
 date: 2025-01-14T10:47:24+01:00
-tags: ["ASIC", "course" ]
+tags: ["ASIC", "Year Review" ]
 images: ["year_update_2024.png"]
 featured_image: "year_update_2024.png"
 image_pos: 0% +10%

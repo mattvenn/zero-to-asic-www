@@ -1,7 +1,7 @@
 ---
 title: "Review of 2025 and goals for 2026"
 date: 2026-01-04T14:24:44+01:00
-tags: ["ASIC", "course" ]
+tags: ["ASIC", "Year Review" ]
 images: ["keepcalmandmakeasics.jpeg"]
 featured_image: "keepcalmandmakeasics.jpeg"
 image_pos: 0% +50%
