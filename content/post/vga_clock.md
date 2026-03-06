@@ -9,7 +9,7 @@ This is one of the first projects I [hardened](/terminology/harden) using [OpenL
 
 News update: my clock works! And you can [buy a kit here](https://store.tinytapeout.com/products/TT03p5-Development-Kit-VGA-PMOD-p655428056)!
 
-{{< twitter user="matthewvenn" id="1509491474722967553" >}}
+{{< x user="matthewvenn" id="1509491474722967553" >}}
 
 It shows the time on an LCD panel. It will be part of my first [tapeout](/terminology/tapeout).
 

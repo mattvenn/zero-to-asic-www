@@ -146,6 +146,6 @@ I put together a video to describe the process:
 
 Course participant Maximo put together some lovely images here by converting the GDS to STL and then rendering inside blender.
 
-{{< tweet user="maxiborga" id="1408126991459553284" >}}
+{{< x user="maxiborga" id="1408126991459553284" >}}
 
-{{< tweet user="maxiborga" id="1412801867302805504" >}}
+{{< x user="maxiborga" id="1412801867302805504" >}}

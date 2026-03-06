@@ -13,7 +13,7 @@ it would be a great project to tapeout on MPW6.
 
 I wrote about the process on twitter:
 
-{{< twitter user="matthewvenn" id="1526591700122185728" >}}
+{{< x user="matthewvenn" id="1526591700122185728" >}}
 
 As usual with ASIC development, it's much faster to say what you want to do than to actually do it!
 
