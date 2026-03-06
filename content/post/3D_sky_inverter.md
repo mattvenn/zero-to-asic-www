@@ -34,7 +34,7 @@ The poly silicon gate is what controls the P [MOSFET](/terminology/mosfet) on th
 
 The gate is 150nm wide, or at 30000:1, 4.5mm.
 
-The input to the inverter is the **A** port, on the local interconnect layer. When the input is high, the top P MOSFET is off and the botton N MOSFET is on.
+The input to the inverter is the **A** port, on the local interconnect layer. When the input is high, the top P MOSFET is off and the bottom N MOSFET is on.
 
 ![poly](/3Dcell/poly_li_a.jpg)
 
