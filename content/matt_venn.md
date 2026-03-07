@@ -10,7 +10,7 @@ tags: ["course"]
 
 Making your first chip design a reality is what I do - I can guide you through the design process all the way through to getting it manufactured.
 
-I was recently awarded the [Special Recognition for Skills and Education](/post/EOSA_award) by the European Open Source Academy for my work in microelectronics education.
+I was recently awarded the [Special Recognition for Skills and Education](/post/eosa_award) by the European Open Source Academy for my work in microelectronics education.
 
 ### How I got involved with open source silicon
 
