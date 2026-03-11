@@ -1,4 +1,4 @@
-@media screen and (min-width: 1024px){
+@media screen and (min-width: 768px){
     .d-lg{
         display: block;
     }
@@ -8,7 +8,7 @@
     }
 }
 
-@media screen and (max-width: 1023px){
+@media screen and (max-width: 767px){
     .d-lg{
         display: none;
     }
@@ -20,6 +20,23 @@
     .zero-menuicon-label {
         top: 12px;
     }    
+}
+
+.header-menu {
+    margin-left: 1.5rem;
+}
+
+// Hide screen-reader-only nav anchor labels visually at all breakpoints
+.zero-menuanchor-label {
+    position: absolute;
+    clip: rect(1px, 1px, 1px, 1px);
+    -webkit-clip-path: inset(0px 0px 99.9% 99.9%);
+    clip-path: inset(0px 0px 99.9% 99.9%);
+    overflow: hidden;
+    height: 1px;
+    width: 1px;
+    padding: 0;
+    border: 0;
 }
 
 // MOBILE MENU
@@ -34,8 +51,7 @@ main{
     background: #f4f4f4;
 }
 
-@media screen and (min-width: 320px) and (max-width: 768px) and (orientation: portrait),
-(min-width: 320px) and (max-width: 896px) and (orientation: landscape) {
+@media screen and (min-width: 320px) and (max-width: 768px) and (orientation: portrait){
     .top-row__hamb-col {
         flex-basis: 25%;
         display: inline-block;
@@ -207,18 +223,6 @@ main{
         width: 1px;
         height: 1px;
         z-index: 10;
-
-        &-label{
-            position: absolute;
-            clip: rect(1px, 1px, 1px, 1px);
-            -webkit-clip-path: inset(0px 0px 99.9% 99.9%);
-            clip-path: inset(0px 0px 99.9% 99.9%);
-            overflow: hidden;
-            height: 1px;
-            width: 1px;
-            padding: 0;
-            border: 0;
-        }
     }
 
 
