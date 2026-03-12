@@ -1,6 +1,6 @@
 ---
 title: Zero to ASIC Digital Course
-description: Learn to design and manufacture your own custom digital ASIC using open source tools. Hands-on projects, guaranteed chip manufacture via TinyTapeout, and expert support from Matt Venn.
+description: Learn to design and manufacture your own custom digital ASIC using open source tools. Hands-on projects, guaranteed chip manufacture via Tiny Tapeout, and expert support from Matt Venn.
 images: ['maximo_render_3.jpeg']
 featured_image: 'maximo_render_3.jpeg'
 image_pos: 0% +10%
@@ -12,7 +12,7 @@ aliases:
     - /index
 course:
   name: Zero to ASIC Digital Course
-  description: Learn to design and manufacture your own custom digital ASIC using open source tools. Hands-on projects, guaranteed chip manufacture via TinyTapeout, and expert support from Matt Venn.
+  description: Learn to design and manufacture your own custom digital ASIC using open source tools. Hands-on projects, guaranteed chip manufacture via Tiny Tapeout, and expert support from Matt Venn.
   educational_level: Beginner
   workload: PT4H
   teaches:
@@ -21,7 +21,7 @@ course:
     - Logic synthesis
     - Place and route
     - Design rule checking
-    - Chip tapeout with TinyTapeout
+    - Chip tapeout with Tiny Tapeout
   prerequisites:
     - Basic Linux command line experience
     - Some programming experience
@@ -80,7 +80,7 @@ Watch more [in depth feedback here](https://www.youtube.com/watch?v=TR8LiCWoOdg&
     -   Weekly course hangout call.
     -   1 to 1 office hours with Matt: access to expert help on the Boron and Arsenic level tickets.
 -   Asynchronous - do in your own time.
--   Guaranteed ASIC manufacture with [TinyTapeout](https://www.tinytapeout.com).
+-   Guaranteed ASIC manufacture with [Tiny Tapeout](https://www.tinytapeout.com).
 -   High resolution set of digital images of the decapped ASIC - see [FAQ](#asic-def).
 -   Access to the course materials for the lifetime of the course.
 -   Course completion certificate.
@@ -105,7 +105,7 @@ I'm so confident you will love the course, if for any reason you are unhappy you
 
 #### Will my design definitely get manufactured? {#asic-def}
 
-Yes! We are now using [TinyTapeout](https://www.tinytapeout.com) to guarantee ASIC manufacture. 
+Yes! We are now using [Tiny Tapeout](https://www.tinytapeout.com) to guarantee ASIC manufacture. 
 
 * Silicon ticket includes [1 free tile](https://tinytapeout.com/faq/#how-big-can-my-design-be). PCB mounted chip is currently $150 extra.
 * Boron ticket includes 1 free tile, and 1 PCB mounted chip.
@@ -133,7 +133,7 @@ You can take as long as you want with the course materials. Office hours expire 
 
 #### When do I need to submit my final design?
 
-See [TinyTapeout](https://www.tinytapeout.com) for the next shuttle closing date.
+See [Tiny Tapeout](https://www.tinytapeout.com) for the next shuttle closing date.
 
 [Back to top](#tickets)
 
