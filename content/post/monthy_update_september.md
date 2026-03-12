@@ -53,7 +53,7 @@ We've got some really great upgrades to Wokwi, so thanks Uri for that. We can no
 ## Rendering GDS files in your browser or with Blender
 We've got a great feature added by Maximo and Proppy that now lets you generate really cool 3D interactive viewers. After your [GDS](/terminology/gds/) is generated, the rendering happens in the cloud via a GitHub action. In the [interactive viewer](https://mattvenn.github.io/wokwi-verilog-gds-test/viewer/tinytapeout.html), you can check out the stats, what standard cells are used as you hover over them, you can see what the cell is, you can turn on and off the fill layer, turn off unused cells and much more, all within your browser! 
 
-And talking of rendering, I finally got around to doing a [how-to video with Maximo](https://www.youtube.com/watch?v=gBjQI3GrBHU&ab_channel=ZeroToASICCourse). We looked at how you can turn your GDS into STL files import them into blender and then make amazing renders. Thanks very much Maximo. For more info check out the [3D rendering blog post](/post/3Drendering/).
+And talking of rendering, I finally got around to doing a [how-to video with Maximo](https://www.youtube.com/watch?v=gBjQI3GrBHU&ab_channel=ZeroToASICCourse). We looked at how you can turn your GDS into STL files import them into blender and then make amazing renders. Thanks very much Maximo. For more info check out the [3D rendering blog post](/post/3drendering).
 
 {{< youtube gBjQI3GrBHU >}}
 

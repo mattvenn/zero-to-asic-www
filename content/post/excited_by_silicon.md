@@ -95,7 +95,7 @@ Having said that we won't see commercial chips until we have more IP, I think th
 
 Open Source doesn't work without community, and we have a solid foundation that's been growing steadily over the years.
 
-Following the Efabless closure, the [FOSSi foundation](https://fossi-foundation.org/) set up [fossi-chat.org](fossi-chat.org), which has become the central place to chat about open source EDA and silicon.
+Following the Efabless closure, the [FOSSi foundation](https://fossi-foundation.org/) set up [fossi-chat.org](https://fossi-chat.org), which has become the central place to chat about open source EDA and silicon.
 
 The recent Tiny Tapeout user survey showed not just amateurs and academics, but a growing proportion of industry using the platform. Tiny Tapeout's dedicated [community on Discord](https://tinytapeout.com/discord) now has over 3000 people.
 
