@@ -1,9 +1,16 @@
 ---
 title: "PDK"
 date: 2020-11-12T17:38:48+01:00
-description: "Process Design Kit"
+description: "A Process Design Kit (PDK) is a collection of files from a chip foundry that defines the fabrication rules, device models, and standard cells needed to design an ASIC for that process."
 images: ["stackup.png"]
 featured_image: "stackup.png"
+faq:
+  - q: "What is a PDK?"
+    a: "A PDK (Process Design Kit) is a library of files provided by a chip foundry that describes their specific fabrication process. It includes design rules, device models, standard cell libraries, SPICE models for simulation, and verification rule decks — everything a designer needs to create a chip that can be manufactured at that foundry."
+  - q: "What does a PDK contain?"
+    a: "A PDK typically contains: DRC (Design Rule Check) rules, LVS (Layout vs Schematic) rules, SPICE models for analog simulation, standard cell libraries with timing models, IO pad libraries, parameterized cells (pcells), and layer stack definitions."
+  - q: "What PDK is used for open source ASIC design?"
+    a: "The most widely used open source PDK is the SkyWater sky130 PDK, which describes SkyWater Technology's 130nm process node. It is freely available and is the PDK used by the Zero to ASIC Course and open source shuttle programs like Tiny Tapeout. More recently IHP130 and GF180 have been published and are now available at Tiny Tapeout."
 ---
 
 The Process Design Kit is a library of all the specifications that describe a particular factories' particular chip fabrication process. This often includes representations of the design rules and devices which can be used by particular implementation and verification tools that have been checked and approved by the fab. This may include software representations of items such as transistors which will be automatically laid out with the dimensions that meet the rules for the process (often called pcells for 'parameterized cells' - the designer says what size is wanted, the pcell does the rest).
@@ -39,13 +46,13 @@ The following is adapted from one of Tim Ansell's [slides](https://docs.google.c
 
 # Behavioural models
 
-This allows us to model analogue and digital components, for example different sizes of [MOSFET](/terminology/mosfet).
+This allows us to model analog and digital components, for example different sizes of [MOSFET](/terminology/mosfet).
 
 # Support IP
 
 * Input Output libraries
 
-# Analogue design
+# Analog design
 
 * [Spice](/terminology/spice) models
 
@@ -53,5 +60,3 @@ This allows us to model analogue and digital components, for example different s
 
 * [Standard cells](/terminology/standardcell)
 * Timing models - allow us to know how fast we can run our designs
-
-

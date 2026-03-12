@@ -3,6 +3,14 @@ title: "Die"
 date: 2020-11-13T10:31:34+01:00
 images: ["wafermap.svg"]
 featured_image: "wafermap.svg"
+description: A die is an individual IC cut from a silicon wafer after fabrication; each wafer yields hundreds or thousands of dies that are then packaged for use.
+faq:
+  - q: What is a semiconductor die?
+    a: A die is a single IC cut out of a silicon wafer using a diamond-edged saw. Each wafer is patterned with the same mask set to produce hundreds or thousands of copies, and these individual pieces are called dies (or dice).
+  - q: How is a die packaged after being cut from the wafer?
+    a: The die is often mounted to a leadframe with epoxy, then bondwires attach the die pads to the leadframe leads, and the whole assembly is encapsulated in injection-moulded plastic to make it larger and easier to handle.
+  - q: What happens to faulty dies after wafer slicing?
+    a: After separation, the dies are tested and the faulty ones are marked. Only non-faulty dies are then assembled into packages.
 ---
 
 The silicon [wafer](/terminology/wafer) is usually patterned with the [mask set](/terminology/maskset) to make hundreds or thousands of the same [IC](/terminology/ic). The circle below represents the wafer, the squares represent the copies of the maskset pattern exposed onto the wafer by the stepper. The light squares are completely within the wafer and thus may be functional chips, the others are only partial and so cannot be functional chips.

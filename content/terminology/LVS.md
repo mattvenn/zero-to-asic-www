@@ -1,9 +1,16 @@
 ---
 title: "LVS"
 date: 2020-11-12T17:43:29+01:00
-description: "Layout vs Schematic"
+description: Layout vs Schematic (LVS) is a verification step that confirms the physical chip layout matches the intended netlist from synthesis, catching shorts and missing connections before manufacture.
 images: ["lvs.png"]
 featured_image: "lvs.png"
+faq:
+  - q: What is Layout vs Schematic (LVS) verification?
+    a: LVS compares the netlist extracted from the final physical layout (GDS2) against the netlist produced by synthesis, verifying that the manufactured chip will match the designer's intended circuit.
+  - q: What tools are used for LVS in the LibreLane flow?
+    a: In LibreLane, Magic extracts the netlist from the layout, and a tool called Netgen compares that extracted netlist with the netlist from the synthesis step.
+  - q: What are common LVS errors when using LibreLane?
+    a: The most common LVS errors with LibreLane are power supplies not being connected for some reason, and short circuits introduced during routing.
 ---
 
 Layout vs Schematic (or LVS) is an important [verification](/terminology/verification) step.

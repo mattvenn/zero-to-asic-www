@@ -1,12 +1,19 @@
 ---
 title: "STA"
 date: 2020-11-12T17:43:21+01:00
-description: "Static Timing Analysis"
+description: Static Timing Analysis (STA) verifies that all data paths in a design meet setup and hold timing requirements without simulating every input combination, catching violations that could make a chip non-functional.
 images: ["sta.png"]
 featured_image: "sta.png"
+faq:
+  - q: What is Static Timing Analysis and why is it important?
+    a: STA checks that a design has no setup and hold violations by analysing timing paths without requiring full simulation. A failure here could cost you a respin of your ASIC, making it one of the most important verification steps.
+  - q: What is the difference between a setup violation and a hold violation?
+    a: A setup violation means the circuit runs too slowly to work at the given clock rate and may be fixed by slowing the clock. A hold violation means the circuit will fail at any clock speed and cannot be fixed by slowing the clock down.
+  - q: What tool does LibreLane use for STA?
+    a: LibreLane uses OpenSTA, which finds the fastest and slowest data paths and checks setup and hold timings. By default it targets a clock frequency of 100MHz (10ns period), and it is called five times during a typical LibreLane run.
 ---
 
-Static Timing Analysis (STA) checks that the design has no setup and hold violations. This is very important, and a failure here could cost you a respin of your ASIC. It is a way of verifying timing quickly without the complexity and time taken to find such issues using back-annotated digital (or even analogue) simulations. Setup violations imply that the circuit runs too slowly to work at the given clock rate, hold violations imply the circuit will fail at any clock speed.
+Static Timing Analysis (STA) checks that the design has no setup and hold violations. This is very important, and a failure here could cost you a respin of your ASIC. It is a way of verifying timing quickly without the complexity and time taken to find such issues using back-annotated digital (or even analog) simulations. Setup violations imply that the circuit runs too slowly to work at the given clock rate, hold violations imply the circuit will fail at any clock speed.
 
 When the input clock rises, a flip-flop will capture and store the incoming data. An ideal flip-flop would sample data exactly on the rising clock and immediately have that data available on the output and be insensitive to the input value until the next rising clock edge.
 

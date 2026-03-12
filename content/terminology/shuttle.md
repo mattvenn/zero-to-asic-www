@@ -1,9 +1,16 @@
 ---
 title: "Shuttle"
-description: "free ASIC service"
+description: A chip shuttle is a shared fabrication run (multi project wafer) where multiple designers submit designs to be manufactured together, spreading the cost of the mask set across all participants.
 date: 2020-11-12T17:44:07+01:00
 images: ["wafer.jpg"]
 featured_image: "wafer.jpg"
+faq:
+  - q: What is a chip shuttle service?
+    a: A shuttle service is the same as a multi project wafer — a shared fabrication run where multiple designers submit their designs to be manufactured together on one wafer, sharing the cost of the mask set.
+  - q: What is the Caravel harness used in the ChipFoundry shuttle?
+    a: In the ChipFoundry Shuttle designs can be placed within the user project area of the Caravel harness, which includes its own RISCV processor. This makes it easier to bring up and debug designs, at the cost of some available area.
+  - q: What packaging did the Google shuttle provide?
+    a: The Google shuttle returned chips in Wafer Level Chip Scale Packaging (WLCSP) and later easier-to-handle QFN package format.
 ---
 
 A shuttle service is the same as a [multi project wafer](/terminology/mpw).

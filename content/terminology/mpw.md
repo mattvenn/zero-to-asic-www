@@ -3,6 +3,14 @@ title: "MPW"
 date: 2020-11-13T10:58:24+01:00
 images: ["mpw.jpg"]
 featured_image: "mpw.jpg"
+description: A Multi Project Wafer (MPW) reduces ASIC fabrication costs by sharing a single wafer — and its expensive mask set — across many different designs from multiple participants.
+faq:
+  - q: What is a Multi Project Wafer (MPW)?
+    a: An MPW is a wafer that carries many different designs simultaneously, so the Non Recurring Engineering (NRE) costs of making the mask set are shared between all the participants, making it much cheaper for each individual project.
+  - q: What is an example of an MPW program?
+    a: The Google shuttle run through Efabless is an example of an MPW, where many designers submit their chips to share a single Skywater wafer.
+  - q: How many MPW tapeouts has the Zero to ASIC course made?
+    a: Members of the course participated on all the Google sponsored MPWs until they were discontinued. Now all participants use Tiny Tapeout for manufacture, which is a multi project chip manufactured on an MPW.
 ---
 
 A Multi Project Wafer is used to reduce the cost of making an [ASIC](/terminology/asic).

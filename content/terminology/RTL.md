@@ -3,7 +3,14 @@ title: "RTL"
 date: 2020-11-12T17:43:56+01:00
 images: ["rtl.png"]
 featured_image: "rtl.png"
-description: Register Transfer Level
+description: Register Transfer Level (RTL) is a design methodology where data is processed in steps and buffered in registers between them, and also refers to the synthesizable subset of HDL that describes real hardware behaviour.
+faq:
+  - q: What does RTL mean in chip design?
+    a: RTL (Register Transfer Level) is a design methodology where data processing is split into smaller steps with the results buffered in registers (flip-flops) between them. As data flows between registers it is called register transfer level.
+  - q: What is the difference between RTL and HDL?
+    a: HDL (Hardware Description Language) can describe all sorts of things, including netlists, test harnesses, and stimuli. RTL refers specifically to the synthesizable subset of HDL that describes real hardware behaviour — not everything written in Verilog or VHDL is RTL.
+  - q: Why are registers used in the RTL design methodology?
+    a: For reasons of speed and debugging it makes sense to split up data processing into smaller steps and buffer the results in registers. This allows each stage to be analysed and verified independently.
 ---
 People often use the terms RTL and [HDL](/terminology/hdl) interchangably.
 

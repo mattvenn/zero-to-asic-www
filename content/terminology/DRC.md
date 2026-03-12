@@ -3,6 +3,14 @@ title: "DRC"
 date: 2020-11-12T17:42:51+01:00
 images: ["antenna-rule.png"]
 featured_image: "antenna-rule.png"
+description: Design Rule Check (DRC) is a set of manufacturing constraints from the PDK that verifies wire widths, spacing, gate dimensions, and antenna ratios are within the limits reliably producible by the foundry.
+faq:
+  - q: What does a Design Rule Check (DRC) verify?
+    a: DRC checks that MOSFET gates are the correct dimensions, metal layer wires are not too narrow or too close together, and that MOSFET gates with long connecting wires are protected from antenna effects. These rules describe the smallest features that can be reliably manufactured.
+  - q: What happens if DRC rules are violated?
+    a: Items drawn thinner than the rules may have gaps or break during production (opens), or cause yield risks where less than 100% of devices work. Items drawn too close together may short together or cause long-term reliability issues.
+  - q: How many DRC rules does the Skywater130 PDK have?
+    a: There are a few thousand rules in the Skywater130 PDK DRC, and the number of rules increases as the process node gets smaller.
 ---
 
 The Design Rule Check is part of the [PDK](/terminology/pdk). Both the [Magic](/terminology/magic) and [LibreLane](/terminology/librelane) tools make use of it.

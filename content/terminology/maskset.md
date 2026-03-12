@@ -3,6 +3,14 @@ title: "Maskset"
 date: 2020-11-12T17:42:33+01:00
 images: ["photomask.jpg"]
 featured_image: "photomask.jpg"
+description: A mask set is the complete collection of photomasks used in chip fabrication — one per layer — where each opaque plate with transparent patterns is used in a photolithographic step to build up the IC.
+faq:
+  - q: What is a photomask and what is a mask set?
+    a: A photomask is an opaque plate with holes or transparencies that allow light to shine through in a defined pattern. Several masks are used in turn during chip fabrication, each reproducing one layer of the design, and together they are called a mask set.
+  - q: How is a photomask physically made?
+    a: Masks are made from fused quartz with a chrome pattern deposited on the surface and then removed using lasers or ion beams. The pattern on the mask is typically 4 times larger than the image projected onto the wafer, so that the optical reduction makes the mask cheaper and dust less significant.
+  - q: How many masks are needed for the Skywater PDK?
+    a: The Skywater PDK has 33 different layers, so 33 different masks are needed. The masks must be extremely precisely made, which is why the whole set is so expensive.
 ---
 
 From [Wikipedia](https://en.wikipedia.org/wiki/Photomask):

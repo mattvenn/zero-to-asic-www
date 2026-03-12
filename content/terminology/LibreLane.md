@@ -1,10 +1,18 @@
 ---
 title: "LibreLane"
 date: 2020-11-12T17:39:49+01:00
+description: "LibreLane (formerly OpenLane) is an open source automated ASIC flow that takes RTL Verilog and produces GDS2 layout files ready for chip fabrication, using tools like Yosys, OpenROAD, and Magic."
 images: ["librelane-flow.png"]
 featured_image: "librelane-flow.png"
 aliases:
     - /terminology/openlane
+faq:
+  - q: What is LibreLane?
+    a: LibreLane is an open source automated ASIC toolchain that takes RTL (Verilog) as input and produces GDS2 layout files ready for chip fabrication. It orchestrates tools including Yosys for synthesis, OpenROAD for place and route, and Magic for DRC and layout.
+  - q: What is the difference between LibreLane and OpenLane?
+    a: LibreLane is the new name for OpenLane. After Efabless shut down in 2025, the project was transferred to the FOSSi Foundation and renamed LibreLane. It is the same open source ASIC flow, now maintained by the broader open source silicon community.
+  - q: What are the main steps in the LibreLane flow?
+    a: The LibreLane flow covers synthesis (Yosys), floorplanning, placement, clock tree synthesis, routing (OpenROAD), and sign-off checks including LVS, DRC, and static timing analysis. The output is a GDS2 file ready to submit to a foundry.
 ---
 
 LibreLane is an Open Source ASIC tool. You can download it from [here](https://github.com/librelane/librelane). 

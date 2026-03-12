@@ -3,6 +3,14 @@ title: "Place and Route"
 date: 2020-11-12T17:43:12+01:00
 images: ["placement-coarse.png"]
 featured_image: "placement-coarse.png"
+description: Place and route are two automated ASIC design steps that position standard cells on the die and then connect them with wiring on the metal layers to produce the final physical layout.
+faq:
+  - q: What is placement in the ASIC design flow?
+    a: Placement positions standard cells on the die in two steps. Coarse (global) placement puts cells in roughly the right places to minimise estimated wire length. Fine placement (legalisation) then aligns cells to the grid and eliminates overlaps while keeping wire length low.
+  - q: What is Clock Tree Synthesis (CTS) and why is it important?
+    a: CTS specially handles the clock and reset signals, which drive thousands of gates. It adds clock buffer cells to ensure the clock is strong enough, and minimises skew so that all flip-flops see the clock at nearly the same time. Too much skew can cause hold violations that make the chip non-functional at any clock speed.
+  - q: What routing steps happen after placement?
+    a: After placement, the power distribution network is routed first using thick horizontal metal rails. Then signal and clock routing is performed using techniques based around maze routing algorithms, potentially guided by a global routing analysis step.
 ---
 
 Place and Route are two steps in the automated process of turning some [HDL](/terminology/hdl) into [GDS2](/terminology/gds2) files.

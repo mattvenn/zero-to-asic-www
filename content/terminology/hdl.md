@@ -3,6 +3,14 @@ title: "HDL"
 date: 2020-11-13T11:58:32+01:00
 images: ["hdl.png"]
 featured_image: "hdl.png"
+description: A Hardware Description Language (HDL) is used to describe digital circuits in text form; common examples are Verilog and VHDL, which are then synthesised into netlists for chip or FPGA implementation.
+faq:
+  - q: What is a Hardware Description Language (HDL)?
+    a: An HDL is a language used to describe hardware in text form. Instead of drawing a circuit, you write what it does, for example describing an inverter as output = !input. Common HDLs include Verilog and VHDL, with higher-level alternatives like Amaranth, Chisel, and Spinal.
+  - q: How is designing hardware with an HDL different from programming a CPU?
+    a: Circuits described in HDL operate all at once — parallelism is natural and easy. A CPU executes instructions one at a time and requires multiple cores or interleaving for parallelism. If you want sequences in hardware, you must build a sequencer such as a state machine.
+  - q: What happens after you write your design in an HDL?
+    a: After writing your HDL design, you synthesise it into a netlist so it can be recreated using the actual building blocks available in the PDK.
 ---
 
 A Hardware Description Language is used to... describe hardware!

@@ -3,6 +3,14 @@ title: "Magic"
 date: 2020-11-12T17:39:43+01:00
 images: ["magic.png"]
 featured_image: "magic.png"
+description: Magic is an open source VLSI layout tool originally written at Berkeley in the 1980s, widely used for drawing transistors, checking DRC rules, extracting netlists, and streaming GDSII files.
+faq:
+  - q: What is Magic and what can it do?
+    a: Magic is a VLSI layout tool written at Berkeley in the 1980s by John Ousterhout. It can draw transistors and build them into standard cells, extract netlists for simulation or LVS, work with large designs in hierarchy, and apply and check DRC rules.
+  - q: Why is Magic still popular despite being old?
+    a: Magic has remained popular with universities and small companies due to its liberal Berkeley open source license, well-thought-out core algorithms, and reputation as one of the easiest tools to use for circuit layout even for people who use commercial tools for production.
+  - q: When would you use Magic versus LibreLane?
+    a: LibreLane in combination with the Skywater PDK automates most of the layout work, so you are unlikely to do much actual layout in Magic unless you are doing analog layout. However it is worth learning to navigate designs in Magic.
 ---
 
 From its [homepage](http://opencircuitdesign.com/magic/):

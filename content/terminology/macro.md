@@ -3,6 +3,14 @@ title: "Macro"
 date: 2020-11-12T17:06:52+01:00
 images: ["openram.jpg"]
 featured_image: "openram.jpg"
+description: A macro is a reusable, pre-designed intellectual property block — such as a memory, processor core, or PLL — that designers incorporate into their chip without redesigning the internals.
+faq:
+  - q: What is a macro in chip design?
+    a: A macro is a pre-designed intellectual property block that you can use in your design without designing it yourself. Examples include memories, processor cores, SerDes, and PLLs. Macros may have a fixed function or be parameterised.
+  - q: Why use a memory macro instead of building memory from flip-flops?
+    a: A memory created from flip-flops is much bigger, slower, and more power hungry than an optimised memory macro. Memory macros can use special function cells outside the standard cell library to achieve much better density and performance.
+  - q: What is OpenRAM?
+    a: OpenRAM is an open source tool that generates memory macros. It creates a macro you can use in your design without dealing with the internal details, and Skywater 130 support was being added and tested in early tapeouts.
 ---
 
 From http://88physicaldesign.blogspot.com/2015/10/what-is-macro.html:

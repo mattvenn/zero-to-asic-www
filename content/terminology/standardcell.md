@@ -1,12 +1,20 @@
 ---
 title: "Standard cell"
 date: 2020-11-12T17:38:45+01:00
+description: "Standard cells are pre-designed logic building blocks — AND, OR, NOT gates, flip-flops — that share a common height for automated placement. They are the foundation of digital ASIC design."
 images: ["std-cell-inverter.png"]
 featured_image: "std-cell-inverter.png"
+faq:
+  - q: What is a standard cell?
+    a: A standard cell is a pre-designed, pre-verified logic building block used in digital ASIC design. Standard cell libraries contain gates (AND, OR, NOT, XOR), flip-flops, multiplexers, and other common logic functions. Designers do not draw these manually — synthesis tools automatically select and connect them from the library.
+  - q: Why do standard cells all have the same height?
+    a: Standard cells share a common height so they can be placed side by side in rows during automated place and route. The common height ensures that power and ground rails align across all cells, and that DRC rules are satisfied at all cell boundaries regardless of which cells are adjacent.
+  - q: What is included in a standard cell library?
+    a: A standard cell library contains the physical layout (GDS), abstract layout (LEF), timing models (Liberty), simulation models (SPICE), and schematic views for each cell. It will include multiple drive strengths for common cells, and is one of the key components provided by a PDK.
 ---
 
 One of the many things a [PDK](/terminology/pdk) contains is the standard cell library.
-This is a collection of all digital building blocks used to build an IC like AND, OR, NOT gates, flip-flops, etc. There will be other libraries for specialised functions such as IO pads, and any analogue blocks or memory macros, and so on.
+This is a collection of all digital building blocks used to build an IC like AND, OR, NOT gates, flip-flops, etc. There will be other libraries for specialised functions such as IO pads, and any analog blocks or memory macros, and so on.
 
 Standard cell libraries are a set of cells that have common characteristics and physical layout. The most obvious element is that the cells have a common height. Because the cells will be placed side by side with abutting edges, all items that cross these edges need to be at fixed positions and have fixed sizes. These items typically include the power and ground rails and the wells. 
 In addition the cells, because they touch, they need to be DRC legal in all combinations. This means that items that do not cross the boundary need to be moved away from it by at least half the minimum spacing rule for that layer.

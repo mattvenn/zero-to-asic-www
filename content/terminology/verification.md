@@ -3,6 +3,14 @@ title: "Verification"
 date: 2020-11-12T17:44:17+01:00
 images: ["simulation.png"]
 featured_image: "simulation.png"
+description: Verification covers all checks that confirm a chip design is correct at every stage — including simulation, STA, DRC, LVS, and formal methods — without modifying the design itself.
+faq:
+  - q: What is verification in chip design?
+    a: Verification covers all areas of checking that a design is correct at some stage in the design process, including simulation, STA, DRC, LVS, LEC, and other checks. Any step that looks at the design and compares it with some standard without altering the design is part of verification.
+  - q: Why is simulation alone not enough for verification?
+    a: Simulation is stimulus-driven dynamic verification — you can only find errors for the stimuli you apply. If you don't apply the right inputs, you won't see errors that only occur for that unique set of stimuli. Static methods like STA and LEC examine all paths and compare against rules rather than relying on specific input patterns.
+  - q: What is formal verification and how does it differ from simulation?
+    a: Formal verification uses a solver to prove properties of a design rather than testing it with specific stimuli. For example, you can add an assertion that a certain output is always in a known state during reset, and the tool will try to find any counter-example that breaks the assertion, providing stronger guarantees than simulation.
 ---
 
 Verification covers all areas of checking that a design, at some stage in the design process, is correct. This includes simulation, STA, DRC, LVS, LEC and other checks that are performed. In essence, any step that looks at the design, compares it with some other quantity, and does not alter the design, is part of verification.

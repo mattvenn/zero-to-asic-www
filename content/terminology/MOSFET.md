@@ -1,8 +1,16 @@
 ---
 title: "MOSFET"
 date: 2020-11-12T17:39:16+01:00
+description: "A MOSFET (Metal Oxide Semiconductor Field Effect Transistor) is the fundamental transistor used in modern chips. Learn how MOSFETs work, the difference between NMOS and PMOS, and how they are manufactured."
 images: ["Construction-of-MOSFET.png"]
 featured_image: "Construction-of-MOSFET.png"
+faq:
+  - q: What is a MOSFET?
+    a: A MOSFET (Metal Oxide Semiconductor Field Effect Transistor) is a type of transistor used as a digital switch in integrated circuits. It is the basic building block of modern electronics and the most manufactured object in the world, with over 10^22 made since 1960.
+  - q: What is the difference between NMOS and PMOS?
+    a: In an NMOS transistor, the channel is formed by electrons (negative charge carriers) and the device is built on a P-type substrate. In a PMOS transistor, the channel is formed by holes (positive charge carriers) on an N-type substrate. PMOS transistors are typically 2-3x wider than NMOS to achieve equivalent drive strength because holes have lower mobility than electrons.
+  - q: How does a MOSFET work?
+    a: When a voltage is applied across the gate and body, an electric field forms in the channel region. This field attracts minority charge carriers to the channel, allowing current to flow between the drain and source. Removing the gate voltage collapses the channel and turns the transistor off.
 ---
 
 A MOSFET is a type of transistor we can use as a digital switch.

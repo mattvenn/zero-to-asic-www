@@ -3,6 +3,14 @@ title: "Synthesis"
 date: 2020-11-12T17:43:01+01:00
 images: ["show_rtl.png"]
 featured_image: "show_rtl.png"
+description: Synthesis converts an RTL hardware description into a netlist of standard cells from the PDK, analogous to compilation in software, mapping the intended behaviour onto the available logic building blocks.
+faq:
+  - q: What does synthesis do in the ASIC design flow?
+    a: Synthesis converts a behavioural RTL description into an equivalent netlist made of cells from the standard cell library. It is analogous to compilation — just as a compiler maps C code to CPU instructions, synthesis maps HDL into the available standard cells.
+  - q: What are the steps synthesis performs?
+    a: Synthesis converts RTL into equivalent logical operations, maps those to library cells, analyses timing to find problem areas, changes the implementation of slow paths using stronger cells, and iterates until timing is met or effort is exhausted.
+  - q: What open source tool is used for synthesis in LibreLane?
+    a: LibreLane uses Yosys, an open source synthesis tool written by Claire Wolf. Before Yosys it was thought that only large semiconductor companies had the resources to write a synthesis tool.
 ---
 
 Synthesis converts a behavioral description of the circuit, in the form of RTL, into an equivalent netlist made of cells from the standard cell library. It is analogous to the compilation process used for turning programming languages like C into binaries. The compiler knows how to read the language and maps it to the instructions we have available in the CPU, and synthesis translates from what we want the design to do, into a set of available cells that will perform it.

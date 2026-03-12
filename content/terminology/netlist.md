@@ -3,6 +3,14 @@ title: "Netlist"
 date: 2020-11-13T10:13:03+01:00
 images: ["show_rtl.png"]
 featured_image: "show_rtl.png"
+description: A netlist is a machine-readable file describing all the connections between every component in a design, produced by synthesis tools like Yosys as the first step toward physical chip layout.
+faq:
+  - q: What is a netlist in chip design?
+    a: A netlist is a machine-readable file that contains all the connections between all the components in a design. It is one of the main outputs of a synthesis tool like Yosys.
+  - q: What does a netlist look like before and after synthesis?
+    a: An initial netlist from RTL may contain high-level blocks like multiplexors and adders. These are not part of the PDK, so synthesis breaks them down further until the blocks are simple enough to be mapped onto the standard cells available in the PDK.
+  - q: How is a netlist used in the LibreLane flow?
+    a: The synthesis process producing the netlist is the first step in the LibreLane tool. The netlist is later used in LVS to verify the final layout matches the intended design.
 ---
 A netlist is a machine readable file that contains all the connections between all the components in your design.
 

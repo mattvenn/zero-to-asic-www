@@ -3,6 +3,14 @@ title: "Antenna Report"
 date: 2021-03-30T12:31:35+02:00
 images: ["antenna-rule.png"]
 featured_image: "antenna-rule.png"
+description: An antenna report lists DRC violations where metal wiring connected to transistor gates accumulates enough plasma charge during fabrication to risk destroying the gate oxide.
+faq:
+  - q: What is an antenna violation in chip design?
+    a: During fabrication, plasma used to etch metal layers can build up electrical charge on wires. If a wire connects to a transistor gate and the metal-to-gate area ratio exceeds the antenna rule limit, the voltage may be high enough to destroy the gate — this is an antenna violation.
+  - q: What do PAR and CAR mean in an antenna report?
+    a: PAR stands for Partial Antenna Ratio and tells you if any single metallization step is likely to damage a gate. CAR stands for Cumulative Antenna Ratio and adds up damage across successive layers as they are built up.
+  - q: How does LibreLane fix antenna violations?
+    a: LibreLane automatically inserts antenna diode cells to drain away charge, and supports heuristic diode insertion controlled by the GRT_REPAIR_ANTENNAS and RUN_HEURISTIC_DIODE_INSERTION flags. Violations can also be fixed by jumping to higher metal layers to reduce the antenna size on the layer connected to the gate.
 ---
 
 Antenna rules are part of the [DRC](/terminology/drc).

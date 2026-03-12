@@ -3,11 +3,19 @@ title: "Corner"
 date: 2021-03-22T16:59:20+01:00
 images: ["corners.png"]
 featured_image: "corners.png"
+description: Process corners represent the most extreme manufacturing variations in MOSFET speed and strength, used in simulation to verify a design works across all real-world fabrication conditions.
+faq:
+  - q: What are process corners in chip design?
+    a: Process corners represent the most extreme variations in MOSFET characteristics across manufacturing. The five main corners are FF (fast-fast), SS (slow-slow), TT (typical-typical), SF (slow-fast), and FS (fast-slow), where the two letters refer to the P-type and N-type transistors respectively.
+  - q: Why do FF and SS corners occur more often than SF or FS?
+    a: If both P and N transistors are formed by the same etching step they tend to vary together, making FF, TT, and SS more likely. SF and FS require P and N devices to vary from typical in opposite directions, which is less common since their doping steps are separate.
+  - q: Which corners should be used to check setup and hold timing?
+    a: The slowest conditions (SS corner, low supply voltage, high temperature) are used to find setup violations and determine the maximum clock rate. The fastest conditions (FF corner, high supply, low temperature) are used to find hold time violations.
 ---
 
 [MOSFET](/terminology/mosfet) characteristics can vary across multiple wafers.
 
-If we wanted to make sure a sensitive analogue design worked across all process variations, we would want to simulate these variations and check the results were still within our specification.
+If we wanted to make sure a sensitive analog design worked across all process variations, we would want to simulate these variations and check the results were still within our specification.
 
 Some of the most common variations affect the strength or speed of the MOSFET switching, and we have both P and N type MOSFETS.
 The corners represent the most extreme variations of these parameters. By combining them, we get these combinations:
@@ -26,7 +34,7 @@ Fast transistors are ones that can switch more than typical current, and thus ch
 
 Process corners may combine two separate elements: the modelling of the transistors, and the modelling of wiring parasitics. As the transistors and wiring are made in totally separate process steps, the transistors on a particular chip may have fast transistors but large parasitics which will tend to slow signals down. The 'fast' corner typically combines fast transistors and low parasitics, the 'slow' corner combines slow transitors and large parasitics.
 
-To truly know whether a design will function under all real-life conditions, designers normally check for process, temperature and voltage variations. The slowest conditions are typically SS process corner, low power supply voltage, high temperature. The faster conditions are typically FF process corner, high power supply, low temperature. To find the highest clock rate your design is likely to work at, you probably need to analyse under the slow conditions. To find 'hold time' violations - where signals shoothrough logic earlier than expected and cause failures - you typically need to analyse under the fastest conditions. For analogue circuits it may not be obvious which are the worst case set of conditions, so the designer may need to verify under different settings of process, temperature and voltage.
+To truly know whether a design will function under all real-life conditions, designers normally check for process, temperature and voltage variations. The slowest conditions are typically SS process corner, low power supply voltage, high temperature. The faster conditions are typically FF process corner, high power supply, low temperature. To find the highest clock rate your design is likely to work at, you probably need to analyse under the slow conditions. To find 'hold time' violations - where signals shoothrough logic earlier than expected and cause failures - you typically need to analyse under the fastest conditions. For analog circuits it may not be obvious which are the worst case set of conditions, so the designer may need to verify under different settings of process, temperature and voltage.
 
 For my basic simulations, I often remove all the corner libraries except TT, to speed up the simulation time. 
 

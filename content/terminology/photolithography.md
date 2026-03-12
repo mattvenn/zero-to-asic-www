@@ -3,6 +3,15 @@ title: "Photolithography"
 date: 2020-11-13T10:57:47+01:00
 images: ["die.jpg"]
 featured_image: "die.jpg"
+description: Photolithography is the repeating process of coating a wafer with light-sensitive resist, exposing it through a mask, and etching the pattern to build up the many layers that form an IC.
+faq:
+  - q: What is photolithography in chip manufacturing?
+    a: Photolithography is the process of using a series of masks and light to build up a 3-dimensional structure on a silicon wafer. Each step deposits a layer, coats it with photoresist, exposes it through a mask, develops and etches the pattern, and then strips the resist before repeating for the next layer.
+  - q: What are the key steps in a single photolithography cycle?
+    a: |-
+      Each photolithography step involves depositing silicon dioxide on the wafer surface, coating it with photoresist, baking it, using a mask to expose areas with UV light, developing the resist to reveal holes, etching through those holes to create a hard mask, and then using that hard mask to control where dopants or metals are applied before stripping it and repeating for the next layer.
+  - q: Why is photolithography important for chip scaling?
+    a: Photolithography is the key that allows patterns created in tools like Magic or LibreLane to be miniaturised to the nanometre scale. It also allows the same design to be tiled across an entire wafer and reproduced millions of times reliably and rapidly.
 ---
 
 Sam Zeloof did a great talk about his home [IC](/terminology) [foundry](/terminology/foundry) at the Hackaday Supercon 2019.

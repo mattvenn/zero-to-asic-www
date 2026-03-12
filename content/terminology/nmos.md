@@ -1,9 +1,16 @@
 ---
 title: "NMOS"
 date: 2020-11-13T13:12:26+01:00
-description: "N-type Metal Oxide Semiconductor"
+description: NMOS logic builds circuits using only N-type MOSFETs with resistor pull-ups, an older approach that is cheaper to fabricate than CMOS but wastes power as heat when transistors are conducting.
 images: ["nmos.png"]
 featured_image: "nmos.png"
+faq:
+  - q: What is NMOS logic?
+    a: NMOS logic refers to building standard cells using only N-type MOSFETs, where the pulldown path uses an N-type transistor and the pullup path uses a resistor. It is a form of resistor-transistor logic.
+  - q: What is the disadvantage of NMOS logic compared to CMOS?
+    a: NMOS logic wastes a small amount of current through the pullup resistor whenever the transistor is conducting. With millions of gates this wastes a significant amount of electricity as heat, causing chips to run hot and slow down. CMOS was invented to solve this problem.
+  - q: Why is NMOS cheaper to manufacture than CMOS?
+    a: NMOS logic only requires N-type transistors, so there is no need to manufacture P-type transistors. This makes the processing cheaper and quicker to perform.
 ---
 
 NMOS logic refers to building the [standard cells](/terminology/standardcell) we need for our [IC](/terminology/ic) out of only N-type [MOSFETs](/terminology/mosfet). This is a form of resistor-transistor logic, where the pulldown path uses an N type transistor, and the pullup path uses a resistor.

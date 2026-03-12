@@ -3,6 +3,14 @@ title: "ASIC"
 date: 2020-11-12T17:38:37+01:00
 images: ["asic-zoom.png"]
 featured_image: "asic-zoom.png"
+description: An Application Specific Integrated Circuit is a custom chip designed for a particular use, capable of combining digital and analog circuits in ways that standard off-the-shelf chips cannot.
+faq:
+  - q: What is an ASIC and why would you make one?
+    a: An ASIC (Application Specific Integrated Circuit) is a custom chip built for a specific purpose. You might make one because no off-the-shelf chip meets your needs, to save money by merging many components into one, or simply for fun.
+  - q: What is the difference between an ASIC and an FPGA?
+    a: If your design only needs digital logic, an FPGA may suffice. ASICs have the advantage of combining digital and analog circuits together, but errors often cannot be fixed afterwards, making verification critical.
+  - q: How much does it cost to make an ASIC?
+    a: A full maskset for the 130nm process at the Skywater foundry costs about $200k. An MPW might cost around $10k. Tiny Tapeout further reduces the cost to around $150. Open source tools like LibreLane have reduced the software cost barrier and enabled experimentation and learning.
 ---
 
 Application Specific Integrated Circuit. An ASIC is a custom [IC](/terminology/ic), which means it is not a standard product such as a microprocessor, memory, standard logic chip or generic component which might be available from several or many different manufacturers. It will often add functionality not available from a standard product, or combine the functions of many standard products at a lower total price.
@@ -13,7 +21,7 @@ You might make an ASIC because:
 * You can save money by merging a lot of components into one,
 * Recently, for fun!
 
-If your design only needs digital logic, you might be able to use an [FPGA](/terminology/fpga). An advantage of ASICs is that they can combine digital and analogue circuits together in one chip. A disadvantage is that errors often cannot be fixed afterwards, hence the heavy use of [verification](/terminology/verification).
+If your design only needs digital logic, you might be able to use an [FPGA](/terminology/fpga). An advantage of ASICs is that they can combine digital and analog circuits together in one chip. A disadvantage is that errors often cannot be fixed afterwards, hence the heavy use of [verification](/terminology/verification).
 
 Big semiconductor companies produce millions of chips, which can offset the large costs related to the [masks](/terminology/maskset). For example, a full maskset for the 130nm process at the Skywater [foundry](/terminology/foundry) costs about $200k.
 

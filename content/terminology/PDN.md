@@ -3,7 +3,14 @@ title: "PDN"
 date: 2021-02-07T18:59:34+01:00
 images: ["librelane_pdn.png"]
 featured_image: "librelane_pdn.png"
-description: "Power Delivery Network"
+description: The Power Delivery Network (PDN) is the grid of metal rails and vias that distributes power and ground to every cell in an ASIC design, built automatically by LibreLane during the flow.
+faq:
+  - q: What is a Power Delivery Network (PDN) in an ASIC?
+    a: The PDN is what provides power for all the macros in your design. It is a structured network of metal rails that carries supply voltages and ground to every cell across the chip.
+  - q: How does LibreLane build the PDN for a Tiny Tapeout shuttle submission?
+    a: LibreLane creates a PDN that supplies the 4 rails available to the user project area — two 3.3V analog supplies, two analog grounds, two 1.8V digital supplies, and two digital grounds. Metal 4 is used for vertical lines and Metal 5 routes over everything, dropping vias to connect macros.
+  - q: What is a common PDN failure with LibreLane for small designs?
+    a: A common failure for small designs is that the die area is not large enough for the PDN to be created. A simple fix is setting the absolute die size to ensure it is big enough.
 ---
 
 The Power Delivery Network is what provides power for all the [macros](/terminology/macro) in your design.
