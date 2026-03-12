@@ -12,7 +12,7 @@ Welcome to the September 2022 monthly update!
 
 Here are the main topics from last month:
 * [MPW7](/post/mpw7_submitted/) submission,
-* [MPW2](/post/mpw2_submitted/) updates,
+* [MPW2](/post/mpw2-submitted/) updates,
 * Job posting at E-Fabless,
 * New videos,
 * Is it the end for UVM? and
