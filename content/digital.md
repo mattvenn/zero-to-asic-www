@@ -1,6 +1,6 @@
 ---
 title: Zero to ASIC Digital Course
-description: Learn how to design chips!
+description: Learn to design and manufacture your own custom digital ASIC using open source tools. Hands-on projects, guaranteed chip manufacture via TinyTapeout, and expert support from Matt Venn.
 images: ['maximo_render_3.jpeg']
 featured_image: 'maximo_render_3.jpeg'
 image_pos: 0% +10%
@@ -10,6 +10,21 @@ layout: single
 aliases:
     - /contact
     - /index
+course:
+  name: Zero to ASIC Digital Course
+  description: Learn to design and manufacture your own custom digital ASIC using open source tools. Hands-on projects, guaranteed chip manufacture via TinyTapeout, and expert support from Matt Venn.
+  educational_level: Beginner
+  workload: PT4H
+  teaches:
+    - Digital ASIC design
+    - RTL design with Verilog
+    - Logic synthesis
+    - Place and route
+    - Design rule checking
+    - Chip tapeout with TinyTapeout
+  prerequisites:
+    - Basic Linux command line experience
+    - Some programming experience
 ---
 
 {{< youtube GjEnA3LUDdo >}}

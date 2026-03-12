@@ -1,12 +1,27 @@
 ---
 title: Zero to ASIC Analog Course
-description: Learn how to design Analog ASICs!
+description: Learn analog IC layout and tapeout using open source tools. 11 hands-on labs, guaranteed chip manufacture via TinyTapeout, and support from analog expert Prof. Harald Pretl.
 images: ['analog_background.png']
 featured_image: 'analog_background.png'
 image_pos: 0% 50%
 tags: ["course", "analog"]
 type: page
 layout: single
+course:
+  name: Zero to ASIC Analog Course
+  description: Learn analog IC layout and tapeout using open source tools. 11 hands-on labs, guaranteed chip manufacture via TinyTapeout, and support from analog expert Prof. Harald Pretl.
+  educational_level: Intermediate
+  workload: PT4H
+  teaches:
+    - Analog IC layout
+    - SPICE simulation
+    - Design rule checking for analog circuits
+    - Analog chip tapeout with TinyTapeout
+    - Use of open source tools including Magic and ngspice
+  prerequisites:
+    - Basic Linux command line experience
+    - Some programming experience
+    - Basic analog circuit knowledge (schematic not covered in course)
 ---
 
 {{< youtube wM4cobfjMMQ >}}
