@@ -4,6 +4,7 @@ date: 2022-10-08T08:00:00+01:00
 images: ["jamesstine.png"]
 featured_image: "jamesstine.png"
 tags: ["interviews" ]
+video_id: 5J8LJoUxCHk
 ---
 In this interview with Professor James Stine, we talk about:
 

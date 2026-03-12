@@ -4,6 +4,7 @@ date: 2021-07-23T14:17:19+02:00
 images: ["fuserisc.png"]
 featured_image: "fuserisc.png"
 tags: ["interviews", "videos"]
+video_id: 5rpi-c0WuQU
 ---
 
 One of the popular types of entries to MPW1 & 2 have been FPGAs. 

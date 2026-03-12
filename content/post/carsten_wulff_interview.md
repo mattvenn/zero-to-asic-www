@@ -5,6 +5,7 @@ date: 2024-03-09T13:15:37+02:00
 images: ["analog_philosophy.png"]
 image_pos: 0% +80%
 featured_image: "analog_philosophy.png"
+video_id: ypXynGz8Heo
 ---
 
 In this insightful interview, I talk with Carsten Wulff, Principal IC Scientist at Nordic Semiconductor, about all things analog ASIC design.

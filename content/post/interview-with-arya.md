@@ -4,6 +4,7 @@ date: 2020-12-05T16:08:53+01:00
 images: ["fpga-fabric.png"]
 featured_image: "fpga-fabric.png"
 tags: ["interviews", "videos"]
+video_id: paJSqgrDLls
 ---
 
 In this interview I talk with Arya Reais-Parsi about their shuttle submission.

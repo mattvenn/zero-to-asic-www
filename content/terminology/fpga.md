@@ -11,6 +11,7 @@ faq:
     a: An FPGA consists of a huge number of repeated logic elements, each typically containing a lookup table (LUT), a flip-flop, and carry logic. The LUT can be programmed to model any type of gate, such as an inverter or a 4-input NAND.
   - q: What tools does FPGA design share with ASIC design?
     a: FPGAs require synthesis, place and route, simulation, and verification tools — the same categories needed for ASIC design. The main additional tool needed for FPGAs is one that programs the finished bitstream onto the device.
+video_id: A5AHglpfdtQ
 ---
 
 An FPGA, or field programmable gate array, is a way to implement a digital circuit on a chip without fabricating it from scratch. This allows the designer to get a result more quickly, which can be useful for prototyping, and is much cheaper if only a small number of the chips need to be produced. If millions of devices need to be made, then an ASIC is probably going to be much cheaper than using FPGAs for the same function, and will have higher performance.

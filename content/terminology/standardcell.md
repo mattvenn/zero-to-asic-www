@@ -11,6 +11,7 @@ faq:
     a: Standard cells share a common height so they can be placed side by side in rows during automated place and route. The common height ensures that power and ground rails align across all cells, and that DRC rules are satisfied at all cell boundaries regardless of which cells are adjacent.
   - q: What is included in a standard cell library?
     a: A standard cell library contains the physical layout (GDS), abstract layout (LEF), timing models (Liberty), simulation models (SPICE), and schematic views for each cell. It will include multiple drive strengths for common cells, and is one of the key components provided by a PDK.
+video_id: 5J8LJoUxCHk
 ---
 
 One of the many things a [PDK](/terminology/pdk) contains is the standard cell library.

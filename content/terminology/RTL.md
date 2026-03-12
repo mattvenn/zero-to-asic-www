@@ -11,6 +11,7 @@ faq:
     a: HDL (Hardware Description Language) can describe all sorts of things, including netlists, test harnesses, and stimuli. RTL refers specifically to the synthesizable subset of HDL that describes real hardware behaviour — not everything written in Verilog or VHDL is RTL.
   - q: Why are registers used in the RTL design methodology?
     a: For reasons of speed and debugging it makes sense to split up data processing into smaller steps and buffer the results in registers. This allows each stage to be analysed and verified independently.
+video_id: 5PRuPVIjEcs
 ---
 People often use the terms RTL and [HDL](/terminology/hdl) interchangably.
 

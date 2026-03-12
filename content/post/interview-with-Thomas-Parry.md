@@ -4,6 +4,7 @@ date: 2021-03-23T16:09:22+01:00
 images: ["thomas-parry.jpg"]
 featured_image: "thomas-parry.jpg"
 tags: ["interviews"]
+video_id: Q4MVCppCdKM
 ---
 
 In this interview Thomas talks us through his Amateur satellite transceiver shuttle submission. We also discuss the differences between the Open Source tools and the industry standard ones he uses in his day job.

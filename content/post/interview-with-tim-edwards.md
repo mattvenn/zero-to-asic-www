@@ -4,6 +4,7 @@ date: 2021-01-10T16:08:53+01:00
 images: ["fpga-fabric.png"]
 featured_image: "fpga-fabric.png"
 tags: ["interviews", "videos"]
+video_id: tc4iPFeFLzQ
 ---
 
 In this interview I talk with Tim Edwards from eFabless. He is their vice president of analog and platform.

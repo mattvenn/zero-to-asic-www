@@ -4,6 +4,7 @@ date: 2021-05-05T16:09:22+01:00
 images: ["dan-rodrigues.png"]
 featured_image: "dan-rodrigues.png"
 tags: ["interviews"]
+video_id: EzotAjqIvWg
 ---
 
 In this interview Dan and I talk about his submission to the first shuttle, simulating video projects, how to do graphics

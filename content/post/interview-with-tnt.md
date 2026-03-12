@@ -4,6 +4,7 @@ date: 2020-12-05T16:08:53+01:00
 images: ["pyfive.jpg"]
 featured_image: "pyfive.jpg"
 tags: ["interviews", "videos"]
+video_id: -I0nuVvh91c
 ---
 
 In this interview I talk with Sylvain 'tnt' Munaut about his Google/Skywater ASIC application.

@@ -11,6 +11,7 @@ faq:
     a: In CMOS, when inputs are stable only one transistor in each pull-up/pull-down pair is conducting at a time, so there is no static current path from supply to ground. NMOS logic uses a resistor for pull-up, which continuously dissipates power. This makes CMOS far more energy efficient, especially at scale.
   - q: What is crowbar current in CMOS?
     a: Crowbar current is a brief pulse of current that flows directly from the supply through the PMOS transistor to ground through the NMOS transistor during input switching, when both transistors are momentarily on at the same time. CMOS cells are designed to minimise this overlap to reduce switching power consumption.
+video_id: IQ_DcWT_cbc
 ---
 
 CMOS was introduced to [ICs](/terminology/ic) in the late 1960s. P type MOSFETs are used to pull output signals up, and N type MOSFETs are used to pull output signals down - P and N are the complementary types.

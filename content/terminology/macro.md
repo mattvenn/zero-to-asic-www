@@ -11,6 +11,7 @@ faq:
     a: A memory created from flip-flops is much bigger, slower, and more power hungry than an optimised memory macro. Memory macros can use special function cells outside the standard cell library to achieve much better density and performance.
   - q: What is OpenRAM?
     a: OpenRAM is an open source tool that generates memory macros. It creates a macro you can use in your design without dealing with the internal details, and Skywater 130 support was being added and tested in early tapeouts.
+video_id: 9Lw83kFtnc4
 ---
 
 From http://88physicaldesign.blogspot.com/2015/10/what-is-macro.html:

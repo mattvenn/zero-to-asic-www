@@ -11,6 +11,7 @@ faq:
     a: A setup violation means the circuit runs too slowly to work at the given clock rate and may be fixed by slowing the clock. A hold violation means the circuit will fail at any clock speed and cannot be fixed by slowing the clock down.
   - q: What tool does LibreLane use for STA?
     a: LibreLane uses OpenSTA, which finds the fastest and slowest data paths and checks setup and hold timings. By default it targets a clock frequency of 100MHz (10ns period), and it is called five times during a typical LibreLane run.
+video_id: 5PRuPVIjEcs
 ---
 
 Static Timing Analysis (STA) checks that the design has no setup and hold violations. This is very important, and a failure here could cost you a respin of your ASIC. It is a way of verifying timing quickly without the complexity and time taken to find such issues using back-annotated digital (or even analog) simulations. Setup violations imply that the circuit runs too slowly to work at the given clock rate, hold violations imply the circuit will fail at any clock speed.

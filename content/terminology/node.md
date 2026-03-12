@@ -11,6 +11,7 @@ faq:
     a: No. Since around 2000 the node number has had no physical meaning and is used mainly as a marketing tool. The gate length and metal half-width measurements have become completely uncoupled from the advertised node number.
   - q: How common are older process nodes like 130nm?
     a: Despite being old, the 130nm process and larger/older sizes still account for about 50% of all ASICs made by EuroPractice, showing that older nodes remain commercially important.
+video_id: 1kQUXpZpLXI
 ---
 
 The metrics for measuring integration density used to be metal half-pitch and gate length. For a while they were about the same number. This number became known as the node or process number.

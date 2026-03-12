@@ -4,6 +4,7 @@ date: 2021-02-11T18:34:38+02:00
 images: ["microwatt.jpg"]
 featured_image: "microwatt.jpg"
 tags: ["interviews"]
+video_id: pSpO7RcwOiM
 ---
 
 I interviewed Anton Blanchard about his MPW1 application - a 64bit OpenPOWER core written in VHDL.

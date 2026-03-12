@@ -11,6 +11,7 @@ faq:
     a: In the ChipFoundry Shuttle designs can be placed within the user project area of the Caravel harness, which includes its own RISCV processor. This makes it easier to bring up and debug designs, at the cost of some available area.
   - q: What packaging did the Google shuttle provide?
     a: The Google shuttle returned chips in Wafer Level Chip Scale Packaging (WLCSP) and later easier-to-handle QFN package format.
+video_id: EczW2IWdnOM
 ---
 
 A shuttle service is the same as a [multi project wafer](/terminology/mpw).

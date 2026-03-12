@@ -11,6 +11,7 @@ faq:
     a: Several open source digital simulators are available including Icarus Verilog, Verilator, and CXXRTL. For writing testbenches, cocotb is a popular framework that allows complex stimulus to be written in Python rather than Verilog.
   - q: What is a VCD file in digital simulation?
     a: A VCD (Value Change Dump) is the data format used to store simulation results. Values are only recorded when a signal changes rather than at every time step, minimising file sizes — though multi-gigabyte dump files are not unusual.
+video_id: dtK-4JZ4Cwc
 ---
 
 Simulation lets us see the design working. It's useful for debugging while designing and it can also be used to verify that the design is working correctly.

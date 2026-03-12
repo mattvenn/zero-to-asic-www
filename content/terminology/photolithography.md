@@ -12,6 +12,7 @@ faq:
       Each photolithography step involves depositing silicon dioxide on the wafer surface, coating it with photoresist, baking it, using a mask to expose areas with UV light, developing the resist to reveal holes, etching through those holes to create a hard mask, and then using that hard mask to control where dopants or metals are applied before stripping it and repeating for the next layer.
   - q: Why is photolithography important for chip scaling?
     a: Photolithography is the key that allows patterns created in tools like Magic or LibreLane to be miniaturised to the nanometre scale. It also allows the same design to be tiled across an entire wafer and reproduced millions of times reliably and rapidly.
+video_id: 23fTB3hG5cA
 ---
 
 Sam Zeloof did a great talk about his home [IC](/terminology) [foundry](/terminology/foundry) at the Hackaday Supercon 2019.

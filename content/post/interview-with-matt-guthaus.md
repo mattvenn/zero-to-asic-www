@@ -4,6 +4,7 @@ date: 2021-08-11T17:23:24+02:00
 images: ["openram_mpw2.png"]
 featured_image: "openram_mpw2.png"
 tags: ["interviews"]
+video_id: hUh-z4E542o
 ---
 
 In this interview with Matt Guthaus, we talk about:

@@ -13,6 +13,7 @@ faq:
     a: LibreLane is the new name for OpenLane. After Efabless shut down in 2025, the project was transferred to the FOSSi Foundation and renamed LibreLane. It is the same open source ASIC flow, now maintained by the broader open source silicon community.
   - q: What are the main steps in the LibreLane flow?
     a: The LibreLane flow covers synthesis (Yosys), floorplanning, placement, clock tree synthesis, routing (OpenROAD), and sign-off checks including LVS, DRC, and static timing analysis. The output is a GDS2 file ready to submit to a foundry.
+video_id: nSNQNp6Mz8Q
 ---
 
 LibreLane is an Open Source ASIC tool. You can download it from [here](https://github.com/librelane/librelane). 

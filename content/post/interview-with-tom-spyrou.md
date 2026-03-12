@@ -4,6 +4,7 @@ date: 2021-08-02T14:16:05+02:00
 images: ["librelane-flow.png"]
 featured_image: "librelane-flow.png"
 tags: ["interviews", "videos"]
+video_id: nSNQNp6Mz8Q
 ---
 
 Tom Spyrou is a long time EDA developer who has worked at large and small companies.

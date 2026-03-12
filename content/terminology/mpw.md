@@ -11,6 +11,7 @@ faq:
     a: The Google shuttle run through Efabless is an example of an MPW, where many designers submit their chips to share a single Skywater wafer.
   - q: How many MPW tapeouts has the Zero to ASIC course made?
     a: Members of the course participated on all the Google sponsored MPWs until they were discontinued. Now all participants use Tiny Tapeout for manufacture, which is a multi project chip manufactured on an MPW.
+video_id: gg_-dsuFY0I
 ---
 
 A Multi Project Wafer is used to reduce the cost of making an [ASIC](/terminology/asic).

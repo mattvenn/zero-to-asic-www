@@ -5,6 +5,7 @@ tags: ["interviews"]
 images: ["adders.png"]
 image_pos: 0% 20%
 featured_image: "adders.png"
+video_id: ZvssTXMTRmk
 ---
 
 Teodor-Dumitru Ene has been doing some interesting work on optimising hardware adders.

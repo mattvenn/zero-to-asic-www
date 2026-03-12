@@ -11,6 +11,7 @@ faq:
     a: The type of silicon used in the Skywater 130nm process is doped to become p-type before being patterned. After the wafers are ready, they are patterned using the photolithographic process with a series of masks.
   - q: How are silicon wafers made?
     a: Silicon is purified to extreme levels, then melted and a crystal ingot is pulled from the molten material. The ingot is then sliced into very thin round sheets called wafers.
+video_id: sIRfWyyOFPg
 ---
 
 Silicon is purified to around 99.9999999%! Then it is sliced into very thin round sheets called wafers.

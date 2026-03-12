@@ -11,6 +11,7 @@ faq:
     a: Parasitics slow signals down and increase power dissipation. An ideal inverter inverts instantly, but in reality the gate and drain capacitances plus wiring resistance all add delay. Without accounting for these, timing analysis would be inaccurate.
   - q: How are parasitics used after extraction?
     a: After extraction, the parasitics are annotated into the ideal circuit model to represent the real circuit. This annotated model can then be analysed for timing accuracy using simulation or STA.
+video_id: QyXcVrPGomw
 ---
 
 PEX stands for Parasitic Extraction (often called just 'extraction').

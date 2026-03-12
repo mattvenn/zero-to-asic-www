@@ -4,6 +4,7 @@ date: 2021-01-03T18:06:26+01:00
 images: ["analog_simulation.png"]
 featured_image: "analog_simulation.png"
 tags: ["interviews", "videos"]
+video_id: uTlpT6Lszm4
 ---
 
 In this interview I talk with [Diego Hernando](https://www.linkedin.com/in/diego-joaqu%C3%ADn-hernando-196a2715b/) about their ASIC submission.

@@ -4,6 +4,7 @@ date: 2024-08-03T14:18:07+02:00
 tags: ["interviews", "videos"]
 images: ["decap_zepto.png"]
 featured_image: "decap_zepto.png"
+video_id: zUv6sdxOaFE
 ---
 
 In this interview, I met up with Michael from [Zeptobars](https://zeptobars.com/en/) in Zurich, Switzerland, where we use acid to **decapsulate one of my Tiny Tapeout chips.**  This technique involves using acid to remove the protective epoxy layer of a chip, revealing the silicon die underneath.   Decapping is commonly used to analyse the construction of integrated circuits. Michael usually decapsulates chips designed by others, sometimes decades ago, but this time one of the designs is his own.

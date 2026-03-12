@@ -11,6 +11,7 @@ faq:
     a: In an NMOS transistor, the channel is formed by electrons (negative charge carriers) and the device is built on a P-type substrate. In a PMOS transistor, the channel is formed by holes (positive charge carriers) on an N-type substrate. PMOS transistors are typically 2-3x wider than NMOS to achieve equivalent drive strength because holes have lower mobility than electrons.
   - q: How does a MOSFET work?
     a: When a voltage is applied across the gate and body, an electric field forms in the channel region. This field attracts minority charge carriers to the channel, allowing current to flow between the drain and source. Removing the gate voltage collapses the channel and turns the transistor off.
+video_id: IcrBqCFLHIY
 ---
 
 A MOSFET is a type of transistor we can use as a digital switch.

@@ -11,6 +11,7 @@ faq:
     a: The SkyWater facility was originally established by Control Data Corporation (CDC) in the 1980s, then acquired by Cypress Semiconductor in 1991. SkyWater spun off from Cypress in 2017 with private equity backing from Oxbow Industries.
   - q: What is the difference between a fab and a foundry?
     a: All chips come from fabrication plants (fabs), but the term foundry is specifically used when the fab manufactures chips designed by other companies rather than its own in-house designs.
+video_id: aBDJQ9NYTEU
 ---
 
 Foundry is the fancy semiconductor word for factory. You have to admit, silicon foundry does sound cool.

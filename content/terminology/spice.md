@@ -11,6 +11,7 @@ faq:
     a: ngspice is a successor to the original SPICE simulator that is easily installable on Linux. It is the simulator used on this site to explore the Skywater 130 PDK.
   - q: Can SPICE simulate digital circuits and flip-flops?
     a: Yes, SPICE can simulate digital circuits at the transistor level. The site includes a demo of simulating a Sky130 D-type flip-flop with SPICE to show how it works.
+video_id: 5PRuPVIjEcs
 ---
 
 SPICE is a general-purpose, open-source analog electronic circuit simulator. It stands for Simulation Program with Integrated Circuit Emphasis.
