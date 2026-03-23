@@ -1,0 +1,25 @@
+{{- with .Params.course -}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Course",
+  "name": "{{ .name }}",
+  "description": "{{ .description }}",
+  "provider": {
+    "@type": "Organization",
+    "name": "Zero to ASIC Course",
+    "url": "https://www.zerotoasiccourse.com"
+  },
+  "url": "{{ $.Permalink }}",
+  "courseMode": "online",
+  "educationalLevel": "{{ .educational_level }}",
+  "teaches": [{{ range $i, $v := .teaches }}{{ if $i }}, {{ end }}"{{ $v }}"{{ end }}],
+  "coursePrerequisites": [{{ range $i, $v := .prerequisites }}{{ if $i }}, {{ end }}"{{ $v }}"{{ end }}],
+  "hasCourseInstance": {
+    "@type": "CourseInstance",
+    "courseMode": "online",
+    "courseWorkload": "{{ .workload }}"
+  }
+}
+</script>
+{{- end -}}

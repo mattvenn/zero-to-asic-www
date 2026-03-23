@@ -1,0 +1,21 @@
+{{- with .Params.faq -}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {{- range $i, $item := . -}}
+    {{- if $i }},{{ end }}
+    {
+      "@type": "Question",
+      "name": "{{ $item.q }}",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "{{ $item.a }}"
+      }
+    }
+    {{- end }}
+  ]
+}
+</script>
+{{- end -}}
