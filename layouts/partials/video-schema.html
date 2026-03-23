@@ -6,7 +6,7 @@
   "name": "{{ $.Title }}",
   "description": "{{ $.Description | default $.Summary }}",
   "thumbnailUrl": "https://img.youtube.com/vi/{{ . }}/maxresdefault.jpg",
-  "uploadDate": "{{ $.Date.Format "2006-01-02" }}",
+  "uploadDate": "{{ $.Date.Format "2006-01-02T15:04:05Z07:00" }}",
   "url": "https://www.youtube.com/watch?v={{ . }}",
   "embedUrl": "https://www.youtube.com/embed/{{ . }}"
 }
