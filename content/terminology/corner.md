@@ -26,6 +26,8 @@ The corners represent the most extreme variations of these parameters. By combin
 * FS (fast slow)
 * TT (typical typical)
 
+In practice, libraries also have custom corners apart from these combinations. These take things like aging, parasitics, leakage, etc. into account.
+
 We have [SPICE models](/terminology/spice) of the different corners provided in the [Skywater PDK](/terminology/pdk).
 
 ![corners included in spice file](/corners.png)
