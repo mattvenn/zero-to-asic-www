@@ -50,6 +50,6 @@ tags: ["course"]
 
 # FPGA
 
-* FPGA boards: [iCEBreaker](https://www.crowdsupply.com/1bitsquared/icebreaker-fpga), [TinyFPGA](https://tinyfpga.com/), [Black Ice](https://www.tindie.com/products/Folknology/blackice-mx/)
+* FPGA boards: [iCEBreaker](https://www.crowdsupply.com/1bitsquared/icebreaker-fpga), [TinyFPGA](https://tinyfpga.com/), [Black Ice](https://www.tindie.com/products/Folknology/blackice-mx/), [ULX3S](https://www.crowdsupply.com/radiona/ulx3s)
 * Will Green's [Project F](https://projectf.io/about/)
 * [WTFPGA course](https://github.com/esden/WTFpga)
