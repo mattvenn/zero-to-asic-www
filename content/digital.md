@@ -157,7 +157,7 @@ Take the course with your colleagues. You will work through the course material 
 
 #### Is there a cheaper option? {#grant}
 
-We have a grant that provides a Silicon-level ticket option for the Zero to ASIC course for those unable to afford the course at full price. More information [here](/post/ticket_grant).
+We have a grant that provides a Silicon-level ticket option for the Zero to ASIC digital course for those unable to afford the course at full price. More information [here](/post/ticket_grant).
 
 [Back to top](#tickets)
 

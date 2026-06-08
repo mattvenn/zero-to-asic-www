@@ -52,6 +52,7 @@ course:
 -   [Contact me](/contact-form) if your business has any special requirements.
 -   Secure payment handling by Stripe.
 -   Not ready? [Join the mailing list to receive updates and promotional discount codes](/newsletter).
+-   Are the pricing options too expensive? Apply for a ticket grant **[ⓘ](#grant)**
 
 ## What do people say about the course?
 
@@ -136,6 +137,12 @@ You can take as long as you want with the course materials. Office hours expire 
 #### When do I need to submit my final design?
 
 See [TinyTapeout](https://www.tinytapeout.com) for the next shuttle closing date.
+
+[Back to top](#tickets)
+
+#### Is there a cheaper option? {#grant}
+
+We have a grant that provides a Silicon-level ticket option for the Zero to ASIC analog course for those unable to afford the course at full price. Apply [here](https://forms.gle/Gvire7wkN15jhMPj8).
 
 [Back to top](#tickets)
 
