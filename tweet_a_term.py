@@ -14,9 +14,8 @@ URL = "https://www.zerotoasiccourse.com"
 
 class Term():
 
-    def __init__(self, analytics, term_file, num_terms, args):
+    def __init__(self, term_file, num_terms, args, rank_lookup):
         self.file = term_file
-        self.analytics = analytics
         self.num_terms = num_terms
         self.args = args
 
@@ -24,27 +23,11 @@ class Term():
         self.url_end = self.url_end.lower().replace('.md', '')
         self.url = URL + "/terminology/" + self.url_end
 
-        self.term_rank = None
-        rank = 0
-        for row in self.analytics.rows:
-            if 'terminology' in row.dimension_values[0].value: 
-                stat_url = row.dimension_values[0].value
-                #print(stat_url)
-                stat_url = stat_url.replace(".md", "")
-                stat_url = stat_url.replace("/terminology/", "")
-                stat_url = stat_url.replace("/", "")
-                stat_url = stat_url.lower()
-
-                # skip blank urls
-                if stat_url == '':
-                    continue
-
-                rank += 1
-                if self.url_end == stat_url:
-                    if self.term_rank is None:
-                        if self.args.verbose:
-                            print("found term %s at pos %d" % (self.url_end, rank))
-                        self.term_rank = rank
+        # fall back to last place if the term never showed up in analytics
+        # (e.g. brand new term with no traffic yet)
+        self.term_rank = rank_lookup.get(self.url_end, num_terms)
+        if self.args.verbose:
+            print("found term %s at pos %d" % (self.url_end, self.term_rank))
 
         # get the title by reading the title definition from the file
         with open(term_file) as fh:
@@ -135,10 +118,40 @@ if __name__ == '__main__':
     # glob is non-deterministic!
     term_files = sorted(term_files, key=str.casefold)
 
+    # normalize the url each term file would live at, so we can recognise
+    # analytics rows that correspond to a term that still exists
+    known_url_ends = set()
+    for term_file in term_files:
+        url_end = term_file.replace('content/terminology/', '')
+        url_end = url_end.lower().replace('.md', '')
+        known_url_ends.add(url_end)
+
+    # rank terms by popularity, counting each known term at most once -
+    # analytics can contain multiple/stale rows (renamed or deleted terms,
+    # trailing-slash or query-string variants) which must not inflate rank
+    rank_lookup = {}
+    rank = 0
+    for row in analytics.rows:
+        if 'terminology' not in row.dimension_values[0].value:
+            continue
+        stat_url = row.dimension_values[0].value
+        stat_url = stat_url.replace(".md", "")
+        stat_url = stat_url.replace("/terminology/", "")
+        stat_url = stat_url.replace("/", "")
+        stat_url = stat_url.lower()
+
+        if stat_url == '' or stat_url not in known_url_ends:
+            continue
+        if stat_url in rank_lookup:
+            continue
+
+        rank += 1
+        rank_lookup[stat_url] = rank
+
     # build list of terms
     terms = []
     for term_file in term_files:
-        term = Term(analytics, term_file, len(term_files), args)
+        term = Term(term_file, len(term_files), args, rank_lookup)
         if args.test_url:
             term.test_url()
         terms.append(term)
