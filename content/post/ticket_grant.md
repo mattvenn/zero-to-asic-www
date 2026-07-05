@@ -19,6 +19,7 @@ This course aims to revolutionize open-source silicon by training engineers, hob
 ## Participation Requirements
 
 * Submitting a design for tapeout: the course is focused on helping participants make their own ASICs. You should aim to submit your design for tapeout, no matter how simple!
+* You must be over 16 years old.
 * Time investment: The expectation is that you'll spend ~4 hours per week on the course over 8-10 weeks (depending on prior experience)
 * Computer access: You'll need a computer with Mac/Windows/Linux, 20GB free space, internet connection fast enough for voice calls.
 * Brief presentation at the weekly meeting:  At one weekly call after your tapeout, you will make a short presentation (~10 min) about your design.
