@@ -35,4 +35,4 @@ Please only submit to one course at a time.
 * [Make an application for the digital course here](https://forms.gle/LAYVnqF1pWbQF5ti6).
 * [Make an application for the analog course here](https://forms.gle/Gvire7wkN15jhMPj8).
 
-Applications will be reviewed once per month, please be patient.
+Applications will be reviewed at **the end of each month**, please be patient.
