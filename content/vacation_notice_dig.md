@@ -10,10 +10,12 @@ type: page
 
 # Digital Vacation Notice
 
-* Matt is away on holiday from 1st August to the 13th of August.
+* Matt is away on holiday from 16th August to the 1st of September.
 * You can still buy a ticket, prepare your tools installation, get started with the course and join the community.
-* Onboarding can be booked for after 13th August.
+* Onboarding can be booked for after 1st September.
 
 | Silicon           | Boron         | Arsenic |
 |----------------   |-------------- |----------------   |
 | {{< buybutton "dig_silicon" >}} | {{< buybutton "dig_boron" >}} | {{< buybutton "dig_arsenic" >}} |
+
+* Have a great summer!
