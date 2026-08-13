@@ -30,6 +30,18 @@ https://canovasjm.netlify.app/2020/11/29/github-actions-run-a-python-script-on-s
 
 https://docs.github.com/en/actions/learn-github-actions/events-that-trigger-workflows
 
+# vacation mode
+
+To stop taking orders (e.g. while away), edit `config.toml` and set:
+```toml
+buttonSet = "vacation"
+```
+This switches every `{{< buybutton >}}` shortcode (used on `digital.md`, `analog.md`, etc.) from the real Stripe checkout links (`params.urls.normal`) to the vacation notice pages (`params.urls.vacation`: `/vacation_notice_dig`, `/vacation_notice_ana`).
+
+To go back to selling, set `buttonSet = "normal"`.
+
+To put only a single page into vacation mode instead of the whole site, add `buttonSet: "vacation"` to that page's front matter — it overrides the site-wide default.
+
 # secrets
 
 use encrypt.sh to encrypt
