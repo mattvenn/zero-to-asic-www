@@ -8,7 +8,7 @@ featured_image: "necklace/asic_necklace_1.JPG"
 
 For the last few years I've worn an old 4 inch [wafer](/terminology/wafer) to conferences or whenever I'm teaching in person. People rarely get to handle a wafer and are always interested to know more.
 
-![old necklace](/necklace/old_necklace.JPG)
+![old necklace](/necklace/asic_necklace_red.jpg)
 
 While it's a fantastic conversation starter, the problem with this necklace is that it's too hip-hop, and not enough "15 million dollar Nikon [Lithography](/terminology/photolithography) Stepper". To resolve this annoyance, I decided to make the most ridiculous ASIC bling possible - using my own chips of course! The only thing I kept from the old design was the quick release wafer.
 
