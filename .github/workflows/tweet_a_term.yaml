@@ -27,6 +27,7 @@ jobs:
 
     # decrypt secrets
     - name: Decrypt large secret
+      id: decrypt
       run: ./decrypt.sh
       env:
           LARGE_SECRET_PASSPHRASE: ${{ secrets.LARGE_SECRET_PASSPHRASE }}
@@ -35,6 +36,8 @@ jobs:
     - name: run tweet a term
       run: python ./tweet_a_term.py --tweet --week-offset 26 --verbose
 
+    # run even if the tweet failed, so one service can't block the other
     - name: run skeet a term
+      if: ${{ !cancelled() && steps.decrypt.outcome == 'success' }}
       run: python ./tweet_a_term.py --skeet --week-offset 26 --verbose
 
