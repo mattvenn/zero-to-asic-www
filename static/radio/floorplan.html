@@ -1,0 +1,1431 @@
+<title>OOK Radio Floorplan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans+Condensed:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: a layout-editor workbench. Canvas fills the left, a dense inspector column on the right; stacks on phones. */
+:root {
+  --bg: #eef0ec; --panel: #f8f9f6; --ink: #1d2320; --muted: #5f6a64; --line: #cfd5cf; --grid: #dfe4de;
+  --die: #fbfcfa; --accent: #0f6e63; --accent-ink: #ffffff; --sel: #d9480f;
+  --rx: #127a6c; --late: #b4237d; --rxin: #0b5fa5; --clk: #c2410c; --en: #8a6a12; --bias: #4d7c0f; --tx: #b45309; --trim: #6d28d9; --dig: #475569;
+  --decap: #7b8794; --pass: #2f7d32; --warn: #b7791f; --fail: #c0392b; --info: #6b7280;
+  --mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  --ui: "IBM Plex Sans Condensed", "Arial Narrow", "Roboto Condensed", system-ui, sans-serif;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #121614; --panel: #181d1b; --ink: #e3e8e4; --muted: #94a19a; --line: #2c3430; --grid: #222a26;
+  --die: #0d100f; --accent: #3fb8a6; --accent-ink: #06201c; --sel: #ff8a4c;
+  --rx: #3fc1ad; --late: #ef6ab8; --rxin: #5aa9ef; --clk: #fb8a4a; --en: #d9b44a; --bias: #9acd4c; --tx: #f2a23a; --trim: #a78bfa; --dig: #94a3b8;
+  --decap: #8b98a6; --pass: #5cbf60; --warn: #e3a83b; --fail: #f0675a; --info: #9aa3ad; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #121614; --panel: #181d1b; --ink: #e3e8e4; --muted: #94a19a; --line: #2c3430; --grid: #222a26;
+  --die: #0d100f; --accent: #3fb8a6; --accent-ink: #06201c; --sel: #ff8a4c;
+  --rx: #3fc1ad; --late: #ef6ab8; --rxin: #5aa9ef; --clk: #fb8a4a; --en: #d9b44a; --bias: #9acd4c; --tx: #f2a23a; --trim: #a78bfa; --dig: #94a3b8;
+  --decap: #8b98a6; --pass: #5cbf60; --warn: #e3a83b; --fail: #f0675a; --info: #9aa3ad; color-scheme: dark }
+* { box-sizing: border-box }
+html, body { height: 100% }
+body { background: var(--bg); color: var(--ink); font: 14px/1.4 var(--ui); }
+button, input, select, textarea { font: inherit; color: inherit }
+.app { display: block }
+header { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 16px; padding: 10px 16px; border-bottom: 1px solid var(--line); background: var(--panel) }
+.brand { display: flex; align-items: baseline; gap: 10px; min-width: 0 }
+.brand h1 { margin: 0; font-size: 18px; font-weight: 700; letter-spacing: .01em }
+.brand .sub { font: 12px var(--mono); color: var(--muted) }
+.tabs { display: flex; flex-wrap: wrap; gap: 6px; order: 3; flex: 1 1 100%; min-width: 0 }
+.tools { margin-left: auto }
+.tab { flex: 0 0 auto; border: 1px solid var(--line); background: transparent; padding: 4px 10px; border-radius: 3px; cursor: pointer; max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap }
+.tab[aria-selected="true"] { background: var(--accent); color: var(--accent-ink); border-color: var(--accent) }
+.tab .dots { font: 11px var(--mono); margin-left: 6px; opacity: .85 }
+.tools { display: flex; flex-wrap: wrap; gap: 6px; align-items: center }
+.btn { border: 1px solid var(--line); background: var(--die); padding: 4px 10px; border-radius: 3px; cursor: pointer }
+.btn:hover { border-color: var(--accent) }
+.btn.primary { background: var(--accent); color: var(--accent-ink); border-color: var(--accent) }
+.btn:disabled { opacity: .45; cursor: default }
+:focus-visible { outline: 2px solid var(--sel); outline-offset: 1px }
+.sync { font: 12px var(--mono); color: var(--muted) }
+main { display: block }
+.stage { position: relative; width: 100%; height: max(300px, min(calc(100vw * 0.56), calc(100vh - 96px))); overflow: hidden; background: var(--bg); border-bottom: 1px solid var(--line) }
+svg#cv { width: 100%; height: 100%; display: block; touch-action: none; user-select: none; cursor: grab }
+svg#cv.panning { cursor: grabbing }
+.overlay { position: absolute; left: 12px; bottom: 12px; display: flex; flex-wrap: wrap; gap: 6px; align-items: center; font-size: 12px }
+.seg { display: inline-flex; border: 1px solid var(--line); border-radius: 3px; overflow: hidden }
+.seg button { border: 0; background: var(--die); padding: 4px 12px; cursor: pointer }
+.seg button + button { border-left: 1px solid var(--line) }
+.seg button[aria-pressed="true"] { background: var(--ink); color: var(--bg) }
+.diagram .keys, .diagram .overlay, .diagram .coords { display: none }
+svg#cv.dg { cursor: default }
+.dg [data-dinst] { cursor: pointer }
+.dg [data-dinst]:hover rect.blk { stroke-width: 2.4 }
+.chip { display: inline-flex; align-items: center; gap: 4px; padding: 2px 8px; border: 1px solid var(--line); border-radius: 3px; background: var(--panel); cursor: pointer }
+.chip input { margin: 0 }
+.coords { position: absolute; right: 12px; bottom: 12px; font: 12px var(--mono); color: var(--muted); background: var(--panel); border: 1px solid var(--line); padding: 2px 8px; border-radius: 3px }
+.tip { position: absolute; pointer-events: none; background: var(--ink); color: var(--bg); font: 12px var(--mono); padding: 3px 7px; border-radius: 3px; white-space: nowrap; z-index: 3 }
+.keys { position: absolute; right: 12px; top: 12px; font: 11px var(--mono); color: var(--muted); text-align: right; line-height: 1.5 }
+aside { background: var(--panel); display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); align-items: start; min-width: 0 }
+section.box { border-bottom: 1px solid var(--line); border-right: 1px solid var(--line); padding: 12px 16px; display: grid; gap: 8px; min-width: 0 }
+#secChecks { grid-row: span 3 }
+section.box > h2 { margin: 0; font-size: 12px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); display: flex; justify-content: space-between; align-items: baseline; gap: 8px }
+section.box > h2 .meta { letter-spacing: 0; text-transform: none; font: 12px var(--mono) }
+.empty { color: var(--muted); font-size: 13px }
+.row { display: flex; flex-wrap: wrap; gap: 6px; align-items: center }
+.kv { display: grid; grid-template-columns: auto 1fr; gap: 2px 10px; font: 12px var(--mono) }
+.kv dt { color: var(--muted) } .kv dd { margin: 0; text-align: right; font-variant-numeric: tabular-nums }
+label.f { display: grid; gap: 2px; font-size: 12px; color: var(--muted) }
+input[type=number], input[type=text], select, textarea { background: var(--die); border: 1px solid var(--line); border-radius: 3px; padding: 3px 6px; min-width: 0 }
+input[type=number] { width: 84px; font-family: var(--mono); font-size: 12px }
+textarea { width: 100%; font: 12px var(--mono); resize: vertical }
+.orients { display: grid; grid-template-columns: repeat(4, 1fr); gap: 4px }
+.orients button { padding: 3px 0; font: 12px var(--mono) }
+.orients button[aria-pressed="true"] { background: var(--accent); color: var(--accent-ink); border-color: var(--accent) }
+.checks { display: grid; gap: 6px; margin: 0; padding: 0; list-style: none }
+.check { position: relative; cursor: help; display: grid; grid-template-columns: 44px 1fr auto; gap: 2px 8px; align-items: baseline; padding: 6px 8px; border-radius: 3px; background: var(--die); border-left: 3px solid var(--info) }
+.check .why { display: none; position: absolute; left: 0; right: 0; top: calc(100% + 4px); z-index: 6; background: var(--ink); color: var(--bg); padding: 8px 10px; border-radius: 3px; font-size: 12px; line-height: 1.45; box-shadow: 0 4px 14px rgb(0 0 0 / .25) }
+.check .why b { display: block; font-size: 11px; letter-spacing: .06em; text-transform: uppercase; margin-bottom: 2px; opacity: .75 }
+.check:hover .why, .check:focus .why { display: block }
+.check:hover, .check:focus { outline: 1px solid var(--line) }
+.check.pass { border-left-color: var(--pass) } .check.warn { border-left-color: var(--warn) } .check.fail { border-left-color: var(--fail) }
+.check .st { font: 600 11px var(--mono); text-transform: uppercase }
+.check.pass .st { color: var(--pass) } .check.warn .st { color: var(--warn) } .check.fail .st { color: var(--fail) } .check.info .st { color: var(--info) }
+.check .t { font-weight: 600 } .check .v { font: 12px var(--mono); font-variant-numeric: tabular-nums; text-align: right }
+.check .d { grid-column: 2 / 4; font-size: 12px; color: var(--muted) }
+.summary { display: flex; gap: 10px; font: 12px var(--mono) }
+.summary b { font-weight: 600 }
+.bar { height: 12px; display: flex; border-radius: 2px; overflow: hidden; background: var(--grid) }
+.bar span { display: block; height: 100% }
+.legend { display: flex; flex-wrap: wrap; gap: 4px 12px; font-size: 12px; color: var(--muted) }
+.sw { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 4px; vertical-align: -1px }
+.tbl { width: 100%; border-collapse: collapse; font: 12px var(--mono); font-variant-numeric: tabular-nums }
+.tbl td { padding: 2px 4px; border-bottom: 1px solid var(--grid) } .tbl td.n { text-align: right }
+.tbl tr:hover td { background: var(--grid); cursor: default }
+.scroll { max-height: 280px; overflow-y: auto }
+.note { font-size: 12px; color: var(--muted); white-space: pre-wrap; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden }
+.note.open { display: block }
+.linkbtn { border: 0; background: none; padding: 0; color: var(--accent); cursor: pointer; font-size: 12px; justify-self: start }
+
+.warnbox { font-size: 12px; padding: 6px 8px; border-radius: 3px; background: var(--die); border-left: 3px solid var(--warn) }
+.ro .edit-only { display: none !important }
+details > summary { cursor: pointer; font-size: 12px; color: var(--muted) }
+@media (max-width: 860px) {
+  .stage { height: min(62vh, 80vw); min-height: 300px }
+  .keys { display: none }
+}
+@media (prefers-reduced-motion: reduce) { * { transition: none !important } }
+</style>
+
+<div class="app" id="app">
+  <header>
+    <div class="brand"><h1>OOK Radio Floorplan</h1><span class="sub">tt_analog_3x2_3v3 · 493.12 × 225.76 µm</span></div>
+    <div class="tabs" id="tabs" role="tablist" aria-label="Variants"></div>
+    <div class="tools">
+      <div class="seg" role="group" aria-label="View"><button id="mLayout" data-mode="layout">Layout</button><button id="mDiagram" data-mode="diagram">Block diagram</button></div>
+      <button class="btn" id="bFull" title="Fill the screen (Esc to leave)">Full screen</button>
+      <button class="btn edit-only" id="bDup" title="Copy this variant">Duplicate</button>
+      <button class="btn edit-only" id="bRen">Rename</button>
+      <button class="btn edit-only" id="bDel">Delete</button>
+      <button class="btn edit-only" id="bNew" title="A new variant with the macro placed and every other block parked under the tile">Blank</button>
+      <span class="sync" id="sync">connecting…</span>
+    </div>
+  </header>
+  <main>
+    <div class="stage" id="stage">
+      <svg id="cv" aria-label="Tile floorplan"></svg>
+      <div class="keys">drag: move · wheel: zoom · drag empty: pan · shift-drag: select a group · shift-click: add / remove<br>Esc clear · R rotate · X flip ↕ (MX) · Y flip ↔ (MY) · arrows nudge · F fit</div>
+      <div class="overlay" id="layers"></div>
+      <div class="coords" id="coords">x –, y – µm</div>
+      <div class="tip" id="tip" hidden></div>
+    </div>
+    <aside id="side">
+      <section class="box" id="secVariant"></section>
+      <section class="box" id="secSel"></section>
+      <section class="box" id="secChecks"></section>
+      <section class="box" id="secArea"></section>
+      <section class="box" id="secNets"></section>
+      <section class="box" id="secStraps"></section>
+      <section class="box" id="secIO"></section>
+      <section class="box" id="secSettings"></section>
+    </aside>
+  </main>
+</div>
+
+<script>window.FP_DATA = {"tile":{"source":"tt-support-tools main: tech/sky130A/def/analog/tt_analog_3x2_3v3.def","w":493.12,"h":225.76,"pins":{"clk":{"layer":"met4","x0":128.19,"y0":224.76,"x1":128.49,"y1":225.76},"ena":{"layer":"met4","x0":130.95,"y0":224.76,"x1":131.25,"y1":225.76},"rst_n":{"layer":"met4","x0":125.43,"y0":224.76,"x1":125.73,"y1":225.76},"ua[0]":{"layer":"met4","x0":136.17,"y0":0.0,"x1":137.07,"y1":1.0},"ua[1]":{"layer":"met4","x0":116.85,"y0":0.0,"x1":117.75,"y1":1.0},"ua[2]":{"layer":"met4","x0":97.53,"y0":0.0,"x1":98.43,"y1":1.0},"ua[3]":{"layer":"met4","x0":78.21,"y0":0.0,"x1":79.11,"y1":1.0},"ua[4]":{"layer":"met4","x0":58.89,"y0":0.0,"x1":59.79,"y1":1.0},"ua[5]":{"layer":"met4","x0":39.57,"y0":0.0,"x1":40.47,"y1":1.0},"ua[6]":{"layer":"met4","x0":20.25,"y0":0.0,"x1":21.15,"y1":1.0},"ua[7]":{"layer":"met4","x0":0.93,"y0":0.0,"x1":1.83,"y1":1.0},"ui_in[0]":{"layer":"met4","x0":122.67,"y0":224.76,"x1":122.97,"y1":225.76},"ui_in[1]":{"layer":"met4","x0":119.91,"y0":224.76,"x1":120.21,"y1":225.76},"ui_in[2]":{"layer":"met4","x0":117.15,"y0":224.76,"x1":117.45,"y1":225.76},"ui_in[3]":{"layer":"met4","x0":114.39,"y0":224.76,"x1":114.69,"y1":225.76},"ui_in[4]":{"layer":"met4","x0":111.63,"y0":224.76,"x1":111.93,"y1":225.76},"ui_in[5]":{"layer":"met4","x0":108.87,"y0":224.76,"x1":109.17,"y1":225.76},"ui_in[6]":{"layer":"met4","x0":106.11,"y0":224.76,"x1":106.41,"y1":225.76},"ui_in[7]":{"layer":"met4","x0":103.35,"y0":224.76,"x1":103.65,"y1":225.76},"uio_in[0]":{"layer":"met4","x0":100.59,"y0":224.76,"x1":100.89,"y1":225.76},"uio_in[1]":{"layer":"met4","x0":97.83,"y0":224.76,"x1":98.13,"y1":225.76},"uio_in[2]":{"layer":"met4","x0":95.07,"y0":224.76,"x1":95.37,"y1":225.76},"uio_in[3]":{"layer":"met4","x0":92.31,"y0":224.76,"x1":92.61,"y1":225.76},"uio_in[4]":{"layer":"met4","x0":89.55,"y0":224.76,"x1":89.85,"y1":225.76},"uio_in[5]":{"layer":"met4","x0":86.79,"y0":224.76,"x1":87.09,"y1":225.76},"uio_in[6]":{"layer":"met4","x0":84.03,"y0":224.76,"x1":84.33,"y1":225.76},"uio_in[7]":{"layer":"met4","x0":81.27,"y0":224.76,"x1":81.57,"y1":225.76},"uio_oe[0]":{"layer":"met4","x0":34.35,"y0":224.76,"x1":34.65,"y1":225.76},"uio_oe[1]":{"layer":"met4","x0":31.59,"y0":224.76,"x1":31.89,"y1":225.76},"uio_oe[2]":{"layer":"met4","x0":28.83,"y0":224.76,"x1":29.13,"y1":225.76},"uio_oe[3]":{"layer":"met4","x0":26.07,"y0":224.76,"x1":26.37,"y1":225.76},"uio_oe[4]":{"layer":"met4","x0":23.31,"y0":224.76,"x1":23.61,"y1":225.76},"uio_oe[5]":{"layer":"met4","x0":20.55,"y0":224.76,"x1":20.85,"y1":225.76},"uio_oe[6]":{"layer":"met4","x0":17.79,"y0":224.76,"x1":18.09,"y1":225.76},"uio_oe[7]":{"layer":"met4","x0":15.03,"y0":224.76,"x1":15.33,"y1":225.76},"uio_out[0]":{"layer":"met4","x0":56.43,"y0":224.76,"x1":56.73,"y1":225.76},"uio_out[1]":{"layer":"met4","x0":53.67,"y0":224.76,"x1":53.97,"y1":225.76},"uio_out[2]":{"layer":"met4","x0":50.91,"y0":224.76,"x1":51.21,"y1":225.76},"uio_out[3]":{"layer":"met4","x0":48.15,"y0":224.76,"x1":48.45,"y1":225.76},"uio_out[4]":{"layer":"met4","x0":45.39,"y0":224.76,"x1":45.69,"y1":225.76},"uio_out[5]":{"layer":"met4","x0":42.63,"y0":224.76,"x1":42.93,"y1":225.76},"uio_out[6]":{"layer":"met4","x0":39.87,"y0":224.76,"x1":40.17,"y1":225.76},"uio_out[7]":{"layer":"met4","x0":37.11,"y0":224.76,"x1":37.41,"y1":225.76},"uo_out[0]":{"layer":"met4","x0":78.51,"y0":224.76,"x1":78.81,"y1":225.76},"uo_out[1]":{"layer":"met4","x0":75.75,"y0":224.76,"x1":76.05,"y1":225.76},"uo_out[2]":{"layer":"met4","x0":72.99,"y0":224.76,"x1":73.29,"y1":225.76},"uo_out[3]":{"layer":"met4","x0":70.23,"y0":224.76,"x1":70.53,"y1":225.76},"uo_out[4]":{"layer":"met4","x0":67.47,"y0":224.76,"x1":67.77,"y1":225.76},"uo_out[5]":{"layer":"met4","x0":64.71,"y0":224.76,"x1":65.01,"y1":225.76},"uo_out[6]":{"layer":"met4","x0":61.95,"y0":224.76,"x1":62.25,"y1":225.76},"uo_out[7]":{"layer":"met4","x0":59.19,"y0":224.76,"x1":59.49,"y1":225.76}}},"cells":{"log_det":{"h":31.01,"m4":[[1.4,1.32,8.87,6.96],[1.4,22.72,8.87,6.96],[10.56,1.32,8.87,6.96],[10.56,22.72,8.87,6.96],[22.23,1.32,8.87,6.96],[22.23,22.72,8.87,6.96],[31.39,1.32,8.87,6.96],[31.39,22.72,8.87,6.96],[43.06,1.32,8.87,6.96],[43.06,22.72,8.87,6.96],[52.23,1.32,8.87,6.96],[52.23,22.72,8.87,6.96],[63.89,6.38,22.04,24.44]],"pins":{"VDD":{"layer":"met3","x":86.73,"y":15.51},"VSS":{"layer":"met3","x":0.5,"y":15.51},"det":{"layer":"met2","x":0.2,"y":0.25},"ibias_det":{"layer":"met2","x":87.08,"y":24.29},"t1n":{"layer":"met3","x":12.77,"y":23.02},"t1p":{"layer":"met3","x":1.7,"y":23.02},"t2n":{"layer":"met3","x":33.59,"y":23.02},"t2p":{"layer":"met3","x":22.53,"y":23.02},"t3n":{"layer":"met3","x":54.43,"y":23.02},"t3p":{"layer":"met3","x":43.36,"y":23.02},"t4n":{"layer":"met3","x":12.77,"y":7.99},"t4p":{"layer":"met3","x":1.7,"y":7.99},"t5n":{"layer":"met3","x":33.59,"y":7.99},"t5p":{"layer":"met3","x":22.53,"y":7.99},"t6n":{"layer":"met3","x":54.43,"y":7.99},"t6p":{"layer":"met3","x":43.36,"y":7.99}},"w":87.33},"lpf_rc":{"h":35.02,"m4":[[0.2,2.2,64.8,30.0]],"pins":{"VSS":{"layer":"met1","x":0.5,"y":1.0},"in":{"layer":"met2","x":1.5,"y":0.25},"out":{"layer":"met3","x":64.95,"y":31.0},"r1":{"layer":"met1","x":24.2,"y":32.62},"r10":{"layer":"met1","x":33.2,"y":5.58},"r11":{"layer":"met1","x":34.2,"y":32.62},"r12":{"layer":"met1","x":35.2,"y":5.58},"r13":{"layer":"met1","x":36.2,"y":32.62},"r14":{"layer":"met1","x":37.2,"y":5.58},"r15":{"layer":"met1","x":38.2,"y":32.62},"r2":{"layer":"met1","x":25.2,"y":5.58},"r3":{"layer":"met1","x":26.2,"y":32.62},"r4":{"layer":"met1","x":27.2,"y":5.58},"r5":{"layer":"met1","x":28.2,"y":32.62},"r6":{"layer":"met1","x":29.2,"y":5.58},"r7":{"layer":"met1","x":30.2,"y":32.62},"r8":{"layer":"met1","x":31.2,"y":5.58},"r9":{"layer":"met1","x":32.2,"y":32.62}},"w":65.2},"avg_sc":{"h":30.4,"m4":[[0.2,0.2,76.85,30.0],[64.8,19.7,0.4,10.7],[65.5,18.9,0.4,11.5],[68.45,7.6,7.0,14.2],[72.55,23.7,0.5,6.7],[73.35,14.8,0.5,6.2]],"pins":{"VDD":{"layer":"met3","x":68.52,"y":29.65},"VSS":{"layer":"met3","x":68.52,"y":15.55},"cs":{"layer":"met3","x":70.06,"y":21.55},"in":{"layer":"met2","x":77.1,"y":0.25},"out":{"layer":"met3","x":77.1,"y":22.35},"phi1":{"layer":"met4","x":65.0,"y":30.15},"phi1b":{"layer":"met3","x":67.71,"y":24.75},"phi2":{"layer":"met4","x":65.7,"y":30.15},"phi2b":{"layer":"met3","x":68.91,"y":25.55}},"w":77.35},"comp_ct":{"h":41.16,"m4":[[1.15,7.76,22.0,24.2],[13.1,29.86,0.5,5.7],[16.45,32.27,0.5,4.3],[24.65,3.52,0.6,29.24],[25.65,2.72,0.6,26.84],[26.65,1.92,0.6,39.24],[27.65,1.12,12.0,29.24],[41.25,7.76,22.0,24.2],[71.35,0.0,0.5,32.77],[72.15,19.22,1.3,9.54],[72.95,22.22,0.5,8.14]],"pins":{"VDD":{"layer":"met3","x":37.0,"y":40.41},"VSS":{"layer":"met3","x":37.0,"y":19.71},"d1":{"layer":"met3","x":18.65,"y":33.31},"d2":{"layer":"met3","x":36.9,"y":31.71},"ibias":{"layer":"met4","x":73.2,"y":22.47},"inn":{"layer":"met3","x":42.45,"y":40.91},"inp":{"layer":"met3","x":37.85,"y":40.91},"o2":{"layer":"met3","x":69.34,"y":33.31},"out":{"layer":"met4","x":71.6,"y":0.25},"rdeg1":{"layer":"met1","x":3.08,"y":16.68},"rdeg10":{"layer":"met1","x":12.09,"y":5.6},"rdeg11":{"layer":"met1","x":13.09,"y":16.68},"rdeg12":{"layer":"met1","x":14.09,"y":5.6},"rdeg13":{"layer":"met1","x":15.09,"y":16.68},"rdeg14":{"layer":"met1","x":16.09,"y":5.6},"rdeg15":{"layer":"met1","x":17.09,"y":16.68},"rdeg16":{"layer":"met1","x":18.09,"y":5.6},"rdeg17":{"layer":"met1","x":19.09,"y":16.68},"rdeg18":{"layer":"met1","x":20.09,"y":5.6},"rdeg19":{"layer":"met1","x":21.09,"y":16.68},"rdeg2":{"layer":"met1","x":4.08,"y":5.6},"rdeg20":{"layer":"met1","x":22.09,"y":5.6},"rdeg21":{"layer":"met1","x":23.09,"y":16.68},"rdeg22":{"layer":"met1","x":24.09,"y":5.6},"rdeg23":{"layer":"met1","x":25.09,"y":16.68},"rdeg24":{"layer":"met1","x":26.09,"y":5.6},"rdeg25":{"layer":"met1","x":27.09,"y":16.68},"rdeg26":{"layer":"met1","x":28.09,"y":5.6},"rdeg27":{"layer":"met1","x":29.09,"y":16.68},"rdeg28":{"layer":"met1","x":30.09,"y":5.6},"rdeg29":{"layer":"met1","x":31.09,"y":16.68},"rdeg3":{"layer":"met1","x":5.08,"y":16.68},"rdeg4":{"layer":"met1","x":6.08,"y":5.6},"rdeg5":{"layer":"met1","x":7.08,"y":16.68},"rdeg6":{"layer":"met1","x":8.09,"y":5.6},"rdeg7":{"layer":"met1","x":9.09,"y":16.68},"rdeg8":{"layer":"met1","x":10.09,"y":5.6},"rdeg9":{"layer":"met1","x":11.09,"y":16.68},"sa":{"layer":"met3","x":40.3,"y":32.52},"sb":{"layer":"met3","x":44.45,"y":29.31},"tail":{"layer":"met3","x":27.3,"y":30.91},"trim":{"layer":"met4","x":73.2,"y":19.47},"vref":{"layer":"met3","x":28.6,"y":30.11}},"w":73.55},"r2r":{"h":54.12,"m4":[],"pins":{"VGND":{"layer":"met1","x":13.12,"y":0.5},"b":{"layer":"met1","x":17.12,"y":2.5},"b0":{"layer":"met1","x":5.62,"y":0.5},"b1":{"layer":"met1","x":20.62,"y":0.5},"b2":{"layer":"met1","x":28.12,"y":0.5},"b3":{"layer":"met1","x":35.62,"y":0.5},"b4":{"layer":"met1","x":43.12,"y":0.5},"b5":{"layer":"met1","x":50.62,"y":0.5},"b6":{"layer":"met1","x":58.12,"y":0.5},"b7":{"layer":"met1","x":65.62,"y":0.5},"c":{"layer":"met1","x":24.62,"y":2.5},"d":{"layer":"met1","x":32.12,"y":2.5},"e":{"layer":"met1","x":39.62,"y":2.5},"f":{"layer":"met1","x":47.12,"y":2.5},"g":{"layer":"met1","x":54.62,"y":2.5},"out":{"layer":"met1","x":62.12,"y":0.5}},"w":71.75},"bias_gen":{"h":49.07,"m4":[[0.0,11.8,24.04,35.57],[24.94,9.4,55.29,39.67],[29.55,1.7,48.47,22.04]],"pins":{"VDD":{"layer":"met3","x":15.18,"y":23.05},"VSS":{"layer":"met3","x":15.18,"y":0.75},"d1":{"layer":"met3","x":15.64,"y":9.65},"dsw":{"layer":"met3","x":28.3,"y":14.45},"en":{"layer":"met2","x":2.0,"y":0.25},"enb":{"layer":"met3","x":6.51,"y":11.25},"ib_chain":{"layer":"met2","x":28.18,"y":48.82},"ib_comp":{"layer":"met2","x":80.02,"y":48.07},"ib_det":{"layer":"met2","x":79.22,"y":48.82},"ota":{"layer":"met3","x":2.05,"y":12.05},"pb":{"layer":"met3","x":28.3,"y":13.65},"pr":{"layer":"met3","x":2.05,"y":15.25},"rd0":{"layer":"met1","x":33.48,"y":17.44},"rd1":{"layer":"met1","x":34.48,"y":6.37},"rd3":{"layer":"met1","x":36.48,"y":6.37},"rd4":{"layer":"met1","x":37.48,"y":17.44},"rd6":{"layer":"met1","x":39.48,"y":17.44},"rd7":{"layer":"met1","x":40.48,"y":6.37},"rt0":{"layer":"met1","x":44.16,"y":17.15},"rt1":{"layer":"met1","x":45.16,"y":6.65},"rt2":{"layer":"met1","x":46.16,"y":17.15},"tail":{"layer":"met3","x":14.1,"y":12.85},"tsw":{"layer":"met3","x":28.3,"y":10.45},"vcm":{"layer":"met4","x":31.32,"y":48.82},"vref":{"layer":"met3","x":28.3,"y":11.25},"x":{"layer":"met3","x":28.3,"y":8.85},"xr":{"layer":"met1","x":49.92,"y":17.67}},"w":80.22},"dbg_tg":{"h":16.3,"m4":[],"pins":{"VDD":{"layer":"met3","x":2.83,"y":15.3},"VSS":{"layer":"met3","x":2.83,"y":1.0},"a":{"layer":"met3","x":0.25,"y":0.25},"b":{"layer":"met2","x":5.55,"y":0.25},"en":{"layer":"met3","x":5.45,"y":6.35},"enb":{"layer":"met3","x":2.74,"y":7.15}},"w":5.7},"tx_ring":{"h":6.96,"m4":[],"pins":{"VDD":{"layer":"met3","x":9.16,"y":3.48},"VSS":{"layer":"met3","x":9.16,"y":0.5},"en":{"layer":"met3","x":0.44,"y":4.46},"out":{"layer":"met3","x":0.44,"y":1.56},"r1":{"layer":"li1","x":1.34,"y":1.95},"r10":{"layer":"li1","x":14.22,"y":1.95},"r11":{"layer":"li1","x":15.6,"y":1.95},"r12":{"layer":"li1","x":16.98,"y":1.95},"r13":{"layer":"li1","x":16.52,"y":5.01},"r14":{"layer":"li1","x":15.14,"y":5.01},"r15":{"layer":"li1","x":13.76,"y":5.01},"r16":{"layer":"li1","x":12.38,"y":5.01},"r17":{"layer":"li1","x":11.0,"y":5.01},"r18":{"layer":"li1","x":9.62,"y":5.01},"r19":{"layer":"li1","x":8.24,"y":5.01},"r2":{"layer":"li1","x":2.72,"y":1.95},"r20":{"layer":"li1","x":6.86,"y":5.01},"r21":{"layer":"li1","x":5.02,"y":5.01},"r22":{"layer":"li1","x":3.64,"y":5.01},"r3":{"layer":"li1","x":4.1,"y":1.95},"r4":{"layer":"li1","x":5.48,"y":1.95},"r5":{"layer":"li1","x":6.86,"y":1.95},"r6":{"layer":"li1","x":8.24,"y":1.95},"r7":{"layer":"li1","x":9.62,"y":1.95},"r8":{"layer":"li1","x":11.0,"y":1.95},"r9":{"layer":"li1","x":12.84,"y":1.95}},"w":18.32},"tx_ls":{"h":19.0,"m4":[],"pins":{"A":{"layer":"met3","x":13.8,"y":9.35},"B":{"layer":"met3","x":13.8,"y":10.95},"VAPWR":{"layer":"met3","x":10.9,"y":18.0},"VDD":{"layer":"met3","x":3.95,"y":18.0},"VSS":{"layer":"met3","x":7.4,"y":1.0},"ctrl":{"layer":"met3","x":6.23,"y":10.15},"ctrl_n":{"layer":"met3","x":8.5,"y":8.55},"in":{"layer":"met3","x":1.0,"y":10.95}},"w":14.25},"tx_ls_en":{"h":15.48,"m4":[],"pins":{"A":{"layer":"met3","x":12.9,"y":6.83},"B":{"layer":"met3","x":12.9,"y":8.43},"VAPWR":{"layer":"met3","x":10.0,"y":14.48},"VDD":{"layer":"met3","x":3.5,"y":14.48},"VSS":{"layer":"met3","x":6.95,"y":1.0},"ctrl":{"layer":"met3","x":5.78,"y":7.63},"ctrl_n":{"layer":"met3","x":7.6,"y":6.03},"in":{"layer":"met3","x":1.0,"y":8.43}},"w":13.35},"tx_drv":{"h":26.68,"m4":[],"pins":{"VAPWR":{"layer":"met3","x":20.82,"y":25.18},"VSS":{"layer":"met3","x":20.82,"y":1.5},"en":{"layer":"met3","x":1.0,"y":12.38},"in":{"layer":"met3","x":1.0,"y":11.33},"out":{"layer":"met3","x":39.4,"y":12.08},"y0":{"layer":"met3","x":3.05,"y":10.53},"y1":{"layer":"met3","x":5.89,"y":12.38},"y2":{"layer":"met3","x":7.94,"y":11.33},"y3":{"layer":"met3","x":10.99,"y":12.38},"y4":{"layer":"met3","x":22.41,"y":12.38}},"w":40.9},"lna_chain":{"h":70.47,"m4":[[0.8,38.11,67.02,31.16],[10.1,6.24,29.94,12.07],[42.64,6.24,29.94,12.07],[75.18,6.24,29.94,12.07],[103.82,31.91,0.5,6.8],[104.62,30.41,0.5,7.4],[107.72,6.24,29.94,12.07],[107.72,41.45,29.94,12.07]],"pins":{"VDD":{"layer":"met3","x":144.86,"y":35.96},"VSS":{"layer":"met1","x":143.56,"y":20.46},"g1n":{"layer":"met2","x":7.04,"y":60.97},"g1p":{"layer":"met2","x":6.04,"y":60.97},"ibias":{"layer":"met2","x":0.25,"y":49.86},"inn":{"layer":"met3","x":41.2,"y":70.22},"inp":{"layer":"met3","x":21.88,"y":70.22},"o1n":{"layer":"met2","x":142.46,"y":2.9},"o1p":{"layer":"met2","x":141.76,"y":3.6},"o2n":{"layer":"met2","x":139.06,"y":2.9},"o2p":{"layer":"met2","x":140.06,"y":3.6},"o3n":{"layer":"met2","x":106.42,"y":2.9},"o3p":{"layer":"met2","x":106.42,"y":3.6},"o4n":{"layer":"met2","x":73.88,"y":2.9},"o4p":{"layer":"met2","x":73.88,"y":3.6},"o5n":{"layer":"met2","x":41.34,"y":2.9},"o5p":{"layer":"met2","x":41.34,"y":3.6},"outn":{"layer":"met2","x":9.05,"y":2.2},"outp":{"layer":"met2","x":9.05,"y":3.6},"vcm":{"layer":"met2","x":0.25,"y":38.15}},"w":145.36}}};
+window.FP_DEV_VARIANTS = [{"name": "Final: the floorplan that went to the fab", "note": "matt layout 4 (handoff, chain folded) with the 2026-10-09 routing review, and every block laid out to it (pins from the GDS). comp_ct MYR90 (out at its tile-south-east corner; inp = avg / inn = lpf on the west face; ibias over the corridor west of Ctrim, trim over Ctrim); r2r MYR90 (out level with Ctrim, a straight met2 run over r2r); avg_sc clocks on its north edge (leave over the top, away from comp inp / inn), in on its south edge; Ctrim laid out (1 pF shunt cap trim -> VGND, 22.4 um). Macro pins: trim_out[i] level with r2r b_i, comp_in in the gap under r2r, sc_phi then dbg_en / tx_en_n / tx_en just under the TT group (the enables run west in the TT channel). Block positions unchanged.", "place": {"macro": {"x": 282.5, "y": 2.88, "orient": "MY"}, "xchain": {"x": 13.14, "y": 6.5, "orient": "R180"}, "xdet": {"x": 67.5, "y": 80, "orient": "MX"}, "xlpf": {"x": 67, "y": 113.6, "orient": "R0"}, "xavg": {"x": 53, "y": 151.2, "orient": "R0"}, "xcomp": {"x": 137.5, "y": 116.6, "orient": "MYR90"}, "xdac": {"x": 185, "y": 91, "orient": "MYR90"}, "xctrim": {"x": 159, "y": 90.3, "orient": "MX"}, "xbias": {"x": 160.5, "y": 7.5, "orient": "R90"}, "xdbg": {"x": 57.5, "y": 124, "orient": "R0"}, "xtx.xring": {"x": 17.5, "y": 140.5, "orient": "R270"}, "xtx.xls": {"x": 26.5, "y": 141, "orient": "MYR90"}, "xtx.xlse_p": {"x": 39.5, "y": 124, "orient": "MYR90"}, "xtx.xlse_n": {"x": 13, "y": 124, "orient": "R270"}, "xtx.xdrv_p": {"x": 37.5, "y": 80.5, "orient": "R270"}, "xtx.xdrv_n": {"x": 5.5, "y": 80.5, "orient": "MYR90"}}, "decaps": {"xdeca": [{"x": 242, "y": 2, "w": 33, "h": 211}, {"x": 0, "y": 193, "w": 239, "h": 20}, {"x": 0, "y": 162, "w": 50, "h": 28}, {"x": 182, "y": 166, "w": 57, "h": 24}, {"x": 185, "y": 91, "w": 54.12, "h": 71.75, "mim": true}], "xdecd": [{"x": 0, "y": 7, "w": 10.64, "h": 71}, {"x": 0, "y": 124, "w": 10, "h": 35}, {"x": 213, "y": 2, "w": 26, "h": 86}, {"x": 0, "y": 216, "w": 51, "h": 6}]}, "straps": [{"net": "VGND", "x": 12, "w": 3.1}, {"net": "VDPWR", "x": 5.8, "w": 4.7}, {"net": "VAPWR", "x": 481, "w": 8.22}, {"net": "VGND", "x": 489.72, "w": 1.2}, {"net": "VDPWR", "x": 491.42, "w": 1.2}, {"net": "VAPWR", "x": 276.5, "w": 1.2}, {"net": "VGND", "x": 278.2, "w": 1.2}, {"net": "VDPWR", "x": 279.9, "w": 1.2}, {"net": "VAPWR", "x": 0.3, "w": 5}], "est": {"macro": {"w": 200, "h": 220, "area": 44000}}, "macroPins": {"trim": "W"}, "pins": {"macro": {"rx_en": {"x": 199.75, "y": 7.14}, "comp_in": {"x": 199.75, "y": 86.02}, "trim_out[7]": {"x": 199.75, "y": 94.18}, "trim_out[6]": {"x": 199.75, "y": 102.34}, "trim_out[5]": {"x": 199.75, "y": 109.14}, "trim_out[4]": {"x": 199.75, "y": 117.3}, "trim_out[3]": {"x": 199.75, "y": 124.1}, "trim_out[2]": {"x": 199.75, "y": 132.26}, "trim_out[1]": {"x": 199.75, "y": 139.06}, "trim_out[0]": {"x": 199.75, "y": 154.02}, "sc_phi2": {"x": 199.75, "y": 155.38}, "sc_phi1": {"x": 199.75, "y": 156.74}, "dbg_en": {"x": 199.75, "y": 158.1}, "tx_en_n": {"x": 199.75, "y": 159.46}, "tx_en": {"x": 199.75, "y": 160.82}, "clk": {"x": 199.75, "y": 162.18}, "uio_oe[7]": {"x": 199.75, "y": 163.54}, "uio_oe[6]": {"x": 199.75, "y": 164.9}, "uio_oe[5]": {"x": 199.75, "y": 166.26}, "uio_oe[4]": {"x": 199.75, "y": 167.62}, "uio_oe[3]": {"x": 199.75, "y": 168.98}, "uio_oe[2]": {"x": 199.75, "y": 170.34}, "uio_oe[1]": {"x": 199.75, "y": 171.7}, "uio_oe[0]": {"x": 199.75, "y": 173.06}, "uio_out[7]": {"x": 199.75, "y": 174.42}, "uio_out[6]": {"x": 199.75, "y": 175.78}, "uio_out[5]": {"x": 199.75, "y": 177.14}, "uio_out[4]": {"x": 199.75, "y": 178.5}, "uio_out[3]": {"x": 199.75, "y": 179.86}, "uio_out[2]": {"x": 199.75, "y": 181.22}, "uio_out[1]": {"x": 199.75, "y": 182.58}, "uio_out[0]": {"x": 199.75, "y": 183.94}, "uo_out[7]": {"x": 199.75, "y": 185.3}, "uo_out[6]": {"x": 199.75, "y": 186.66}, "uo_out[5]": {"x": 199.75, "y": 188.02}, "uo_out[4]": {"x": 199.75, "y": 189.38}, "uo_out[3]": {"x": 199.75, "y": 190.74}, "uo_out[2]": {"x": 199.75, "y": 192.1}, "uo_out[1]": {"x": 199.75, "y": 193.46}, "uo_out[0]": {"x": 199.75, "y": 194.82}, "uio_in[7]": {"x": 199.75, "y": 196.18}, "uio_in[6]": {"x": 199.75, "y": 197.54}, "uio_in[5]": {"x": 199.75, "y": 198.9}, "uio_in[4]": {"x": 199.75, "y": 200.26}, "uio_in[3]": {"x": 199.75, "y": 201.62}, "uio_in[2]": {"x": 199.75, "y": 202.98}, "uio_in[1]": {"x": 199.75, "y": 204.34}, "uio_in[0]": {"x": 199.75, "y": 205.7}, "ui_in[7]": {"x": 199.75, "y": 207.06}, "ui_in[6]": {"x": 199.75, "y": 208.42}, "ui_in[5]": {"x": 199.75, "y": 209.78}, "ui_in[4]": {"x": 199.75, "y": 211.14}, "ui_in[3]": {"x": 199.75, "y": 212.5}, "ui_in[2]": {"x": 199.75, "y": 213.86}, "ui_in[1]": {"x": 199.75, "y": 215.22}, "ui_in[0]": {"x": 199.75, "y": 216.58}, "rst_n": {"x": 199.75, "y": 217.94}}}, "id": "final", "order": 0}, {"id": "A", "decaps": {"xdeca": [{"h": 127, "w": 49, "x": 1.5, "y": 85.5}, {"h": 16, "w": 253, "x": 240, "y": 2}], "xdecd": [{"h": 31, "w": 12, "x": 174, "y": 108}, {"h": 36, "w": 34, "x": 52, "y": 177}, {"h": 25, "w": 8, "x": 215, "y": 188}, {"h": 10, "w": 60, "x": 103, "y": 47}, {"h": 8, "w": 61, "x": 162, "y": 22}]}, "est": {}, "name": "A: RX left, TX middle, macro right", "note": "RX left, TX middle, macro right. The real lna_chain (268 x 35 \u00b5m) is parked under the tile: place it.", "order": 1, "place": {"macro": {"orient": "R0", "x": 228.12, "y": 23.76}, "xavg": {"orient": "MYR90", "x": 188.50485652815644, "y": 107.60861038361007}, "xbias": {"orient": "R270", "x": 0, "y": 3}, "xcomp": {"orient": "R180", "x": 89.64774538128748, "y": 97.81379914193293}, "xctrim": {"orient": "R180", "x": 188.5, "y": 187.5}, "xdac": {"orient": "R90", "x": 166.42967043601254, "y": 33.26435839047503}, "xdbg": {"orient": "R180", "x": 165.60372182330417, "y": 123.59516036428452}, "xdet": {"orient": "MX", "x": 88.5, "y": 142.5}, "xlpf": {"orient": "MX", "x": 98.69466926029928, "y": 60.23099976629979}, "xtx.xdrv_n": {"orient": "MYR90", "x": 102.7, "y": 3}, "xtx.xdrv_p": {"orient": "R270", "x": 131.9, "y": 3}, "xtx.xls": {"orient": "MXR90", "x": 165.16404347966127, "y": 4.4925922928136215}, "xtx.xlse_n": {"orient": "R180", "x": 207.5, "y": 3}, "xtx.xlse_p": {"orient": "R180", "x": 223.5, "y": 3}, "xtx.xring": {"orient": "R0", "x": 186.6645882208298, "y": 3.980861755559603}}, "straps": [{"net": "VGND", "w": 1.2, "x": 49.6}, {"net": "VDPWR", "w": 1.2, "x": 87.6}, {"net": "VAPWR", "w": 1.2, "x": 221.4}, {"net": "VGND", "w": 1.2, "x": 488.6}, {"net": "VDPWR", "w": 1.2, "x": 490.2}], "updatedAt": "2026-10-09T07:29:21.307Z", "updatedBy": "u_f2MrQcToqQu4mF7vfWFxQQ"}, {"id": "B", "decaps": {"xdeca": [{"h": 127, "w": 49, "x": 0, "y": 86}, {"h": 28, "w": 242, "x": 251, "y": 2}], "xdecd": [{"h": 36, "w": 34, "x": 52, "y": 177}, {"h": 89, "w": 9, "x": 90, "y": 50}, {"h": 37, "w": 22, "x": 189, "y": 176}, {"h": 9, "w": 32, "x": 216, "y": 2}]}, "est": {}, "name": "B: A with the macro at the top edge", "note": "A with the macro body on the top edge (one ~31 \u00b5m band below it). The macro's north pins can't be reached from the TT pins this way unless it is re-hardened with them on the west edge. The real lna_chain is parked under the tile: place it.", "order": 2, "place": {"macro": {"orient": "R0", "x": 228.12, "y": 35.76}, "xavg": {"orient": "MX", "x": 105.29335933109874, "y": 108.15036252818773}, "xbias": {"orient": "R270", "x": 0, "y": 3}, "xcomp": {"orient": "MYR90", "x": 176.61049335622917, "y": 32.156412336998656}, "xctrim": {"orient": "R0", "x": 161.42500092863204, "y": 6.0653909514499835}, "xdac": {"orient": "MX", "x": 102.35166143133266, "y": 51.49260380209149}, "xdbg": {"orient": "R0", "x": 214.02431477263235, "y": 176.14349003505612}, "xdet": {"orient": "MX", "x": 89.36, "y": 142.4}, "xlpf": {"orient": "R270", "x": 185.1450415326407, "y": 108.22645837690104}, "xtx.xdrv_n": {"orient": "MYR90", "x": 102.7, "y": 3}, "xtx.xdrv_p": {"orient": "R270", "x": 131.9, "y": 3}, "xtx.xls": {"orient": "R90", "x": 187.4265096986774, "y": 15.32119862610488}, "xtx.xlse_n": {"orient": "R180", "x": 234.89408944704877, "y": 15.138879261534452}, "xtx.xlse_p": {"orient": "R180", "x": 219, "y": 14}, "xtx.xring": {"orient": "MX", "x": 195.04348227505298, "y": 5.826065051330564}}, "straps": [{"net": "VGND", "w": 1.2, "x": 49.6}, {"net": "VDPWR", "w": 1.2, "x": 87.6}, {"net": "VAPWR", "w": 1.2, "x": 221.4}, {"net": "VGND", "w": 1.2, "x": 488.6}, {"net": "VDPWR", "w": 1.2, "x": 490.2}], "updatedAt": "2026-10-08T21:32:53.400Z"}, {"id": "C", "decaps": {"xdeca": [{"h": 13, "w": 16, "x": -103, "y": 3.5}, {"h": 13, "w": 19, "x": 175.5, "y": -45.5}, {"h": 9, "w": 24, "x": 199, "y": 39}, {"h": 15, "w": 45, "x": 177.5, "y": -51}, {"h": 16, "w": 316, "x": 179.5, "y": -29.5}], "xdecd": [{"h": 11, "w": 60, "x": 40, "y": 128}, {"h": 30, "w": 9, "x": -62, "y": 105}, {"h": 36, "w": 37, "x": -128.5, "y": 141}, {"h": 49, "w": 56, "x": -181.5, "y": 16.5}]}, "est": {}, "name": "C: chain far left, signal path along the top", "note": "Chain at the far left, signal path in the upper middle. The real lna_chain is parked under the tile: place it.", "order": 3, "place": {"macro": {"orient": "R0", "x": -11, "y": 252}, "xavg": {"orient": "MX", "x": 139.07889758480638, "y": 183.35523787992088}, "xbias": {"orient": "MYR90", "x": 40, "y": 45}, "xcomp": {"orient": "MYR90", "x": 179.35214409447207, "y": 107.34276766857806}, "xctrim": {"orient": "MX", "x": 115.69600053470306, "y": 116.28504329222315}, "xdac": {"orient": "R180", "x": 150.94577297738863, "y": 50.709646888743}, "xdbg": {"orient": "R180", "x": 103, "y": 123.5}, "xdet": {"orient": "MX", "x": 39.76, "y": 142.4}, "xlpf": {"orient": "R90", "x": 141.70116332870546, "y": 115.055778715805}, "xtx.xdrv_n": {"orient": "MYR90", "x": 102.7, "y": 3}, "xtx.xdrv_p": {"orient": "R270", "x": 131.9, "y": 3}, "xtx.xls": {"orient": "MY", "x": 161.08585021782704, "y": 29.00220451269536}, "xtx.xlse_n": {"orient": "R270", "x": 110.5, "y": 46.5}, "xtx.xlse_p": {"orient": "R180", "x": 161.10183334957748, "y": 10.928247870117204}, "xtx.xring": {"orient": "R0", "x": 178, "y": 38.5}}, "straps": [{"net": "VGND", "w": 1.2, "x": 38.5}, {"net": "VDPWR", "w": 1.2, "x": 0.6}, {"net": "VAPWR", "w": 1.2, "x": 221.4}, {"net": "VGND", "w": 1.2, "x": 488.6}, {"net": "VDPWR", "w": 1.2, "x": 490.2}], "updatedAt": "2026-10-09T07:44:58.992Z", "updatedBy": "u_f2MrQcToqQu4mF7vfWFxQQ"}];</script>
+<script>// Floorplan engine: instances, orientations, pins, nets and the ranked-rule checks.
+// Pure functions, no DOM: the page inlines this file, and `node layout/floorplan/page/check.js`
+// runs the same checks on layout/floorplan/variants.json.
+// Units: um, tile origin at its lower-left. A placement {x, y, orient} puts the lower-left
+// corner of the transformed bbox at (x, y), as in floorplan.json.
+(function (root) {
+  'use strict';
+
+  // GDS orientations as (rotation k * 90 deg CCW, mirror about the x axis first), the same
+  // decomposition as KLayout's DCplxTrans(mag, rot, mirror, u).
+  const ORIENTS = {
+    R0: [0, false], R90: [1, false], R180: [2, false], R270: [3, false],
+    MX: [0, true], MXR90: [1, true], MY: [2, true], MYR90: [3, true],
+  };
+  const ORIENT_OF = {};
+  for (const [n, [k, m]] of Object.entries(ORIENTS)) ORIENT_OF[k + (m ? 'm' : '')] = n;
+
+  function rotPt(k, m, x, y) {
+    if (m) y = -y;
+    for (let i = 0; i < k; i++) [x, y] = [-y, x];
+    return [x, y];
+  }
+  // Placed size of a w x h cell.
+  function placedSize(orient, w, h) { return ORIENTS[orient][0] % 2 ? [h, w] : [w, h]; }
+  // Map a cell-local point (cell bbox lower-left = 0,0) to tile coordinates.
+  function mapPt(pl, w, h, x, y) {
+    const [k, m] = ORIENTS[pl.orient];
+    const cs = [[0, 0], [w, 0], [0, h], [w, h]].map(([a, b]) => rotPt(k, m, a, b));
+    const mx = Math.min(...cs.map(c => c[0])), my = Math.min(...cs.map(c => c[1]));
+    const [px, py] = rotPt(k, m, x, y);
+    return [pl.x + px - mx, pl.y + py - my];
+  }
+  function mapRect(pl, w, h, r) {
+    const a = mapPt(pl, w, h, r[0], r[1]), b = mapPt(pl, w, h, r[0] + r[2], r[1] + r[3]);
+    return [Math.min(a[0], b[0]), Math.min(a[1], b[1]), Math.abs(a[0] - b[0]), Math.abs(a[1] - b[1])];
+  }
+  // Orientation after rotating 90 CCW / mirroring top-bottom (MX) / left-right (MY) on screen.
+  function compose(orient, op) {
+    let [k, m] = ORIENTS[orient];
+    if (op === 'rot') k = (k + 1) % 4;
+    else if (op === 'mx') { k = (4 - k) % 4; m = !m; }
+    else if (op === 'my') { k = (6 - k) % 4; m = !m; }
+    return ORIENT_OF[k + (m ? 'm' : '')];
+  }
+
+  // ---- the netlist of the tile (docs/floorplan_spec.md, "What goes in the tile" + "Nets")
+  function buildCatalog(data) {
+    const C = data.cells, cat = {};
+    // zones of the real (folded) chain, in its own frame (layout/gen/lna_chain.py): the input
+    // section (Cin, Rb, Mref) and stage 1 in the front row (top), stages 4-6 in the back row
+    // (bottom, across the 14 um moat). Placed R180, the front row sits over the RX pads.
+    const chainZones = { input: [0, 35.21, 69.02, 35.26], stage1: [69.02, 35.21, 36.4, 20.73], late: [9.8, 0, 95.62, 21.21] };
+    const real = (inst, cell, extra) => Object.assign({ inst, cell, w: C[cell].w, h: C[cell].h, pins: C[cell].pins, m4: C[cell].m4 || [], group: 'rx' }, extra || {});
+    // macro pins: even spread of pin_order.cfg slots (LibreLane), an estimate until the DEF is read
+    const W = ['$', '$', 'tx_en', 'tx_en_n', '$', '$', '$', 'rx_en', 'dbg_en', '$', '$', '$', 'comp_in', 'sc_phi1', 'sc_phi2', '$', '$']
+      .concat([0, 1, 2, 3, 4, 5, 6, 7].map(i => `trim_out[${i}]`)).concat(Array(25).fill('$'));
+    const mpins = {};
+    W.forEach((n, i) => { if (n !== '$') mpins[n] = { layer: 'met3', x: 0, y: +((i + 1) * 190 / (W.length + 1)).toFixed(2), est: true }; });
+    const N = [];
+    for (const b of ['uio_oe', 'uio_out', 'uo_out', 'uio_in', 'ui_in']) for (let i = 7; i >= 0; i--) N.push(`${b}[${i}]`);
+    N.push('rst_n', 'clk');
+    N.forEach((n, i) => { mpins[n] = { layer: 'met2', x: +((i + 1) * 260 / 83).toFixed(2), y: 190, est: true }; });
+    const list = [
+      { inst: 'macro', cell: 'radio_digital', w: 260, h: 190, reshape: true, halo: 5, pins: mpins, m4: [[0, 0, 260, 190]], group: 'dig', label: 'radio_digital' },
+      real('xchain', 'lna_chain', { zones: chainZones }),
+      real('xdet', 'log_det'), real('xlpf', 'lpf_rc'),
+      real('xavg', 'avg_sc'),
+      real('xcomp', 'comp_ct'),
+      real('xdac', 'r2r', { group: 'trim', overDecap: true }),   // met1-only: a MIM decap may sit on top
+      C.ctrim_1p ? real('xctrim', 'ctrim_1p', { group: 'trim', label: 'Ctrim 1 pF' })     // laid out (layout/gen/ctrim_1p.py)
+        : { inst: 'xctrim', cell: 'ctrim_1p', w: 23.5, h: 23.5, estimate: true, group: 'trim', label: 'Ctrim 1 pF',
+          pins: { trim: { layer: 'met4', x: 1, y: 0.25 } }, m4: [[0, 0, 23.5, 23.5]] },
+      real('xbias', 'bias_gen', { group: 'bias' }), real('xdbg', 'dbg_tg'),
+      real('xtx.xring', 'tx_ring', { group: 'tx' }), real('xtx.xls', 'tx_ls', { group: 'tx' }),
+      real('xtx.xlse_p', 'tx_ls_en', { group: 'tx' }), real('xtx.xlse_n', 'tx_ls_en', { group: 'tx' }),
+      real('xtx.xdrv_p', 'tx_drv', { group: 'tx' }), real('xtx.xdrv_n', 'tx_drv', { group: 'tx' }),
+    ];
+    for (const b of list) cat[b.inst] = b;
+    return cat;
+  }
+  const MIM_FF = 2.06;                 // fF / um2, cap_mim_m3_1 (xschem/gen/chain.py)
+  const DECAPS = {
+    xdeca: { cell: 'decap_vapwr', net: 'VAPWR', pf: 50, target: 18000, label: 'decap VAPWR' },
+    xdecd: { cell: 'decap_vdpwr', net: 'VDPWR', pf: 30, target: 4100, label: 'decap VDPWR' },
+  };
+
+  // [name, class, from, to]; endpoints are "inst.pin" or "pad:<tile pin>"
+  const NETS = [
+    ['rx_p', 'rxin', 'pad:ua[0]', 'xchain.inp'], ['rx_n', 'rxin', 'pad:ua[1]', 'xchain.inn'],
+    ['o1', 'rx', 'xchain.o1p', 'xdet.t1p'], ['o2', 'rx', 'xchain.o2p', 'xdet.t2p'], ['o3', 'rx', 'xchain.o3p', 'xdet.t3p'],
+    ['o4', 'late', 'xchain.o4p', 'xdet.t4p'], ['o5', 'late', 'xchain.o5p', 'xdet.t5p'], ['out', 'late', 'xchain.outp', 'xdet.t6p'],
+    ['det', 'rx', 'xdet.det', 'xlpf.in'], ['det dbg', 'rx', 'xdet.det', 'xdbg.a'], ['dbg', 'rx', 'xdbg.b', 'pad:ua[2]'],
+    ['lpf', 'rx', 'xlpf.out', 'xavg.in'], ['lpf comp', 'rx', 'xlpf.out', 'xcomp.inn'], ['avg', 'rx', 'xavg.out', 'xcomp.inp'],   // xschem/gen/top.py: inp = avg, inn = lpf
+    ['comp_in', 'clk', 'xcomp.out', 'macro.comp_in'],
+    ['sc_phi1', 'clk', 'macro.sc_phi1', 'xavg.phi1'], ['sc_phi2', 'clk', 'macro.sc_phi2', 'xavg.phi2'],
+    ['rx_en', 'en', 'macro.rx_en', 'xbias.en'], ['dbg_en', 'en', 'macro.dbg_en', 'xdbg.en'],
+    ['tx_en key', 'en', 'macro.tx_en', 'xtx.xring.en'], ['tx_en', 'en', 'macro.tx_en', 'xtx.xlse_p.in'], ['tx_en_n', 'en', 'macro.tx_en_n', 'xtx.xlse_n.in'],
+    ['clk', 'clk', 'pad:clk', 'macro.clk'],
+  ].concat([0, 1, 2, 3, 4, 5, 6, 7].map(i => [`trim[${i}]`, 'trim', `macro.trim_out[${i}]`, `xdac.b${i}`])).concat([
+    ['dac', 'trim', 'xdac.out', 'xctrim.trim'], ['trim', 'trim', 'xctrim.trim', 'xcomp.trim'],   // one net: Ctrim is a shunt cap (trim -> VGND)
+    ['ib_chain', 'bias', 'xbias.ib_chain', 'xchain.ibias'], ['vcm', 'bias', 'xbias.vcm', 'xchain.vcm'],
+    ['ib_det', 'bias', 'xbias.ib_det', 'xdet.ibias_det'], ['ib_comp', 'bias', 'xbias.ib_comp', 'xcomp.ibias'],
+    ['ring', 'tx', 'xtx.xring.out', 'xtx.xls.in'], ['a', 'tx', 'xtx.xls.A', 'xtx.xdrv_p.in'], ['b', 'tx', 'xtx.xls.B', 'xtx.xdrv_n.in'],
+    ['enh_p', 'tx', 'xtx.xlse_p.A', 'xtx.xdrv_p.en'], ['enh_n', 'tx', 'xtx.xlse_n.A', 'xtx.xdrv_n.en'],
+    ['tx_p', 'tx', 'xtx.xdrv_p.out', 'pad:ua[3]'], ['tx_n', 'tx', 'xtx.xdrv_n.out', 'pad:ua[4]'],
+  ]);
+  const NET_CLASSES = {
+    rxin: 'RX input', rx: 'RX signal', late: 'RX late stages', clk: 'clock / switching', en: 'enable (static in RX)', bias: 'bias', tx: 'TX', trim: 'trim',
+  };
+
+  const DEFAULT_SETTINGS = {
+    keepout: 2.5,          // um between blocks (guard rings)
+    channel: 12,           // um: TT digital pins -> macro north pins routing channel along the top
+    strapY: 5,             // straps run from strapY to H - strapY
+    r1: 100, r2: 60, r3: 20, r4: 320, r5: 40, r6: 60, r8: 40,
+    deca: 18000, decd: 4100,
+  };
+
+  // ---- geometry
+  const area = r => r[2] * r[3];
+  function rectGap(a, b) {         // Euclidean gap between two rects (0 if touching/overlapping)
+    const dx = Math.max(0, b[0] - (a[0] + a[2]), a[0] - (b[0] + b[2]));
+    const dy = Math.max(0, b[1] - (a[1] + a[3]), a[1] - (b[1] + b[3]));
+    return Math.hypot(dx, dy);
+  }
+  function overlap(a, b) {
+    const w = Math.min(a[0] + a[2], b[0] + b[2]) - Math.max(a[0], b[0]);
+    const h = Math.min(a[1] + a[3], b[1] + b[3]) - Math.max(a[1], b[1]);
+    return w > 1e-6 && h > 1e-6 ? w * h : 0;
+  }
+  const segRect = (s) => [Math.min(s[0], s[2]), Math.min(s[1], s[3]), Math.abs(s[2] - s[0]), Math.abs(s[3] - s[1])];
+  function segCrosses(s, r, margin) {   // axis-aligned segment passes through rect interior (shrunk by margin)
+    const m = margin || 0, q = [r[0] + m, r[1] + m, r[2] - 2 * m, r[3] - 2 * m];
+    if (q[2] <= 0 || q[3] <= 0) return false;
+    const sr = segRect(s);
+    return sr[0] < q[0] + q[2] && sr[0] + sr[2] > q[0] && sr[1] < q[1] + q[3] && sr[1] + sr[3] > q[1];
+  }
+  const manhattan = (a, b) => Math.abs(a[0] - b[0]) + Math.abs(a[1] - b[1]);
+  // Two L-shaped candidate routes; pick the one crossing fewer obstacles (ties: horizontal first).
+  function lRoute(a, b, obstacles) {
+    const r1 = [[a[0], a[1], b[0], a[1]], [b[0], a[1], b[0], b[1]]];
+    const r2 = [[a[0], a[1], a[0], b[1]], [a[0], b[1], b[0], b[1]]];
+    if (!obstacles || !obstacles.length) return r1;
+    const hits = r => obstacles.filter(o => r.some(s => segCrosses(s, o, 0.6))).length;
+    return hits(r2) < hits(r1) ? r2 : r1;
+  }
+
+  // ---- placement
+  // A variant: {name, note, place: {inst: {x, y, orient}}, decaps: {xdeca: [{x,y,w,h}], ...},
+  //             straps: [{net, x, w}], est: {xctrim: {w, h}}}
+  function resolve(cat, v) {
+    const inst = {};
+    for (const [n, c] of Object.entries(cat)) {
+      const p = (v.place || {})[n];
+      if (!p) continue;
+      const F = c.fold && v.fold && v.fold[n] ? c.fold : null;          // folded chain: its own size, pins, met4 and zones
+      let w = F ? F.w : c.w, h = F ? F.h : c.h;
+      const scaled = c.estimate || c.reshape;      // estimated blocks, and the macro (re-hardened at a new aspect ratio, same area)
+      if (scaled && v.est && v.est[n]) { w = v.est[n].w; h = c.reshape ? (v.est[n].area || c.w * c.h) / w : v.est[n].h; }   // macro: est.area overrides the hardened area
+      const pl = { x: p.x, y: p.y, orient: p.orient || 'R0' };
+      const [pw, ph] = placedSize(pl.orient, w, h);
+      const rect = [pl.x, pl.y, pw, ph];
+      const pins = {};
+      const sx = scaled ? w / c.w : 1, sy = scaled ? h / c.h : 1;
+      const src = n === 'macro' ? macroPins(c, v) : F ? F.pins : c.pins;
+      // moved pins (floorplanning): v.pins[inst][pin] = {x, y} in the block's own frame at its
+      // placed size; they need a block re-layout (or, for the macro, a new pin_order.cfg)
+      const mv = (v.pins || {})[n] || {};
+      for (const [pn, pp] of Object.entries(src)) {
+        const m = mv[pn];
+        pins[pn] = Object.assign({}, pp, m ? { x: m.x, y: m.y, moved: true, at: mapPt(pl, w, h, m.x, m.y) } : { at: mapPt(pl, w, h, pp.x * sx, pp.y * sy) });
+      }
+      const m4 = ((F ? F.m4 : c.m4) || []).map(r => scaled ? [0, 0, w, h] : r).map(r => mapRect(pl, w, h, r));
+      const zones = {};
+      for (const [zn, z] of Object.entries((F ? F.zones : c.zones) || {})) zones[zn] = mapRect(pl, w, h, z);
+      inst[n] = { name: n, cat: c, pl, w, h, rect, pins, m4, zones, folded: !!F,
+        halo: c.halo ? [rect[0] - c.halo, rect[1] - c.halo, rect[2] + 2 * c.halo, rect[3] + 2 * c.halo] : null };
+    }
+    const decaps = [];
+    for (const [n, d] of Object.entries(DECAPS)) ((v.decaps || {})[n] || []).forEach((r, i) =>
+      decaps.push({ name: `${n}.${i + 1}`, base: n, idx: i, def: d, mim: !!r.mim, rect: [r.x, r.y, r.w, r.h] }));
+    return { inst, decaps };
+  }
+
+  // The r2r trim drive (trim_out[7:0]) can move to another macro edge (a pin_order.cfg change
+  // and a re-harden): W as hardened; S at the west end of the south edge; N after the 42 TT pins;
+  // E at the same heights as on W. Coordinates in the 260 x 190 frame (scaled when reshaped).
+  const TRIM_SIDES = { W: 'west (as hardened)', S: 'south', N: 'north', E: 'east' };
+  function macroPins(c, v) {
+    const side = (v.macroPins && v.macroPins.trim) || 'W';
+    if (side === 'W') return c.pins;
+    const p = Object.assign({}, c.pins);
+    for (let i = 0; i < 8; i++) {
+      const k = `trim_out[${i}]`, o = c.pins[k];
+      const at = side === 'S' ? { x: +((i + 1) * 260 / 83).toFixed(2), y: 0 }
+        : side === 'N' ? { x: +((i + 43) * 260 / 83).toFixed(2), y: 190 } : { x: 260, y: o.y };
+      p[k] = Object.assign({}, o, at);
+    }
+    return p;
+  }
+
+  function pinAt(tile, R, ref) {
+    if (ref.startsWith('pad:')) {
+      const p = tile.pins[ref.slice(4)];
+      if (!p) return null;
+      return [(p.x0 + p.x1) / 2, p.y0 < 1 ? 0 : tile.h];
+    }
+    const i = ref.lastIndexOf('.');
+    const ins = R.inst[ref.slice(0, i)];
+    if (!ins) return null;
+    const p = ins.pins[ref.slice(i + 1)];
+    return p ? p.at : null;
+  }
+
+  // The TT digital pins (top edge) to the macro's pins: at each x, the channel along the top is as
+  // tall as the number of wires running horizontally there x the track pitch (s.channel = all 42).
+  // So it ramps up from x 15 to the last TT pin, is full height until the first macro pin, and
+  // ramps down again over the macro as the wires land.
+  function channelShapes(tile, R, s) {
+    const m = R.inst.macro;
+    if (!s.channel || !m) return [];
+    const spans = [];
+    for (const [n, tp] of Object.entries(tile.pins)) {
+      if (tp.y0 < 1 || !m.pins[n]) continue;                            // top-edge TT pins the macro has
+      const tx = (tp.x0 + tp.x1) / 2, mx = m.pins[n].at[0];
+      spans.push([Math.min(tx, mx), Math.max(tx, mx)]);
+    }
+    if (!spans.length) return [];
+    const pitch = s.channel / spans.length, xs = [...new Set(spans.flat())].sort((a, b) => a - b), out = [];
+    for (let i = 0; i < xs.length - 1; i++) {
+      const a = xs[i], b = xs[i + 1], mid = (a + b) / 2, k = spans.filter(([p, q]) => p <= mid && q >= mid).length;
+      if (!k) continue;
+      const h = k * pitch, last = out[out.length - 1];
+      if (last && Math.abs(last[3] - h) < 1e-9 && Math.abs(last[0] + last[2] - a) < 1e-9) last[2] = b - last[0];
+      else out.push([a, tile.h - h, b - a, h]);
+    }
+    return out;
+  }
+  function channelRect(tile, R, s) {                                   // bounding box of the channel
+    const sh = channelShapes(tile, R, s);
+    if (!sh.length) return null;
+    const x0 = Math.min(...sh.map(r => r[0])), x1 = Math.max(...sh.map(r => r[0] + r[2])), y0 = Math.min(...sh.map(r => r[1]));
+    return [x0, y0, x1 - x0, tile.h - y0];
+  }
+
+  function routeNets(tile, R) {
+    const obst = Object.values(R.inst).map(i => i.rect);
+    const out = [];
+    for (const [name, cls, a, b] of NETS) {
+      const pa = pinAt(tile, R, a), pb = pinAt(tile, R, b);
+      if (!pa || !pb) { out.push({ name, cls, a, b, missing: true }); continue; }
+      const ownA = a.startsWith('pad:') ? null : a.slice(0, a.lastIndexOf('.'));
+      const ownB = b.startsWith('pad:') ? null : b.slice(0, b.lastIndexOf('.'));
+      const others = Object.values(R.inst).filter(i => i.name !== ownA && i.name !== ownB).map(i => i.rect);
+      out.push({ name, cls, a, b, pa, pb, len: manhattan(pa, pb), segs: lRoute(pa, pb, others) });
+    }
+    return out;
+  }
+
+  const fmt = (x, d) => (x === Infinity ? '-' : x.toFixed(d === undefined ? 0 : d));
+  function minGapShapes(A, B) {     // A, B: arrays of rects or segments (as rects)
+    let d = Infinity;
+    for (const a of A) for (const b of B) d = Math.min(d, rectGap(a, b));
+    return d;
+  }
+
+  // ---- checks: [{id, rule, title, status: pass|warn|fail|info, value, detail}]
+  function evaluate(data, cat, v, settings) {
+    const s = Object.assign({}, DEFAULT_SETTINGS, settings || {});
+    const tile = data.tile, R = resolve(cat, v), nets = routeNets(tile, R);
+    const I = R.inst, res = [];
+    const add = (rule, title, status, value, detail) => res.push({ rule, title, status, value, detail: detail || '' });
+    const netBy = n => nets.find(x => x.name === n);
+    const segsOf = list => list.filter(n => n && !n.missing).flatMap(n => n.segs.map(segRect));
+    const lvl = (x, pass, warn, higher) => higher ? (x >= pass ? 'pass' : x >= warn ? 'warn' : 'fail') : (x <= pass ? 'pass' : x <= warn ? 'warn' : 'fail');
+    const chanSh = channelShapes(tile, R, s), chan = chanSh.length ? channelRect(tile, R, s) : null;
+    const missing = Object.keys(cat).filter(n => !I[n]);
+
+    // inputs: chain input section + pad wires; late: stages 4-6, log_det's t4-t6 row and their tap wires
+    const A = I.xchain, D = I.xdet, M = I.macro;
+    const inputZone = A ? [A.zones.input].concat(segsOf([netBy('rx_p'), netBy('rx_n')])) : [];
+    const stage1 = A ? [A.zones.stage1] : [];
+
+    // 1. chain input far from the digital macro and the TT digital wires
+    if (A && M) {
+      const dM = minGapShapes(inputZone, [M.halo]);
+      const dig = segsOf([netBy('clk')]).concat(chanSh);
+      const dC = minGapShapes(inputZone, dig);
+      const d = Math.min(dM, dC);
+      const crossers = nets.filter(n => !n.missing && (n.cls === 'clk' || n.cls === 'trim') &&
+        n.segs.some(sg => [A.rect].some(r => segCrosses(sg, r, 0.6))));
+      add(1, 'Chain input far from the macro', crossers.length ? 'fail' : lvl(d, s.r1, s.r1 / 2, true),
+        `${fmt(dM)} µm`, `input ↔ macro halo ${fmt(dM)} µm, ↔ TT channel / clk ${fmt(dC)} µm (want ≥ ${s.r1}).` +
+        (crossers.length ? ` Digital wires over the chain: ${crossers.map(n => n.name).join(', ')}.` : ' No macro wire over the chain.'));
+    } else add(1, 'Chain input far from the macro', 'info', '-', 'Place the chain and the macro.');
+
+    // 2. late stages / detector t4-t6 away from the input
+    if (A && D) {
+      const tLate = ['t4p', 't5p', 't6p', 't4n', 't5n', 't6n'].map(p => D.pins[p].at).map(q => [q[0] - 1, q[1] - 1, 2, 2]);
+      const late = [A.zones.late].concat(tLate, segsOf([netBy('o4'), netBy('o5'), netBy('out')]));
+      const d = minGapShapes(late, inputZone.concat(stage1));
+      const dOut = minGapShapes([[A.pins.outp.at[0] - 1, A.pins.outp.at[1] - 1, 2, 2]], inputZone);
+      const cross = segsOf([netBy('o4'), netBy('o5'), netBy('out')]).some(sg => inputZone.concat(stage1).some(z => rectGap(sg, z) === 0));
+      add(2, 'Late stages away from the input', cross ? 'fail' : lvl(d, s.r2, s.r2 / 2, true), `${fmt(d)} µm`,
+        `closest late-stage shape (stages 4-6, t4-t6, their tap wires) to the input section, pad wires or stage 1: ${fmt(d)} µm; ` +
+        `stage 6 output ↔ input ${fmt(dOut)} µm (want ≥ ${s.r2}).`);
+    } else add(2, 'Late stages away from the input', 'info', '-', 'Place the chain and log_det.');
+
+    // 3. clock edges off the RX
+    {
+      const ck = ['sc_phi1', 'sc_phi2', 'comp_in', 'clk'].map(netBy).filter(n => n && !n.missing);
+      const rxr = [A, D].filter(Boolean).map(i => i.rect);
+      const crossing = ck.filter(n => n.segs.some(sg => rxr.some(r => segCrosses(sg, r, 0.6))));
+      const d = minGapShapes(segsOf(ck), rxr);
+      add(3, 'Clock edges off the RX', crossing.length ? 'fail' : lvl(d, s.r3, s.r3 / 2, true), crossing.length ? 'crosses' : `${fmt(d)} µm`,
+        (crossing.length ? `Crossing the chain / log_det: ${crossing.map(n => n.name).join(', ')}. ` : 'phi lines cross RX: no. ') +
+        `phi1/2, comp_in, clk ↔ chain / log_det ${fmt(d)} µm (want ≥ ${s.r3}).`);
+    }
+
+    // 4. short analog path
+    {
+      const p = ['det', 'lpf', 'lpf comp', 'avg', 'dac', 'trim'].map(netBy).filter(n => n && !n.missing);
+      const sum = p.reduce((a, n) => a + n.len, 0), avg = netBy('avg');
+      add(4, 'Short analog path', p.length < 6 ? 'info' : lvl(sum, s.r4, s.r4 * 1.5), `${fmt(sum)} µm`,
+        p.map(n => `${n.name} ${fmt(n.len)}`).join(', ') + (avg && !avg.missing ? `; avg_sc.out → comp_ct.inn ${fmt(avg.len)} µm` : ''));
+    }
+
+    // 5. TX at the pads
+    {
+      const tp = netBy('tx_p'), tn = netBy('tx_n');
+      if (tp && tn && !tp.missing && !tn.missing) {
+        const m = Math.max(tp.len, tn.len), en = ['tx_en', 'tx_en_n', 'tx_en key'].map(netBy).filter(n => n && !n.missing);
+        add(5, 'TX at ua[3] / ua[4]', lvl(m, s.r5, s.r5 * 2), `${fmt(m)} µm`,
+          `driver → pad: tx_p ${fmt(tp.len)}, tx_n ${fmt(tn.len)} µm (met3, 2.5 µm wide; want ≤ ${s.r5}). Enables from the macro: ${en.map(n => fmt(n.len)).join(' / ')} µm.`);
+      } else add(5, 'TX at ua[3] / ua[4]', 'info', '-', 'Place the TX drivers.');
+    }
+
+    // 6. bias near the chain
+    {
+      const c = ['ib_chain', 'vcm'].map(netBy).filter(n => n && !n.missing), o = ['ib_det', 'ib_comp'].map(netBy).filter(n => n && !n.missing);
+      if (c.length === 2) {
+        const m = Math.max(...c.map(n => n.len));
+        add(6, 'Bias next to the chain', lvl(m, s.r6, s.r6 * 2), `${fmt(m)} µm`,
+          `ib_chain ${fmt(c[0].len)}, vcm ${fmt(c[1].len)} µm (want ≤ ${s.r6}); ` + o.map(n => `${n.name} ${fmt(n.len)}`).join(', ') + ' µm.');
+      } else add(6, 'Bias next to the chain', 'info', '-', 'Place bias_gen and the chain.');
+    }
+
+    // 7. decaps
+    for (const [n, d] of Object.entries(DECAPS)) {
+      // decap tiles at the estimate's density (d.pf per target area); MIM-only rectangles over a block at 2.06 fF/um2
+      const ds = R.decaps.filter(x => x.base === n), tgt = s[n === 'xdeca' ? 'deca' : 'decd'];
+      const a = ds.filter(x => !x.mim).reduce((t, x) => t + area(x.rect), 0), am = ds.filter(x => x.mim).reduce((t, x) => t + area(x.rect), 0);
+      const pf = d.pf * a / tgt + MIM_FF * am / 1000;
+      add(7, `Decap ${d.net}`, lvl(pf / d.pf, 1, 0.7, true), `${fmt(100 * pf / d.pf)} %`,
+        `≈ ${fmt(pf, 1)} of ${d.pf} pF: ${fmt(a)} µm² of decap tiles (of ${fmt(tgt)})` + (am ? ` + ${fmt(am)} µm² MIM over blocks` : '') + `, ${ds.length} rectangle(s).`);
+    }
+
+    // 8. TX vs RX (soft)
+    {
+      const tx = Object.values(I).filter(i => i.cat.group === 'tx');
+      if (tx.length && A) {
+        const d = minGapShapes(tx.map(i => i.rect), [A.zones.input].concat(stage1));
+        add(8, 'TX away from the RX input', d >= s.r8 ? 'pass' : 'warn', `${fmt(d)} µm`,
+          `TX blocks ↔ chain input section and stage 1: ${fmt(d)} µm (soft, want ≥ ${s.r8}; the TX is idle in RX).`);
+      }
+    }
+
+    // 9. spacing, bounds, macro halo, routing channel
+    {
+      const boxes = Object.values(I).map(i => ({ n: i.name, r: i.rect, halo: i.halo, over: i.cat.overDecap })).concat(R.decaps.map(d => ({ n: d.name, r: d.rect, mim: d.mim })));
+      const inside = (q, r) => q[0] >= r[0] - 1e-6 && q[1] >= r[1] - 1e-6 && q[0] + q[2] <= r[0] + r[2] + 1e-6 && q[1] + q[3] <= r[1] + r[3] + 1e-6;
+      const stacked = (a, b) => (a.over && b.mim && inside(b.r, a.r)) || (b.over && a.mim && inside(a.r, b.r));   // MIM decap on top of a met1-only block
+      const over = [], tight = [], outside = [], inChan = [];
+      for (let i = 0; i < boxes.length; i++) {
+        const a = boxes[i], r = a.r;
+        if (r[0] < -1e-6 || r[1] < -1e-6 || r[0] + r[2] > tile.w + 1e-6 || r[1] + r[3] > tile.h + 1e-6) outside.push(a.n);
+        if (a.n !== 'macro' && chanSh.some(c => overlap(r, c) > 0)) inChan.push(a.n);
+        for (let j = i + 1; j < boxes.length; j++) {
+          const b = boxes[j];
+          const ra = a.halo || r, rb = b.halo || b.r;
+          if (stacked(a, b)) continue;
+          if (overlap(ra, rb) > 0.01) over.push(`${a.n} / ${b.n}`);
+          else if (!a.halo && !b.halo && rectGap(r, b.r) < s.keepout - 1e-3) tight.push(`${a.n} / ${b.n} ${fmt(rectGap(r, b.r), 1)}`);
+        }
+      }
+      add(9, 'Overlaps and spacing', over.length || outside.length ? 'fail' : tight.length ? 'warn' : 'pass',
+        over.length ? `${over.length} overlap${over.length > 1 ? 's' : ''}` : tight.length ? `${tight.length} tight` : 'none',
+        (over.length ? `Overlapping (halo counts): ${over.join(', ')}. ` : 'overlaps: none. ') +
+        (outside.length ? `Outside the tile: ${outside.join(', ')}. ` : '') +
+        (tight.length ? `Closer than ${s.keepout} µm: ${tight.join(', ')}.` : `All gaps ≥ ${s.keepout} µm.`));
+      if (chan) {
+        const above = M ? tile.h - (M.rect[1] + M.rect[3]) : 0;
+        const need = M ? Math.max(0, ...chanSh.filter(c => c[0] < M.rect[0] + M.rect[2] && c[0] + c[2] > M.rect[0]).map(c => c[3])) : 0;
+        const full = Math.max(...chanSh.map(c => c[3]));
+        const st = inChan.length ? 'fail' : above + 1e-6 < need ? 'fail' : 'pass';
+        add(9, 'TT pin channel clear', st, `${fmt(above, 1)} µm`,
+          `The 42 TT pins (x 15-131) run along the top to the macro's pins: the channel is as tall as the wires crossing each x (${fmt(full, 1)} µm where all ${Math.round(full / (s.channel / 42))} run side by side, at ${fmt(s.channel / 42, 2)} µm per track). ` +
+          `Over the macro it needs ${fmt(need, 1)} µm; there is ${fmt(above, 1)} µm above the macro body.` +
+          (inChan.length ? ` Blocks in the channel: ${inChan.join(', ')}.` : '') +
+          (above + 1e-6 < need ? ' Move the macro down, or put its TT pins nearer the TT pins.' : ''));
+      }
+    }
+
+    // straps: full-height met4 lanes must clear every met4 / MIM shape and the macro
+    {
+      const ys = s.strapY, obs = Object.values(I).flatMap(i => i.m4.map(r => ({ n: i.name, r }))).concat(R.decaps.filter(d => d.mim).map(d => ({ n: d.name, r: d.rect })));
+      const issues = [], nets = new Set();
+      (v.straps || []).forEach((st, i) => {
+        nets.add(st.net);
+        const lane = [st.x - 0.3, ys, st.w + 0.6, tile.h - 2 * ys];
+        const hit = [...new Set(obs.filter(o => overlap(lane, o.r) > 0).map(o => o.n))];
+        if (hit.length) issues.push(`${st.net} @ ${fmt(st.x, 1)} blocked by ${hit.join(', ')} met4`);
+        if (st.w < 1.2) issues.push(`${st.net} @ ${fmt(st.x, 1)} narrower than 1.2 µm`);
+        (v.straps || []).slice(i + 1).forEach(o => { if (rectGap([st.x, 0, st.w, 1], [o.x, 0, o.w, 1]) < 0.3) issues.push(`${st.net} / ${o.net} straps touch`); });
+      });
+      const miss = ['VDPWR', 'VAPWR', 'VGND'].filter(n => !nets.has(n));
+      add('P', 'Power straps', issues.length ? 'fail' : miss.length ? 'warn' : 'pass',
+        issues.length ? `${issues.length} blocked` : miss.length ? `missing ${miss.join(', ')}` : `${(v.straps || []).length} clear`,
+        issues.length ? issues.join('; ') + '.' : `${(v.straps || []).length} strap(s), every lane clear of met4 and MIM.` + (miss.length ? ` No strap for ${miss.join(', ')}.` : ''));
+    }
+    if (missing.length) add('-', 'Unplaced blocks', 'warn', `${missing.length}`, missing.join(', '));
+
+    // area panel
+    const macroBox = M ? M.halo : [0, 0, 0, 0];
+    const tileA = tile.w * tile.h;
+    const sig = Object.values(I).filter(i => i.name !== 'macro').reduce((t, i) => t + i.w * i.h, 0);
+    const dec = R.decaps.filter(d => !d.mim).reduce((t, d) => t + area(d.rect), 0);   // MIM over blocks uses no extra area
+    const decTarget = s.deca + s.decd;
+    const areaInfo = { tile: tileA, macro: area(macroBox), free: tileA - area(macroBox), signal: sig, decap: dec, decapTarget: decTarget,
+      spacing: 0.1 * (sig + dec), need: 1.1 * (sig + decTarget) };
+    return { checks: res, nets, R, area: areaInfo, settings: s, channel: chan, channelShapes: chanSh };
+  }
+
+  // floorplan.json (docs/floorplan_spec.md, "Export/import")
+  function exportJSON(data, cat, v) {
+    const R = resolve(cat, v), blocks = [];
+    for (const i of Object.values(R.inst)) {
+      const [k, m] = ORIENTS[i.pl.orient];
+      const b = { inst: i.name, cell: i.cat.cell, x: +i.rect[0].toFixed(2), y: +i.rect[1].toFixed(2), orient: i.pl.orient,
+        rot: k * 90, mirror: m, estimate: !!i.cat.estimate };
+      if (i.folded) { b.w = i.w; b.h = i.h; b.fold = 'U-fold, same area, half width: input half (input section, stages 1-2) on top with the inputs on the top edge, stages 3-6 turning back along the bottom row (needs a lna_chain re-layout)'; }
+      if (i.cat.estimate || (i.cat.reshape && (Math.abs(i.w - i.cat.w) > 1e-6 || Math.abs(i.h - i.cat.h) > 1e-6))) { b.w = +i.w.toFixed(3); b.h = +i.h.toFixed(3); }
+      if (i.cat.reshape && Math.abs(i.w - i.cat.w) < 1e-6 && Math.abs(i.h - i.cat.h) > 1e-6) b.note = `re-harden at ${b.w} x ${b.h} um`;
+      if (i.cat.reshape && Math.abs(i.w - i.cat.w) > 1e-6) b.note = `re-harden at ${b.w} x ${b.h} um (${(i.w * i.h).toFixed(0)} um2; hardened ${i.cat.w} x ${i.cat.h} = ${i.cat.w * i.cat.h} um2)`;
+      blocks.push(b);
+    }
+    for (const d of R.decaps) blocks.push(Object.assign({ inst: d.base, part: d.idx + 1, cell: d.def.cell, x: d.rect[0], y: d.rect[1], w: d.rect[2], h: d.rect[3], orient: 'R0', rot: 0, mirror: false, estimate: true }, d.mim ? { mim: true, note: 'MIM only (cap_mim_m3_1), on top of a met1-only block' } : {}));
+    return {
+      variant: v.name, note: v.note || '', tile: { w: data.tile.w, h: data.tile.h }, blocks,
+      macro_pins: { 'trim_out[7:0]': (v.macroPins && v.macroPins.trim) || 'W' },
+      pins_moved: Object.fromEntries(Object.entries(v.pins || {}).filter(([, ps]) => Object.keys(ps).length).map(([i, ps]) => [i, Object.fromEntries(Object.entries(ps).map(([p, q]) => [p, [+q.x.toFixed(2), +q.y.toFixed(2)]]))])),
+      pins_note: 'pins_moved: [x, y] in each block\'s own frame (lower-left = 0, 0, before its orientation); they need a block re-layout, or for the macro a new pin_order.cfg.',
+      straps: (v.straps || []).map(s => ({ net: s.net, x: s.x, w: s.w })),
+      transform: 'x, y = lower-left of the placed bbox. KLayout: t = DCplxTrans(1, rot, mirror, 0, 0); bb = cell.dbbox().transformed(t); place with DCplxTrans(1, rot, mirror, x - bb.left, y - bb.bottom).',
+    };
+  }
+  function importJSON(cat, j) {
+    const v = { name: j.variant || 'Imported', note: j.note || '', place: {}, decaps: {}, straps: (j.straps || []).map(s => ({ net: s.net, x: +s.x, w: +s.w })), est: {} };
+    const ts = j.macro_pins && j.macro_pins['trim_out[7:0]']; if (TRIM_SIDES[ts]) v.macroPins = { trim: ts };
+    if (j.pins_moved) { v.pins = {}; for (const [i, ps] of Object.entries(j.pins_moved)) { if (!cat[i]) continue; v.pins[i] = {}; for (const [p, xy] of Object.entries(ps)) v.pins[i][p] = { x: +xy[0], y: +xy[1] }; } }
+    for (const b of j.blocks || []) {
+      if (DECAPS[b.inst]) { (v.decaps[b.inst] = v.decaps[b.inst] || []).push(Object.assign({ x: +b.x, y: +b.y, w: +b.w, h: +b.h }, b.mim ? { mim: true } : {})); continue; }
+      const n = b.inst;
+      if (!cat[n]) continue;
+      v.place[n] = { x: +b.x, y: +b.y, orient: ORIENTS[b.orient] ? b.orient : 'R0' };
+      if (b.fold && cat[n].fold) { v.fold = v.fold || {}; v.fold[n] = true; }
+      if ((cat[n].estimate || cat[n].reshape) && b.w && b.h) { v.est[n] = { w: +b.w, h: +b.h }; if (cat[n].reshape && Math.abs(b.w * b.h - cat[n].w * cat[n].h) > 1) v.est[n].area = +b.w * +b.h; }
+    }
+    return v;
+  }
+
+  root.FP = { TRIM_SIDES, ORIENTS, placedSize, mapPt, mapRect, compose, buildCatalog, DECAPS, NETS, NET_CLASSES, DEFAULT_SETTINGS,
+    resolve, routeNets, evaluate, exportJSON, importJSON, rectGap, overlap, channelRect, channelShapes };
+})(typeof window !== 'undefined' ? window : globalThis);
+</script>
+<script>
+(function () {
+'use strict';
+const DATA = window.FP_DATA, FP = window.FP, CAT = FP.buildCatalog(DATA), TILE = DATA.tile, H = TILE.h, W = TILE.w;
+const $ = (s) => document.querySelector(s);
+const esc = (s) => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+const f1 = (x) => (Math.round(x * 100) / 100).toString();
+const snap = (x) => Math.round(x * 2) / 2;
+const NET_COLOR = { rxin: 'var(--rxin)', rx: 'var(--rx)', late: 'var(--late)', clk: 'var(--clk)', en: 'var(--en)', bias: 'var(--bias)', tx: 'var(--tx)', trim: 'var(--trim)' };
+const GROUP_COLOR = { rx: 'var(--rx)', tx: 'var(--tx)', trim: 'var(--trim)', bias: 'var(--bias)', dig: 'var(--dig)' };
+const STRAP_COLOR = { VGND: 'var(--dig)', VAPWR: 'var(--tx)', VDPWR: 'var(--rx)' };
+
+// ---- state
+const S = {
+  variants: {},          // id -> variant body (from the store, or local when there is no store)
+  order: [],
+  cur: null,
+  sel: null,             // {kind: 'inst'|'decap'|'strap', id}
+  settings: Object.assign({}, FP.DEFAULT_SETTINGS),
+  view: null,
+  mode: 'layout',
+  layers: { flylines: true, pins: true, m4: false, labels: true, grid: true, decap: true },
+  hoverNet: null,
+  canWrite: true, db: null, user: null, uid: null, names: {},
+  dirty: new Set(), saving: new Set(), dragging: false,
+};
+try { const l = JSON.parse(localStorage.getItem('fp.layers') || 'null'); if (l) Object.assign(S.layers, l); } catch (e) {}
+try { if (localStorage.getItem('fp.mode') === 'diagram') S.mode = 'diagram'; } catch (e) {}
+
+const clone = (o) => JSON.parse(JSON.stringify(o));
+const cur = () => S.variants[S.cur] || null;
+
+// Unplaced blocks wait in a parking row under the tile.
+function parked(v) {
+  const out = {}; let x = 0;
+  for (const [n, c] of Object.entries(CAT)) {
+    if (v.place && v.place[n]) continue;
+    const w = (v.est && v.est[n] ? v.est[n].w : c.w), h = (v.est && v.est[n] ? v.est[n].h : c.h);
+    if (x + w > W) x = 0;
+    out[n] = { x, y: -40 - h, orient: 'R0', parked: true };
+    x += w + 6;
+  }
+  return out;
+}
+function viewVariant(v) {           // the variant with parked blocks filled in, for drawing only
+  return Object.assign({}, v, { place: Object.assign({}, parked(v), v.place || {}) });
+}
+
+// ---- store
+let unsub = null;
+async function connect() {
+  let db = null, user = null;
+  try { db = window.claude && await window.claude.use('db'); } catch (e) { db = null; }
+  try { user = window.claude && await window.claude.use('user'); } catch (e) { user = null; }
+  S.db = db; S.user = user;
+  if (user) {
+    try { S.uid = await user.id(); } catch (e) {}
+    try { const c = await user.can('data.write'); if (c === false) setReadOnly(); } catch (e) {}
+  }
+  if (!db) { setSync('local only: changes stay in this view'); if (!S.order.length) render(); return; }
+  setSync('loading…');
+  db.collection('variants').onSnapshot((snap) => {
+    const seen = new Set();
+    for (const d of snap.docs) {
+      seen.add(d.id);
+      if (S.dirty.has(d.id) || S.saving.has(d.id) || (S.dragging && d.id === S.cur)) continue;
+      S.variants[d.id] = clone(d.data());
+    }
+    for (const id of Object.keys(S.variants)) if (!seen.has(id) && !S.dirty.has(id) && !S.saving.has(id)) delete S.variants[id];
+    sortOrder();
+    if (!S.cur || !S.variants[S.cur]) S.cur = pickStart();
+    setSync(snap.metadata.fromCache ? 'syncing…' : 'saved');
+    render(); resolveNames();
+  }, (e) => setSync('store unavailable: ' + e.code));
+  db.doc('config/settings').onSnapshot((d) => {
+    if (d.exists && !S.dirty.has('$settings')) { Object.assign(S.settings, FP.DEFAULT_SETTINGS, d.data()); render(); }
+  }, () => {});
+}
+function pickStart() {
+  let id = null; try { id = localStorage.getItem('fp.cur'); } catch (e) {}
+  return id && S.variants[id] ? id : S.order[0] || null;
+}
+function sortOrder() {
+  S.order = Object.keys(S.variants).sort((a, b) => ((S.variants[a].order ?? 99) - (S.variants[b].order ?? 99)) || a.localeCompare(b));
+}
+function setSync(t) { $('#sync').textContent = t; }
+function setReadOnly() { S.canWrite = false; $('#app').classList.add('ro'); setSync('view only'); }
+
+const timers = {};
+function touch(id) {                // a local edit: save after a pause, one write at a time per doc
+  id = id || S.cur;
+  const v = S.variants[id]; if (!v) return;
+  v.updatedAt = new Date().toISOString(); if (S.uid) v.updatedBy = S.uid;
+  S.dirty.add(id); setSync('unsaved…');
+  clearTimeout(timers[id]);
+  timers[id] = setTimeout(() => flush(id), 700);
+  render();
+}
+async function flush(id) {
+  if (S.dragging && id === S.cur) { timers[id] = setTimeout(() => flush(id), 300); return; }
+  if (!S.db) { S.dirty.delete(id); setSync('local only: changes stay in this view'); return; }
+  if (S.saving.has(id)) { timers[id] = setTimeout(() => flush(id), 300); return; }
+  S.dirty.delete(id); S.saving.add(id); setSync('saving…');
+  try {
+    if (id === '$settings') await S.db.doc('config/settings').set(clone(S.settings));
+    else if (S.variants[id]) await S.db.collection('variants').doc(id).set(clone(S.variants[id]));
+    else await S.db.collection('variants').doc(id).delete();
+    setSync('saved');
+  } catch (e) {
+    if (e && e.code === 'invalid_argument') { setReadOnly(); setSync('view only: this view cannot save'); }
+    else if (e && e.code === 'quota_exceeded') setSync('store full: delete a variant');
+    else setSync('save failed (' + (e && e.code || 'error') + '), retrying');
+    if (e && e.code === 'unavailable') { S.dirty.add(id); timers[id] = setTimeout(() => flush(id), 1500 + Math.random() * 1000); }
+  } finally { S.saving.delete(id); }
+}
+async function resolveNames() {
+  if (!S.user || !S.user.profiles) return;
+  const ids = [...new Set(Object.values(S.variants).map(v => v.updatedBy).filter(Boolean))];
+  if (!ids.length) return;
+  try { const ps = await S.user.profiles(ids); for (const id of ids) S.names[id] = (ps[id] && ps[id].name) || ''; renderVariantBox(); } catch (e) {}
+}
+
+// ---- view transform (SVG user units = um, y flipped)
+const Y = (y) => H - y;
+function fit() {
+  const st = $('#stage').getBoundingClientRect();
+  const v = cur(), pk = v ? Object.values(viewVariant(v).place).filter(p => p.parked) : [];
+  const extra = pk.length ? Math.max(...pk.map(p => -p.y)) - 18 : 0;   // show the parking row under the tile
+  const m = 10, vw = W + 2 * m, vh = H + 2 * m + 24 + Math.max(0, extra);
+  const ar = st.width / Math.max(1, st.height);
+  let w = vw, h = vh;
+  if (w / h < ar) w = h * ar; else h = w / ar;
+  S.view = { x: -m - (w - vw) / 2, y: -m - (h - vh) / 2 - 4, w, h };
+}
+function toUm(evt) {
+  const svg = $('#cv'), r = svg.getBoundingClientRect(), v = S.view;
+  const x = v.x + (evt.clientX - r.left) / r.width * v.w, sy = v.y + (evt.clientY - r.top) / r.height * v.h;
+  return [x, H - sy];
+}
+
+// ---- drawing
+function rectEl(r, attrs) {
+  return `<rect x="${r[0]}" y="${Y(r[1] + r[3])}" width="${Math.max(0, r[2])}" height="${Math.max(0, r[3])}" ${attrs || ''}/>`;
+}
+function text(x, y, s, size, attrs) {
+  return `<text x="${x}" y="${Y(y)}" font-size="${size}" ${attrs || ''}>${esc(s)}</text>`;
+}
+let last = null;
+// group selection: S.sel = {kind: 'group', items: [{kind: 'inst' | 'decap', id}]}
+function isSel(kind, id) {
+  if (!S.sel) return false;
+  if (S.sel.kind === 'group') return S.sel.items.some(q => q.kind === kind && q.id === id);
+  return S.sel.kind === kind && S.sel.id === id;
+}
+function selItems() { return !S.sel ? [] : S.sel.kind === 'group' ? S.sel.items : (S.sel.kind === 'inst' || S.sel.kind === 'decap') ? [{ kind: S.sel.kind, id: S.sel.id }] : []; }
+function setGroup(items) { S.sel = items.length === 0 ? null : items.length === 1 ? { kind: items[0].kind, id: items[0].id } : { kind: 'group', items }; }
+function toggleSel(kind, id) {
+  const items = selItems().slice(), i = items.findIndex(q => q.kind === kind && q.id === id);
+  if (i >= 0) items.splice(i, 1); else items.push({ kind, id });
+  setGroup(items);
+}
+function bandRect() { const b = drag; return [Math.min(b.x0, b.x1), Math.min(b.y0, b.y1), Math.abs(b.x1 - b.x0), Math.abs(b.y1 - b.y0)]; }
+function decapRef(v, id) { const [b, i] = id.split('.'); return (v.decaps[b] || [])[+i - 1]; }
+function itemPos(v, q) { if (q.kind === 'inst') { const p = viewVariant(v).place[q.id]; return { x: p.x, y: p.y, orient: p.orient }; } const d = decapRef(v, q.id); return { x: d.x, y: d.y }; }
+function setItemPos(v, q, x, y, o) { if (q.kind === 'inst') v.place[q.id] = { x, y, orient: o.orient }; else { const d = decapRef(v, q.id); d.x = x; d.y = y; } }
+function moveGroup(v, dx, dy) { for (const q of selItems()) { const o = itemPos(v, q); setItemPos(v, q, +(o.x + dx).toFixed(3), +(o.y + dy).toFixed(3), o); } }
+function draw() {
+  $('#stage').classList.toggle('diagram', S.mode === 'diagram');
+  $('#cv').classList.toggle('dg', S.mode === 'diagram');
+  document.querySelectorAll('[data-mode]').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.mode === S.mode)));
+  if (S.mode === 'diagram') { if (cur()) last = FP.evaluate(DATA, CAT, cur(), S.settings); drawDiagram(); return; }
+  const v = cur(); const svg = $('#cv');
+  if (!S.view) fit();
+  svg.setAttribute('viewBox', `${S.view.x} ${S.view.y} ${S.view.w} ${S.view.h}`);
+  const scale = S.view.w / Math.max(1, svg.getBoundingClientRect().width);   // um per px
+  const out = [];
+  out.push(`<defs>
+    <pattern id="g10" width="10" height="10" patternUnits="userSpaceOnUse" y="${Y(0) % 10}"><path d="M10 0H0V10" fill="none" stroke="var(--grid)" stroke-width="${0.6 * scale}"/></pattern>
+    <pattern id="g50" width="50" height="50" patternUnits="userSpaceOnUse" y="${Y(0) % 50}"><rect width="50" height="50" fill="url(#g10)"/><path d="M50 0H0V50" fill="none" stroke="var(--line)" stroke-width="${0.9 * scale}"/></pattern>
+    <pattern id="hatch" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="4" stroke="var(--decap)" stroke-width="0.8" opacity=".55"/></pattern>
+    <pattern id="hatchE" width="3" height="3" patternUnits="userSpaceOnUse" patternTransform="rotate(-45)"><line x1="0" y1="0" x2="0" y2="3" stroke="currentColor" stroke-width="0.5" opacity=".5"/></pattern>
+  </defs>`);
+  out.push(rectEl([0, 0, W, H], `fill="var(--die)" stroke="var(--ink)" stroke-width="${1.2 * scale}"`));
+  if (S.layers.grid) out.push(rectEl([0, 0, W, H], 'fill="url(#g50)"'));
+  // tile pins
+  for (const [n, p] of Object.entries(TILE.pins)) {
+    const bottom = p.y0 < 1, ua = n.startsWith('ua'), dead = n === 'ua[6]' || n === 'ua[7]';
+    out.push(rectEl([p.x0, bottom ? -1.5 : H - 1, p.x1 - p.x0, 2.5], `fill="${ua ? (dead ? 'var(--muted)' : 'var(--ink)') : 'var(--dig)'}"`));
+    if (ua) {
+      const x = (p.x0 + p.x1) / 2;
+      const role = { 'ua[0]': 'rx_p', 'ua[1]': 'rx_n', 'ua[2]': 'dbg', 'ua[3]': 'tx_p', 'ua[4]': 'tx_n', 'ua[5]': 'free', 'ua[6]': 'n/a', 'ua[7]': 'n/a' }[n];
+      out.push(text(x, -7, n, 4.2, `text-anchor="middle" fill="var(--ink)" font-family="var(--mono)"`));
+      out.push(text(x, -12.5, role, 3.6, `text-anchor="middle" fill="var(--muted)" font-family="var(--mono)"`));
+    }
+  }
+  out.push(text(73, H + 3.5, 'TT digital pins  x 15–131', 3.6, `text-anchor="middle" fill="var(--muted)" font-family="var(--mono)"`));
+  out.push(text(W, -7, '0, 0 lower-left · µm', 3.4, `text-anchor="end" fill="var(--muted)" font-family="var(--mono)"`));
+  if (!v) { svg.innerHTML = out.join(''); return; }
+  const vv = viewVariant(v);
+  const r = FP.evaluate(DATA, CAT, vv, S.settings);
+  last = r;
+  // TT channel
+  if (r.channelShapes && r.channelShapes.length) {
+    for (const c of r.channelShapes) out.push(rectEl(c, `fill="var(--dig)" fill-opacity=".1" stroke="none"`));
+    const top = r.channelShapes.reduce((a, c) => c[3] > a[3] ? c : a);
+    out.push(text(top[0] + 2, H - top[3] / 2 - 1.2, 'TT pin channel', 3.2, 'fill="var(--muted)" font-family="var(--mono)"'));
+  }
+  // straps
+  (v.straps || []).forEach((st, i) => {
+    const issue = r.checks.find(c => c.rule === 'P' && c.status === 'fail' && c.detail.includes(`${st.net} @ ${(Math.round(st.x * 10) / 10).toFixed(1)}`));
+    const sel = S.sel && S.sel.kind === 'strap' && S.sel.id === i;
+    out.push(`<g data-strap="${i}" style="cursor:ew-resize">` +
+      rectEl([st.x - 1.5, S.settings.strapY, st.w + 3, H - 2 * S.settings.strapY], 'fill="transparent"') +
+      rectEl([st.x, S.settings.strapY, st.w, H - 2 * S.settings.strapY], `fill="${STRAP_COLOR[st.net] || 'var(--muted)'}" fill-opacity="${sel ? .7 : .35}" stroke="${issue ? 'var(--fail)' : sel ? 'var(--sel)' : 'none'}" stroke-width="${1.2 * scale}"`) +
+      text(st.x + st.w / 2, H - S.settings.strapY - 3, st.net, 2.6, `text-anchor="middle" fill="var(--ink)" font-family="var(--mono)" transform="rotate(-90 ${st.x + st.w / 2} ${Y(H - S.settings.strapY - 3)})"`) + '</g>');
+  });
+  // decaps
+  for (const d of S.layers.decap ? r.R.decaps : []) {
+    const sel = isSel('decap', d.name);
+    out.push(`<g data-decap="${d.name}" style="cursor:move">` + rectEl(d.rect, `fill="url(#hatch)" stroke="${sel ? 'var(--sel)' : 'var(--decap)'}" stroke-width="${(sel ? 1.6 : 0.8) * scale}"`) +
+      (d.mim ? rectEl(d.rect, `fill="none" stroke="var(--decap)" stroke-dasharray="${2 * scale} ${1.5 * scale}" stroke-width="${0.8 * scale}"`) : '') +
+      (d.rect[2] > 20 && d.rect[3] > 6 ? text(d.rect[0] + 2, d.rect[1] + d.rect[3] - 4.5, `${d.def.label} ${d.idx + 1}${d.mim ? ' (MIM over block)' : ''}`, 3.2, 'fill="var(--muted)" font-family="var(--mono)"') +
+        text(d.rect[0] + 2, d.rect[1] + d.rect[3] - 8.5, `${f1(d.rect[2])} × ${f1(d.rect[3])}`, 2.8, 'fill="var(--muted)" font-family="var(--mono)"') : '') +
+      (sel ? rectEl([d.rect[0] + d.rect[2] - 2, d.rect[1] - 0.5, 2.5, 2.5], 'data-resize="1" fill="var(--sel)" style="cursor:nwse-resize"') : '') + '</g>');
+  }
+  // blocks
+  const order = Object.values(r.R.inst).sort((a, b) => (a.name === 'macro' ? -1 : 0) - (b.name === 'macro' ? -1 : 0));
+  for (const ins of order) {
+    const c = ins.cat, col = GROUP_COLOR[c.group] || 'var(--dig)', sel = isSel('inst', ins.name);
+    const isParked = vv.place[ins.name].parked;
+    const g = [`<g data-inst="${ins.name}" style="cursor:move;color:${col}" opacity="${isParked ? .55 : 1}">`];
+    if (ins.halo) g.push(rectEl(ins.halo, `fill="none" stroke="${col}" stroke-dasharray="${2 * scale} ${2 * scale}" stroke-width="${0.8 * scale}"`));
+    g.push(rectEl(ins.rect, `fill="${col}" fill-opacity="${c.inst === 'macro' ? .1 : .14}" stroke="${sel ? 'var(--sel)' : col}" stroke-width="${(sel ? 2 : 1) * scale}"`));
+    if (c.estimate || ins.folded) g.push(rectEl(ins.rect, 'fill="url(#hatchE)"'));
+    if (S.layers.m4 && ins.name !== 'macro') for (const m of ins.m4) g.push(rectEl(m, `fill="var(--fail)" fill-opacity=".18" stroke="var(--fail)" stroke-opacity=".5" stroke-width="${0.5 * scale}"`));
+    if (S.layers.pins) for (const [pn, p] of Object.entries(ins.pins)) {
+      if (ins.name === 'macro' && !/^(tx_en|tx_en_n|rx_en|dbg_en|comp_in|sc_phi|trim_out|clk)/.test(pn)) continue;
+      const s = ins.name === 'macro' ? 1.0 : 1.2;
+      g.push(rectEl([p.at[0] - s / 2, p.at[1] - s / 2, s, s], `fill="${/^(VDD|VSS|VAPWR|VGND)$/.test(pn) ? 'var(--muted)' : col}"`));
+      if (p.moved) g.push(`<circle cx="${p.at[0]}" cy="${Y(p.at[1])}" r="1.5" fill="none" stroke="var(--sel)" stroke-width="${0.9 * scale}"/>`);
+      if (S.layers.labels && scale < 0.35 && !/^(VDD|VSS|VAPWR|VGND)$/.test(pn)) g.push(text(p.at[0] + 0.9, p.at[1] + 0.5, pn, 1.6, 'fill="var(--ink)" font-family="var(--mono)"'));
+    }
+    const [x, y, w, h] = ins.rect;
+    if (S.layers.labels) {
+      const fs = Math.max(2.4, Math.min(8, Math.min(w / (ins.name.length * 0.62 + 1), h / 2.6)));
+      g.push(text(x + w / 2, y + h / 2 + fs * 0.1, ins.name === 'macro' ? 'radio_digital' : ins.name, fs, `text-anchor="middle" fill="var(--ink)" font-weight="600"`));
+      if (h > fs * 2.4) g.push(text(x + w / 2, y + h / 2 - fs * 0.95, `${c.label || c.cell}${ins.folded ? ' (folded)' : ''} · ${ins.pl.orient}`, fs * 0.55, `text-anchor="middle" fill="var(--muted)" font-family="var(--mono)"`));
+      if (c.inst === 'macro') g.push(text(x + w / 2, y + h / 2 - 13, (Math.abs(ins.w - 260) > 1e-6 || Math.abs(ins.h - 190) > 1e-6 ? `${f1(ins.w)} × ${f1(ins.h)}, ${Math.abs(ins.w * ins.h - 49400) > 1 ? ((ins.w * ins.h / 49400 - 1) * 100 >= 0 ? '+' : '') + ((ins.w * ins.h / 49400 - 1) * 100).toFixed(1) + ' % area' : 'same area'}: needs a re-harden` : 'outline real (260 × 190)') + '; pin positions estimated from pin_order.cfg', 3.4, 'text-anchor="middle" fill="var(--muted)" font-family="var(--mono)"'));
+    }
+    g.push('</g>');
+    out.push(g.join(''));
+  }
+  // flylines
+  if (S.layers.flylines) for (const n of r.nets) {
+    if (n.missing) continue;
+    const hot = S.hoverNet === n.name;
+    const pts = [n.pa, n.segs[0].slice(2, 4), n.pb];
+    out.push(`<polyline data-net="${esc(n.name)}" points="${pts.map(p => `${p[0]},${Y(p[1])}`).join(' ')}" fill="none" stroke="${NET_COLOR[n.cls]}" stroke-width="${(hot ? 2.6 : 1.1) * scale}" stroke-opacity="${hot ? 1 : .8}" ${n.cls === 'en' ? `stroke-dasharray="${3 * scale} ${2 * scale}"` : ''}/>`);
+    out.push(`<polyline data-net="${esc(n.name)}" points="${pts.map(p => `${p[0]},${Y(p[1])}`).join(' ')}" fill="none" stroke="transparent" stroke-width="${7 * scale}"/>`);
+  }
+  // TT bus: 42 pins to the macro's north edge
+  if (S.layers.flylines && r.R.inst.macro) {
+    const m = r.R.inst.macro, a = m.pins['uio_oe[7]'].at, b = m.pins['clk'].at;
+    out.push(`<path d="M15 ${Y(H)} L${a[0]} ${Y(a[1])} M131 ${Y(H)} L${b[0]} ${Y(b[1])}" stroke="var(--dig)" stroke-width="${0.8 * scale}" stroke-dasharray="${1.5 * scale} ${1.5 * scale}" fill="none"/>`);
+  }
+  if (drag && drag.kind === 'band') { const b = bandRect(); out.push(rectEl(b, `fill="var(--sel)" fill-opacity=".08" stroke="var(--sel)" stroke-dasharray="${3 * scale} ${2 * scale}" stroke-width="${scale}"`)); }
+  out.push(text(0, -24, 'parking: unplaced blocks wait here; drag them into the tile', 3.4, 'fill="var(--muted)" font-family="var(--mono)" ' + (Object.values(vv.place).some(p => p.parked) ? '' : 'visibility="hidden"')));
+  svg.innerHTML = out.join('');
+}
+
+// ---- block diagram: how the blocks join, RX on top, TX below; lengths from the open variant
+const DG = {
+  blocks: [
+    ['pad:ua[0]', 'ua[0]', 'rx_p', 20, 110, 46, 22, 'pad'], ['pad:ua[1]', 'ua[1]', 'rx_n', 20, 150, 46, 22, 'pad'],
+    ['xchain', 'lna_chain', '', 100, 90, 330, 100, 'rx'],
+    ['xdet', 'log_det', 'successive detection, t1-t6', 100, 240, 330, 56, 'rx'],
+    ['xlpf', 'lpf_rc', '14 kHz RC', 470, 240, 110, 40, 'rx'],
+    ['xdbg', 'dbg_tg', '', 470, 294, 60, 24, 'rx'], ['pad:ua[2]', 'ua[2]', '', 566, 295, 46, 22, 'pad'],
+    ['xavg', 'avg_sc', 'SC average', 640, 250, 120, 44, 'rx'],
+    ['xcomp', 'comp_ct', 'comparator', 800, 150, 120, 80, 'rx'],
+    ['xdac', 'r2r', '8-bit trim DAC', 700, 28, 120, 48, 'trim'],
+    ['xctrim', 'Ctrim', '1 pF est.', 820, 92, 80, 34, 'trim'],
+    ['xbias', 'bias_gen', '', 470, 30, 120, 50, 'bias'],
+    ['macro', 'radio_digital', '', 960, 10, 90, 530, 'dig'],
+    ['pad:ua[3]', 'ua[3]', 'tx_p', 40, 372, 46, 22, 'pad'], ['pad:ua[4]', 'ua[4]', 'tx_n', 40, 462, 46, 22, 'pad'],
+    ['xtx.xdrv_p', 'tx_drv', 'p arm', 140, 360, 110, 46, 'tx'], ['xtx.xdrv_n', 'tx_drv', 'n arm', 140, 450, 110, 46, 'tx'],
+    ['xtx.xls', 'tx_ls', 'level shift', 340, 400, 100, 50, 'tx'],
+    ['xtx.xlse_p', 'tx_ls_en', 'enable p', 340, 334, 100, 36, 'tx'], ['xtx.xlse_n', 'tx_ls_en', 'enable n', 340, 482, 100, 36, 'tx'],
+    ['xtx.xring', 'tx_ring', '~434 MHz ring', 500, 405, 100, 40, 'tx'],
+  ],
+  // [net name (as in the engine), points, label anchor segment]
+  wires: [
+    ['rx_p', [[66, 121], [100, 121]], { name: '', pos: [68, 134, 'start'] }], ['rx_n', [[66, 161], [100, 161]], { name: '', pos: [68, 174, 'start'] }],
+    ['o1', [[157, 150], [157, 240]]], ['o2', [[207, 150], [207, 240]]], ['o3', [[257, 150], [257, 240]]],
+    ['o4', [[307, 150], [307, 240]]], ['o5', [[357, 150], [357, 240]]], ['out', [[407, 150], [407, 240]]],
+    ['det', [[430, 268], [450, 268], [450, 260], [470, 260]], { pos: [452, 236, 'middle'] }],
+    ['det dbg', [[450, 268], [450, 306], [470, 306]], { pos: [454, 290, 'start'] }], ['dbg', [[530, 306], [566, 306]], { pos: [548, 330, 'middle'] }],
+    ['lpf comp', [[580, 260], [620, 260], [620, 200], [800, 200]]], ['lpf', [[620, 260], [620, 272], [640, 272]], { pos: [584, 290, 'start'] }],
+    ['avg', [[760, 272], [780, 272], [780, 178], [800, 178]]],
+    ['comp_in', [[920, 190], [960, 190]]],
+    ['sc_phi1', [[960, 282], [760, 282]]], ['sc_phi2', [[960, 290], [760, 290]], { below: true }],
+    ['trim[7]', [[960, 52], [820, 52]], { name: 'trim_out[7:0]' }], ['dac', [[760, 76], [760, 110], [820, 110]]], ['trim', [[900, 110], [910, 110], [910, 150]]],
+    ['vcm', [[470, 45], [125, 45], [125, 90]]], ['ib_chain', [[470, 65], [260, 65], [260, 90]]],
+    ['ib_det', [[530, 80], [530, 225], [440, 225], [440, 268], [430, 268]]],
+    ['ib_comp', [[590, 55], [640, 55], [640, 160], [800, 160]]],
+    ['rx_en', [[960, 16], [530, 16], [530, 30]]], ['dbg_en', [[960, 314], [500, 314], [500, 318]]],
+    ['tx_en key', [[960, 425], [600, 425]]], ['ring', [[500, 425], [440, 425]]],
+    ['a', [[340, 412], [300, 412], [300, 383], [250, 383]]], ['b', [[340, 438], [280, 438], [280, 473], [250, 473]]],
+    ['tx_en', [[960, 352], [440, 352]]], ['enh_p', [[340, 352], [195, 352], [195, 360]]],
+    ['tx_en_n', [[960, 506], [440, 506]]], ['enh_n', [[340, 506], [195, 506], [195, 496]]],
+    ['tx_p', [[140, 383], [86, 383]]], ['tx_n', [[140, 473], [86, 473]]],
+  ],
+};
+function drawDiagram() {
+  const svg = $('#cv'), nets = last ? last.nets : [], o = [];
+  const byName = (n) => nets.find(q => q.name === n);
+  const VB = [0, -6, 1060, 572];
+  svg.setAttribute('viewBox', VB.join(' '));
+  o.push(`<defs><marker id="ar" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L8 4L0 8z" fill="context-stroke"/></marker></defs>`);
+  o.push(`<rect x="${VB[0]}" y="${VB[1]}" width="${VB[2]}" height="${VB[3]}" fill="var(--die)"/>`);
+  o.push(`<line x1="8" y1="326" x2="950" y2="326" stroke="var(--line)" stroke-dasharray="4 4"/>`);
+  o.push(`<text x="12" y="12" font-size="13" font-weight="700" fill="var(--rx)" letter-spacing="1">RX</text>`);
+  o.push(`<text x="12" y="344" font-size="13" font-weight="700" fill="var(--tx)" letter-spacing="1">TX</text>`);
+  for (const [id, name, sub, x, y, w, h, g] of DG.blocks) {
+    const col = g === 'pad' ? 'var(--ink)' : GROUP_COLOR[g] || 'var(--dig)', est = CAT[id] && CAT[id].estimate;
+    const placed = !id.startsWith('pad:') && cur() && cur().place && cur().place[id];
+    o.push(`<g ${id.startsWith('pad:') ? '' : `data-dinst="${id}"`}><title>${esc(id.startsWith('pad:') ? id.slice(4) : id + ' (' + name + ')' + (placed ? '' : ' — not placed in this variant'))}</title>`);
+    o.push(`<rect class="blk" x="${x}" y="${y}" width="${w}" height="${h}" rx="${g === 'pad' ? 0 : 3}" fill="${col}" fill-opacity="${g === 'pad' ? .9 : .12}" stroke="${col}" stroke-width="1.4" ${placed || id.startsWith('pad:') ? '' : 'stroke-dasharray="4 3"'}/>`);
+    if (est) o.push(`<rect x="${x}" y="${y}" width="${w}" height="${h}" fill="url(#hatchD)" style="color:${col}"/>`);
+    if (g === 'pad') o.push(`<text x="${x + w / 2}" y="${y + 15}" font-size="10" text-anchor="middle" fill="var(--die)" font-family="var(--mono)">${esc(name)}</text><text x="${x + w / 2}" y="${y - 4}" font-size="9" text-anchor="middle" fill="var(--muted)" font-family="var(--mono)">${esc(sub)}</text>`);
+    else if (id === 'macro') o.push(`<text x="${x + w / 2}" y="${y + h / 2}" font-size="14" font-weight="600" text-anchor="middle" fill="var(--ink)" transform="rotate(-90 ${x + w / 2} ${y + h / 2})">radio_digital (macro)</text>`);
+    else {
+      o.push(`<text x="${x + 8}" y="${y + 16}" font-size="13" font-weight="600" fill="var(--ink)">${esc(name)}</text>`);
+      if (sub && h > 26) o.push(`<text x="${x + 8}" y="${y + 30}" font-size="10" fill="var(--muted)" font-family="var(--mono)">${esc(sub)}</text>`);
+    }
+    o.push('</g>');
+  }
+  // chain stages and log_det taps
+  for (let i = 0; i < 6; i++) {
+    const x0 = 115 + i * 50;
+    o.push(`<path d="M${x0} 118 L${x0} 162 L${x0 + 34} 140 Z" fill="var(--die)" stroke="var(--rx)" stroke-width="1.2"/><text x="${x0 + 10}" y="144" font-size="10" fill="var(--ink)" font-family="var(--mono)">${i + 1}</text>`);
+    o.push(`<line x1="${x0 + 34}" y1="140" x2="${x0 + 50}" y2="140" stroke="var(--rx)" stroke-width="1.2"/>`);
+    o.push(`<text x="${157 + i * 50 + 3}" y="292" font-size="9" fill="var(--muted)" font-family="var(--mono)">t${i + 1}</text>`);
+  }
+  o.push(`<line x1="100" y1="121" x2="108" y2="121" stroke="var(--rxin)"/><line x1="108" y1="121" x2="108" y2="140" stroke="var(--rxin)"/><line x1="100" y1="161" x2="108" y2="161" stroke="var(--rxin)"/><line x1="108" y1="161" x2="108" y2="140" stroke="var(--rxin)"/><line x1="108" y1="140" x2="115" y2="140" stroke="var(--rxin)"/>`);
+  const tw = (t) => t.length * 5.5;                       // 9px mono text width
+  const lab = (x, y, t, col, anchor) => `<text x="${x}" y="${y}" font-size="9" text-anchor="${anchor || 'middle'}" fill="${col}" font-family="var(--mono)">${esc(t)}</text>`;
+  for (const [n, pts, opt = {}] of DG.wires) {
+    const net = byName(n), cls = (FP.NETS.find(q => q[0] === n) || [])[1] || 'rx';
+    const col = NET_COLOR[cls], hot = S.hoverNet === n;
+    o.push(`<polyline data-net="${esc(n)}" points="${pts.map(p => p.join(',')).join(' ')}" fill="none" stroke="${col}" stroke-width="${hot ? 3 : 1.6}" ${cls === 'en' ? 'stroke-dasharray="5 3"' : ''} marker-end="url(#ar)"/>`);
+    o.push(`<polyline data-net="${esc(n)}" points="${pts.map(p => p.join(',')).join(' ')}" fill="none" stroke="transparent" stroke-width="10"/>`);
+    const len = n === 'trim[7]' ? (nets.some(q => q.name.startsWith('trim[') && !q.missing) ? Math.max(...nets.filter(q => q.name.startsWith('trim[') && !q.missing).map(q => q.len)) : null)
+      : net && !net.missing ? net.len : null;
+    const name = opt.name !== undefined ? opt.name : n, L = len !== null ? `${len.toFixed(0)} µm` : '';
+    if (opt.pos) { o.push(lab(opt.pos[0], opt.pos[1], [name, L].filter(Boolean).join(' '), col, opt.pos[2])); continue; }
+    let best = 0, bl = -1;                                    // label the longest segment
+    for (let i = 0; i < pts.length - 1; i++) { const l = Math.abs(pts[i + 1][0] - pts[i][0]) + Math.abs(pts[i + 1][1] - pts[i][1]); if (l > bl) { bl = l; best = i; } }
+    const a = pts[best], b = pts[best + 1], one = [name, L].filter(Boolean).join(' ');
+    if (a[1] === b[1]) {
+      const mx = (a[0] + b[0]) / 2;
+      if (Math.abs(b[0] - a[0]) >= tw(one) + 8) o.push(lab(mx, opt.below ? a[1] + 11 : a[1] - 4, one, col));
+      else { o.push(lab(mx, a[1] - 4, name, col)); if (L) o.push(lab(mx, a[1] + 11, L, col)); }
+    } else {
+      const my = (a[1] + b[1]) / 2;
+      o.push(lab(a[0] + 4, my - 2, name, col, 'start')); if (L) o.push(lab(a[0] + 4, my + 9, L, col, 'start'));
+    }
+  }
+  o.push(`<text x="12" y="552" font-size="10" fill="var(--muted)" font-family="var(--mono)">Lengths: Manhattan, in the open variant (none shown when an end is unplaced). Dashed outline: not placed. Click a block to find it in the layout.</text>`);
+  o.push(`<text x="12" y="565" font-size="10" fill="var(--muted)" font-family="var(--mono)">Decaps (VAPWR 50 pF, VDPWR 30 pF) sit on the supplies, off the signal path.</text>`);
+  o.unshift(`<defs><pattern id="hatchD" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(-45)"><line x1="0" y1="0" x2="0" y2="5" stroke="currentColor" stroke-width="0.8" opacity=".5"/></pattern></defs>`);
+  svg.innerHTML = o.join('');
+}
+function setMode(m) {
+  S.mode = m; try { localStorage.setItem('fp.mode', m); } catch (e) {}
+  if (m === 'layout') fit();
+  draw();
+}
+document.querySelectorAll('[data-mode]').forEach(b => b.onclick = () => setMode(b.dataset.mode));
+
+// ---- panels
+function badge(st) { return `<span class="st">${st}</span>`; }
+function renderTabs() {
+  const t = $('#tabs');
+  if (!S.order.length) { t.innerHTML = '<span class="empty">No variants yet</span>'; return; }
+  t.innerHTML = S.order.map(id => {
+    const v = S.variants[id];
+    const r = FP.evaluate(DATA, CAT, viewVariant(v), S.settings);
+    const f = r.checks.filter(c => c.status === 'fail').length, w = r.checks.filter(c => c.status === 'warn').length;
+    return `<button class="tab" role="tab" data-tab="${esc(id)}" aria-selected="${id === S.cur}" title="${esc(v.name)}">${esc(v.name)}<span class="dots">${f} fail · ${w} warn</span></button>`;
+  }).join('');
+}
+function renderVariantBox() {
+  const v = cur(), el = $('#secVariant');
+  if (!v) {
+    el.innerHTML = `<h2>Variants</h2><p class="empty">Nothing here yet. Claude writes named variants into this page's shared store, and they appear as tabs above.
+      Start a blank variant, or import a floorplan.json below.</p><div class="row edit-only"><button class="btn primary" id="bNew2">Start a blank variant</button></div>`;
+    const b = $('#bNew2'); if (b) b.onclick = newBlank;
+    return;
+  }
+  const who = v.updatedBy ? (v.updatedBy === S.uid ? 'you' : (S.names[v.updatedBy] || 'someone')) : '';
+  el.innerHTML = `<h2>${esc(v.name)} <span class="meta">${v.updatedAt ? new Date(v.updatedAt).toLocaleString() : ''}${who ? ' · ' + esc(who) : ''}</span></h2>
+    <div class="note${S.noteOpen ? ' open' : ''}" id="noteView">${esc(v.note || '')}</div>
+    <div class="row"><button class="linkbtn" id="noteMore">${S.noteOpen ? 'less' : 'more'}</button>
+    <details class="edit-only"><summary>Edit the note</summary><textarea id="noteEd" rows="6">${esc(v.note || '')}</textarea></details></div>`;
+  $('#noteMore').onclick = () => { S.noteOpen = !S.noteOpen; renderVariantBox(); };
+  const ne = $('#noteEd'); if (ne) ne.oninput = () => { v.note = ne.value; $('#noteView').textContent = ne.value; touchQuiet(); };
+}
+let quietT = null;
+function touchQuiet() { clearTimeout(quietT); quietT = setTimeout(() => { const v = cur(); if (v) { S.dirty.add(S.cur); v.updatedAt = new Date().toISOString(); if (S.uid) v.updatedBy = S.uid; flush(S.cur); } }, 800); }
+
+function renderSel() {
+  const el = $('#secSel'), v = cur();
+  if (!v || !S.sel) { el.innerHTML = `<h2>Selection</h2><p class="empty">Click a block, decap or strap to edit it. Dragging snaps to 0.5 µm. Shift-drag over empty space selects a group; shift-click adds or removes one.</p>`; return; }
+  if (S.sel.kind === 'group') {
+    const items = S.sel.items, names = items.map(q => q.kind === 'inst' ? q.id : FP.DECAPS[q.id.split('.')[0]].label + ' ' + q.id.split('.')[1]);
+    const R0 = FP.resolve(CAT, viewVariant(v)), rs = items.map(q => q.kind === 'inst' ? R0.inst[q.id] && R0.inst[q.id].rect : R0.decaps.find(d => d.name === q.id).rect).filter(Boolean);
+    const bx = Math.min(...rs.map(r => r[0])), by = Math.min(...rs.map(r => r[1])), bx1 = Math.max(...rs.map(r => r[0] + r[2])), by1 = Math.max(...rs.map(r => r[1] + r[3]));
+    el.innerHTML = `<h2>Group <span class="meta">${items.length} selected</span></h2>
+      <p class="note" style="display:block">${esc(names.join(', '))}</p>
+      <dl class="kv"><dt>group outline</dt><dd>x ${f1(bx)}–${f1(bx1)}, y ${f1(by)}–${f1(by1)}</dd></dl>
+      <div class="row edit-only"><label class="f">move by x<input type="number" step="0.5" id="gdx" value="0"></label><label class="f">y<input type="number" step="0.5" id="gdy" value="0"></label><button class="btn" id="gMove">Move</button><button class="btn" id="gClear">Clear selection</button></div>
+      <p class="empty" style="margin:0">Drag any of them to move the group. Arrows nudge 0.5 µm (shift: 5 µm). Esc clears.</p>`;
+    $('#gMove').onclick = () => { const dx = +$('#gdx').value, dy = +$('#gdy').value; if (isFinite(dx) && isFinite(dy) && (dx || dy)) { moveGroup(v, dx, dy); touch(); } };
+    $('#gClear').onclick = () => { S.sel = null; render(); };
+    return;
+  }
+  if (S.sel.kind === 'inst') {
+    const n = S.sel.id, c = CAT[n], p = viewVariant(v).place[n];
+    const ins = last && last.R.inst[n];
+    const est = v.est && v.est[n] ? v.est[n] : { w: c.w, h: c.h };
+    el.innerHTML = `<h2>${esc(n)} <span class="meta">${esc(c.cell)}${c.part ? ' part ' + c.part : ''}</span></h2>
+      <div class="row"><label class="f">x<input type="number" step="0.5" id="sx" value="${f1(p.x)}"></label><label class="f">y<input type="number" step="0.5" id="sy" value="${f1(p.y)}"></label>
+      ${c.estimate ? `<label class="f">w<input type="number" step="0.5" id="sw" value="${f1(est.w)}"></label><label class="f">h<input type="number" step="0.5" id="sh" value="${f1(est.h)}"></label>` : ''}</div>
+      ${c.fold ? `<label class="chip edit-only"><input type="checkbox" id="cFold" ${v.fold && v.fold[n] ? 'checked' : ''}> Fold in two (${f1(c.fold.w)} × ${f1(c.fold.h)}, same area): input half on top, stages 3-6 back along the bottom</label>` : ''}
+      <div class="orients edit-only">${Object.keys(FP.ORIENTS).map(o => `<button class="btn" data-or="${o}" aria-pressed="${p.orient === o}">${o}</button>`).join('')}</div>
+      ${c.reshape ? (() => { const A0 = c.w * c.h, A = est.area || A0; return `<label class="f">width (height follows, at the area below)<input type="range" id="mwR" min="${Math.ceil(A / 220)}" max="485" step="0.5" value="${f1(est.w)}"></label>
+      <div class="row edit-only"><label class="f">w<input type="number" step="0.5" id="mw" value="${f1(est.w)}"></label><label class="f">h<input type="number" id="mh" value="${(A / est.w).toFixed(2)}" disabled></label>
+      <label class="f">area, µm²<input type="number" step="500" id="mA" value="${Math.round(A)}"></label><span class="sync" id="mApct">${A >= A0 ? '+' : ''}${(100 * (A / A0 - 1)).toFixed(1)} % vs hardened</span></div>
+      <div class="row edit-only"><button class="btn" id="mReset">Back to 260 × 190</button><button class="btn" id="mAreaReset">Back to the hardened area</button></div>
+      <label class="f">r2r trim drive, trim_out[7:0], on the macro's<select id="mTrim">${Object.entries(FP.TRIM_SIDES).map(([k, l]) => `<option value="${k}" ${((v.macroPins && v.macroPins.trim) || 'W') === k ? 'selected' : ''}>${l} edge</option>`).join('')}</select></label>`; })() : ''}
+      <dl class="kv"><dt>placed size</dt><dd>${ins ? `${f1(ins.rect[2])} × ${f1(ins.rect[3])} µm` : '-'}</dd><dt>area</dt><dd>${f1(c.estimate ? est.w * est.h : c.reshape ? (est.area || c.w * c.h) : c.w * c.h)} µm²</dd>${c.reshape && (Math.abs(est.w - c.w) > 1e-6 || (est.area && Math.abs(est.area - c.w * c.h) > 1) || (v.macroPins && v.macroPins.trim && v.macroPins.trim !== 'W')) ? '<dt>note</dt><dd>needs a re-harden (size, shape or pin order)</dd>' : ''}
+      <dt>status</dt><dd>${c.estimate ? 'estimate: not laid out yet (hatched)' : ins && ins.folded ? 'folded: same area, half width; needs a chain re-layout (hatched)' : p.parked ? 'parked, not placed' : 'GDS outline'}</dd>
+      ${ins && Object.values(ins.pins).some(q => q.moved) ? `<dt>pins moved</dt><dd>${esc(Object.entries(ins.pins).filter(([, q]) => q.moved).map(([k]) => k).join(', '))}</dd><dt></dt><dd>${n === 'macro' ? 'needs a new pin_order.cfg' : 'needs a block re-layout'} (orange rings)</dd>` : ''}</dl>
+      ${ins && Object.values(ins.pins).some(q => q.moved) ? '<div class="row edit-only"><button class="btn" id="bPinReset">Put its pins back (GDS)</button></div>' : ''}
+      ${p.parked ? '' : `<div class="row edit-only"><button class="btn" id="bPark">Park it (unplace)</button></div>`}`;
+    const cf = $('#cFold'); if (cf) cf.onchange = () => {
+      const o = viewVariant(v).place[n], R0 = FP.resolve(CAT, viewVariant(v)), r0 = R0.inst[n] && R0.inst[n].rect;
+      v.fold = Object.assign({}, v.fold); if (cf.checked) v.fold[n] = true; else delete v.fold[n];
+      if (v.pins && v.pins[n]) delete v.pins[n];                        // moved pins were for the other shape
+      v.place[n] = { x: o.x, y: o.y, orient: o.orient };                // keep the lower-left corner
+      touch();
+    };
+    const setXY = () => { const x = +$('#sx').value, y = +$('#sy').value; if (isFinite(x) && isFinite(y)) { v.place[n] = Object.assign({}, p, { x, y }); delete v.place[n].parked; touch(); } };
+    $('#sx').onchange = setXY; $('#sy').onchange = setXY;
+    if (c.reshape) {
+      const A0 = c.w * c.h;
+      // keep the top-right corner while the macro changes shape or size
+      const setWA = (w, A, live) => {
+        A = Math.min(110000, Math.max(20000, +A)); w = Math.min(485, Math.max(Math.ceil(A / 220), snap(+w)));
+        if (!isFinite(w) || !isFinite(A)) return;
+        const o = viewVariant(v).place[n], oldA = est.area || A0, old = est.w;
+        const [pw0, ph0] = FP.placedSize(o.orient, old, oldA / old), [pw1, ph1] = FP.placedSize(o.orient, w, A / w);
+        v.est = v.est || {}; v.est[n] = Object.assign({ w, h: +(A / w).toFixed(4) }, Math.abs(A - A0) > 1 ? { area: +A.toFixed(1) } : {});
+        // moved pins (own frame) follow the edges: scale along each edge, stay on the edge they were on
+        const sx = w / old, sy = (A / w) / (oldA / old), oh0 = oldA / old;
+        for (const q of Object.values((v.pins || {})[n] || {})) {
+          const onE = q.x >= old - 0.3, onN = q.y >= oh0 - 0.3;
+          q.x = +(onE ? w - (old - q.x) : q.x * sx).toFixed(3); q.y = +(onN ? A / w - (oh0 - q.y) : q.y * sy).toFixed(3);
+        }
+        v.place[n] = { x: +(o.x + pw0 - pw1).toFixed(3), y: +(o.y + ph0 - ph1).toFixed(3), orient: o.orient };
+        est.w = w; est.area = Math.abs(A - A0) > 1 ? A : undefined;
+        if (live) { draw(); renderChecks(); $('#mw').value = f1(w); $('#mh').value = (A / w).toFixed(2); } else touch();
+      };
+      const curA = () => est.area || A0;
+      $('#mwR').oninput = () => setWA($('#mwR').value, curA(), true);
+      $('#mwR').onchange = () => setWA($('#mwR').value, curA(), false);
+      $('#mw').onchange = () => setWA($('#mw').value, curA(), false);
+      $('#mA').onchange = () => setWA(est.w, +$('#mA').value, false);
+      $('#mReset').onclick = () => setWA(260, A0, false);
+      $('#mAreaReset').onclick = () => setWA(est.w, A0, false);
+      $('#mTrim').onchange = () => { v.macroPins = Object.assign({}, v.macroPins, { trim: $('#mTrim').value }); touch(); };
+    }
+    if (c.estimate) { const se = () => { v.est = v.est || {}; v.est[n] = { w: Math.max(1, +$('#sw').value), h: Math.max(1, +$('#sh').value) }; touch(); }; $('#sw').onchange = se; $('#sh').onchange = se; }
+    el.querySelectorAll('[data-or]').forEach(b => b.onclick = () => setOrient(n, b.dataset.or));
+    const bp = $('#bPark'); if (bp) bp.onclick = () => { delete v.place[n]; touch(); };
+    const br = $('#bPinReset'); if (br) br.onclick = () => { if (v.pins) delete v.pins[n]; touch(); };
+  } else if (S.sel.kind === 'decap') {
+    const [base, i] = S.sel.id.split('.'); const list = v.decaps[base]; const d = list && list[+i - 1];
+    if (!d) { S.sel = null; return renderSel(); }
+    const def = FP.DECAPS[base];
+    el.innerHTML = `<h2>${esc(def.label)} ${i} <span class="meta">${def.cell} · estimate</span></h2>
+      <div class="row"><label class="f">x<input type="number" step="0.5" id="dx" value="${f1(d.x)}"></label><label class="f">y<input type="number" step="0.5" id="dy" value="${f1(d.y)}"></label>
+      <label class="f">w<input type="number" step="0.5" id="dw" value="${f1(d.w)}"></label><label class="f">h<input type="number" step="0.5" id="dh" value="${f1(d.h)}"></label></div>
+      <label class="chip edit-only"><input type="checkbox" id="dMim" ${d.mim ? 'checked' : ''}> MIM only, on top of a met1-only block (r2r)</label>
+      <dl class="kv"><dt>this rectangle</dt><dd>${f1(d.w * d.h)} µm²${d.mim ? ' MIM' : ''}</dd><dt>all ${def.net} decap</dt><dd>${f1(list.reduce((t, q) => t + q.w * q.h, 0))} µm²</dd></dl>
+      <div class="row edit-only"><button class="btn" id="bDecDel">Remove this rectangle</button></div>`;
+    for (const k of ['x', 'y', 'w', 'h']) $('#d' + k).onchange = () => { d[k] = Math.max(k === 'w' || k === 'h' ? 1 : -1e9, +$('#d' + k).value); touch(); };
+    $('#bDecDel').onclick = () => { list.splice(+i - 1, 1); S.sel = null; touch(); };
+    const dm = $('#dMim'); if (dm) dm.onchange = () => { if (dm.checked) d.mim = true; else delete d.mim; touch(); };
+  } else if (S.sel.kind === 'strap') {
+    const st = (v.straps || [])[S.sel.id]; if (!st) { S.sel = null; return renderSel(); }
+    el.innerHTML = `<h2>Strap ${esc(st.net)} <span class="meta">met4, full height</span></h2>
+      <div class="row"><label class="f">net<select id="tn">${['VGND', 'VAPWR', 'VDPWR'].map(n => `<option ${n === st.net ? 'selected' : ''}>${n}</option>`).join('')}</select></label>
+      <label class="f">x<input type="number" step="0.1" id="tx" value="${f1(st.x)}"></label><label class="f">w<input type="number" step="0.1" id="tw" value="${f1(st.w)}"></label></div>
+      <div class="row edit-only"><button class="btn" id="bStDel">Remove strap</button></div>`;
+    $('#tn').onchange = () => { st.net = $('#tn').value; touch(); };
+    $('#tx').onchange = () => { st.x = +$('#tx').value; touch(); };
+    $('#tw').onchange = () => { st.w = Math.max(0.5, +$('#tw').value); touch(); };
+    $('#bStDel').onclick = () => { v.straps.splice(S.sel.id, 1); S.sel = null; touch(); };
+  }
+}
+// Why each rule exists (docs/floorplan_spec.md "Rules, ranked" and the results behind it)
+const WHY = {
+  'Chain input far from the macro': 'The macro runs at 10 MHz and its 43rd / 44th harmonics (430 / 440 MHz) fall in the chain\'s 330-560 MHz band; the correlator runs all the time in RX. Anything coupled into the chain input is amplified ~80 dB, so the input section and the ua[0] / ua[1] pad wires should be as far as possible from the macro, its supply and the TT-pin wiring. Measured from the input section + pad wires to the macro halo and the TT channel / clk wire. Fails if a switching macro wire (comp_in, phi, clk, trim) crosses the chain.',
+  'Late stages away from the input': 'With ~80 dB of gain, output-to-input coupling above ~0.1 fF (asymmetric) makes the chain peak or oscillate: at the ss 10 °C corner 0.2 fF gives +2.8 dB of peaking near 600 MHz and 0.5 fF oscillates. Stages 4-6, log_det\'s t4-t6 inputs and their tap wires carry the large signal, so they must stay away from the pads, the input wires and stage 1.',
+  'Clock edges off the RX': 'sc_phi1 / sc_phi2 (to avg_sc), comp_in (from comp_ct) and clk switch during RX. Their edges couple into the chain and the detector, which see µV-level signals. Fails if one of these wires crosses the chain or log_det; warns when it passes closer than the threshold. Also keep the phi lines off avg_sc\'s Cavg top plates.',
+  'Short analog path': 'det -> lpf -> avg_sc / comp_ct and r2r -> Ctrim -> comp.trim are slow, high-impedance nodes where tenths of a mV matter (the trim step is ~0.07 mV per LSB). Short wires keep pickup, leakage and parasitic capacitance down. The value is the sum of those Manhattan lengths.',
+  'TX at ua[3] / ua[4]': 'The drivers deliver about +4 dBm at 434 MHz, and the driver -> pad wires carry the full output current (met3, 2.5 µm wide for electromigration). Long ones add loss and inductance, and act as an antenna inside the tile.',
+  'Bias next to the chain': 'ib_chain (60 µA into the chain\'s current mirror) and vcm (the input common mode, through Rb) set the gain and operating point of the most sensitive block. Long wires pick up noise and coupling; ib_det and ib_comp are less critical and only reported.',
+  'Decap VAPWR': 'About 50 pF on VAPWR (3.3 V) keeps ~1 V peak-to-peak of 434 MHz TX ripple off the chip\'s shared 3.3 V net, which other projects use and which would also radiate. At 30 pF the ripple rises from ~0.05 to ~0.15 V; that is the lever if area runs out. Not laid out yet: area is the estimate.',
+  'Decap VDPWR': 'About 30 pF on VDPWR (1.8 V) holds up the RX and digital supply; with 30 pF the chain stays stable with up to 5 nH of supply / ground inductance. Not laid out yet: area is the estimate.',
+  'TX away from the RX input': 'Soft rule: the radio is half-duplex and the TX is stopped in RX (ring off, both arms low), so TX / RX distance only matters for leakage while transmitting. Never at the cost of rules 1 and 2.',
+  'Overlaps and spacing': 'Blocks need about 2-3 µm between them for guard rings and wiring (the keep-out setting). Nothing may overlap another block, sit outside the tile, or enter the macro\'s 5 µm halo.',
+  'TT pin channel clear': 'The 42 TT digital pins (top edge, x 15-131) connect to the macro\'s north pins. About 42 wires run horizontally above the analog area and drop into the macro from above, which needs a channel of ~12 µm. If the macro\'s top is closer to the tile edge than that, its north pins can\'t be reached.',
+  'Power straps': 'Power reaches the TT PDN through vertical met4 straps (≥ 1.2 µm wide, nearly full height); met5 is reserved for the TT PDN. A strap can\'t cross met4 shapes or MIM top plates (cap_mim_m3_1), nor the macro, which routes up to met4. Each net (VGND, VAPWR, VDPWR) needs at least one; turn on the met4 / MIM layer to see what blocks a lane.',
+  'Unplaced blocks': 'Blocks still in the parking row under the tile are left out of every check. Place them to have them scored.',
+};
+
+function renderChecks() {
+  const el = $('#secChecks');
+  if (!last) { el.innerHTML = '<h2>Checklist</h2><p class="empty">Rules appear once a variant is open.</p>'; return; }
+  const cs = last.checks, n = (s) => cs.filter(c => c.status === s).length;
+  el.innerHTML = `<h2>Checklist <span class="meta">ranked rules, live</span></h2>
+    <div class="summary"><span style="color:var(--fail)"><b>${n('fail')}</b> fail</span><span style="color:var(--warn)"><b>${n('warn')}</b> warn</span><span style="color:var(--pass)"><b>${n('pass')}</b> pass</span></div>
+    <ol class="checks">${cs.map(c => `<li class="check ${c.status}" tabindex="0">${badge(c.status)}<span class="t">${c.rule}. ${esc(c.title)}</span><span class="v">${esc(c.value)}</span><span class="d">${esc(c.detail)}</span>${WHY[c.title] ? `<div class="why" role="tooltip"><b>Why</b>${esc(WHY[c.title])}</div>` : ''}</li>`).join('')}</ol>`;
+}
+function renderArea() {
+  const el = $('#secArea');
+  if (!last) { el.innerHTML = '<h2>Area</h2>'; return; }
+  const a = last.area, k = (x) => (x / 1000).toFixed(1) + 'k';
+  const used = a.signal + a.decap + a.spacing, pct = (x) => Math.max(0, 100 * x / a.free).toFixed(1);
+  el.innerHTML = `<h2>Area <span class="meta">beside the macro: ${k(a.free)} µm²</span></h2>
+    <div class="bar" role="img" aria-label="Area use"><span style="width:${pct(a.signal)}%;background:var(--rx)"></span><span style="width:${pct(a.decap)}%;background:var(--decap)"></span><span style="width:${pct(a.spacing)}%;background:var(--warn)"></span></div>
+    <div class="legend"><span><i class="sw" style="background:var(--rx)"></i>signal ${k(a.signal)}</span><span><i class="sw" style="background:var(--decap)"></i>decap ${k(a.decap)} of ${k(a.decapTarget)}</span><span><i class="sw" style="background:var(--warn)"></i>spacing +10 % ${k(a.spacing)}</span></div>
+    <dl class="kv"><dt>tile</dt><dd>${k(a.tile)}</dd><dt>macro + halo</dt><dd>${k(a.macro)}</dd><dt>placed incl. spacing</dt><dd>${k(used)} · ${(100 * used / a.free).toFixed(0)} %</dd>
+    <dt>needed at full decap</dt><dd>${k(a.need)} · ${(100 * a.need / a.free).toFixed(0)} %</dd><dt>free left</dt><dd>${k(a.free - used)}</dd></dl>`;
+}
+function renderNets() {
+  const el = $('#secNets');
+  if (!last) { el.innerHTML = '<h2>Nets</h2>'; return; }
+  const rows = last.nets.filter(n => !n.missing);
+  const total = rows.reduce((t, n) => t + n.len, 0);
+  el.innerHTML = `<h2>Nets <span class="meta">Manhattan, ${(total / 1000).toFixed(2)} mm total</span></h2>
+    <div class="legend">${Object.entries(FP.NET_CLASSES).map(([c, l]) => `<span><i class="sw" style="background:${NET_COLOR[c]}"></i>${l}</span>`).join('')}</div>
+    <div class="scroll"><table class="tbl"><tbody>${rows.map(n => `<tr data-net="${esc(n.name)}"><td><i class="sw" style="background:${NET_COLOR[n.cls]}"></i>${esc(n.name)}</td><td>${esc(n.a.replace('pad:', ''))} → ${esc(n.b.replace('pad:', ''))}</td><td class="n">${n.len.toFixed(1)}</td></tr>`).join('')}</tbody></table></div>`;
+  el.querySelectorAll('tr[data-net]').forEach(tr => { tr.onmouseenter = () => { S.hoverNet = tr.dataset.net; draw(); }; tr.onmouseleave = () => { S.hoverNet = null; draw(); }; });
+}
+function renderStraps() {
+  const el = $('#secStraps'), v = cur();
+  if (!v) { el.innerHTML = '<h2>Power straps</h2>'; return; }
+  const st = v.straps || [];
+  el.innerHTML = `<h2>Power straps <span class="meta">met4 ≥ 1.2 µm, y ${S.settings.strapY}–${f1(H - S.settings.strapY)}</span></h2>
+    ${st.length ? `<table class="tbl"><tbody>${st.map((s, i) => `<tr><td><i class="sw" style="background:${STRAP_COLOR[s.net]}"></i>${s.net}</td><td class="n">x ${f1(s.x)}</td><td class="n">w ${f1(s.w)}</td><td class="n"><button class="btn" data-ss="${i}">edit</button></td></tr>`).join('')}</tbody></table>` : '<p class="empty">No straps yet.</p>'}
+    <div class="row edit-only"><button class="btn" id="bStrap">Add a strap</button><button class="btn" id="bDecA">Add VAPWR decap</button><button class="btn" id="bDecD">Add VDPWR decap</button></div>
+    <div class="warnbox">Straps can't cross met4 or MIM (red with the met4 layer on), or the macro. A strap inside the macro's 5 µm halo clears it.</div>`;
+  el.querySelectorAll('[data-ss]').forEach(b => b.onclick = () => { S.sel = { kind: 'strap', id: +b.dataset.ss }; render(); });
+  const add = $('#bStrap'); if (add) add.onclick = () => { v.straps = v.straps || []; v.straps.push({ net: 'VGND', x: 2, w: 1.2 }); S.sel = { kind: 'strap', id: v.straps.length - 1 }; touch(); };
+  const ad = (base) => () => { v.decaps = v.decaps || {}; (v.decaps[base] = v.decaps[base] || []).push({ x: 0, y: -90, w: 40, h: 25 }); S.sel = { kind: 'decap', id: `${base}.${v.decaps[base].length}` }; touch(); };
+  const a1 = $('#bDecA'); if (a1) a1.onclick = ad('xdeca');
+  const a2 = $('#bDecD'); if (a2) a2.onclick = ad('xdecd');
+}
+async function saveFile(name, text) {
+  let dl = null; try { dl = window.claude && await window.claude.use('downloads'); } catch (e) {}
+  if (dl) { try { await dl.save({ filename: name, data: text }); setSync('file offered'); return; } catch (e) { if (e && e.code === 'declined') return; } }
+  copy(text);
+}
+async function copy(t) {
+  try { await navigator.clipboard.writeText(t); setSync('copied'); }
+  catch (e) { const ta = $('#ioText'); ta.value = t; ta.closest('details').open = true; ta.select(); setSync('select and copy the JSON'); }
+}
+function renderIO() {
+  const el = $('#secIO'), v = cur();
+  el.innerHTML = `<h2>floorplan.json <span class="meta">layout/floorplan/</span></h2>
+    <div class="row"><button class="btn primary" id="bExp" ${v ? '' : 'disabled'}>Save floorplan.json</button><button class="btn" id="bCopy" ${v ? '' : 'disabled'}>Copy JSON</button></div>
+    <details><summary>Show / paste JSON</summary><textarea id="ioText" rows="8" placeholder="Paste a floorplan.json here, then import it"></textarea>
+    <div class="row edit-only"><button class="btn" id="bImp">Import as a new variant</button><label class="btn">Open a file<input type="file" id="ioFile" accept=".json,application/json" hidden></label></div></details>
+    <p class="empty" style="margin:0">x, y are the lower-left of each placed bbox; rot / mirror give the KLayout DCplxTrans for layout/gen/top.py.</p>`;
+  const json = () => JSON.stringify(FP.exportJSON(DATA, CAT, v), null, 1);
+  if (v) { $('#bExp').onclick = () => saveFile('floorplan.json', json()); $('#bCopy').onclick = () => copy(json()); }
+  const imp = (txt) => { try { const j = JSON.parse(txt); const nv = FP.importJSON(CAT, j); addVariant(nv); } catch (e) { setSync('import failed: ' + e.message); } };
+  const bi = $('#bImp'); if (bi) bi.onclick = () => imp($('#ioText').value);
+  const fi = $('#ioFile'); if (fi) fi.onchange = () => { const f = fi.files[0]; if (f) f.text().then(imp); };
+}
+function renderSettings() {
+  const el = $('#secSettings'), s = S.settings;
+  const fields = [['keepout', 'keep-out between blocks, µm'], ['channel', 'TT pin channel, all 42 wires side by side, µm (0 = off)'], ['r1', '1. input ↔ macro ≥'], ['r2', '2. late ↔ input ≥'], ['r3', '3. clocks ↔ RX ≥'],
+    ['r4', '4. analog path ≤'], ['r5', '5. driver → pad ≤'], ['r6', '6. ib_chain, vcm ≤'], ['r8', '8. TX ↔ RX input ≥'], ['deca', 'VAPWR decap target, µm²'], ['decd', 'VDPWR decap target, µm²'], ['strapY', 'strap end inset, µm']];
+  el.innerHTML = `<h2>Thresholds <span class="meta">shared with everyone</span></h2>
+    <div class="row">${fields.map(([k, l]) => `<label class="f">${l}<input type="number" step="0.5" data-set="${k}" value="${s[k]}"></label>`).join('')}</div>
+    <div class="row edit-only"><button class="btn" id="bReset">Reset to defaults</button></div>`;
+  el.querySelectorAll('[data-set]').forEach(i => i.onchange = () => { const x = +i.value; if (isFinite(x)) { s[i.dataset.set] = x; S.dirty.add('$settings'); clearTimeout(timers.$s); timers.$s = setTimeout(() => flush('$settings'), 600); render(); } });
+  const br = $('#bReset'); if (br) br.onclick = () => { Object.assign(s, FP.DEFAULT_SETTINGS); S.dirty.add('$settings'); flush('$settings'); render(); };
+}
+function renderLayers() {
+  $('#layers').innerHTML = Object.entries({ flylines: 'flylines', pins: 'pins', labels: 'labels', decap: 'decap', m4: 'met4 / MIM', grid: 'grid' })
+    .map(([k, l]) => `<label class="chip"><input type="checkbox" id="ly_${k}" data-layer="${k}" ${S.layers[k] ? 'checked' : ''}>${l}</label>`).join('') +
+    `<button class="chip" id="bFit">fit</button>`;
+  document.querySelectorAll('[data-layer]').forEach(c => c.onchange = () => { S.layers[c.dataset.layer] = c.checked; try { localStorage.setItem('fp.layers', JSON.stringify(S.layers)); } catch (e) {} draw(); });
+  $('#bFit').onclick = () => { fit(); draw(); };
+}
+function render() {
+  draw(); renderTabs(); renderVariantBox(); renderSel(); renderChecks(); renderArea(); renderNets(); renderStraps(); renderIO(); renderSettings();
+  const has = !!cur();
+  for (const b of ['#bDup', '#bRen', '#bDel']) $(b).disabled = !has;
+}
+
+// ---- variant actions
+function newId() { return 'v' + Date.now().toString(36) + Math.random().toString(36).slice(2, 5); }
+function addVariant(v) {
+  const id = newId();
+  v.order = Math.max(0, ...Object.values(S.variants).map(x => x.order || 0)) + 1;
+  S.variants[id] = v; sortOrder(); S.cur = id; S.sel = null; touch(id);
+}
+function newBlank() {
+  addVariant({ name: 'Blank', note: '', place: { macro: { x: 228.12, y: 23.76, orient: 'R0' } }, decaps: {}, straps: [], est: {} });
+}
+$('#bNew').onclick = newBlank;
+$('#bFull').onclick = async () => {
+  try {
+    if (document.fullscreenElement) await document.exitFullscreen();
+    else await document.documentElement.requestFullscreen();
+  } catch (e) { setSync('full screen not available here: open the link in its own tab'); }
+};
+document.addEventListener('fullscreenchange', () => { $('#bFull').textContent = document.fullscreenElement ? 'Exit full screen' : 'Full screen'; setTimeout(() => { fit(); draw(); }, 50); });
+$('#bDup').onclick = () => { const v = cur(); if (!v) return; const c = clone(v); c.name = v.name.replace(/( \(copy\))*$/, '') + ' (copy)'; addVariant(c); };
+$('#bRen').onclick = () => {
+  const v = cur(); if (!v) return;
+  const tab = document.querySelector(`[data-tab="${CSS.escape(S.cur)}"]`);
+  const inp = document.createElement('input'); inp.type = 'text'; inp.id = 'renameInput'; inp.value = v.name; inp.style.width = '260px';
+  tab.replaceWith(inp); inp.focus(); inp.select();
+  const done = (ok) => { if (ok && inp.value.trim()) { v.name = inp.value.trim(); touch(); } else render(); };
+  inp.onkeydown = (e) => { if (e.key === 'Enter') done(true); if (e.key === 'Escape') done(false); };
+  inp.onblur = () => done(true);
+};
+let delArm = 0;
+$('#bDel').onclick = () => {
+  const b = $('#bDel');
+  if (Date.now() - delArm > 3000) { delArm = Date.now(); b.textContent = 'Delete? click again'; setTimeout(() => { b.textContent = 'Delete'; }, 3000); return; }
+  delArm = 0; b.textContent = 'Delete';
+  const id = S.cur; delete S.variants[id]; sortOrder(); S.cur = S.order[0] || null; S.sel = null;
+  S.dirty.add(id); flush(id); render();
+};
+$('#tabs').addEventListener('click', (e) => {
+  const t = e.target.closest('[data-tab]'); if (!t) return;
+  S.cur = t.dataset.tab; S.sel = null; try { localStorage.setItem('fp.cur', S.cur); } catch (err) {} fit(); render();
+});
+
+// ---- canvas interaction
+const svg = $('#cv');
+let drag = null;
+function setOrient(n, o) {
+  const v = cur(), vv = viewVariant(v), p = vv.place[n], c = CAT[n];
+  const est = v.est && v.est[n] ? v.est[n] : { w: c.w, h: c.h };
+  const [w0, h0] = FP.placedSize(p.orient, est.w, est.h), [w1, h1] = FP.placedSize(o, est.w, est.h);
+  v.place[n] = { x: snap(p.x + (w0 - w1) / 2), y: snap(p.y + (h0 - h1) / 2), orient: o };
+  touch();
+}
+svg.addEventListener('pointerdown', (e) => {
+  if (e.button !== 0) return;
+  if (S.mode === 'diagram') {
+    const g = e.target.closest('[data-dinst]');
+    if (g && CAT[g.dataset.dinst]) { S.sel = { kind: 'inst', id: g.dataset.dinst }; setMode('layout'); render(); }
+    return;
+  }
+  const v = cur(); const [x, y] = toUm(e);
+  let gi = e.target.closest('[data-inst]'), gd = e.target.closest('[data-decap]'); const gs = e.target.closest('[data-strap]');
+  if (v && !gi && !gd && !gs && !e.target.closest('[data-resize]')) {   // a flyline or label on top: hit-test the blocks underneath
+    const R0 = FP.resolve(CAT, viewVariant(v)), inR = (r) => x >= r[0] && x <= r[0] + r[2] && y >= r[1] && y <= r[1] + r[3];
+    const bi = Object.values(R0.inst).filter(i => inR(i.rect)).sort((a, b) => a.rect[2] * a.rect[3] - b.rect[2] * b.rect[3])[0];
+    const bd = S.layers.decap ? R0.decaps.filter(d => inR(d.rect)).sort((a, b) => a.rect[2] * a.rect[3] - b.rect[2] * b.rect[3])[0] : null;
+    const pick = bi && bd ? (bi.rect[2] * bi.rect[3] <= bd.rect[2] * bd.rect[3] ? 'i' : 'd') : bi ? 'i' : bd ? 'd' : null;
+    if (pick === 'i') gi = { dataset: { inst: bi.name } }; else if (pick === 'd') gd = { dataset: { decap: bd.name } };
+  }
+  svg.setPointerCapture(e.pointerId);
+  if (v && e.shiftKey && (gi || gd)) {                       // shift-click: add to / remove from the group
+    toggleSel(gi ? 'inst' : 'decap', gi ? gi.dataset.inst : gd.dataset.decap); drag = null; render(); return;
+  }
+  if (v && e.shiftKey && !gs) {                              // shift-drag on empty space: selection box
+    drag = { kind: 'band', x0: x, y0: y, x1: x, y1: y, keep: selItems().slice() }; S.dragging = false; draw(); return;
+  }
+  const hit = gi ? { kind: 'inst', id: gi.dataset.inst } : gd && !e.target.dataset.resize ? { kind: 'decap', id: gd.dataset.decap } : null;
+  if (v && S.canWrite && hit && S.sel && S.sel.kind === 'group' && isSel(hit.kind, hit.id)) {   // drag the whole group
+    drag = { kind: 'group', x0: x, y0: y, orig: S.sel.items.map(q => [q, itemPos(v, q)]) }; S.dragging = true; render(); return;
+  }
+  if (v && S.canWrite && gi) {
+    const n = gi.dataset.inst, p = viewVariant(v).place[n];
+    S.sel = { kind: 'inst', id: n }; drag = { kind: 'inst', n, dx: x - p.x, dy: y - p.y, p0: p, moved: false };
+  } else if (v && S.canWrite && gd) {
+    const [base, i] = gd.dataset.decap.split('.'), d = v.decaps[base][+i - 1];
+    S.sel = { kind: 'decap', id: gd.dataset.decap };
+    drag = e.target.dataset.resize ? { kind: 'resize', d, x0: d.x, y1: d.y + d.h } : { kind: 'decap', d, dx: x - d.x, dy: y - d.y };
+  } else if (v && S.canWrite && gs) {
+    const st = v.straps[+gs.dataset.strap]; S.sel = { kind: 'strap', id: +gs.dataset.strap }; drag = { kind: 'strap', st, dx: x - st.x };
+  } else if (!S.canWrite && (gi || gd || gs)) {
+    S.sel = gi ? { kind: 'inst', id: gi.dataset.inst } : gd ? { kind: 'decap', id: gd.dataset.decap } : { kind: 'strap', id: +gs.dataset.strap };
+    drag = { kind: 'pan', cx: e.clientX, cy: e.clientY, v0: Object.assign({}, S.view) };
+  } else {
+    if (e.target === svg || !e.target.closest('[data-net]')) S.sel = null;
+    drag = { kind: 'pan', cx: e.clientX, cy: e.clientY, v0: Object.assign({}, S.view) }; svg.classList.add('panning');
+  }
+  S.dragging = drag.kind !== 'pan';
+  render();
+});
+svg.addEventListener('pointermove', (e) => {
+  const [x, y] = toUm(e);
+  $('#coords').textContent = `x ${x.toFixed(1)}, y ${y.toFixed(1)} µm`;
+  const tip = $('#tip');
+  const tn = e.target.closest && e.target.closest('[data-net]');
+  if (tn && last && !drag) {
+    const n = last.nets.find(q => q.name === tn.dataset.net);
+    if (n) { const r = $('#stage').getBoundingClientRect(); tip.hidden = false; tip.textContent = `${n.name}: ${n.a.replace('pad:', '')} → ${n.b.replace('pad:', '')}  ${n.len.toFixed(1)} µm`; tip.style.left = (e.clientX - r.left + 12) + 'px'; tip.style.top = (e.clientY - r.top + 12) + 'px'; }
+    if (S.hoverNet !== n.name) { S.hoverNet = n.name; draw(); }
+  } else if (!drag) { tip.hidden = true; if (S.hoverNet) { S.hoverNet = null; draw(); } }
+  if (!drag) return;
+  const v = cur();
+  if (drag.kind === 'pan') {
+    const r = svg.getBoundingClientRect();
+    S.view.x = drag.v0.x - (e.clientX - drag.cx) / r.width * S.view.w;
+    S.view.y = drag.v0.y - (e.clientY - drag.cy) / r.height * S.view.h;
+    draw(); return;
+  }
+  if (drag.kind === 'band') { drag.x1 = x; drag.y1 = y; draw(); return; }
+  if (drag.kind === 'group') {
+    const dx = snap(x - drag.x0), dy = snap(y - drag.y0);
+    for (const [q, o] of drag.orig) setItemPos(v, q, +(o.x + dx).toFixed(3), +(o.y + dy).toFixed(3), o);
+    drag.moved = dx !== 0 || dy !== 0; draw(); renderChecks(); return;
+  }
+  if (drag.kind === 'inst') { v.place[drag.n] = { x: snap(x - drag.dx), y: snap(y - drag.dy), orient: drag.p0.orient }; drag.moved = true; }
+  else if (drag.kind === 'decap') { drag.d.x = snap(x - drag.dx); drag.d.y = snap(y - drag.dy); }
+  else if (drag.kind === 'resize') { drag.d.w = Math.max(2, snap(x - drag.x0)); const ny = Math.min(drag.y1 - 2, snap(y)); drag.d.h = drag.y1 - ny; drag.d.y = ny; }
+  else if (drag.kind === 'strap') { drag.st.x = Math.round((x - drag.dx) * 10) / 10; }
+  draw(); renderChecks();
+});
+function endDrag() {
+  if (!drag) return;
+  const was = drag; drag = null; S.dragging = false; svg.classList.remove('panning');
+  if (was.kind === 'band') {
+    const v = cur(), b = [Math.min(was.x0, was.x1), Math.min(was.y0, was.y1), Math.abs(was.x1 - was.x0), Math.abs(was.y1 - was.y0)];
+    const R0 = FP.resolve(CAT, viewVariant(v)), items = was.keep.slice();
+    const add = (kind, id) => { if (!items.some(q => q.kind === kind && q.id === id)) items.push({ kind, id }); };
+    if (b[2] > 0.5 || b[3] > 0.5) {
+      for (const i of Object.values(R0.inst)) if (FP.overlap(i.rect, b) > 0) add('inst', i.name);
+      if (S.layers.decap) for (const d of R0.decaps) if (FP.overlap(d.rect, b) > 0) add('decap', d.name);
+    }
+    setGroup(items); render(); return;
+  }
+  if (was.kind === 'group') { if (was.moved) touch(); else render(); return; }
+  if (was.kind !== 'pan') touch(); else render();
+}
+svg.addEventListener('pointerup', endDrag);
+svg.addEventListener('pointercancel', endDrag);
+svg.addEventListener('wheel', (e) => {
+  if (S.mode === 'diagram') return;
+  e.preventDefault();
+  const r = svg.getBoundingClientRect(), k = Math.exp(e.deltaY * 0.0015);
+  const fx = (e.clientX - r.left) / r.width, fy = (e.clientY - r.top) / r.height;
+  const nw = Math.min(2000, Math.max(20, S.view.w * k)), nh = S.view.h * nw / S.view.w;
+  S.view.x += (S.view.w - nw) * fx; S.view.y += (S.view.h - nh) * fy; S.view.w = nw; S.view.h = nh;
+  draw();
+}, { passive: false });
+document.addEventListener('keydown', (e) => {
+  if (/INPUT|TEXTAREA|SELECT/.test(document.activeElement && document.activeElement.tagName)) return;
+  if (S.mode === 'diagram') return;
+  if (e.key === 'f' || e.key === 'F') { fit(); draw(); return; }
+  if (e.key === 'Escape' && S.sel) { S.sel = null; render(); return; }
+  const v = cur(); if (!v || !S.sel || !S.canWrite) return;
+  if (S.sel.kind === 'group') {
+    const st = e.shiftKey ? 5 : 0.5, dir = { ArrowLeft: [-st, 0], ArrowRight: [st, 0], ArrowUp: [0, st], ArrowDown: [0, -st] }[e.key];
+    if (dir) { e.preventDefault(); moveGroup(v, dir[0], dir[1]); touch(); }
+    return;
+  }
+  if (S.sel.kind === 'inst') {
+    const n = S.sel.id, p = viewVariant(v).place[n];
+    const op = { r: 'rot', R: 'rot', x: 'mx', X: 'mx', y: 'my', Y: 'my' }[e.key];
+    if (op) { setOrient(n, FP.compose(p.orient, op)); e.preventDefault(); return; }
+  }
+  const st = e.shiftKey ? 5 : 0.5, dir = { ArrowLeft: [-st, 0], ArrowRight: [st, 0], ArrowUp: [0, st], ArrowDown: [0, -st] }[e.key];
+  if (!dir) return;
+  e.preventDefault();
+  if (S.sel.kind === 'inst') { const p = viewVariant(v).place[S.sel.id]; v.place[S.sel.id] = { x: p.x + dir[0], y: p.y + dir[1], orient: p.orient }; }
+  else if (S.sel.kind === 'decap') { const [b, i] = S.sel.id.split('.'); const d = v.decaps[b][+i - 1]; d.x += dir[0]; d.y += dir[1]; }
+  else if (S.sel.kind === 'strap') { v.straps[S.sel.id].x = Math.round((v.straps[S.sel.id].x + dir[0] / 5) * 10) / 10; }
+  touch();
+});
+new ResizeObserver(() => { const old = S.view; fit(); if (old) { /* keep zoom on resize only when first fitting */ } draw(); }).observe($('#stage'));
+
+renderLayers();
+if (window.FP_DEV_VARIANTS) {        // local preview hook (not used in the published page)
+  for (const v of window.FP_DEV_VARIANTS) { S.variants[v.id] = clone(v); }
+  sortOrder(); S.cur = S.order[0];
+}
+render();
+connect();
+})();
+</script>

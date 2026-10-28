@@ -6,7 +6,7 @@
         {{ .Title }}
       </a>
     </h1>
-    <a href="{{ .Permalink }}"><img src="/{{ .Params.featured_image }}"/></a>
+    <a href="{{ .Permalink }}"><img src="/{{ .Params.thumbnail | default .Params.featured_image }}"/></a>
     <br/>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
       {{ if .Params.custom_summary }}
