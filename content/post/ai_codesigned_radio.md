@@ -22,7 +22,7 @@ The chip goes to the fab in November, so everything here is simulation. I'll onl
 
 If you've studied analog chip design, you've probably heard of Behzad Razavi, the UCLA professor whose textbooks a lot of us learnt from. Earlier this year he tested AI on his own analog design questions, and the best model got about half of them right.
 
-Zushu Jiang at ETH Zurich has turned those kinds of questions into a [benchmark](https://razavi-bench.tokenzhang.com) that makes it easy to test different models. In just a few months the leaderboard had changed completely, with Claude Opus in third place at 95%.
+[Zhishuai Zhang](https://www.linkedin.com/in/zhishuai-zhang/) at ETH Zurich has turned those kinds of questions into a [benchmark](https://razavi-bench.tokenzhang.com) that makes it easy to test different models. In just a few months the leaderboard had changed completely, with Claude Opus in third place at 95%.
 
 The benchmark doesn't allow tools, because it's testing how well the models reason. But to build a real radio I wanted the best results, so I re-ran the questions and gave the agent ngspice to check its answers. Claude Opus 5.5 on max effort came out on top, with 96.5% ([see my results](https://github.com/mattvenn/razavi-bench/tree/main/experiments/2026-10-18-agentic-iic-osic-tools), as of 19th October).
 
