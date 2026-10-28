@@ -16,7 +16,7 @@ A few weeks ago I finally designed it, with an AI agent doing most of the work. 
 
 {{< youtube c53n4mH_RYg >}}
 
-The chip goes to the fab in November, so everything here is simulation. I'll only count it as a win when the chips come back and talk to each other.
+The chip [goes to the fab in November](https://app.tinytapeout.com/shuttles/ttsky26d), so everything here is simulation. I'll only count it as a win when the chips come back and talk to each other.
 
 ### Can AI actually do analog?
 
