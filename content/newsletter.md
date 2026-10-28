@@ -9,9 +9,9 @@ type: page
 
 Sign up to the Zero to ASIC course newsletter!
 
-* Special Offers for the course & news about important course updates
+* Special Offers & news about important course updates
 * Interviews, Videos & News from the world of open source silicon
-* Related projects like [TinyTapeout](https://tinytapeout.com) and SiliWiz
+* Upcoming tapeouts & news from [Tiny Tapeout](https://tinytapeout.com) 
 
 {{< mail-chimp >}}
 
