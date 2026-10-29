@@ -70,6 +70,7 @@ div.editable, h1.editable, h2.editable{display:block}
 .stage .lede{margin:0; color:var(--muted); max-width:52rem}
 svg text{font-family:var(--sans)}
 .scene{width:100%; height:8rem; display:block}  /* about two readout rows */
+.scene.nar{height:auto; max-width:40rem; margin:0 auto}   /* narrow screens: the boards drawn closer, at their own height */
 .hit{cursor:pointer}
 .hit:hover .hl, .hit:focus-visible .hl{stroke:var(--sig); stroke-width:3}
 .hit:focus{outline:none}
@@ -176,10 +177,31 @@ svg.strip{max-width:100%; height:auto; display:block}
 .help h2{margin:0 0 .5rem}
 .help kbd{font-family:var(--mono); background:var(--panel2); border:1px solid var(--line); border-radius:4px; padding:0 .35rem}
 .help ul{padding-left:1.1rem; margin:.5rem 0}
+.ctl{display:contents}   /* desktop: the slider and the step buttons are header columns */
+.chipblks{display:flex; flex-wrap:wrap; gap:.4rem}
+/* phones and tablets: the header is the brand and the breadcrumb; the slider and the step buttons sit in a bar at the foot of the screen,
+   so the slider stays in reach while the plot it changes is on screen */
+@media (max-width:1000px){
+  header{display:flex; flex-wrap:wrap; padding:.5rem .75rem .6rem; gap:.25rem 1.25rem} nav.crumbs{flex-wrap:wrap; white-space:normal}
+  .ctl{display:flex; flex-direction:column; gap:.2rem; position:fixed; left:0; right:0; bottom:0; z-index:4; padding:.35rem .75rem calc(.35rem + env(safe-area-inset-bottom)); background:rgba(12,8,24,.96); border-top:1px solid var(--line)}
+  .ctl::before{content:""; position:absolute; left:0; right:0; top:-1px; height:2px; background:linear-gradient(90deg, var(--z2a-cyan), var(--z2a-purple) 50%, var(--z2a-magenta))}
+  .dist label{display:none} .dist.off{display:none}   /* a page the power doesn't change: just the step buttons */
+  .dist output{width:auto; font-size:.95rem}
+  .dist input{-webkit-appearance:none; appearance:none; background:transparent; height:2.75rem; margin:0; touch-action:none; cursor:pointer}
+  .dist input::-webkit-slider-runnable-track{height:6px; border-radius:3px; background:var(--line)}
+  .dist input::-webkit-slider-thumb{-webkit-appearance:none; width:28px; height:28px; margin-top:-11px; border-radius:50%; background:var(--sig); border:2px solid #05181c}
+  .dist input::-moz-range-track{height:6px; border-radius:3px; background:var(--line)}
+  .dist input::-moz-range-thumb{width:24px; height:24px; border-radius:50%; background:var(--sig); border:2px solid #05181c}
+  .navbtns{justify-content:space-between} .navbtns button{min-width:3.5rem; min-height:44px; font-size:1.1rem}
+  body{padding-bottom:var(--ctlh, 6rem)}
+}
+@media (hover:none){ #helpbtn{display:none} }   /* the keyboard shortcuts: nothing to press on a touch screen */
 @media (max-width:640px){
-  main{padding:.75rem} header{display:flex; flex-wrap:wrap; padding:.6rem .75rem} nav.crumbs{flex-wrap:wrap; white-space:normal}
+  main{padding:.75rem} nav.crumbs{font-size:1rem}
   .arrow{display:none} .blk, .blk.pin{flex:1 1 calc(50% - .4rem); min-width:0}
-  .dist{margin-left:0} .dist input{width:100%} .stage, .detail{padding:.8rem}
+  .stage, .detail{padding:.8rem}
+  .fig .ft{flex-wrap:wrap; gap:0 1rem} .fig .ft > span:first-child{white-space:normal}   /* titles may wrap here: the column is too narrow for one line */
+  .ro small, .ro b, .burst{white-space:normal} .bursts{grid-template-columns:repeat(2, minmax(0,1fr))}
 }
 .nl{position:fixed; inset:0; background:rgba(0,0,0,.6); display:flex; align-items:center; justify-content:center; padding:1rem; z-index:6}
 .nl[hidden]{display:none}
@@ -202,6 +224,7 @@ footer{padding:0 1.25rem .6rem; color:var(--faint); font-size:.78rem; display:fl
 <header>
   <a class="brand" href="https://www.zerotoasiccourse.com" title="Zero to ASIC course"><svg viewBox="0 0 3401.5 3401.6" aria-hidden="true"><g fill="currentColor" transform="matrix(1.3333333,0,0,-1.3333333,1322.7806,2078.743)"><g transform="matrix(5,0,0,5,-1133.86,-1133.8572)"><path transform="translate(338.1049,200.4037)" d="m 0,0 66.389,-22.676 -214.282,-56.036 15.083,29.348 h -110.97 l 131.522,261.79 H -274.566 C -296.924,174.5 -309.75,130.285 -309.75,83.061 c 0,-111.623 71.706,-206.523 171.573,-241.105 l 36.387,72.291 73.68,29.884 -57.325,-114.332 c 10.101,-1.237 20.385,-1.857 30.803,-1.857 61.288,0 117.509,21.622 161.506,57.626 L 57.358,113.964 Z"/><path transform="translate(283.4731,538.5829)" d="M 0,0 C -66.422,0 -126.907,-25.385 -172.292,-66.974 H 35.485 l -131.84,-261.941 h 47.291 l 11.221,22.308 42.174,-14.398 127.86,254.031 73.127,-339.567 c 31.288,42.342 49.784,94.716 49.784,151.423 C 255.102,-114.231 140.887,0 0,0"/></g></g></svg><span><small>Zero to ASIC</small><b>433 MHz OOK radio</b></span></a>
   <nav class="crumbs" aria-label="Level" id="crumbs"></nav>
+  <div class="ctl" id="ctl">
   <div class="dist">
     <label for="dist">Received power</label>
     <input id="dist" type="range" min="25" max="110" step="0.5" value="56" aria-describedby="distout">
@@ -212,6 +235,7 @@ footer{padding:0 1.25rem .6rem; color:var(--faint); font-size:.78rem; display:fl
     <span id="stepno" aria-live="polite"></span>
     <button type="button" id="next" aria-label="Next step">&#8594;</button>
     <button type="button" id="helpbtn" aria-label="Keyboard shortcuts">?</button>
+  </div>
   </div>
 </header>
 <main id="main"><div class="loading">Loading simulation data…</div></main>
@@ -254,10 +278,10 @@ const BRAND_JPG = "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYG
 if (BRAND_JPG.length > 20) document.documentElement.style.setProperty('--brandimg', `url(data:image/jpeg;base64,${BRAND_JPG})`);
 
 // ------------------------------------------------------------------ analytics + newsletter
-/* Google Analytics 4: only on a real web host (not file:, not localhost / edit.py), and only once GA_ID is set.
+/* Google Analytics 4: only on a real web host (not file:, localhost / edit.py or a LAN address), and only once GA_ID is set.
    Events: explainer_step (page, step), explainer_power (dbm), explainer_dip, explainer_zoom, newsletter_shown / _subscribe / _dismiss */
 const GA_ID = 'G-2HQ02ESFZB';   // the GA4 web stream that zerotoasiccourse.com sends to (through its tag manager, GTM-PL32RC6)
-const GA_ON = !!GA_ID && /^https?:$/.test(location.protocol) && !/^(localhost|127\.|0\.0\.0\.0|\[::1\])/.test(location.hostname);
+const GA_ON = !!GA_ID && /^https?:$/.test(location.protocol) && !/^(localhost|127\.|0\.0\.0\.0|\[::1\]|10\.|192\.168\.|172\.(1[6-9]|2\d|3[01])\.)/.test(location.hostname);
 window.dataLayer = window.dataLayer || [];
 function gtag() { dataLayer.push(arguments); }
 if (GA_ON) {
@@ -455,7 +479,7 @@ function wirePlots(root) {
   root.querySelectorAll('.plot').forEach(el => {
     const P = PLOTS[el.dataset.plot]; if (!P) return;
     const svg = el.querySelector('svg'), cur = svg.querySelector('.cur'), hov = el.querySelector('.hov');
-    svg.addEventListener('pointermove', e => {
+    const show = e => {
       const r = svg.getBoundingClientRect(), vx = (e.clientX - r.left) / r.width * P.W;
       if (vx < P.L || vx > P.W - P.R) return;
       const X = P.x0 + (vx - P.L) / (P.W - P.L - P.R) * (P.x1 - P.x0), xv = P.opts.xlog ? Math.pow(10, X) : X;
@@ -465,8 +489,9 @@ function wirePlots(root) {
         let i = 0, n = s.d.x.length; while (i < n - 1 && s.d.x[i] < xv) i++;
         lines.push(`${s.label.split(':')[0]} ${fmt(s.d.y[i])}`); });
       hov.textContent = lines.join('\n'); hov.hidden = false;
-    });
-    svg.addEventListener('pointerleave', () => { cur.setAttribute('visibility', 'hidden'); hov.hidden = true; });
+    };
+    svg.addEventListener('pointermove', show); svg.addEventListener('pointerdown', show);   // touch: a tap shows the readout
+    svg.addEventListener('pointerleave', e => { if (e.pointerType === 'touch') return; cur.setAttribute('visibility', 'hidden'); hov.hidden = true; });   // and it stays after the finger lifts
   });
 }
 /* rows of 1-bit cells: rows [{bits, label, color, cmp}] cmp: compare to reference bits -> red if mismatch */
@@ -833,34 +858,44 @@ function figLed() {
 // ------------------------------------------------------------------ levels
 function linkScene(focus = null) {
   const rate = run();   // how many of the model's sends at this power toggle the LED (the animation replays one of them)
+  /* narrow column (phones, tablets): a 520-wide scene with small boards, no board subtitles and the LED under the RX, so the text stays readable */
+  const nar = GEO.w < 760, W = nar ? 520 : 1200, H = nar ? 150 : 130, bw = nar ? 60 : 150, g0 = nar ? 220 : 400, g1 = nar ? 380 : 890;
   const d = dist(), p = prx(), lo = Math.log10(dist(-25)), hi = Math.log10(dist(-110)),   // the slider's whole range, on a log scale
-    gap = 400 + Math.max(0, Math.min(1, (Math.log10(d) - lo) / (hi - lo))) * 490, tx = 600 - gap / 2, rx = 600 + gap / 2;
+    gap = g0 + Math.max(0, Math.min(1, (Math.log10(d) - lo) / (hi - lo))) * (g1 - g0), tx = W / 2 - gap / 2, rx = W / 2 + gap / 2;
   /* vertical, parallel dipoles on the facing sides: the link is broadside to both (a dipole has a null along its own axis) */
   const board = (x, label, sub, color, lvl, pin, side) => `
     <g class="hit" role="button" tabindex="0" data-go="${lvl}" aria-label="Open the ${label.toLowerCase()}">
-      <rect class="hl${focus === 'ook' && lvl === 'chip:tx' ? ' on' : ''}" x="${x - 150}" y="38" width="300" height="76" rx="10" fill="#123024" stroke="#2f6b4f" stroke-width="2"/>
-      <rect x="${x - 138}" y="48" width="72" height="56" rx="5" fill="#0a0615" stroke="${color}" stroke-width="2"/>
+      <rect class="hl${focus === 'ook' && lvl === 'chip:tx' ? ' on' : ''}" x="${x - bw}" y="38" width="${2 * bw}" height="76" rx="10" fill="#123024" stroke="#2f6b4f" stroke-width="2"/>
+      ${nar ? `<rect x="${x - bw + 12}" y="48" width="${2 * bw - 24}" height="56" rx="5" fill="#0a0615" stroke="${color}" stroke-width="2"/>
+      <text x="${x}" y="84" fill="${color}" font-size="24" text-anchor="middle" font-weight="600">${label}</text>`
+      : `<rect x="${x - 138}" y="48" width="72" height="56" rx="5" fill="#0a0615" stroke="${color}" stroke-width="2"/>
       <text x="${x - 102}" y="83" fill="${color}" font-size="20" text-anchor="middle" font-weight="600">${label}</text>
-      <text x="${x - 54}" y="81" fill="#f1edf8" font-size="14">${sub}</text>
-      <path d="M ${x + side * 150} 72 H ${x + side * 168} V 34 M ${x + side * 150} 80 H ${x + side * 168} V 118" fill="none" stroke="#c8d3da" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="${x - 54}" y="81" fill="#f1edf8" font-size="14">${sub}</text>`}
+      <path d="M ${x + side * bw} 72 H ${x + side * (bw + 18)} V 34 M ${x + side * bw} 80 H ${x + side * (bw + 18)} V 118" fill="none" stroke="#c8d3da" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
     </g>`;
+  const ledc = rate.ok === D.model.sends ? 'var(--ok)' : rate.ok ? 'var(--sig2)' : 'var(--bad)';
   let waves = '';
   for (let k = 0; k < WAVE_N; k++) waves += `<path class="wave" d="" fill="none" stroke="var(--sig)" stroke-width="2.5" stroke-linecap="round" opacity="0"/>`;
   const nl = d / LAMBDA, nlt = nl < 10 ? nl.toFixed(1) : nl.toFixed(0);
-  return `<svg class="scene" viewBox="0 0 1200 130" role="img" aria-label="Two boards: the transmitter on the left, the receiver on the right, ${fmtd(d)} apart">
+  const y0 = nar && focus ? 24 : 0;   // no caption on a block page: start under where it would be
+  return `<svg class="scene${nar ? ' nar' : ''}" viewBox="0 ${y0} ${W} ${H - y0}" role="img" aria-label="Two boards: the transmitter on the left, the receiver on the right, ${fmtd(d)} apart">
     <g class="hit" role="button" tabindex="0" data-block="air" aria-label="Over the air: received power and estimated distance">
-      <rect class="hl${focus === 'air' ? ' on' : ''}" x="${tx + 180}" y="26" width="${rx - tx - 360}" height="100" rx="10" fill="#ffffff04" stroke="#ffffff10"/>
-      <clipPath id="gapclip"><rect x="${tx + 180}" y="26" width="${rx - tx - 360}" height="100" rx="10"/></clipPath>
-      <g id="waves" clip-path="url(#gapclip)" data-x0="${tx + 168}" data-x1="${rx - 168}" data-cy="76" data-d="${d}">${waves}</g>
-      ${focus ? '' : `<text x="600" y="20" fill="#b4a9cf" font-size="16" text-anchor="middle">≈ ${fmtd(d)} apart (${distSrc(d)}) · ${nlt} wavelength${nlt === '1.0' ? '' : 's'}</text>`}
+      <rect class="hl${focus === 'air' ? ' on' : ''}" x="${tx + bw + 30}" y="26" width="${rx - tx - 2 * bw - 60}" height="100" rx="10" fill="#ffffff04" stroke="#ffffff10"/>
+      <clipPath id="gapclip"><rect x="${tx + bw + 30}" y="26" width="${rx - tx - 2 * bw - 60}" height="100" rx="10"/></clipPath>
+      <g id="waves" clip-path="url(#gapclip)" data-x0="${tx + bw + 18}" data-x1="${rx - bw - 18}" data-cy="76" data-d="${d}">${waves}</g>
+      ${focus ? '' : `<text x="${W / 2}" y="20" fill="#b4a9cf" font-size="${nar ? 19 : 16}" text-anchor="middle">≈ ${fmtd(d)} apart (${distSrc(d)}) · ${nlt} wavelength${nlt === '1.0' ? '' : 's'}</text>`}
     </g>
     ${board(tx, 'TX', 'switches the carrier on/off', 'var(--tx)', 'chip:tx', 'ua[3] / ua[4]', 1)}
     ${board(rx, 'RX', 'measures RF energy', 'var(--rx)', 'chip:rx', 'ua[0] / ua[1]', -1)}
     <g class="hit" role="button" tabindex="0" data-block="led" aria-label="The LED: 2 of 3 bursts confirm a send">
-      <rect class="hl" x="${rx + 76}" y="10" width="68" height="28" rx="6" fill="#ffffff00"/>
+      ${nar ? `<rect class="hl" x="${rx - bw - 150}" y="124" width="${2 * bw + 150}" height="24" rx="6" fill="#ffffff00"/>
+      <circle id="led" cx="${rx + bw - 10}" cy="136" r="10" fill="#382c5a" stroke="#000"/>
+      <text x="${rx + bw - 26}" y="141" fill="#b4a9cf" font-size="16" text-anchor="end">LED</text>
+      <text x="${rx + bw - 66}" y="141" fill="${ledc}" font-size="16" text-anchor="end">${rate.ok}/${D.model.sends} sends toggle it</text>`
+      : `<rect class="hl" x="${rx + 76}" y="10" width="68" height="28" rx="6" fill="#ffffff00"/>
       <circle id="led" cx="${rx + 128}" cy="24" r="10" fill="#382c5a" stroke="#000"/>
       <text x="${rx + 112}" y="29" fill="#b4a9cf" font-size="12" text-anchor="end">LED</text>
-      <text x="${rx + 70}" y="29" fill="${rate.ok === D.model.sends ? 'var(--ok)' : rate.ok ? 'var(--sig2)' : 'var(--bad)'}" font-size="12" text-anchor="end">${rate.ok}/${D.model.sends} sends toggle it</text>
+      <text x="${rx + 70}" y="29" fill="${ledc}" font-size="12" text-anchor="end">${rate.ok}/${D.model.sends} sends toggle it</text>`}
     </g>
   </svg>`;
 }
@@ -879,10 +914,21 @@ function levelLink() {
   </div>
   <div class="hit striphit" role="button" tabindex="0" data-block="ook" aria-pressed="${S.block === 'ook'}" aria-label="On-off keying: the idea, bit by bit"><div id="codestrip">${codeStrip(anim._b || 0, anim._pos || 0)}</div></div>`;
 }
+/* narrow screens: the diagram's labels are too small to read or tap, so its blocks are also buttons underneath
+   (the whole chip: its two halves; a half: its blocks in tour order), and a half is cropped to its own rows */
+const DGVB = {rx: '0 -6 1060 320', tx: '0 318 1060 210'};
+function chipBlocks(f) {
+  if (!f) return [['chip:rx', 'Receiver', 'antenna to the LED', 'rx'], ['chip:tx', 'Transmitter', 'Gold code to the antenna', 'tx']]
+    .map(([go, n, sub, c]) => `<button type="button" class="blk ${c}" data-go="${go}"><b>${n}</b><span>${sub}</span></button>`).join('');
+  const ti = id => { const i = TOUR.findIndex(t => t.block === id); return i < 0 ? 99 : i; };
+  return [...new Set(DGHALF[f].map(d => DG2B[d]).filter(Boolean))].sort((a, b) => ti(a) - ti(b))
+    .map(id => `<button type="button" class="blk ${B[id].color || B[id].lvl}" data-block="${id}"><b>${nm(id)}</b><span>${T(id, 'sub') || (DG.blocks.find(d => DG2B[d[0]] === id) || [])[2] || ''}</span></button>`).join('');
+}
 function chipPage() {
-  const f = S.focus;   // no intro text on any chip page, so the transmitter / receiver diagrams are as big as the whole one
+  const f = S.focus, nar = !fits();   // no intro text on any chip page, so the transmitter / receiver diagrams are as big as the whole one
   return `<div class="chippage">
-  <div class="dgwrap">${dgSVG({hl: f ? DGHALF[f] : null, cls: 'big'})}</div>
+  <div class="dgwrap">${dgSVG({hl: f ? DGHALF[f] : null, cls: 'big', vb: nar && f ? DGVB[f] : null})}</div>
+  ${nar ? `<div class="chipblks">${chipBlocks(f)}</div>` : ''}
   <div class="links"><a class="secondary" href="${GDS('tt_um_mattvenn_radio', 'gds')}" target="_blank" rel="noopener">Whole layout ↗</a></div>
   </div>`;
 }
@@ -965,7 +1011,7 @@ function dgSVG(opts = {}) {
   const netOn = w => !hl || hl.has(w[2]) || hl.has(w[3]);
   const padOn = id => !hl || DG.wires.some(w => (w[2] === id || w[3] === id) && netOn(w));
   const DIM = .2, o = [];
-  o.push(`<svg class="dg ${opts.cls || ''}" viewBox="0 -6 1060 552" role="img" aria-label="System diagram: receiver on top, transmitter below, the digital macro on the right">`);
+  o.push(`<svg class="dg ${opts.cls || ''}" viewBox="${opts.vb || '0 -6 1060 552'}" role="img" aria-label="System diagram: receiver on top, transmitter below, the digital macro on the right">`);
   const cols = Object.assign({}, DGC); STAGE_COLS.forEach((c, i) => cols['s' + i] = c);   // the chain's taps in the stage colours used on lna_chain and log_det
   o.push(`<defs>${Object.entries(cols).map(([k, c]) => `<marker id="dga-${k}" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L8 4L0 8z" fill="${c}"/></marker>`).join('')}</defs>`);
   const TAPS = ['o1', 'o2', 'o3', 'o4', 'o5', 'out'];
@@ -1115,6 +1161,7 @@ function build() {
   if (S.edit && !cb.contains(document.activeElement)) cb.innerHTML = `<b>EDIT</b> <span class="capl">tour caption${onTour ? ' (step ' + (S.step + 1) + ')' : ''}:</span> ${ed(pageId(), 'cap', 'span', '', '')} <span id="edstat">${edStat}</span> <span class="capl">e: done</span>`;
   anim.reset();
   useGeo('stage');
+  document.body.style.setProperty('--ctlh', fits() ? '0px' : $('ctl').offsetHeight + 'px');   // the bottom bar (narrow screens) mustn't cover the end of the page
 }
 function go(where, block = null) { const [level, focus] = where.split(':'); S.level = level; S.focus = focus || null; S.block = block; render(); }
 const nextStep = () => setStep((S.step + 1) % TOUR.length);   // the last step wraps to the first
