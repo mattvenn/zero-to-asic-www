@@ -36,10 +36,11 @@ button{font:inherit; color:inherit}
 header{position:relative; display:grid; grid-template-columns:auto minmax(22rem,1fr) minmax(0,30rem) auto;   /* 22rem: the longest breadcrumb, Link › Chip › bit slicer (digital) */ align-items:center; gap:.75rem 1.5rem; padding:.35rem 1.25rem; border-bottom:0; background:linear-gradient(90deg, rgba(12,8,24,.55) 0%, rgba(12,8,24,.8) 22%, rgba(12,8,24,.88) 100%), var(--brandimg, none) center 40%/cover, var(--panel)}
 header::after{content:""; position:absolute; left:0; right:0; bottom:0; height:3px; background:linear-gradient(90deg, var(--z2a-cyan), var(--z2a-purple) 50%, var(--z2a-magenta))}
 .brand{display:flex; align-items:center; gap:.6rem; min-width:0; color:var(--text); text-decoration:none}
+.brand a{color:inherit; text-decoration:none; display:flex} .brand a:hover b{text-decoration:underline}   /* logo and "Zero to ASIC" go to the course, the title to the first page */
 .brand svg{width:2.3rem; height:2.3rem; flex:none}
 .brand span{display:flex; flex-direction:column; line-height:1.15}
 .brand small{font-size:.72rem; font-weight:600; letter-spacing:.12em; text-transform:uppercase; color:var(--z2a-cyan)}
-.brand b{font-size:1.3rem; letter-spacing:-.01em}
+.brand b{font-size:1.3rem; letter-spacing:-.01em; white-space:nowrap}
 nav.crumbs{display:flex; align-items:center; gap:.35rem; flex-wrap:nowrap; white-space:nowrap; overflow:hidden; min-width:0; font-size:1.15rem}
 nav.crumbs button{background:none; border:0; padding:.15rem .45rem; border-radius:6px; color:var(--muted); cursor:pointer; min-height:34px}
 nav.crumbs button[aria-current]{color:var(--text); font-weight:600}
@@ -95,7 +96,7 @@ svg text{font-family:var(--sans)}
 .blk:hover{border-color:var(--sig)}
 .blk[aria-pressed=true]{outline:3px solid var(--sig); outline-offset:1px}
 .arrow{align-self:center; color:var(--faint); font-size:1.2rem; flex:0 0 auto}
-.focus{display:grid; grid-template-columns:minmax(16rem,30rem) minmax(0,1fr); gap:2rem; align-items:start}
+.focus{display:grid; grid-template-columns:minmax(16rem,var(--sidemax,30rem)) minmax(0,1fr);   /* --sidemax: 30rem on screen whatever the page zoom (render) */ gap:2rem; align-items:start}
 .focus .side{display:flex; flex-direction:column; gap:.9rem; min-width:0}
 .focus .side h2{margin:0; font-family:var(--mono); font-weight:500; font-size:1.45rem}
 .focus .side .top{display:flex; justify-content:space-between; gap:1rem; align-items:flex-start}
@@ -229,12 +230,12 @@ footer{padding:0 1.25rem .6rem; color:var(--faint); font-size:.78rem; display:fl
 </head>
 <body>
 <header>
-  <a class="brand" href="https://www.zerotoasiccourse.com" title="Zero to ASIC course"><svg viewBox="0 0 3401.5 3401.6" aria-hidden="true"><g fill="currentColor" transform="matrix(1.3333333,0,0,-1.3333333,1322.7806,2078.743)"><g transform="matrix(5,0,0,5,-1133.86,-1133.8572)"><path transform="translate(338.1049,200.4037)" d="m 0,0 66.389,-22.676 -214.282,-56.036 15.083,29.348 h -110.97 l 131.522,261.79 H -274.566 C -296.924,174.5 -309.75,130.285 -309.75,83.061 c 0,-111.623 71.706,-206.523 171.573,-241.105 l 36.387,72.291 73.68,29.884 -57.325,-114.332 c 10.101,-1.237 20.385,-1.857 30.803,-1.857 61.288,0 117.509,21.622 161.506,57.626 L 57.358,113.964 Z"/><path transform="translate(283.4731,538.5829)" d="M 0,0 C -66.422,0 -126.907,-25.385 -172.292,-66.974 H 35.485 l -131.84,-261.941 h 47.291 l 11.221,22.308 42.174,-14.398 127.86,254.031 73.127,-339.567 c 31.288,42.342 49.784,94.716 49.784,151.423 C 255.102,-114.231 140.887,0 0,0"/></g></g></svg><span><small>Zero to ASIC</small><b>433 MHz OOK radio</b></span></a>
+  <div class="brand"><a href="https://www.zerotoasiccourse.com" title="Zero to ASIC course" aria-label="Zero to ASIC course"><svg viewBox="0 0 3401.5 3401.6" aria-hidden="true"><g fill="currentColor" transform="matrix(1.3333333,0,0,-1.3333333,1322.7806,2078.743)"><g transform="matrix(5,0,0,5,-1133.86,-1133.8572)"><path transform="translate(338.1049,200.4037)" d="m 0,0 66.389,-22.676 -214.282,-56.036 15.083,29.348 h -110.97 l 131.522,261.79 H -274.566 C -296.924,174.5 -309.75,130.285 -309.75,83.061 c 0,-111.623 71.706,-206.523 171.573,-241.105 l 36.387,72.291 73.68,29.884 -57.325,-114.332 c 10.101,-1.237 20.385,-1.857 30.803,-1.857 61.288,0 117.509,21.622 161.506,57.626 L 57.358,113.964 Z"/><path transform="translate(283.4731,538.5829)" d="M 0,0 C -66.422,0 -126.907,-25.385 -172.292,-66.974 H 35.485 l -131.84,-261.941 h 47.291 l 11.221,22.308 42.174,-14.398 127.86,254.031 73.127,-339.567 c 31.288,42.342 49.784,94.716 49.784,151.423 C 255.102,-114.231 140.887,0 0,0"/></g></g></svg></a><span><a href="https://www.zerotoasiccourse.com" title="Zero to ASIC course"><small>Zero to ASIC</small></a><a id="home" href="#step=0" title="Back to the first page"><b>433 MHz OOK radio</b></a></span></div>
   <nav class="crumbs" aria-label="Level" id="crumbs"></nav>
   <div class="ctl" id="ctl">
   <div class="dist">
     <label for="dist">Received power</label>
-    <input id="dist" type="range" min="25" max="110" step="0.5" value="56" aria-describedby="distout">
+    <input id="dist" type="range" min="-110" max="-25" step="0.5" value="-56" aria-describedby="distout">
     <output id="distout" for="dist"></output>
   </div>
   <div class="navbtns">
@@ -270,7 +271,7 @@ footer{padding:0 1.25rem .6rem; color:var(--faint); font-size:.78rem; display:fl
       <li><kbd>→</kbd> or <kbd>Space</kbd>: next step of the tour (after the last, back to the first); <kbd>←</kbd>: back</li>
       <li><kbd>Esc</kbd>: up one level</li>
       <li><kbd>1</kbd>–<kbd>9</kbd>: go to that step; two digits quickly for steps 10 and up (<kbd>1</kbd> <kbd>2</kbd>: step 12)</li>
-      <li><kbd>[</kbd> <kbd>]</kbd>: received power 1 dB stronger / weaker</li>
+      <li><kbd>[</kbd> <kbd>]</kbd>: received power 1 dB weaker / stronger (boards further apart / closer)</li>
       <li><kbd>p</kbd>: pause or play the animation</li>
       <li><kbd>e</kbd>: edit the words on the page (saves to text.md when served by <code>edit.py</code>)</li>
       <li><kbd>?</kbd>: this help</li>
@@ -448,10 +449,10 @@ function plot(opts) {
     x0 = Math.min(x0, X); x1 = Math.max(x1, X); y0 = Math.min(y0, Y); y1 = Math.max(y1, Y); } });
   if (opts.xlim) [x0, x1] = opts.xlim.map(tx);
   if (opts.ylim) [y0, y1] = opts.ylim.map(ty); else { const p = (y1 - y0) * 0.08 || 1; y0 -= p; y1 += p; }
-  const sx = v => L + (tx(v) - x0) / (x1 - x0) * (W - L - R), sy = v => T + (1 - (ty(v) - y0) / (y1 - y0)) * (H - T - Bm);
+  const sx = v => L + (opts.xrev ? x1 - tx(v) : tx(v) - x0) / (x1 - x0) * (W - L - R),   /* xrev: x runs right to left */ sy = v => T + (1 - (ty(v) - y0) / (y1 - y0)) * (H - T - Bm);
   const sy2 = opts.y2lim ? v => T + (1 - (v - opts.y2lim[0]) / (opts.y2lim[1] - opts.y2lim[0])) * (H - T - Bm) : sy;
   let g = `<svg viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="${opts.aria || opts.yl || 'plot'}" id="${id}">`;
-  (opts.bands || []).forEach(b => g += `<rect x="${sx(b.x0)}" y="${T}" width="${sx(b.x1) - sx(b.x0)}" height="${H - T - Bm}" fill="${b.color}"/>`);
+  (opts.bands || []).forEach(b => g += `<rect x="${Math.min(sx(b.x0), sx(b.x1))}" y="${T}" width="${Math.abs(sx(b.x1) - sx(b.x0))}" height="${H - T - Bm}" fill="${b.color}"/>`);
   const xt = opts.xlog ? [0.1, 1, 10, 100, 1000].filter(v => tx(v) >= x0 - 1e-9 && tx(v) <= x1 + 1e-9) : ticks(x0, x1, 6);
   const yt = opts.ylog ? [1e-4, 1e-3, 1e-2, 0.1, 1, 10, 100, 1000].filter(v => ty(v) >= y0 && ty(v) <= y1) : ticks(y0, y1, 4);
   xt.forEach(v => g += `<line x1="${sx(v)}" x2="${sx(v)}" y1="${T}" y2="${H - Bm}" stroke="#271e40"/><text x="${sx(v)}" y="${H - Bm + F + 4}" fill="#9f94bb" font-size="${F}" text-anchor="middle">${opts.xfmt ? opts.xfmt(v) : fmt(v)}</text>`);
@@ -489,7 +490,13 @@ function wirePlots(root) {
     const show = e => {
       const r = svg.getBoundingClientRect(), vx = (e.clientX - r.left) / r.width * P.W;
       if (vx < P.L || vx > P.W - P.R) return;
-      const X = P.x0 + (vx - P.L) / (P.W - P.L - P.R) * (P.x1 - P.x0), xv = P.opts.xlog ? Math.pow(10, X) : X;
+      const fr = (vx - P.L) / (P.W - P.L - P.R), X = P.x0 + (P.opts.xrev ? 1 - fr : fr) * (P.x1 - P.x0), xv = P.opts.xlog ? Math.pow(10, X) : X;
+      if (P.opts.tips) {   // a plot of dots: snap to the nearest one and show its description
+        const d = P.opts.series.find(s => s.pts).d; let i = 0;
+        d.x.forEach((v, k) => { if (Math.abs(v - xv) < Math.abs(d.x[i] - xv)) i = k; });
+        cur.setAttribute('x1', P.sx(d.x[i])); cur.setAttribute('x2', P.sx(d.x[i])); cur.setAttribute('visibility', 'visible');
+        hov.textContent = P.opts.tips(i); hov.hidden = false; return;
+      }
       cur.setAttribute('x1', vx); cur.setAttribute('x2', vx); cur.setAttribute('visibility', 'visible');
       const lines = [`${P.opts.xl ? P.opts.xl.split(' (')[0] : 'x'} ${fmt(xv)}`];
       P.opts.series.forEach(s => { if (!s.d || !s.label || s.pts) return;
@@ -767,9 +774,13 @@ function figChain() {
   // the tone transient nearest the slider (rf.sh's -60 dBm run, plus rf_levels.sh's other levels)
   const TL = toneLevels(), {br, n} = toneAt(prx());
   const x = n.map((_, i) => i), y = n.map(v => v.vpk * 1000);
+  const TIP = {antenna: "antenna, open-circuit voltage\n(the ideal source, before the\nantenna's 73 Ω and the pad load it)",
+    pad: "chip input pin = stage 1's input\n(after the antenna's 73 Ω and the\npin, bond wire and ESD of the pad)",
+    'stage 1': 'after stage 1 (low-noise amplifier)', 'stage 6': 'after stage 6, the last'};
+  const tips = i => `${TIP[n[i].label] || 'after ' + n[i].label}${i > 1 ? "\n(feeds one of the log detector's cells)" : ''}\n${fmt(y[i])} mV peak`;   // every stage output taps a detector cell
   let h = fig(`peak signal at each stage, ${DBM(prx())}`, plot({series: [
       {d: {x, y}, color: 'var(--rx)', w: 2}, {d: {x, y}, color: 'var(--rx)', pts: true}],   // the tone transient only: the log_det CW sweep gave the same points
-    ylog: true, ylim: [0.01, 3000], yfmt: v => v >= 1 ? v + '' : v, xfmt: i => (n[i] || {}).label || '', yl: 'mV peak (log)', h: 260}), runsNote(br, 'rx_rf_tone'));
+    ylog: true, ylim: [0.01, 3000], yfmt: v => v >= 1 ? v + '' : v, xfmt: i => (n[i] || {}).label || '', yl: 'mV peak (log)', h: 260, tips}), runsNote(br, 'rx_rf_tone'));
   h += '<p>Each stage multiplies the signal until the last stages limit at ~1 V: that limiting is what the log detector uses.</p>';
   const cols = ['#f1edf8', '#b4a9cf'].concat(STAGE_COLS);   // antenna, pad, then stages 1-6 in log_det's colours
   h += fig(`10 ns at every stage, ${DBM(prx())}`, plot({series: n.map((v, i) => ({d: v.d, color: cols[i], label: v.label, w: 1.3})), xl: 'time (ns)', yl: 'mV', h: 240, ylim: tly()}), runsNote(br, 'rx_rf_tone'));
@@ -778,12 +789,14 @@ function figChain() {
 const STAGE_COLS = ['#4c6b78', '#5d8592', '#3cc4a8', '#8ad6c2', '#ffd166', '#f0954a'];   // stages 1-6 (taps o1..o5, out), shared by lna_chain and log_det
 function figLogdet() {
   const L = D.logdet, p = prx();
-  let h = fig('detector output vs input power', plot({series: [{d: {x: L.pin, y: L.det}, color: 'var(--rx)', label: 'det (V)', w: 2.5}],
+  // signal flow: what reaches each cell first, then the detector output they add up to
+  const out = fig('detector output vs input power', plot({series: [{d: {x: L.pin, y: L.det}, color: 'var(--rx)', label: 'det (V)', w: 2.5}],
     xl: 'input power (dBm)', yl: 'det (V)', h: 240, vl: [{x: Math.max(-110, Math.min(-10, p)), color: '#fff'}],
     hl: []}), 'sim/logdet/taps.txt, tt');
   const cols = STAGE_COLS;
-  h += fig('amplitude reaching each detector cell: they saturate one after another', plot({series: L.tap_amp.map((a, i) => ({d: {x: L.pin, y: a}, color: cols[i], label: i < 5 ? 'o' + (i + 1) : 'out'})),
-    ylog: true, ylim: [1e-4, 3], xl: 'input power (dBm)', yl: 'V peak (log)', h: 240, vl: [{x: Math.max(-110, Math.min(-10, p)), color: '#fff'}]}));
+  let h = fig('amplitude reaching each detector cell: they saturate one after another', plot({series: L.tap_amp.map((a, i) => ({d: {x: L.pin, y: a}, color: cols[i], label: i < 5 ? 'o' + (i + 1) : 'out'})),
+    ylog: true, ylim: [1e-4, 3], xl: 'input power (dBm)', yl: 'V peak (log)', h: 240, vl: [{x: Math.max(-110, Math.min(-10, p)), color: '#fff'}]}), 'sim/logdet/taps.txt, tt');
+  h += out;
   const KL = D.rx_rf && D.rx_rf.key_levels;
   if (KL && KL.length && KL[0].rf_hi) {
     // the keyed runs at the slider's power: the RF going in (drawn as its envelope: ~870 cycles while on) and the detector's step
@@ -1198,7 +1211,7 @@ function render() {
       const sd = el.querySelector('.focus .side'), fh = fp.getBoundingClientRect().height;   // the text column stretches, so add up what is in it
       const side = [...sd.children].reduce((a, c) => a + c.getBoundingClientRect().height, 0) + parseFloat(getComputedStyle(sd).rowGap || 0) * COL.z * (sd.children.length - 1);
       const above = el.querySelector('.focus').getBoundingClientRect().top - inner(el).getBoundingClientRect().top;
-      if (above + side > room + 1) { COL.z = Math.floor(COL.z * room / h * 1000) / 1000; continue; }   // only when the text itself can't fit
+      if (above + side > room + 1) { COL.z = Math.floor(COL.z * room / (above + side) * 1000) / 1000; continue; }   // only when the text itself can't fit; scaled by the text's height, not the page's (the plots would feed back)
       if (COL.detail.ph > .45 && ph > 0) COL.detail.ph = Math.max(.45, COL.detail.ph * Math.max(.3, (ph - over) / ph) - .01);
       else COL.pz = Math.floor(COL.pz * (fh - over) / fh * 1000) / 1000;
     } else if (COL.stage.ph > .45 && ph > 0) COL.stage.ph = Math.max(.45, COL.stage.ph * Math.max(.3, (ph - over) / ph) - .01);
@@ -1213,7 +1226,7 @@ function build() {
   useGeo('stage');
   const page = S.block && B[S.block] ? focusPage(S.block) : S.level === 'chip' ? chipPage() : levelLink();
   main.className = '';
-  main.innerHTML = `<section class="stage" aria-label="${S.block ? nm(S.block) : S.level}"><div class="inner"${COL.z < 1 ? ` style="zoom:${COL.z}"` : ''}>${page}</div></section>`;
+  main.innerHTML = `<section class="stage" aria-label="${S.block ? nm(S.block) : S.level}"><div class="inner"${COL.z < 1 ? ` style="zoom:${COL.z}; --sidemax:${(30 / COL.z).toFixed(2)}rem"` : ''}>${page}</div></section>`;
   wirePlots(main);
   // breadcrumbs follow the tour: Story (steps 1-5) or Chip › Transmitter / Receiver › block; the last one is this page
   const half = S.focus || (S.block && (B[S.block].lvl === 'tx' || B[S.block].lvl === 'rx') ? B[S.block].lvl : null);
@@ -1224,7 +1237,7 @@ function build() {
   $('crumbs').innerHTML = cr;
   const p = prx();
   $('distout').textContent = `${p.toFixed(0)} dBm ≈ ${fmtd(dist())}`;
-  $('dist').value = -S.p;   // slider runs strong (left) to weak (right), like moving the boards apart
+  $('dist').value = S.p;   // slider runs weak / far apart (left) to strong / close (right)
   const live = usesPower(); $('dist').disabled = !live; document.querySelector('.dist').classList.toggle('off', !live);
   document.querySelector('.dist').title = live ? '' : 'The received power does not change this page';
   $('dist').setAttribute('aria-valuetext', `${p.toFixed(0)} dBm received, about ${fmtd(dist())} (${distSrc()})`);
@@ -1367,7 +1380,7 @@ document.addEventListener('keydown', e => {
   const k = e.key;
   if (k === ' ' && e.target.tagName !== 'BUTTON') { e.preventDefault(); nextStep(); }
   else if (k === 'Escape') { if (S.block) S.block = null; else if (S.focus) S.focus = null; else S.level = 'link'; render(); }
-  else if ((k === '[' || k === ']') && usesPower()) { S.p = Math.max(-110, Math.min(-25, S.p + (k === '[' ? 1 : -1))); render(); }
+  else if ((k === '[' || k === ']') && usesPower()) { S.p = Math.max(-110, Math.min(-25, S.p + (k === '[' ? -1 : 1))); render(); }
   else if (k === 'p') S.playing = !S.playing;
   else if (k === 'e') { S.edit = !S.edit; if (S.edit && location.protocol === 'file:') edStat = 'not saved: open the page through docs/explainer/edit.py'; render(); }
   else if (k === '?') $('help').hidden = false;
@@ -1387,7 +1400,7 @@ document.addEventListener('input', e => {
 });
 document.addEventListener('input', e => { if (e.target.id === 'dsoff') { S.dsOff = +e.target.value; dsRedraw(); } });   // the code page: shift the code copy
 document.addEventListener('change', e => { if (e.target.id === 'dsoff') interacted('explainer_shift', {bits: S.dsOff}); });
-$('dist').addEventListener('input', e => { S.p = -e.target.value; render(); $('dist').focus(); });
+$('dist').addEventListener('input', e => { S.p = +e.target.value; render(); $('dist').focus(); });
 $('dist').addEventListener('pointerdown', () => { S.dragging = true; });
 addEventListener('pointerup', () => { if (S.dragging) { S.dragging = false; anim.reset(); anim._si = null; } });
 $('dist').addEventListener('change', () => { S.dragging = false; anim.reset(); anim._si = null; interacted('explainer_power', {dbm: Math.round(prx())}); });   // keyboard or release: start the sweep from chip 1
@@ -1400,6 +1413,7 @@ $('next').onclick = nextStep;
 let resizeT; addEventListener('resize', () => { clearTimeout(resizeT); resizeT = setTimeout(() => { if (D) render(); }, 100); });
 $('helpbtn').onclick = () => { $('help').hidden = false; $('helpclose').focus(); };
 $('helpclose').onclick = () => { $('help').hidden = true; };
+$('home').onclick = e => { e.preventDefault(); setStep(0); };   // header title: back to the first page
 
 load().then(async d => {
   D = d; D.bb = D.bb || []; TEXT = D.text || {};
