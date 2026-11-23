@@ -24,6 +24,16 @@ captcha_key = "6LeFKlcdAAAAAA6sEbdU78sUuy0lPezU-0H0JueA"
 editURL = "https://github.com/mattvenn/zero-to-asic-www/edit/main/content/"
 newsletter_link = "https://www.zerotoasiccourse.com/newsletter/"
 
+# Black Friday banner at the top of the digital and analog pages.
+# mode: "off", "upcoming" (tease the sale, push newsletter) or "sale" (show the code)
+[params.blackFriday]
+mode = "sale"
+saving = "$150"
+dates = "27th to 29th November"
+ends = "Monday 30th November"
+code = "Z2ABF26W"
+count = "40"
+
 [params.urls.vacation]
 dig_silicon = { url = "/vacation_notice_dig", text = "Buy for $699" }
 ana_silicon = { url = "/vacation_notice_ana", text = "Buy for $699" }

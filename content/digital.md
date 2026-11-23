@@ -27,6 +27,8 @@ course:
     - Some programming experience
 ---
 
+{{% blackfriday %}}
+
 {{< youtube GjEnA3LUDdo >}}
 
 ## Digital ticket options {#tickets}

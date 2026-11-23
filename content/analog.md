@@ -24,6 +24,8 @@ course:
     - Basic analog circuit knowledge (schematic not covered in course)
 ---
 
+{{% blackfriday %}}
+
 {{< youtube wM4cobfjMMQ >}}
 
 ## Analog ticket options {#tickets}

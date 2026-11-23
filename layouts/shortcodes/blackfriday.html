@@ -1,0 +1,13 @@
+{{- /* Black Friday banner, controlled by [params.blackFriday] in config.toml.
+       mode = "off" | "upcoming" | "sale" */ -}}
+{{- with site.Params.blackFriday -}}
+{{- if eq .mode "upcoming" -}}
+# Save {{ .saving }} in the upcoming Black Friday sale!
+
+Discount available from {{ .dates }}. Subscribe to the [newsletter](/newsletter) to receive the coupon.
+{{- else if eq .mode "sale" -}}
+# Save {{ .saving }} until {{ .ends }}!
+
+Apply the code {{ .code }} at checkout to claim one of {{ .count }} available discounts.
+{{- end -}}
+{{- end -}}
